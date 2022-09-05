@@ -1,0 +1,181 @@
+
+
+================================================================
+== Vitis HLS Report for 'GRAYMat2AXIvideo_0_2160_3840_2_3_s'
+================================================================
+* Date:           Sun Sep  4 22:40:28 2022
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        hud3.prj
+* Solution:       sol1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z045-ffg900-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.30 ns|  3.180 ns|     0.89 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+-----------+-----+---------+---------+
+    |  Latency (cycles) |  Latency (absolute)  |    Interval   | Pipeline|
+    |   min   |   max   |    min   |    max    | min |   max   |   Type  |
+    +---------+---------+----------+-----------+-----+---------+---------+
+    |        3|  4160163|  9.900 ns|  13.729 ms|    3|  4160163|       no|
+    +---------+---------+----------+-----------+-----+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+----------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip   |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  |   Count  | Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+----------+----------+
+        |- loop_row_mat2axi  |        0|  4160160|  2 ~ 1926|          -|          -|  0 ~ 2160|        no|
+        +--------------------+---------+---------+----------+-----------+-----------+----------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 6 4 5 
+4 --> 5 
+5 --> 3 
+6 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.29>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 7 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%sof = alloca i32 1"   --->   Operation 8 'alloca' 'sof' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (1.20ns)   --->   "%p_read_5 = read i12 @_ssdm_op_Read.ap_auto.i12, i12 %p_read"   --->   Operation 9 'read' 'p_read_5' <Predicate = true> <Delay = 1.20> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%cols = partselect i11 @_ssdm_op_PartSelect.i11.i12.i32.i32, i12 %p_read_5, i32 1, i32 11" [xf_hud_accel.cpp:109]   --->   Operation 10 'partselect' 'cols' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (1.29ns)   --->   "%store_ln121 = store i1 1, i1 %sof" [xf_hud_accel.cpp:121]   --->   Operation 11 'store' 'store_ln121' <Predicate = true> <Delay = 1.29>
+ST_1 : Operation 12 [1/1] (1.29ns)   --->   "%store_ln121 = store i12 0, i12 %i" [xf_hud_accel.cpp:121]   --->   Operation 12 'store' 'store_ln121' <Predicate = true> <Delay = 1.29>
+
+State 2 <SV = 1> <Delay = 1.88>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i12 %gray_mat_rows, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (1.20ns)   --->   "%rows = read i12 @_ssdm_op_Read.ap_fifo.i12P0A, i12 %gray_mat_rows"   --->   Operation 14 'read' 'rows' <Predicate = true> <Delay = 1.20> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 12> <Depth = 2> <FIFO>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %LEF_Img_data157, void @empty_16, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %lef_ptr_V_dest_V, i1 %lef_ptr_V_id_V, i1 %lef_ptr_V_last_V, i1 %lef_ptr_V_user_V, i2 %lef_ptr_V_strb_V, i2 %lef_ptr_V_keep_V, i16 %lef_ptr_V_data_V, void @empty_20, i32 1, i32 1, void @empty_19, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%zext_ln109 = zext i11 %cols" [xf_hud_accel.cpp:109]   --->   Operation 17 'zext' 'zext_ln109' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (1.48ns)   --->   "%sub = add i12 %zext_ln109, i12 4095" [xf_hud_accel.cpp:109]   --->   Operation 18 'add' 'sub' <Predicate = true> <Delay = 1.48> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 19 [1/1] (1.88ns)   --->   "%cmp45 = icmp_eq  i11 %cols, i11 0" [xf_hud_accel.cpp:109]   --->   Operation 19 'icmp' 'cmp45' <Predicate = true> <Delay = 1.88> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%br_ln121 = br void %loop_col_mat2axi" [xf_hud_accel.cpp:121]   --->   Operation 20 'br' 'br_ln121' <Predicate = true> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 1.82>
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%i_3 = load i12 %i" [xf_hud_accel.cpp:121]   --->   Operation 21 'load' 'i_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 22 [1/1] (1.82ns)   --->   "%icmp_ln121 = icmp_eq  i12 %i_3, i12 %rows" [xf_hud_accel.cpp:121]   --->   Operation 22 'icmp' 'icmp_ln121' <Predicate = true> <Delay = 1.82> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 23 [1/1] (1.54ns)   --->   "%i_4 = add i12 %i_3, i12 1" [xf_hud_accel.cpp:121]   --->   Operation 23 'add' 'i_4' <Predicate = true> <Delay = 1.54> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%br_ln121 = br i1 %icmp_ln121, void %loop_col_mat2axi.split, void %for.end42.loopexit" [xf_hud_accel.cpp:121]   --->   Operation 24 'br' 'br_ln121' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%speclooptripcount_ln123 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 0, i64 2160, i64 2160" [xf_hud_accel.cpp:123]   --->   Operation 25 'speclooptripcount' 'speclooptripcount_ln123' <Predicate = (!icmp_ln121)> <Delay = 0.00>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%specloopname_ln118 = specloopname void @_ssdm_op_SpecLoopName, void @empty" [xf_hud_accel.cpp:118]   --->   Operation 26 'specloopname' 'specloopname_ln118' <Predicate = (!icmp_ln121)> <Delay = 0.00>
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%br_ln126 = br i1 %cmp45, void %for.body6.preheader, void %for.inc40" [xf_hud_accel.cpp:126]   --->   Operation 27 'br' 'br_ln126' <Predicate = (!icmp_ln121)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 3.18>
+ST_4 : Operation 28 [1/1] (0.00ns)   --->   "%sof_load = load i1 %sof"   --->   Operation 28 'load' 'sof_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 29 [1/1] (0.00ns)   --->   "%empty = wait i32 @_ssdm_op_Wait"   --->   Operation 29 'wait' 'empty' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 30 [2/2] (3.18ns)   --->   "%call_ln109 = call void @GRAYMat2AXIvideo<0, 2160, 3840, 2, 3>_Pipeline_loop_col_mat2axi, i1 %sof_load, i11 %cols, i12 %sub, i16 %LEF_Img_data157, i16 %lef_ptr_V_data_V, i2 %lef_ptr_V_keep_V, i2 %lef_ptr_V_strb_V, i1 %lef_ptr_V_user_V, i1 %lef_ptr_V_last_V, i1 %lef_ptr_V_id_V, i1 %lef_ptr_V_dest_V" [xf_hud_accel.cpp:109]   --->   Operation 30 'call' 'call_ln109' <Predicate = true> <Delay = 3.18> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 1.29>
+ST_5 : Operation 31 [1/2] (1.20ns)   --->   "%call_ln109 = call void @GRAYMat2AXIvideo<0, 2160, 3840, 2, 3>_Pipeline_loop_col_mat2axi, i1 %sof_load, i11 %cols, i12 %sub, i16 %LEF_Img_data157, i16 %lef_ptr_V_data_V, i2 %lef_ptr_V_keep_V, i2 %lef_ptr_V_strb_V, i1 %lef_ptr_V_user_V, i1 %lef_ptr_V_last_V, i1 %lef_ptr_V_id_V, i1 %lef_ptr_V_dest_V" [xf_hud_accel.cpp:109]   --->   Operation 31 'call' 'call_ln109' <Predicate = (!cmp45)> <Delay = 1.20> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 32 [1/1] (1.29ns)   --->   "%store_ln0 = store i1 0, i1 %sof"   --->   Operation 32 'store' 'store_ln0' <Predicate = (!cmp45)> <Delay = 1.29>
+ST_5 : Operation 33 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc40"   --->   Operation 33 'br' 'br_ln0' <Predicate = (!cmp45)> <Delay = 0.00>
+ST_5 : Operation 34 [1/1] (1.29ns)   --->   "%store_ln121 = store i12 %i_4, i12 %i" [xf_hud_accel.cpp:121]   --->   Operation 34 'store' 'store_ln121' <Predicate = true> <Delay = 1.29>
+ST_5 : Operation 35 [1/1] (0.00ns)   --->   "%br_ln121 = br void %loop_col_mat2axi" [xf_hud_accel.cpp:121]   --->   Operation 35 'br' 'br_ln121' <Predicate = true> <Delay = 0.00>
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 36 [1/1] (0.00ns)   --->   "%ret_ln164 = ret" [xf_hud_accel.cpp:164]   --->   Operation 36 'ret' 'ret_ln164' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.3ns, clock uncertainty: 0.891ns.
+
+ <State 1>: 1.3ns
+The critical path consists of the following:
+	'alloca' operation ('sof') [12]  (0 ns)
+	'store' operation ('store_ln121', xf_hud_accel.cpp:121) of constant 1 on local variable 'sof' [22]  (1.3 ns)
+
+ <State 2>: 1.88ns
+The critical path consists of the following:
+	'icmp' operation ('cmp45', xf_hud_accel.cpp:109) [21]  (1.88 ns)
+
+ <State 3>: 1.82ns
+The critical path consists of the following:
+	'load' operation ('i', xf_hud_accel.cpp:121) on local variable 'i' [26]  (0 ns)
+	'icmp' operation ('icmp_ln121', xf_hud_accel.cpp:121) [27]  (1.82 ns)
+
+ <State 4>: 3.18ns
+The critical path consists of the following:
+	'load' operation ('sof_load') on local variable 'sof' [35]  (0 ns)
+	'call' operation ('call_ln109', xf_hud_accel.cpp:109) to 'GRAYMat2AXIvideo<0, 2160, 3840, 2, 3>_Pipeline_loop_col_mat2axi' [37]  (3.18 ns)
+
+ <State 5>: 1.3ns
+The critical path consists of the following:
+	'store' operation ('store_ln121', xf_hud_accel.cpp:121) of variable 'i', xf_hud_accel.cpp:121 on local variable 'i' [41]  (1.3 ns)
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

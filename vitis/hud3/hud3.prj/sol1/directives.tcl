@@ -3,4 +3,4 @@
 ## Please DO NOT edit it.
 ## Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ############################################################
-set_directive_top -name extractEFrames_accel "extractEFrames_accel"
+set_directive_top -name hud_accel "hud_accel"

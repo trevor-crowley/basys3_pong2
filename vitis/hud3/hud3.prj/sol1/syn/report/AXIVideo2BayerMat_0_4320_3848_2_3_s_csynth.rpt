@@ -1,0 +1,193 @@
+
+
+================================================================
+== Vitis HLS Report for 'AXIVideo2BayerMat_0_4320_3848_2_3_s'
+================================================================
+* Date:           Sun Sep  4 22:40:29 2022
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        hud3.prj
+* Solution:       sol1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z045-ffg900-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.30 ns|  4.196 ns|     0.89 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+---------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |    Interval   | Pipeline|
+    |   min   |   max   |    min    |    max    | min |   max   |   Type  |
+    +---------+---------+-----------+-----------+-----+---------+---------+
+    |        7|  8363527|  29.372 ns|  35.093 ms|    7|  8363527|       no|
+    +---------+---------+-----------+-----------+-----+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        +------------------------------------------------------------------------+-------------------------------------------------------------+---------+---------+-----------+----------+-----+------+---------+
+        |                                                                        |                                                             |  Latency (cycles) |  Latency (absolute)  |  Interval  | Pipeline|
+        |                                Instance                                |                            Module                           |   min   |   max   |    min    |    max   | min |  max |   Type  |
+        +------------------------------------------------------------------------+-------------------------------------------------------------+---------+---------+-----------+----------+-----+------+---------+
+        |grp_AXIVideo2BayerMat_0_4320_3848_2_3_Pipeline_loop_start_hunt_fu_179   |AXIVideo2BayerMat_0_4320_3848_2_3_Pipeline_loop_start_hunt   |        2|        2|   6.600 ns|  6.600 ns|    2|     2|       no|
+        |grp_AXIVideo2BayerMat_0_4320_3848_2_3_Pipeline_loop_col_zxi2mat_fu_199  |AXIVideo2BayerMat_0_4320_3848_2_3_Pipeline_loop_col_zxi2mat  |        4|     1927|  16.784 ns|  8.086 us|    4|  1927|       no|
+        |grp_AXIVideo2BayerMat_0_4320_3848_2_3_Pipeline_loop_last_hunt_fu_226    |AXIVideo2BayerMat_0_4320_3848_2_3_Pipeline_loop_last_hunt    |        2|        2|   6.600 ns|  6.600 ns|    2|     2|       no|
+        +------------------------------------------------------------------------+-------------------------------------------------------------+---------+---------+-----------+----------+-----+------+---------+
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+----------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip   |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  |   Count  | Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+----------+----------+
+        |- loop_row_axi2mat  |        1|  8363521|  8 ~ 1936|          -|          -|  0 ~ 4320|        no|
+        +--------------------+---------+---------+----------+-----------+-----------+----------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+--------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |   LUT  | URAM|
++-----------------+---------+-----+--------+--------+-----+
+|DSP              |        -|    -|       -|       -|    -|
+|Expression       |        -|    -|       0|      24|    -|
+|FIFO             |        -|    -|       -|       -|    -|
+|Instance         |        -|    -|      60|     208|    -|
+|Memory           |        -|    -|       -|       -|    -|
+|Multiplexer      |        -|    -|       -|     147|    -|
+|Register         |        -|    -|      91|       -|    -|
++-----------------+---------+-----+--------+--------+-----+
+|Total            |        0|    0|     151|     379|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Available        |     1090|  900|  437200|  218600|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Utilization (%)  |        0|    0|      ~0|      ~0|    0|
++-----------------+---------+-----+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +------------------------------------------------------------------------+-------------------------------------------------------------+---------+----+----+-----+-----+
+    |                                Instance                                |                            Module                           | BRAM_18K| DSP| FF | LUT | URAM|
+    +------------------------------------------------------------------------+-------------------------------------------------------------+---------+----+----+-----+-----+
+    |grp_AXIVideo2BayerMat_0_4320_3848_2_3_Pipeline_loop_col_zxi2mat_fu_199  |AXIVideo2BayerMat_0_4320_3848_2_3_Pipeline_loop_col_zxi2mat  |        0|   0|  53|  126|    0|
+    |grp_AXIVideo2BayerMat_0_4320_3848_2_3_Pipeline_loop_last_hunt_fu_226    |AXIVideo2BayerMat_0_4320_3848_2_3_Pipeline_loop_last_hunt    |        0|   0|   4|   50|    0|
+    |grp_AXIVideo2BayerMat_0_4320_3848_2_3_Pipeline_loop_start_hunt_fu_179   |AXIVideo2BayerMat_0_4320_3848_2_3_Pipeline_loop_start_hunt   |        0|   0|   3|   32|    0|
+    +------------------------------------------------------------------------+-------------------------------------------------------------+---------+----+----+-----+-----+
+    |Total                                                                   |                                                             |        0|   0|  60|  208|    0|
+    +------------------------------------------------------------------------+-------------------------------------------------------------+---------+----+----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+----+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |i_6_fu_288_p2        |         +|   0|  0|  13|          13|           1|
+    |cmp41_fu_275_p2      |      icmp|   0|  0|   5|          11|           1|
+    |icmp_ln61_fu_283_p2  |      icmp|   0|  0|   5|          13|          13|
+    |ap_block_state1      |        or|   0|  0|   1|           1|           1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |Total                |          |   0|  0|  24|          38|          16|
+    +---------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------+----+-----------+-----+-----------+
+    |            Name            | LUT| Input Size| Bits| Total Bits|
+    +----------------------------+----+-----------+-----+-----------+
+    |InImg_cols_c_blk_n          |   9|          2|    1|          2|
+    |InImg_data156_write         |   9|          2|    1|          2|
+    |ap_NS_fsm                   |  49|         12|    1|         12|
+    |ap_done                     |   9|          2|    1|          2|
+    |axi_data_2_lcssa_reg_157    |   9|          2|   16|         32|
+    |axi_data_V_2_fu_92          |   9|          2|   16|         32|
+    |axi_last_2_lcssa_reg_146    |   9|          2|    1|          2|
+    |axi_last_V_2_reg_136        |   9|          2|    1|          2|
+    |i_fu_88                     |   9|          2|   13|         26|
+    |in_ptr_TREADY_int_regslice  |  17|          4|    1|          4|
+    |last_0_lcssa_reg_167        |   9|          2|    1|          2|
+    +----------------------------+----+-----------+-----+-----------+
+    |Total                       | 147|         34|   53|        118|
+    +----------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                         Name                                        | FF | LUT| Bits| Const Bits|
+    +-------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                                            |  11|   0|   11|          0|
+    |ap_done_reg                                                                          |   1|   0|    1|          0|
+    |axi_data_2_lcssa_reg_157                                                             |  16|   0|   16|          0|
+    |axi_data_V_2_fu_92                                                                   |  16|   0|   16|          0|
+    |axi_last_2_lcssa_reg_146                                                             |   1|   0|    1|          0|
+    |axi_last_V_2_reg_136                                                                 |   1|   0|    1|          0|
+    |axi_last_V_4_loc_fu_100                                                              |   1|   0|    1|          0|
+    |cmp41_reg_379                                                                        |   1|   0|    1|          0|
+    |grp_AXIVideo2BayerMat_0_4320_3848_2_3_Pipeline_loop_col_zxi2mat_fu_199_ap_start_reg  |   1|   0|    1|          0|
+    |grp_AXIVideo2BayerMat_0_4320_3848_2_3_Pipeline_loop_last_hunt_fu_226_ap_start_reg    |   1|   0|    1|          0|
+    |grp_AXIVideo2BayerMat_0_4320_3848_2_3_Pipeline_loop_start_hunt_fu_179_ap_start_reg   |   1|   0|    1|          0|
+    |i_6_reg_387                                                                          |  13|   0|   13|          0|
+    |i_fu_88                                                                              |  13|   0|   13|          0|
+    |icmp_ln61_reg_383                                                                    |   1|   0|    1|          0|
+    |last_0_lcssa_reg_167                                                                 |   1|   0|    1|          0|
+    |start_fu_96                                                                          |   1|   0|    1|          0|
+    |trunc_ln38_1_reg_370                                                                 |  11|   0|   11|          0|
+    +-------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                                |  91|   0|   91|          0|
+    +-------------------------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------------+-----+-----+------------+----------------------------------------+--------------+
+|           RTL Ports          | Dir | Bits|  Protocol  |              Source Object             |    C Type    |
++------------------------------+-----+-----+------------+----------------------------------------+--------------+
+|ap_clk                        |   in|    1|  ap_ctrl_hs|  AXIVideo2BayerMat<0, 4320, 3848, 2, 3>|  return value|
+|ap_rst                        |   in|    1|  ap_ctrl_hs|  AXIVideo2BayerMat<0, 4320, 3848, 2, 3>|  return value|
+|ap_start                      |   in|    1|  ap_ctrl_hs|  AXIVideo2BayerMat<0, 4320, 3848, 2, 3>|  return value|
+|ap_done                       |  out|    1|  ap_ctrl_hs|  AXIVideo2BayerMat<0, 4320, 3848, 2, 3>|  return value|
+|ap_continue                   |   in|    1|  ap_ctrl_hs|  AXIVideo2BayerMat<0, 4320, 3848, 2, 3>|  return value|
+|ap_idle                       |  out|    1|  ap_ctrl_hs|  AXIVideo2BayerMat<0, 4320, 3848, 2, 3>|  return value|
+|ap_ready                      |  out|    1|  ap_ctrl_hs|  AXIVideo2BayerMat<0, 4320, 3848, 2, 3>|  return value|
+|in_ptr_TDATA                  |   in|   16|        axis|                         in_ptr_V_data_V|       pointer|
+|in_ptr_TVALID                 |   in|    1|        axis|                         in_ptr_V_dest_V|       pointer|
+|in_ptr_TREADY                 |  out|    1|        axis|                         in_ptr_V_dest_V|       pointer|
+|in_ptr_TDEST                  |   in|    1|        axis|                         in_ptr_V_dest_V|       pointer|
+|in_ptr_TKEEP                  |   in|    2|        axis|                         in_ptr_V_keep_V|       pointer|
+|in_ptr_TSTRB                  |   in|    2|        axis|                         in_ptr_V_strb_V|       pointer|
+|in_ptr_TUSER                  |   in|    1|        axis|                         in_ptr_V_user_V|       pointer|
+|in_ptr_TLAST                  |   in|    1|        axis|                         in_ptr_V_last_V|       pointer|
+|in_ptr_TID                    |   in|    1|        axis|                           in_ptr_V_id_V|       pointer|
+|p_read                        |   in|   13|     ap_none|                                  p_read|        scalar|
+|p_read1                       |   in|   12|     ap_none|                                 p_read1|        scalar|
+|InImg_data156_din             |  out|   16|     ap_fifo|                           InImg_data156|       pointer|
+|InImg_data156_num_data_valid  |   in|    3|     ap_fifo|                           InImg_data156|       pointer|
+|InImg_data156_fifo_cap        |   in|    3|     ap_fifo|                           InImg_data156|       pointer|
+|InImg_data156_full_n          |   in|    1|     ap_fifo|                           InImg_data156|       pointer|
+|InImg_data156_write           |  out|    1|     ap_fifo|                           InImg_data156|       pointer|
+|InImg_cols_c_din              |  out|   12|     ap_fifo|                            InImg_cols_c|       pointer|
+|InImg_cols_c_num_data_valid   |   in|    2|     ap_fifo|                            InImg_cols_c|       pointer|
+|InImg_cols_c_fifo_cap         |   in|    2|     ap_fifo|                            InImg_cols_c|       pointer|
+|InImg_cols_c_full_n           |   in|    1|     ap_fifo|                            InImg_cols_c|       pointer|
+|InImg_cols_c_write            |  out|    1|     ap_fifo|                            InImg_cols_c|       pointer|
++------------------------------+-----+-----+------------+----------------------------------------+--------------+
+

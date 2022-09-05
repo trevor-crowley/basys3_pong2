@@ -1,0 +1,219 @@
+<stg><name>Block_entry5_proc</name>
+
+
+<trans_list>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="2" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="3" bw="16" op_0_bw="16" op_1_bw="16">
+<![CDATA[
+newFuncRoot:0 %width_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %width
+
+]]></Node>
+<StgValue><ssdm name="width_read"/></StgValue>
+</operation>
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="4" bw="16" op_0_bw="16" op_1_bw="16">
+<![CDATA[
+newFuncRoot:1 %height_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %height
+
+]]></Node>
+<StgValue><ssdm name="height_read"/></StgValue>
+</operation>
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="5" bw="12" op_0_bw="16">
+<![CDATA[
+newFuncRoot:2 %LEF_Img_rows = trunc i16 %height_read
+
+]]></Node>
+<StgValue><ssdm name="LEF_Img_rows"/></StgValue>
+</operation>
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="6" bw="13" op_0_bw="13" op_1_bw="12" op_2_bw="1">
+<![CDATA[
+newFuncRoot:3 %InImg_rows = bitconcatenate i13 @_ssdm_op_BitConcatenate.i13.i12.i1, i12 %LEF_Img_rows, i1 0
+
+]]></Node>
+<StgValue><ssdm name="InImg_rows"/></StgValue>
+</operation>
+
+<operation id="6" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="7" bw="12" op_0_bw="16">
+<![CDATA[
+newFuncRoot:4 %LEF_Img_cols = trunc i16 %width_read
+
+]]></Node>
+<StgValue><ssdm name="LEF_Img_cols"/></StgValue>
+</operation>
+
+<operation id="7" st_id="1" stage="1" lat="1">
+<core>Adder</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="12" op_0_bw="12" op_1_bw="12">
+<![CDATA[
+newFuncRoot:5 %InImg_cols = add i12 %LEF_Img_cols, i12 8
+
+]]></Node>
+<StgValue><ssdm name="InImg_cols"/></StgValue>
+</operation>
+
+<operation id="8" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="9" bw="73" op_0_bw="73" op_1_bw="13">
+<![CDATA[
+newFuncRoot:6 %mrv = insertvalue i73 <undef>, i13 %InImg_rows
+
+]]></Node>
+<StgValue><ssdm name="mrv"/></StgValue>
+</operation>
+
+<operation id="9" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="10" bw="73" op_0_bw="73" op_1_bw="12">
+<![CDATA[
+newFuncRoot:7 %mrv_1 = insertvalue i73 %mrv, i12 %LEF_Img_cols
+
+]]></Node>
+<StgValue><ssdm name="mrv_1"/></StgValue>
+</operation>
+
+<operation id="10" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="11" bw="73" op_0_bw="73" op_1_bw="12">
+<![CDATA[
+newFuncRoot:8 %mrv_2 = insertvalue i73 %mrv_1, i12 %LEF_Img_rows
+
+]]></Node>
+<StgValue><ssdm name="mrv_2"/></StgValue>
+</operation>
+
+<operation id="11" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="12" bw="73" op_0_bw="73" op_1_bw="12">
+<![CDATA[
+newFuncRoot:9 %mrv_3 = insertvalue i73 %mrv_2, i12 %LEF_Img_cols
+
+]]></Node>
+<StgValue><ssdm name="mrv_3"/></StgValue>
+</operation>
+
+<operation id="12" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="13" bw="73" op_0_bw="73" op_1_bw="12">
+<![CDATA[
+newFuncRoot:10 %mrv_4 = insertvalue i73 %mrv_3, i12 %InImg_cols
+
+]]></Node>
+<StgValue><ssdm name="mrv_4"/></StgValue>
+</operation>
+
+<operation id="13" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="14" bw="73" op_0_bw="73" op_1_bw="12">
+<![CDATA[
+newFuncRoot:11 %mrv_5 = insertvalue i73 %mrv_4, i12 %LEF_Img_rows
+
+]]></Node>
+<StgValue><ssdm name="mrv_5"/></StgValue>
+</operation>
+
+<operation id="14" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="15" bw="0" op_0_bw="73">
+<![CDATA[
+newFuncRoot:12 %ret_ln191 = ret i73 %mrv_5
+
+]]></Node>
+<StgValue><ssdm name="ret_ln191"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+</ports>
+
+
+<dataflows>
+</dataflows>
+
+
+</stg>
