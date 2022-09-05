@@ -1,13 +1,13 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'extract_Pipeline_LAST_LINES_VITIS_LOOP_177_4'" level="0">
-<item name = "Date">Sun Sep  4 18:21:50 2022
+<item name = "Date">Sun Sep  4 20:23:19 2022
 </item>
 <item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)</item>
 <item name = "Project">hud3.prj</item>
 <item name = "Solution">sol1 (Vivado IP Flow Target)</item>
-<item name = "Product family">artix7</item>
-<item name = "Target device">xc7a200t-fbg676-2</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z045-ffg900-2</item>
 </section>
 
 <section name = "Performance Estimates" level="0">
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">3.30 ns, 5.440 ns, 0.89 ns</column>
+<column name="ap_clk">3.30 ns, 5.454 ns, 0.89 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">52, 52, 0.283 us, 0.283 us, 52, 52, no</column>
+<column name="">52, 52, 0.284 us, 0.284 us, 52, 52, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -48,13 +48,13 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 211, -</column>
+<column name="Expression">-, -, 0, 163, -</column>
 <column name="FIFO">-, -, -, -, -</column>
 <column name="Instance">-, -, 0, 33, -</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, 90, -</column>
 <column name="Register">-, -, 98, -, -</column>
-<specialColumn name="Available">730, 740, 269200, 134600, 0</specialColumn>
+<specialColumn name="Available">1090, 900, 437200, 218600, 0</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
 </table>
 </item>
@@ -79,15 +79,15 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln176_fu_271_p2">+, 0, 0, 21, 14, 1</column>
-<column name="add_ln177_fu_322_p2">+, 0, 0, 18, 11, 1</column>
-<column name="add_ln197_fu_347_p2">+, 0, 0, 39, 32, 1</column>
-<column name="ap_block_pp0_stage0_01001">and, 0, 0, 2, 1, 1</column>
-<column name="icmp_ln176_fu_265_p2">icmp, 0, 0, 12, 14, 14</column>
-<column name="icmp_ln177_fu_280_p2">icmp, 0, 0, 11, 11, 11</column>
-<column name="icmp_ln185_fu_316_p2">icmp, 0, 0, 11, 9, 1</column>
-<column name="icmp_ln194_fu_341_p2">icmp, 0, 0, 18, 32, 3</column>
-<column name="ap_block_state3_pp0_stage0_iter2">or, 0, 0, 2, 1, 1</column>
+<column name="add_ln176_fu_271_p2">+, 0, 0, 14, 14, 1</column>
+<column name="add_ln177_fu_322_p2">+, 0, 0, 11, 11, 1</column>
+<column name="add_ln197_fu_347_p2">+, 0, 0, 32, 32, 1</column>
+<column name="ap_block_pp0_stage0_01001">and, 0, 0, 1, 1, 1</column>
+<column name="icmp_ln176_fu_265_p2">icmp, 0, 0, 6, 14, 14</column>
+<column name="icmp_ln177_fu_280_p2">icmp, 0, 0, 5, 11, 11</column>
+<column name="icmp_ln185_fu_316_p2">icmp, 0, 0, 4, 9, 1</column>
+<column name="icmp_ln194_fu_341_p2">icmp, 0, 0, 12, 32, 3</column>
+<column name="ap_block_state3_pp0_stage0_iter2">or, 0, 0, 1, 1, 1</column>
 <column name="select_ln176_1_fu_361_p3">select, 0, 0, 32, 1, 32</column>
 <column name="select_ln176_fu_286_p3">select, 0, 0, 11, 1, 1</column>
 <column name="select_ln194_fu_353_p3">select, 0, 0, 32, 1, 1</column>
@@ -104,7 +104,7 @@
 <column name="ap_sig_allocacmp_col_2_load">9, 2, 11, 22</column>
 <column name="ap_sig_allocacmp_indvar_flatten_load">9, 2, 14, 28</column>
 <column name="col_2_fu_92">9, 2, 11, 22</column>
-<column name="empty_30_fu_96">9, 2, 32, 64</column>
+<column name="empty_34_fu_96">9, 2, 32, 64</column>
 <column name="indvar_flatten_fu_100">9, 2, 14, 28</column>
 </table>
 </item>
@@ -116,7 +116,7 @@
 <column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter1_reg">1, 0, 1, 0</column>
 <column name="col_2_fu_92">11, 0, 11, 0</column>
-<column name="empty_30_fu_96">32, 0, 32, 0</column>
+<column name="empty_34_fu_96">32, 0, 32, 0</column>
 <column name="icmp_ln176_reg_416">1, 0, 1, 0</column>
 <column name="icmp_ln177_reg_420">1, 0, 1, 0</column>
 <column name="icmp_ln185_reg_425">1, 0, 1, 0</column>

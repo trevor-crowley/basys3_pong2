@@ -3,13 +3,13 @@
 ================================================================
 == Vitis HLS Report for 'extract_Pipeline_LAST_LINES_VITIS_LOOP_177_4'
 ================================================================
-* Date:           Sun Sep  4 18:21:48 2022
+* Date:           Sun Sep  4 20:23:17 2022
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
 * Project:        hud3.prj
 * Solution:       sol1 (Vivado IP Flow Target)
-* Product family: artix7
-* Target device:  xc7a200t-fbg676-2
+* Product family: zynq
+* Target device:  xc7z045-ffg900-2
 
 
 ================================================================
@@ -20,7 +20,7 @@
     +--------+---------+----------+------------+
     |  Clock |  Target | Estimated| Uncertainty|
     +--------+---------+----------+------------+
-    |ap_clk  |  3.30 ns|  5.440 ns|     0.89 ns|
+    |ap_clk  |  3.30 ns|  5.454 ns|     0.89 ns|
     +--------+---------+----------+------------+
 
 + Latency: 
@@ -29,7 +29,7 @@
     |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
     |   min   |   max   |    min   |    max   | min | max |   Type  |
     +---------+---------+----------+----------+-----+-----+---------+
-    |       52|       52|  0.283 us|  0.283 us|   52|   52|       no|
+    |       52|       52|  0.284 us|  0.284 us|   52|   52|       no|
     +---------+---------+----------+----------+-----+-----+---------+
 
     + Detail: 
@@ -85,9 +85,9 @@ IsGatedGlobalClock: 0
 
 * FSM state operations: 
 
-State 1 <SV = 0> <Delay = 5.44>
+State 1 <SV = 0> <Delay = 5.45>
 ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%col_2 = alloca i32 1"   --->   Operation 6 'alloca' 'col_2' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%empty_30 = alloca i32 1"   --->   Operation 7 'alloca' 'empty_30' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%empty_34 = alloca i32 1"   --->   Operation 7 'alloca' 'empty_34' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%indvar_flatten = alloca i32 1"   --->   Operation 8 'alloca' 'indvar_flatten' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %this_buff_7, i64 666, i64 25, i64 18446744073709551615"   --->   Operation 9 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %this_buff_6, i64 666, i64 25, i64 18446744073709551615"   --->   Operation 10 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
@@ -103,20 +103,20 @@ ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface 
 ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%trunc_ln_read = read i11 @_ssdm_op_Read.ap_auto.i11, i11 %trunc_ln" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:95]   --->   Operation 20 'read' 'trunc_ln_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%sub_ln176_read = read i14 @_ssdm_op_Read.ap_auto.i14, i14 %sub_ln176" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:95]   --->   Operation 21 'read' 'sub_ln176_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%tmp = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %empty" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:95]   --->   Operation 22 'read' 'tmp' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 23 [1/1] (1.32ns)   --->   "%store_ln0 = store i14 0, i14 %indvar_flatten"   --->   Operation 23 'store' 'store_ln0' <Predicate = true> <Delay = 1.32>
-ST_1 : Operation 24 [1/1] (1.32ns)   --->   "%store_ln95 = store i32 %tmp, i32 %empty_30" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:95]   --->   Operation 24 'store' 'store_ln95' <Predicate = true> <Delay = 1.32>
-ST_1 : Operation 25 [1/1] (1.32ns)   --->   "%store_ln0 = store i11 0, i11 %col_2"   --->   Operation 25 'store' 'store_ln0' <Predicate = true> <Delay = 1.32>
+ST_1 : Operation 23 [1/1] (1.29ns)   --->   "%store_ln0 = store i14 0, i14 %indvar_flatten"   --->   Operation 23 'store' 'store_ln0' <Predicate = true> <Delay = 1.29>
+ST_1 : Operation 24 [1/1] (1.29ns)   --->   "%store_ln95 = store i32 %tmp, i32 %empty_34" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:95]   --->   Operation 24 'store' 'store_ln95' <Predicate = true> <Delay = 1.29>
+ST_1 : Operation 25 [1/1] (1.29ns)   --->   "%store_ln0 = store i11 0, i11 %col_2"   --->   Operation 25 'store' 'store_ln0' <Predicate = true> <Delay = 1.29>
 ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body93"   --->   Operation 26 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%indvar_flatten_load = load i14 %indvar_flatten" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:176]   --->   Operation 27 'load' 'indvar_flatten_load' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 28 [1/1] (1.79ns)   --->   "%icmp_ln176 = icmp_eq  i14 %indvar_flatten_load, i14 %sub_ln176_read" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:176]   --->   Operation 28 'icmp' 'icmp_ln176' <Predicate = true> <Delay = 1.79> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.79> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 29 [1/1] (1.80ns)   --->   "%add_ln176 = add i14 %indvar_flatten_load, i14 1" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:176]   --->   Operation 29 'add' 'add_ln176' <Predicate = true> <Delay = 1.80> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 28 [1/1] (1.98ns)   --->   "%icmp_ln176 = icmp_eq  i14 %indvar_flatten_load, i14 %sub_ln176_read" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:176]   --->   Operation 28 'icmp' 'icmp_ln176' <Predicate = true> <Delay = 1.98> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 29 [1/1] (1.52ns)   --->   "%add_ln176 = add i14 %indvar_flatten_load, i14 1" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:176]   --->   Operation 29 'add' 'add_ln176' <Predicate = true> <Delay = 1.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%br_ln176 = br i1 %icmp_ln176, void %for.end118.loopexit, void %for.end129.exitStub" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:176]   --->   Operation 30 'br' 'br_ln176' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%col_2_load = load i11 %col_2" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:177]   --->   Operation 31 'load' 'col_2_load' <Predicate = (!icmp_ln176)> <Delay = 0.00>
-ST_1 : Operation 32 [1/1] (1.52ns)   --->   "%icmp_ln177 = icmp_eq  i11 %col_2_load, i11 %trunc_ln_read" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:177]   --->   Operation 32 'icmp' 'icmp_ln177' <Predicate = (!icmp_ln176)> <Delay = 1.52> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.52> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 33 [1/1] (0.83ns)   --->   "%select_ln176 = select i1 %icmp_ln177, i11 0, i11 %col_2_load" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:176]   --->   Operation 33 'select' 'select_ln176' <Predicate = (!icmp_ln176)> <Delay = 0.83> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.83> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 32 [1/1] (1.88ns)   --->   "%icmp_ln177 = icmp_eq  i11 %col_2_load, i11 %trunc_ln_read" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:177]   --->   Operation 32 'icmp' 'icmp_ln177' <Predicate = (!icmp_ln176)> <Delay = 1.88> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 33 [1/1] (0.79ns)   --->   "%select_ln176 = select i1 %icmp_ln177, i11 0, i11 %col_2_load" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:176]   --->   Operation 33 'select' 'select_ln176' <Predicate = (!icmp_ln176)> <Delay = 0.79> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%zext_ln177 = zext i11 %select_ln176" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:177]   --->   Operation 34 'zext' 'zext_ln177' <Predicate = (!icmp_ln176)> <Delay = 0.00>
 ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%tmp_2 = partselect i9 @_ssdm_op_PartSelect.i9.i11.i32.i32, i11 %select_ln176, i32 2, i32 10" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:185]   --->   Operation 35 'partselect' 'tmp_2' <Predicate = (!icmp_ln176)> <Delay = 0.00>
-ST_1 : Operation 36 [1/1] (1.34ns)   --->   "%icmp_ln185 = icmp_eq  i9 %tmp_2, i9 0" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:185]   --->   Operation 36 'icmp' 'icmp_ln185' <Predicate = (!icmp_ln176)> <Delay = 1.34> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.34> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 36 [1/1] (1.62ns)   --->   "%icmp_ln185 = icmp_eq  i9 %tmp_2, i9 0" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:185]   --->   Operation 36 'icmp' 'icmp_ln185' <Predicate = (!icmp_ln176)> <Delay = 1.62> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.62> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%br_ln185 = br i1 %icmp_ln185, void %if.then95, void %if.else111" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:185]   --->   Operation 37 'br' 'br_ln185' <Predicate = (!icmp_ln176)> <Delay = 0.00>
 ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%this_buff_0_addr = getelementptr i16 %this_buff_0, i64 0, i64 %zext_ln177" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:186]   --->   Operation 38 'getelementptr' 'this_buff_0_addr' <Predicate = (!icmp_ln176 & !icmp_ln185)> <Delay = 0.00>
 ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%this_buff_1_addr = getelementptr i16 %this_buff_1, i64 0, i64 %zext_ln177" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:186]   --->   Operation 39 'getelementptr' 'this_buff_1_addr' <Predicate = (!icmp_ln176 & !icmp_ln185)> <Delay = 0.00>
@@ -134,18 +134,18 @@ ST_1 : Operation 50 [3/3] (1.38ns)   --->   "%this_buff_4_load = load i11 %this_
 ST_1 : Operation 51 [3/3] (1.38ns)   --->   "%this_buff_5_load = load i11 %this_buff_5_addr" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:186]   --->   Operation 51 'load' 'this_buff_5_load' <Predicate = (!icmp_ln176 & !icmp_ln185)> <Delay = 1.38> <CoreInst = "RAM_S2P_BRAM">   --->   Core 93 'RAM_S2P_BRAM' <Latency = 2> <II = 1> <Delay = 1.38> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1924> <RAM>
 ST_1 : Operation 52 [3/3] (1.38ns)   --->   "%this_buff_6_load = load i11 %this_buff_6_addr" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:186]   --->   Operation 52 'load' 'this_buff_6_load' <Predicate = (!icmp_ln176 & !icmp_ln185)> <Delay = 1.38> <CoreInst = "RAM_S2P_BRAM">   --->   Core 93 'RAM_S2P_BRAM' <Latency = 2> <II = 1> <Delay = 1.38> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1924> <RAM>
 ST_1 : Operation 53 [3/3] (1.38ns)   --->   "%this_buff_7_load = load i11 %this_buff_7_addr" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:186]   --->   Operation 53 'load' 'this_buff_7_load' <Predicate = (!icmp_ln176 & !icmp_ln185)> <Delay = 1.38> <CoreInst = "RAM_S2P_BRAM">   --->   Core 93 'RAM_S2P_BRAM' <Latency = 2> <II = 1> <Delay = 1.38> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1924> <RAM>
-ST_1 : Operation 54 [1/1] (1.76ns)   --->   "%add_ln177 = add i11 %select_ln176, i11 1" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:177]   --->   Operation 54 'add' 'add_ln177' <Predicate = (!icmp_ln176)> <Delay = 1.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 55 [1/1] (1.32ns)   --->   "%store_ln177 = store i14 %add_ln176, i14 %indvar_flatten" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:177]   --->   Operation 55 'store' 'store_ln177' <Predicate = (!icmp_ln176)> <Delay = 1.32>
-ST_1 : Operation 56 [1/1] (1.32ns)   --->   "%store_ln177 = store i11 %add_ln177, i11 %col_2" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:177]   --->   Operation 56 'store' 'store_ln177' <Predicate = (!icmp_ln176)> <Delay = 1.32>
+ST_1 : Operation 54 [1/1] (1.48ns)   --->   "%add_ln177 = add i11 %select_ln176, i11 1" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:177]   --->   Operation 54 'add' 'add_ln177' <Predicate = (!icmp_ln176)> <Delay = 1.48> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 55 [1/1] (1.29ns)   --->   "%store_ln177 = store i14 %add_ln176, i14 %indvar_flatten" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:177]   --->   Operation 55 'store' 'store_ln177' <Predicate = (!icmp_ln176)> <Delay = 1.29>
+ST_1 : Operation 56 [1/1] (1.29ns)   --->   "%store_ln177 = store i11 %add_ln177, i11 %col_2" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:177]   --->   Operation 56 'store' 'store_ln177' <Predicate = (!icmp_ln176)> <Delay = 1.29>
 
-State 2 <SV = 1> <Delay = 5.05>
-ST_2 : Operation 57 [1/1] (0.00ns)   --->   "%p_load = load i32 %empty_30" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:197]   --->   Operation 57 'load' 'p_load' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 58 [1/1] (2.11ns)   --->   "%icmp_ln194 = icmp_eq  i32 %p_load, i32 7" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:194]   --->   Operation 58 'icmp' 'icmp_ln194' <Predicate = (icmp_ln177)> <Delay = 2.11> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.11> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 59 [1/1] (2.18ns)   --->   "%add_ln197 = add i32 %p_load, i32 1" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:197]   --->   Operation 59 'add' 'add_ln197' <Predicate = (icmp_ln177)> <Delay = 2.18> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.18> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 60 [1/1] (0.77ns)   --->   "%select_ln194 = select i1 %icmp_ln194, i32 0, i32 %add_ln197" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:194]   --->   Operation 60 'select' 'select_ln194' <Predicate = (icmp_ln177)> <Delay = 0.77> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+State 2 <SV = 1> <Delay = 4.67>
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "%p_load = load i32 %empty_34" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:197]   --->   Operation 57 'load' 'p_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 58 [1/1] (1.96ns)   --->   "%icmp_ln194 = icmp_eq  i32 %p_load, i32 7" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:194]   --->   Operation 58 'icmp' 'icmp_ln194' <Predicate = (icmp_ln177)> <Delay = 1.96> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.96> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 59 [1/1] (1.89ns)   --->   "%add_ln197 = add i32 %p_load, i32 1" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:197]   --->   Operation 59 'add' 'add_ln197' <Predicate = (icmp_ln177)> <Delay = 1.89> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 60 [1/1] (0.70ns)   --->   "%select_ln194 = select i1 %icmp_ln194, i32 0, i32 %add_ln197" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:194]   --->   Operation 60 'select' 'select_ln194' <Predicate = (icmp_ln177)> <Delay = 0.70> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_2 : Operation 61 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @LAST_LINES_VITIS_LOOP_177_4_str"   --->   Operation 61 'specloopname' 'specloopname_ln0' <Predicate = (!icmp_ln176)> <Delay = 0.00>
 ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 49, i64 49, i64 49"   --->   Operation 62 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = (!icmp_ln176)> <Delay = 0.00>
-ST_2 : Operation 63 [1/1] (0.77ns)   --->   "%select_ln176_1 = select i1 %icmp_ln177, i32 %select_ln194, i32 %p_load" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:176]   --->   Operation 63 'select' 'select_ln176_1' <Predicate = (!icmp_ln176)> <Delay = 0.77> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 63 [1/1] (0.70ns)   --->   "%select_ln176_1 = select i1 %icmp_ln177, i32 %select_ln194, i32 %p_load" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:176]   --->   Operation 63 'select' 'select_ln176_1' <Predicate = (!icmp_ln176)> <Delay = 0.70> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_2 : Operation 64 [1/1] (0.00ns)   --->   "%specpipeline_ln179 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_18" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:179]   --->   Operation 64 'specpipeline' 'specpipeline_ln179' <Predicate = (!icmp_ln176)> <Delay = 0.00>
 ST_2 : Operation 65 [1/1] (0.00ns)   --->   "%specloopname_ln177 = specloopname void @_ssdm_op_SpecLoopName, void @empty_0" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:177]   --->   Operation 65 'specloopname' 'specloopname_ln177' <Predicate = (!icmp_ln176)> <Delay = 0.00>
 ST_2 : Operation 66 [2/3] (1.38ns)   --->   "%this_buff_0_load = load i11 %this_buff_0_addr" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:186]   --->   Operation 66 'load' 'this_buff_0_load' <Predicate = (!icmp_ln176 & !icmp_ln185)> <Delay = 1.38> <CoreInst = "RAM_S2P_BRAM">   --->   Core 93 'RAM_S2P_BRAM' <Latency = 2> <II = 1> <Delay = 1.38> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1924> <RAM>
@@ -156,11 +156,11 @@ ST_2 : Operation 70 [2/3] (1.38ns)   --->   "%this_buff_4_load = load i11 %this_
 ST_2 : Operation 71 [2/3] (1.38ns)   --->   "%this_buff_5_load = load i11 %this_buff_5_addr" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:186]   --->   Operation 71 'load' 'this_buff_5_load' <Predicate = (!icmp_ln176 & !icmp_ln185)> <Delay = 1.38> <CoreInst = "RAM_S2P_BRAM">   --->   Core 93 'RAM_S2P_BRAM' <Latency = 2> <II = 1> <Delay = 1.38> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1924> <RAM>
 ST_2 : Operation 72 [2/3] (1.38ns)   --->   "%this_buff_6_load = load i11 %this_buff_6_addr" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:186]   --->   Operation 72 'load' 'this_buff_6_load' <Predicate = (!icmp_ln176 & !icmp_ln185)> <Delay = 1.38> <CoreInst = "RAM_S2P_BRAM">   --->   Core 93 'RAM_S2P_BRAM' <Latency = 2> <II = 1> <Delay = 1.38> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1924> <RAM>
 ST_2 : Operation 73 [2/3] (1.38ns)   --->   "%this_buff_7_load = load i11 %this_buff_7_addr" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:186]   --->   Operation 73 'load' 'this_buff_7_load' <Predicate = (!icmp_ln176 & !icmp_ln185)> <Delay = 1.38> <CoreInst = "RAM_S2P_BRAM">   --->   Core 93 'RAM_S2P_BRAM' <Latency = 2> <II = 1> <Delay = 1.38> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1924> <RAM>
-ST_2 : Operation 74 [1/1] (1.32ns)   --->   "%store_ln177 = store i32 %select_ln176_1, i32 %empty_30" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:177]   --->   Operation 74 'store' 'store_ln177' <Predicate = (!icmp_ln176)> <Delay = 1.32>
+ST_2 : Operation 74 [1/1] (1.29ns)   --->   "%store_ln177 = store i32 %select_ln176_1, i32 %empty_34" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:177]   --->   Operation 74 'store' 'store_ln177' <Predicate = (!icmp_ln176)> <Delay = 1.29>
 ST_2 : Operation 75 [1/1] (0.00ns)   --->   "%br_ln177 = br void %for.body93" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:177]   --->   Operation 75 'br' 'br_ln177' <Predicate = (!icmp_ln176)> <Delay = 0.00>
 ST_2 : Operation 91 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 91 'ret' 'ret_ln0' <Predicate = (icmp_ln176)> <Delay = 0.00>
 
-State 3 <SV = 2> <Delay = 4.06>
+State 3 <SV = 2> <Delay = 4.04>
 ST_3 : Operation 76 [1/3] (1.38ns)   --->   "%this_buff_0_load = load i11 %this_buff_0_addr" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:186]   --->   Operation 76 'load' 'this_buff_0_load' <Predicate = (!icmp_ln185)> <Delay = 1.38> <CoreInst = "RAM_S2P_BRAM">   --->   Core 93 'RAM_S2P_BRAM' <Latency = 2> <II = 1> <Delay = 1.38> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1924> <RAM>
 ST_3 : Operation 77 [1/3] (1.38ns)   --->   "%this_buff_1_load = load i11 %this_buff_1_addr" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:186]   --->   Operation 77 'load' 'this_buff_1_load' <Predicate = (!icmp_ln185)> <Delay = 1.38> <CoreInst = "RAM_S2P_BRAM">   --->   Core 93 'RAM_S2P_BRAM' <Latency = 2> <II = 1> <Delay = 1.38> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1924> <RAM>
 ST_3 : Operation 78 [1/3] (1.38ns)   --->   "%this_buff_2_load = load i11 %this_buff_2_addr" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:186]   --->   Operation 78 'load' 'this_buff_2_load' <Predicate = (!icmp_ln185)> <Delay = 1.38> <CoreInst = "RAM_S2P_BRAM">   --->   Core 93 'RAM_S2P_BRAM' <Latency = 2> <II = 1> <Delay = 1.38> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1924> <RAM>
@@ -169,12 +169,12 @@ ST_3 : Operation 80 [1/3] (1.38ns)   --->   "%this_buff_4_load = load i11 %this_
 ST_3 : Operation 81 [1/3] (1.38ns)   --->   "%this_buff_5_load = load i11 %this_buff_5_addr" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:186]   --->   Operation 81 'load' 'this_buff_5_load' <Predicate = (!icmp_ln185)> <Delay = 1.38> <CoreInst = "RAM_S2P_BRAM">   --->   Core 93 'RAM_S2P_BRAM' <Latency = 2> <II = 1> <Delay = 1.38> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1924> <RAM>
 ST_3 : Operation 82 [1/3] (1.38ns)   --->   "%this_buff_6_load = load i11 %this_buff_6_addr" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:186]   --->   Operation 82 'load' 'this_buff_6_load' <Predicate = (!icmp_ln185)> <Delay = 1.38> <CoreInst = "RAM_S2P_BRAM">   --->   Core 93 'RAM_S2P_BRAM' <Latency = 2> <II = 1> <Delay = 1.38> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1924> <RAM>
 ST_3 : Operation 83 [1/3] (1.38ns)   --->   "%this_buff_7_load = load i11 %this_buff_7_addr" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:186]   --->   Operation 83 'load' 'this_buff_7_load' <Predicate = (!icmp_ln185)> <Delay = 1.38> <CoreInst = "RAM_S2P_BRAM">   --->   Core 93 'RAM_S2P_BRAM' <Latency = 2> <II = 1> <Delay = 1.38> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1924> <RAM>
-ST_3 : Operation 84 [1/1] (1.47ns)   --->   "%p_s = mux i16 @_ssdm_op_Mux.ap_auto.8i16.i32, i16 %this_buff_0_load, i16 %this_buff_1_load, i16 %this_buff_2_load, i16 %this_buff_3_load, i16 %this_buff_4_load, i16 %this_buff_5_load, i16 %this_buff_6_load, i16 %this_buff_7_load, i32 %select_ln176_1" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:186]   --->   Operation 84 'mux' 'p_s' <Predicate = (!icmp_ln185)> <Delay = 1.47> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.47> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 85 [1/1] (1.20ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i16P0A, i16 %LEF_Img_data157, i16 %p_s" [/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 85 'write' 'write_ln174' <Predicate = (!icmp_ln185)> <Delay = 1.20> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.18> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 3> <FIFO>
-ST_3 : Operation 86 [1/1] (1.20ns)   --->   "%InImg_data156_read = read i16 @_ssdm_op_Read.ap_fifo.volatile.i16P0A, i16 %InImg_data156" [/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 86 'read' 'InImg_data156_read' <Predicate = (!icmp_ln185)> <Delay = 1.20> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.18> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 3> <FIFO>
-ST_3 : Operation 87 [1/1] (1.20ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i16P0A, i16 %SEF_Img_data158, i16 %InImg_data156_read" [/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 87 'write' 'write_ln174' <Predicate = (!icmp_ln185)> <Delay = 1.20> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.18> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 3> <FIFO>
+ST_3 : Operation 84 [1/1] (1.46ns)   --->   "%p_s = mux i16 @_ssdm_op_Mux.ap_auto.8i16.i32, i16 %this_buff_0_load, i16 %this_buff_1_load, i16 %this_buff_2_load, i16 %this_buff_3_load, i16 %this_buff_4_load, i16 %this_buff_5_load, i16 %this_buff_6_load, i16 %this_buff_7_load, i32 %select_ln176_1" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:186]   --->   Operation 84 'mux' 'p_s' <Predicate = (!icmp_ln185)> <Delay = 1.46> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.46> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 85 [1/1] (1.20ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i16P0A, i16 %LEF_Img_data157, i16 %p_s" [/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 85 'write' 'write_ln174' <Predicate = (!icmp_ln185)> <Delay = 1.20> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 3> <FIFO>
+ST_3 : Operation 86 [1/1] (1.20ns)   --->   "%InImg_data156_read = read i16 @_ssdm_op_Read.ap_fifo.volatile.i16P0A, i16 %InImg_data156" [/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 86 'read' 'InImg_data156_read' <Predicate = (!icmp_ln185)> <Delay = 1.20> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 3> <FIFO>
+ST_3 : Operation 87 [1/1] (1.20ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i16P0A, i16 %SEF_Img_data158, i16 %InImg_data156_read" [/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 87 'write' 'write_ln174' <Predicate = (!icmp_ln185)> <Delay = 1.20> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 3> <FIFO>
 ST_3 : Operation 88 [1/1] (0.00ns)   --->   "%br_ln188 = br void %for.inc116" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:188]   --->   Operation 88 'br' 'br_ln188' <Predicate = (!icmp_ln185)> <Delay = 0.00>
-ST_3 : Operation 89 [1/1] (1.20ns)   --->   "%p_04 = read i16 @_ssdm_op_Read.ap_fifo.volatile.i16P0A, i16 %InImg_data156" [/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 89 'read' 'p_04' <Predicate = (icmp_ln185)> <Delay = 1.20> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.18> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 3> <FIFO>
+ST_3 : Operation 89 [1/1] (1.20ns)   --->   "%p_04 = read i16 @_ssdm_op_Read.ap_fifo.volatile.i16P0A, i16 %InImg_data156" [/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 89 'read' 'p_04' <Predicate = (icmp_ln185)> <Delay = 1.20> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 3> <FIFO>
 ST_3 : Operation 90 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc116"   --->   Operation 90 'br' 'br_ln0' <Predicate = (icmp_ln185)> <Delay = 0.00>
 
 
@@ -210,7 +210,7 @@ Port [ trunc_ln]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; e
 <LifeTime>
 <method=bitvector/>
 col_2                 (alloca           ) [ 0100]
-empty_30              (alloca           ) [ 0110]
+empty_34              (alloca           ) [ 0110]
 indvar_flatten        (alloca           ) [ 0100]
 specmemcore_ln0       (specmemcore      ) [ 0000]
 specmemcore_ln0       (specmemcore      ) [ 0000]
@@ -717,14 +717,14 @@ ret_ln0               (ret              ) [ 0000]
 </bind>
 </comp>
 
-<comp id="96" class="1004" name="empty_30_fu_96">
+<comp id="96" class="1004" name="empty_34_fu_96">
 <pin_list>
 <pin id="97" dir="0" index="0" bw="1" slack="0"/>
 <pin id="98" dir="1" index="1" bw="32" slack="0"/>
 </pin_list>
 <bind>
 <opcode="alloca(26) " fcode="alloca"/>
-<opset="empty_30/1 "/>
+<opset="empty_34/1 "/>
 </bind>
 </comp>
 
@@ -1304,13 +1304,13 @@ ret_ln0               (ret              ) [ 0000]
 </bind>
 </comp>
 
-<comp id="402" class="1005" name="empty_30_reg_402">
+<comp id="402" class="1005" name="empty_34_reg_402">
 <pin_list>
 <pin id="403" dir="0" index="0" bw="32" slack="0"/>
 <pin id="404" dir="1" index="1" bw="32" slack="0"/>
 </pin_list>
 <bind>
-<opset="empty_30 "/>
+<opset="empty_34 "/>
 </bind>
 </comp>
 
@@ -1772,20 +1772,20 @@ ret_ln0               (ret              ) [ 0000]
 |----------|----------------------------|---------|---------|
 | Operation|       Functional Unit      |    FF   |   LUT   |
 |----------|----------------------------|---------|---------|
-|          |      add_ln176_fu_271      |    0    |    21   |
-|    add   |      add_ln177_fu_322      |    0    |    18   |
-|          |      add_ln197_fu_347      |    0    |    39   |
-|----------|----------------------------|---------|---------|
 |          |     select_ln176_fu_286    |    0    |    11   |
 |  select  |     select_ln194_fu_353    |    0    |    32   |
 |          |    select_ln176_1_fu_361   |    0    |    32   |
 |----------|----------------------------|---------|---------|
-|          |      icmp_ln176_fu_265     |    0    |    12   |
-|   icmp   |      icmp_ln177_fu_280     |    0    |    11   |
-|          |      icmp_ln185_fu_316     |    0    |    11   |
-|          |      icmp_ln194_fu_341     |    0    |    18   |
+|          |      add_ln176_fu_271      |    0    |    14   |
+|    add   |      add_ln177_fu_322      |    0    |    11   |
+|          |      add_ln197_fu_347      |    0    |    32   |
 |----------|----------------------------|---------|---------|
 |    mux   |         p_s_fu_373         |    0    |    33   |
+|----------|----------------------------|---------|---------|
+|          |      icmp_ln176_fu_265     |    0    |    6    |
+|   icmp   |      icmp_ln177_fu_280     |    0    |    5    |
+|          |      icmp_ln185_fu_316     |    0    |    4    |
+|          |      icmp_ln194_fu_341     |    0    |    12   |
 |----------|----------------------------|---------|---------|
 |          |  trunc_ln_read_read_fu_104 |    0    |    0    |
 |   read   | sub_ln176_read_read_fu_110 |    0    |    0    |
@@ -1799,7 +1799,7 @@ ret_ln0               (ret              ) [ 0000]
 |----------|----------------------------|---------|---------|
 |partselect|        tmp_2_fu_306        |    0    |    0    |
 |----------|----------------------------|---------|---------|
-|   Total  |                            |    0    |   238   |
+|   Total  |                            |    0    |   192   |
 |----------|----------------------------|---------|---------|
 
 Memories:
@@ -1810,7 +1810,7 @@ N/A
 |                        |   FF   |
 +------------------------+--------+
 |      col_2_reg_395     |   11   |
-|    empty_30_reg_402    |   32   |
+|    empty_34_reg_402    |   32   |
 |   icmp_ln176_reg_416   |    1   |
 |   icmp_ln177_reg_420   |    1   |
 |   icmp_ln185_reg_425   |    1   |
@@ -1841,7 +1841,7 @@ N/A
 | grp_access_fu_235 |  p0  |   2  |  11  |   22   ||    9    |
 | grp_access_fu_241 |  p0  |   2  |  11  |   22   ||    9    |
 |-------------------|------|------|------|--------||---------||---------|
-|       Total       |      |      |      |   176  ||  10.592 ||    72   |
+|       Total       |      |      |      |   176  ||  10.384 ||    72   |
 |-------------------|------|------|------|--------||---------||---------|
 
 
@@ -1850,10 +1850,10 @@ N/A
 +-----------+--------+--------+--------+
 |           |  Delay |   FF   |   LUT  |
 +-----------+--------+--------+--------+
-|  Function |    -   |    0   |   238  |
+|  Function |    -   |    0   |   192  |
 |   Memory  |    -   |    -   |    -   |
 |Multiplexer|   10   |    -   |   72   |
 |  Register |    -   |   180  |    -   |
 +-----------+--------+--------+--------+
-|   Total   |   10   |   180  |   310  |
+|   Total   |   10   |   180  |   264  |
 +-----------+--------+--------+--------+

@@ -3,13 +3,13 @@
 ================================================================
 == Vitis HLS Report for 'extract'
 ================================================================
-* Date:           Sun Sep  4 18:21:50 2022
+* Date:           Sun Sep  4 20:23:20 2022
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
 * Project:        hud3.prj
 * Solution:       sol1 (Vivado IP Flow Target)
-* Product family: artix7
-* Target device:  xc7a200t-fbg676-2
+* Product family: zynq
+* Target device:  xc7z045-ffg900-2
 
 
 ================================================================
@@ -20,7 +20,7 @@
     +--------+---------+----------+------------+
     |  Clock |  Target | Estimated| Uncertainty|
     +--------+---------+----------+------------+
-    |ap_clk  |  3.30 ns|  5.440 ns|     0.89 ns|
+    |ap_clk  |  3.30 ns|  5.454 ns|     0.89 ns|
     +--------+---------+----------+------------+
 
 + Latency: 
@@ -41,7 +41,7 @@
         |grp_extract_Pipeline_VITIS_LOOP_113_1_fu_116             |extract_Pipeline_VITIS_LOOP_113_1             |        9|        9|  29.700 ns|  29.700 ns|    9|     9|       no|
         |grp_extract_Pipeline_VITIS_LOOP_133_2_fu_138             |extract_Pipeline_VITIS_LOOP_133_2             |        3|     2154|   9.900 ns|   7.108 us|    3|  2154|       no|
         |grp_extract_Pipeline_VITIS_LOOP_145_3_fu_162             |extract_Pipeline_VITIS_LOOP_145_3             |        5|     2156|  16.500 ns|   7.115 us|    5|  2156|       no|
-        |grp_extract_Pipeline_LAST_LINES_VITIS_LOOP_177_4_fu_190  |extract_Pipeline_LAST_LINES_VITIS_LOOP_177_4  |       52|       52|   0.283 us|   0.283 us|   52|    52|       no|
+        |grp_extract_Pipeline_LAST_LINES_VITIS_LOOP_177_4_fu_190  |extract_Pipeline_LAST_LINES_VITIS_LOOP_177_4  |       52|       52|   0.284 us|   0.284 us|   52|    52|       no|
         +---------------------------------------------------------+----------------------------------------------+---------+---------+-----------+-----------+-----+------+---------+
 
         * Loop: 
@@ -63,18 +63,18 @@
 |       Name      | BRAM_18K| DSP |   FF   |   LUT  | URAM|
 +-----------------+---------+-----+--------+--------+-----+
 |DSP              |        -|    -|       -|       -|    -|
-|Expression       |        -|    -|       0|     262|    -|
+|Expression       |        -|    -|       0|     195|    -|
 |FIFO             |        -|    -|       -|       -|    -|
-|Instance         |        -|    -|     359|     664|    -|
+|Instance         |        -|    -|     359|     566|    -|
 |Memory           |        -|    -|       -|       -|    -|
 |Multiplexer      |        -|    -|       -|     744|    -|
 |Register         |        -|    -|     237|       -|    -|
 +-----------------+---------+-----+--------+--------+-----+
-|Total            |        0|    0|     596|    1670|    0|
+|Total            |        0|    0|     596|    1505|    0|
 +-----------------+---------+-----+--------+--------+-----+
-|Available        |      730|  740|  269200|  134600|    0|
+|Available        |     1090|  900|  437200|  218600|    0|
 +-----------------+---------+-----+--------+--------+-----+
-|Utilization (%)  |        0|    0|      ~0|       1|    0|
+|Utilization (%)  |        0|    0|      ~0|      ~0|    0|
 +-----------------+---------+-----+--------+--------+-----+
 
 + Detail: 
@@ -82,12 +82,12 @@
     +---------------------------------------------------------+----------------------------------------------+---------+----+-----+-----+-----+
     |                         Instance                        |                    Module                    | BRAM_18K| DSP|  FF | LUT | URAM|
     +---------------------------------------------------------+----------------------------------------------+---------+----+-----+-----+-----+
-    |grp_extract_Pipeline_LAST_LINES_VITIS_LOOP_177_4_fu_190  |extract_Pipeline_LAST_LINES_VITIS_LOOP_177_4  |        0|   0|   98|  334|    0|
-    |grp_extract_Pipeline_VITIS_LOOP_113_1_fu_116             |extract_Pipeline_VITIS_LOOP_113_1             |        0|   0|   25|   78|    0|
-    |grp_extract_Pipeline_VITIS_LOOP_133_2_fu_138             |extract_Pipeline_VITIS_LOOP_133_2             |        0|   0|   25|   78|    0|
-    |grp_extract_Pipeline_VITIS_LOOP_145_3_fu_162             |extract_Pipeline_VITIS_LOOP_145_3             |        0|   0|  211|  174|    0|
+    |grp_extract_Pipeline_LAST_LINES_VITIS_LOOP_177_4_fu_190  |extract_Pipeline_LAST_LINES_VITIS_LOOP_177_4  |        0|   0|   98|  286|    0|
+    |grp_extract_Pipeline_VITIS_LOOP_113_1_fu_116             |extract_Pipeline_VITIS_LOOP_113_1             |        0|   0|   25|   64|    0|
+    |grp_extract_Pipeline_VITIS_LOOP_133_2_fu_138             |extract_Pipeline_VITIS_LOOP_133_2             |        0|   0|   25|   64|    0|
+    |grp_extract_Pipeline_VITIS_LOOP_145_3_fu_162             |extract_Pipeline_VITIS_LOOP_145_3             |        0|   0|  211|  152|    0|
     +---------------------------------------------------------+----------------------------------------------+---------+----+-----+-----+-----+
-    |Total                                                    |                                              |        0|   0|  359|  664|    0|
+    |Total                                                    |                                              |        0|   0|  359|  566|    0|
     +---------------------------------------------------------+----------------------------------------------+---------+----+-----+-----+-----+
 
     * DSP: 
@@ -103,21 +103,21 @@
     +---------------------------------+----------+----+---+----+------------+------------+
     |          Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +---------------------------------+----------+----+---+----+------------+------------+
-    |add_ln125_fu_263_p2              |         +|   0|  0|  11|           3|           1|
-    |add_ln165_fu_323_p2              |         +|   0|  0|  39|          32|           1|
-    |add_ln170_fu_346_p2              |         +|   0|  0|  39|          32|           1|
-    |row_3_fu_329_p2                  |         +|   0|  0|  19|          12|           1|
-    |sub_ln176_fu_306_p2              |         -|   0|  0|  21|          14|          14|
-    |ap_block_state4_on_subcall_done  |       and|   0|  0|   2|           1|           1|
-    |icmp_ln112_fu_257_p2             |      icmp|   0|  0|   8|           3|           2|
-    |icmp_ln113_fu_243_p2             |      icmp|   0|  0|  11|          11|           1|
-    |icmp_ln131_fu_291_p2             |      icmp|   0|  0|  12|          12|          12|
-    |icmp_ln162_fu_317_p2             |      icmp|   0|  0|  18|          32|           3|
-    |icmp_ln167_fu_340_p2             |      icmp|   0|  0|  18|          32|           3|
+    |add_ln125_fu_263_p2              |         +|   0|  0|   4|           3|           1|
+    |add_ln165_fu_323_p2              |         +|   0|  0|  32|          32|           1|
+    |add_ln170_fu_346_p2              |         +|   0|  0|  32|          32|           1|
+    |row_3_fu_329_p2                  |         +|   0|  0|  12|          12|           1|
+    |sub_ln176_fu_306_p2              |         -|   0|  0|  14|          14|          14|
+    |ap_block_state4_on_subcall_done  |       and|   0|  0|   1|           1|           1|
+    |icmp_ln112_fu_257_p2             |      icmp|   0|  0|   2|           3|           2|
+    |icmp_ln113_fu_243_p2             |      icmp|   0|  0|   5|          11|           1|
+    |icmp_ln131_fu_291_p2             |      icmp|   0|  0|   5|          12|          12|
+    |icmp_ln162_fu_317_p2             |      icmp|   0|  0|  12|          32|           3|
+    |icmp_ln167_fu_340_p2             |      icmp|   0|  0|  12|          32|           3|
     |select_ln162_fu_334_p3           |    select|   0|  0|  32|           1|           1|
     |select_ln167_fu_361_p3           |    select|   0|  0|  32|           1|           1|
     +---------------------------------+----------+----+---+----+------------+------------+
-    |Total                            |          |   0|  0| 262|         186|          42|
+    |Total                            |          |   0|  0| 195|         186|          42|
     +---------------------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 

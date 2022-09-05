@@ -204,7 +204,7 @@ entry:5 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %LE
 
 <Node id="17" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="1" op_3_bw="1" op_4_bw="1" op_5_bw="2" op_6_bw="2" op_7_bw="16" op_8_bw="0" op_9_bw="32" op_10_bw="32" op_11_bw="0" op_12_bw="32" op_13_bw="32" op_14_bw="0" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32" op_19_bw="32" op_20_bw="32" op_21_bw="0" op_22_bw="0" op_23_bw="32" op_24_bw="32">
 <![CDATA[
-entry:6 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %lef_ptr_V_dest_V, i1 %lef_ptr_V_id_V, i1 %lef_ptr_V_last_V, i1 %lef_ptr_V_user_V, i2 %lef_ptr_V_strb_V, i2 %lef_ptr_V_keep_V, i16 %lef_ptr_V_data_V, void @empty_20, i32 1, i32 1, void @empty_19, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0
+entry:6 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %m_axis_video_lef_V_dest_V, i1 %m_axis_video_lef_V_id_V, i1 %m_axis_video_lef_V_last_V, i1 %m_axis_video_lef_V_user_V, i2 %m_axis_video_lef_V_strb_V, i2 %m_axis_video_lef_V_keep_V, i16 %m_axis_video_lef_V_data_V, void @empty_20, i32 1, i32 1, void @empty_19, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -423,7 +423,7 @@ for.body6.preheader:1 %empty = wait i32 @_ssdm_op_Wait
 
 <Node id="37" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="11" op_3_bw="12" op_4_bw="16" op_5_bw="16" op_6_bw="2" op_7_bw="2" op_8_bw="1" op_9_bw="1" op_10_bw="1" op_11_bw="1" op_12_bw="0">
 <![CDATA[
-for.body6.preheader:2 %call_ln109 = call void @GRAYMat2AXIvideo<0, 2160, 3840, 2, 3>_Pipeline_loop_col_mat2axi, i1 %sof_load, i11 %cols, i12 %sub, i16 %LEF_Img_data157, i16 %lef_ptr_V_data_V, i2 %lef_ptr_V_keep_V, i2 %lef_ptr_V_strb_V, i1 %lef_ptr_V_user_V, i1 %lef_ptr_V_last_V, i1 %lef_ptr_V_id_V, i1 %lef_ptr_V_dest_V
+for.body6.preheader:2 %call_ln109 = call void @GRAYMat2AXIvideo<0, 2160, 3840, 2, 3>_Pipeline_loop_col_mat2axi, i1 %sof_load, i11 %cols, i12 %sub, i16 %LEF_Img_data157, i16 %m_axis_video_lef_V_data_V, i2 %m_axis_video_lef_V_keep_V, i2 %m_axis_video_lef_V_strb_V, i1 %m_axis_video_lef_V_user_V, i1 %m_axis_video_lef_V_last_V, i1 %m_axis_video_lef_V_id_V, i1 %m_axis_video_lef_V_dest_V
 
 ]]></Node>
 <StgValue><ssdm name="call_ln109"/></StgValue>
@@ -442,7 +442,7 @@ for.body6.preheader:2 %call_ln109 = call void @GRAYMat2AXIvideo<0, 2160, 3840, 2
 
 <Node id="37" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="11" op_3_bw="12" op_4_bw="16" op_5_bw="16" op_6_bw="2" op_7_bw="2" op_8_bw="1" op_9_bw="1" op_10_bw="1" op_11_bw="1" op_12_bw="0">
 <![CDATA[
-for.body6.preheader:2 %call_ln109 = call void @GRAYMat2AXIvideo<0, 2160, 3840, 2, 3>_Pipeline_loop_col_mat2axi, i1 %sof_load, i11 %cols, i12 %sub, i16 %LEF_Img_data157, i16 %lef_ptr_V_data_V, i2 %lef_ptr_V_keep_V, i2 %lef_ptr_V_strb_V, i1 %lef_ptr_V_user_V, i1 %lef_ptr_V_last_V, i1 %lef_ptr_V_id_V, i1 %lef_ptr_V_dest_V
+for.body6.preheader:2 %call_ln109 = call void @GRAYMat2AXIvideo<0, 2160, 3840, 2, 3>_Pipeline_loop_col_mat2axi, i1 %sof_load, i11 %cols, i12 %sub, i16 %LEF_Img_data157, i16 %m_axis_video_lef_V_data_V, i2 %m_axis_video_lef_V_keep_V, i2 %m_axis_video_lef_V_strb_V, i1 %m_axis_video_lef_V_user_V, i1 %m_axis_video_lef_V_last_V, i1 %m_axis_video_lef_V_id_V, i1 %m_axis_video_lef_V_dest_V
 
 ]]></Node>
 <StgValue><ssdm name="call_ln109"/></StgValue>
@@ -541,26 +541,26 @@ for.end42.loopexit:0 %ret_ln164 = ret
 <port id="46" name="LEF_Img_data157" dir="0" iftype="3">
 <core>NULL</core><StgValue><ssdm name="LEF_Img_data157"/></StgValue>
 </port>
-<port id="47" name="lef_ptr_V_data_V" dir="1" iftype="0">
-<core>NULL</core><StgValue><ssdm name="lef_ptr_V_data_V"/></StgValue>
+<port id="47" name="m_axis_video_lef_V_data_V" dir="1" iftype="0">
+<core>NULL</core><StgValue><ssdm name="m_axis_video_lef_V_data_V"/></StgValue>
 </port>
-<port id="48" name="lef_ptr_V_keep_V" dir="1" iftype="0">
-<core>NULL</core><StgValue><ssdm name="lef_ptr_V_keep_V"/></StgValue>
+<port id="48" name="m_axis_video_lef_V_keep_V" dir="1" iftype="0">
+<core>NULL</core><StgValue><ssdm name="m_axis_video_lef_V_keep_V"/></StgValue>
 </port>
-<port id="49" name="lef_ptr_V_strb_V" dir="1" iftype="0">
-<core>NULL</core><StgValue><ssdm name="lef_ptr_V_strb_V"/></StgValue>
+<port id="49" name="m_axis_video_lef_V_strb_V" dir="1" iftype="0">
+<core>NULL</core><StgValue><ssdm name="m_axis_video_lef_V_strb_V"/></StgValue>
 </port>
-<port id="50" name="lef_ptr_V_user_V" dir="1" iftype="0">
-<core>NULL</core><StgValue><ssdm name="lef_ptr_V_user_V"/></StgValue>
+<port id="50" name="m_axis_video_lef_V_user_V" dir="1" iftype="0">
+<core>NULL</core><StgValue><ssdm name="m_axis_video_lef_V_user_V"/></StgValue>
 </port>
-<port id="51" name="lef_ptr_V_last_V" dir="1" iftype="0">
-<core>NULL</core><StgValue><ssdm name="lef_ptr_V_last_V"/></StgValue>
+<port id="51" name="m_axis_video_lef_V_last_V" dir="1" iftype="0">
+<core>NULL</core><StgValue><ssdm name="m_axis_video_lef_V_last_V"/></StgValue>
 </port>
-<port id="52" name="lef_ptr_V_id_V" dir="1" iftype="0">
-<core>NULL</core><StgValue><ssdm name="lef_ptr_V_id_V"/></StgValue>
+<port id="52" name="m_axis_video_lef_V_id_V" dir="1" iftype="0">
+<core>NULL</core><StgValue><ssdm name="m_axis_video_lef_V_id_V"/></StgValue>
 </port>
-<port id="53" name="lef_ptr_V_dest_V" dir="1" iftype="0">
-<core>NULL</core><StgValue><ssdm name="lef_ptr_V_dest_V"/></StgValue>
+<port id="53" name="m_axis_video_lef_V_dest_V" dir="1" iftype="0">
+<core>NULL</core><StgValue><ssdm name="m_axis_video_lef_V_dest_V"/></StgValue>
 </port>
 </ports>
 
@@ -672,19 +672,19 @@ for.end42.loopexit:0 %ret_ln164 = ret
 </dataflow>
 <dataflow id="123" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="72" toId="16">
 </dataflow>
-<dataflow id="124" from="lef_ptr_V_dest_V" to="specinterface_ln0" fromId="53" toId="16">
+<dataflow id="124" from="m_axis_video_lef_V_dest_V" to="specinterface_ln0" fromId="53" toId="16">
 </dataflow>
-<dataflow id="125" from="lef_ptr_V_id_V" to="specinterface_ln0" fromId="52" toId="16">
+<dataflow id="125" from="m_axis_video_lef_V_id_V" to="specinterface_ln0" fromId="52" toId="16">
 </dataflow>
-<dataflow id="126" from="lef_ptr_V_last_V" to="specinterface_ln0" fromId="51" toId="16">
+<dataflow id="126" from="m_axis_video_lef_V_last_V" to="specinterface_ln0" fromId="51" toId="16">
 </dataflow>
-<dataflow id="127" from="lef_ptr_V_user_V" to="specinterface_ln0" fromId="50" toId="16">
+<dataflow id="127" from="m_axis_video_lef_V_user_V" to="specinterface_ln0" fromId="50" toId="16">
 </dataflow>
-<dataflow id="128" from="lef_ptr_V_strb_V" to="specinterface_ln0" fromId="49" toId="16">
+<dataflow id="128" from="m_axis_video_lef_V_strb_V" to="specinterface_ln0" fromId="49" toId="16">
 </dataflow>
-<dataflow id="129" from="lef_ptr_V_keep_V" to="specinterface_ln0" fromId="48" toId="16">
+<dataflow id="129" from="m_axis_video_lef_V_keep_V" to="specinterface_ln0" fromId="48" toId="16">
 </dataflow>
-<dataflow id="130" from="lef_ptr_V_data_V" to="specinterface_ln0" fromId="47" toId="16">
+<dataflow id="130" from="m_axis_video_lef_V_data_V" to="specinterface_ln0" fromId="47" toId="16">
 </dataflow>
 <dataflow id="132" from="empty_20" to="specinterface_ln0" fromId="131" toId="16">
 </dataflow>
@@ -770,19 +770,19 @@ for.end42.loopexit:0 %ret_ln164 = ret
 </dataflow>
 <dataflow id="184" from="LEF_Img_data157" to="call_ln109" fromId="46" toId="30">
 </dataflow>
-<dataflow id="185" from="lef_ptr_V_data_V" to="call_ln109" fromId="47" toId="30">
+<dataflow id="185" from="m_axis_video_lef_V_data_V" to="call_ln109" fromId="47" toId="30">
 </dataflow>
-<dataflow id="186" from="lef_ptr_V_keep_V" to="call_ln109" fromId="48" toId="30">
+<dataflow id="186" from="m_axis_video_lef_V_keep_V" to="call_ln109" fromId="48" toId="30">
 </dataflow>
-<dataflow id="187" from="lef_ptr_V_strb_V" to="call_ln109" fromId="49" toId="30">
+<dataflow id="187" from="m_axis_video_lef_V_strb_V" to="call_ln109" fromId="49" toId="30">
 </dataflow>
-<dataflow id="188" from="lef_ptr_V_user_V" to="call_ln109" fromId="50" toId="30">
+<dataflow id="188" from="m_axis_video_lef_V_user_V" to="call_ln109" fromId="50" toId="30">
 </dataflow>
-<dataflow id="189" from="lef_ptr_V_last_V" to="call_ln109" fromId="51" toId="30">
+<dataflow id="189" from="m_axis_video_lef_V_last_V" to="call_ln109" fromId="51" toId="30">
 </dataflow>
-<dataflow id="190" from="lef_ptr_V_id_V" to="call_ln109" fromId="52" toId="30">
+<dataflow id="190" from="m_axis_video_lef_V_id_V" to="call_ln109" fromId="52" toId="30">
 </dataflow>
-<dataflow id="191" from="lef_ptr_V_dest_V" to="call_ln109" fromId="53" toId="30">
+<dataflow id="191" from="m_axis_video_lef_V_dest_V" to="call_ln109" fromId="53" toId="30">
 </dataflow>
 <dataflow id="192" from="GRAYMat2AXIvideo<0, 2160, 3840, 2, 3>_Pipeline_loop_col_mat2axi" to="call_ln109" fromId="179" toId="31">
 </dataflow>
@@ -794,19 +794,19 @@ for.end42.loopexit:0 %ret_ln164 = ret
 </dataflow>
 <dataflow id="196" from="LEF_Img_data157" to="call_ln109" fromId="46" toId="31">
 </dataflow>
-<dataflow id="197" from="lef_ptr_V_data_V" to="call_ln109" fromId="47" toId="31">
+<dataflow id="197" from="m_axis_video_lef_V_data_V" to="call_ln109" fromId="47" toId="31">
 </dataflow>
-<dataflow id="198" from="lef_ptr_V_keep_V" to="call_ln109" fromId="48" toId="31">
+<dataflow id="198" from="m_axis_video_lef_V_keep_V" to="call_ln109" fromId="48" toId="31">
 </dataflow>
-<dataflow id="199" from="lef_ptr_V_strb_V" to="call_ln109" fromId="49" toId="31">
+<dataflow id="199" from="m_axis_video_lef_V_strb_V" to="call_ln109" fromId="49" toId="31">
 </dataflow>
-<dataflow id="200" from="lef_ptr_V_user_V" to="call_ln109" fromId="50" toId="31">
+<dataflow id="200" from="m_axis_video_lef_V_user_V" to="call_ln109" fromId="50" toId="31">
 </dataflow>
-<dataflow id="201" from="lef_ptr_V_last_V" to="call_ln109" fromId="51" toId="31">
+<dataflow id="201" from="m_axis_video_lef_V_last_V" to="call_ln109" fromId="51" toId="31">
 </dataflow>
-<dataflow id="202" from="lef_ptr_V_id_V" to="call_ln109" fromId="52" toId="31">
+<dataflow id="202" from="m_axis_video_lef_V_id_V" to="call_ln109" fromId="52" toId="31">
 </dataflow>
-<dataflow id="203" from="lef_ptr_V_dest_V" to="call_ln109" fromId="53" toId="31">
+<dataflow id="203" from="m_axis_video_lef_V_dest_V" to="call_ln109" fromId="53" toId="31">
 </dataflow>
 <dataflow id="205" from="StgValue_204" to="store_ln0" fromId="204" toId="32">
 </dataflow>

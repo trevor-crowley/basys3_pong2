@@ -40,7 +40,7 @@ newFuncRoot:0 %j = alloca i32 1
 
 <Node id="13" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="2" op_3_bw="2" op_4_bw="1" op_5_bw="1" op_6_bw="1" op_7_bw="1" op_8_bw="0" op_9_bw="32" op_10_bw="32" op_11_bw="0" op_12_bw="32" op_13_bw="32" op_14_bw="0" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32" op_19_bw="32" op_20_bw="32" op_21_bw="0" op_22_bw="0" op_23_bw="32" op_24_bw="32">
 <![CDATA[
-newFuncRoot:1 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %sef_ptr_V_data_V, i2 %sef_ptr_V_keep_V, i2 %sef_ptr_V_strb_V, i1 %sef_ptr_V_user_V, i1 %sef_ptr_V_last_V, i1 %sef_ptr_V_id_V, i1 %sef_ptr_V_dest_V, void @empty_20, i32 0, i32 0, void @empty_19, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0
+newFuncRoot:1 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %m_axis_video_sef_V_data_V, i2 %m_axis_video_sef_V_keep_V, i2 %m_axis_video_sef_V_strb_V, i1 %m_axis_video_sef_V_user_V, i1 %m_axis_video_sef_V_last_V, i1 %m_axis_video_sef_V_id_V, i1 %m_axis_video_sef_V_dest_V, void @empty_20, i32 0, i32 0, void @empty_19, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -350,7 +350,7 @@ for.body6.split:3 %tmp_V = read i16 @_ssdm_op_Read.ap_fifo.volatile.i16P0A, i16 
 
 <Node id="33" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="2" op_3_bw="2" op_4_bw="1" op_5_bw="1" op_6_bw="1" op_7_bw="1" op_8_bw="16" op_9_bw="2" op_10_bw="2" op_11_bw="1" op_12_bw="1" op_13_bw="1" op_14_bw="1">
 <![CDATA[
-for.body6.split:4 %write_ln304 = write void @_ssdm_op_Write.axis.volatile.i16P0A.i2P0A.i2P0A.i1P0A.i1P0A.i1P0A.i1P0A, i16 %sef_ptr_V_data_V, i2 %sef_ptr_V_keep_V, i2 %sef_ptr_V_strb_V, i1 %sef_ptr_V_user_V, i1 %sef_ptr_V_last_V, i1 %sef_ptr_V_id_V, i1 %sef_ptr_V_dest_V, i16 %tmp_V, i2 3, i2 0, i1 %sof_4, i1 %axi_last_V, i1 0, i1 0
+for.body6.split:4 %write_ln304 = write void @_ssdm_op_Write.axis.volatile.i16P0A.i2P0A.i2P0A.i1P0A.i1P0A.i1P0A.i1P0A, i16 %m_axis_video_sef_V_data_V, i2 %m_axis_video_sef_V_keep_V, i2 %m_axis_video_sef_V_strb_V, i1 %m_axis_video_sef_V_user_V, i1 %m_axis_video_sef_V_last_V, i1 %m_axis_video_sef_V_id_V, i1 %m_axis_video_sef_V_dest_V, i16 %tmp_V, i2 3, i2 0, i1 %sof_4, i1 %axi_last_V, i1 0, i1 0
 
 ]]></Node>
 <StgValue><ssdm name="write_ln304"/></StgValue>

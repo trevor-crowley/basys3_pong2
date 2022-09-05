@@ -13,24 +13,24 @@ set hasInterrupt 0
 set C_modelName {AXIVideo2BayerMat<0, 4320, 3848, 2, 3>_Pipeline_loop_start_hunt}
 set C_modelType { void 0 }
 set C_modelArgList {
-	{ in_ptr_V_data_V int 16 regular {axi_s 0 volatile  { in_ptr Data } }  }
-	{ in_ptr_V_keep_V int 2 regular {axi_s 0 volatile  { in_ptr Keep } }  }
-	{ in_ptr_V_strb_V int 2 regular {axi_s 0 volatile  { in_ptr Strb } }  }
-	{ in_ptr_V_user_V int 1 regular {axi_s 0 volatile  { in_ptr User } }  }
-	{ in_ptr_V_last_V int 1 regular {axi_s 0 volatile  { in_ptr Last } }  }
-	{ in_ptr_V_id_V int 1 regular {axi_s 0 volatile  { in_ptr ID } }  }
-	{ in_ptr_V_dest_V int 1 regular {axi_s 0 volatile  { in_ptr Dest } }  }
+	{ s_axi_video_V_data_V int 16 regular {axi_s 0 volatile  { s_axi_video Data } }  }
+	{ s_axi_video_V_keep_V int 2 regular {axi_s 0 volatile  { s_axi_video Keep } }  }
+	{ s_axi_video_V_strb_V int 2 regular {axi_s 0 volatile  { s_axi_video Strb } }  }
+	{ s_axi_video_V_user_V int 1 regular {axi_s 0 volatile  { s_axi_video User } }  }
+	{ s_axi_video_V_last_V int 1 regular {axi_s 0 volatile  { s_axi_video Last } }  }
+	{ s_axi_video_V_id_V int 1 regular {axi_s 0 volatile  { s_axi_video ID } }  }
+	{ s_axi_video_V_dest_V int 1 regular {axi_s 0 volatile  { s_axi_video Dest } }  }
 	{ axi_last_V_out int 1 regular {pointer 1}  }
 	{ axi_data_V_out int 16 regular {pointer 1}  }
 }
 set C_modelArgMapList {[ 
-	{ "Name" : "in_ptr_V_data_V", "interface" : "axis", "bitwidth" : 16, "direction" : "READONLY"} , 
- 	{ "Name" : "in_ptr_V_keep_V", "interface" : "axis", "bitwidth" : 2, "direction" : "READONLY"} , 
- 	{ "Name" : "in_ptr_V_strb_V", "interface" : "axis", "bitwidth" : 2, "direction" : "READONLY"} , 
- 	{ "Name" : "in_ptr_V_user_V", "interface" : "axis", "bitwidth" : 1, "direction" : "READONLY"} , 
- 	{ "Name" : "in_ptr_V_last_V", "interface" : "axis", "bitwidth" : 1, "direction" : "READONLY"} , 
- 	{ "Name" : "in_ptr_V_id_V", "interface" : "axis", "bitwidth" : 1, "direction" : "READONLY"} , 
- 	{ "Name" : "in_ptr_V_dest_V", "interface" : "axis", "bitwidth" : 1, "direction" : "READONLY"} , 
+	{ "Name" : "s_axi_video_V_data_V", "interface" : "axis", "bitwidth" : 16, "direction" : "READONLY"} , 
+ 	{ "Name" : "s_axi_video_V_keep_V", "interface" : "axis", "bitwidth" : 2, "direction" : "READONLY"} , 
+ 	{ "Name" : "s_axi_video_V_strb_V", "interface" : "axis", "bitwidth" : 2, "direction" : "READONLY"} , 
+ 	{ "Name" : "s_axi_video_V_user_V", "interface" : "axis", "bitwidth" : 1, "direction" : "READONLY"} , 
+ 	{ "Name" : "s_axi_video_V_last_V", "interface" : "axis", "bitwidth" : 1, "direction" : "READONLY"} , 
+ 	{ "Name" : "s_axi_video_V_id_V", "interface" : "axis", "bitwidth" : 1, "direction" : "READONLY"} , 
+ 	{ "Name" : "s_axi_video_V_dest_V", "interface" : "axis", "bitwidth" : 1, "direction" : "READONLY"} , 
  	{ "Name" : "axi_last_V_out", "interface" : "wire", "bitwidth" : 1, "direction" : "WRITEONLY"} , 
  	{ "Name" : "axi_data_V_out", "interface" : "wire", "bitwidth" : 16, "direction" : "WRITEONLY"} ]}
 # RTL Port declarations: 
@@ -42,15 +42,15 @@ set portList {
 	{ ap_done sc_out sc_logic 1 predone -1 } 
 	{ ap_idle sc_out sc_logic 1 done -1 } 
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
-	{ in_ptr_TVALID sc_in sc_logic 1 invld 0 } 
-	{ in_ptr_TDATA sc_in sc_lv 16 signal 0 } 
-	{ in_ptr_TREADY sc_out sc_logic 1 inacc 6 } 
-	{ in_ptr_TKEEP sc_in sc_lv 2 signal 1 } 
-	{ in_ptr_TSTRB sc_in sc_lv 2 signal 2 } 
-	{ in_ptr_TUSER sc_in sc_lv 1 signal 3 } 
-	{ in_ptr_TLAST sc_in sc_lv 1 signal 4 } 
-	{ in_ptr_TID sc_in sc_lv 1 signal 5 } 
-	{ in_ptr_TDEST sc_in sc_lv 1 signal 6 } 
+	{ s_axi_video_TVALID sc_in sc_logic 1 invld 0 } 
+	{ s_axi_video_TDATA sc_in sc_lv 16 signal 0 } 
+	{ s_axi_video_TREADY sc_out sc_logic 1 inacc 6 } 
+	{ s_axi_video_TKEEP sc_in sc_lv 2 signal 1 } 
+	{ s_axi_video_TSTRB sc_in sc_lv 2 signal 2 } 
+	{ s_axi_video_TUSER sc_in sc_lv 1 signal 3 } 
+	{ s_axi_video_TLAST sc_in sc_lv 1 signal 4 } 
+	{ s_axi_video_TID sc_in sc_lv 1 signal 5 } 
+	{ s_axi_video_TDEST sc_in sc_lv 1 signal 6 } 
 	{ axi_last_V_out sc_out sc_lv 1 signal 7 } 
 	{ axi_last_V_out_ap_vld sc_out sc_logic 1 outvld 7 } 
 	{ axi_data_V_out sc_out sc_lv 16 signal 8 } 
@@ -63,15 +63,15 @@ set NewPortList {[
  	{ "name": "ap_done", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "predone", "bundle":{"name": "ap_done", "role": "default" }} , 
  	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
- 	{ "name": "in_ptr_TVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "invld", "bundle":{"name": "in_ptr_V_data_V", "role": "default" }} , 
- 	{ "name": "in_ptr_TDATA", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "in_ptr_V_data_V", "role": "default" }} , 
- 	{ "name": "in_ptr_TREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "inacc", "bundle":{"name": "in_ptr_V_dest_V", "role": "default" }} , 
- 	{ "name": "in_ptr_TKEEP", "direction": "in", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "in_ptr_V_keep_V", "role": "default" }} , 
- 	{ "name": "in_ptr_TSTRB", "direction": "in", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "in_ptr_V_strb_V", "role": "default" }} , 
- 	{ "name": "in_ptr_TUSER", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "in_ptr_V_user_V", "role": "default" }} , 
- 	{ "name": "in_ptr_TLAST", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "in_ptr_V_last_V", "role": "default" }} , 
- 	{ "name": "in_ptr_TID", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "in_ptr_V_id_V", "role": "default" }} , 
- 	{ "name": "in_ptr_TDEST", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "in_ptr_V_dest_V", "role": "default" }} , 
+ 	{ "name": "s_axi_video_TVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "invld", "bundle":{"name": "s_axi_video_V_data_V", "role": "default" }} , 
+ 	{ "name": "s_axi_video_TDATA", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "s_axi_video_V_data_V", "role": "default" }} , 
+ 	{ "name": "s_axi_video_TREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "inacc", "bundle":{"name": "s_axi_video_V_dest_V", "role": "default" }} , 
+ 	{ "name": "s_axi_video_TKEEP", "direction": "in", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "s_axi_video_V_keep_V", "role": "default" }} , 
+ 	{ "name": "s_axi_video_TSTRB", "direction": "in", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "s_axi_video_V_strb_V", "role": "default" }} , 
+ 	{ "name": "s_axi_video_TUSER", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "s_axi_video_V_user_V", "role": "default" }} , 
+ 	{ "name": "s_axi_video_TLAST", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "s_axi_video_V_last_V", "role": "default" }} , 
+ 	{ "name": "s_axi_video_TID", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "s_axi_video_V_id_V", "role": "default" }} , 
+ 	{ "name": "s_axi_video_TDEST", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "s_axi_video_V_dest_V", "role": "default" }} , 
  	{ "name": "axi_last_V_out", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "axi_last_V_out", "role": "default" }} , 
  	{ "name": "axi_last_V_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "axi_last_V_out", "role": "ap_vld" }} , 
  	{ "name": "axi_data_V_out", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "axi_data_V_out", "role": "default" }} , 
@@ -93,15 +93,15 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "in_ptr_V_data_V", "Type" : "Axis", "Direction" : "I",
+			{"Name" : "s_axi_video_V_data_V", "Type" : "Axis", "Direction" : "I",
 				"BlockSignal" : [
-					{"Name" : "in_ptr_TDATA_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "in_ptr_V_keep_V", "Type" : "Axis", "Direction" : "I"},
-			{"Name" : "in_ptr_V_strb_V", "Type" : "Axis", "Direction" : "I"},
-			{"Name" : "in_ptr_V_user_V", "Type" : "Axis", "Direction" : "I"},
-			{"Name" : "in_ptr_V_last_V", "Type" : "Axis", "Direction" : "I"},
-			{"Name" : "in_ptr_V_id_V", "Type" : "Axis", "Direction" : "I"},
-			{"Name" : "in_ptr_V_dest_V", "Type" : "Axis", "Direction" : "I"},
+					{"Name" : "s_axi_video_TDATA_blk_n", "Type" : "RtlSignal"}]},
+			{"Name" : "s_axi_video_V_keep_V", "Type" : "Axis", "Direction" : "I"},
+			{"Name" : "s_axi_video_V_strb_V", "Type" : "Axis", "Direction" : "I"},
+			{"Name" : "s_axi_video_V_user_V", "Type" : "Axis", "Direction" : "I"},
+			{"Name" : "s_axi_video_V_last_V", "Type" : "Axis", "Direction" : "I"},
+			{"Name" : "s_axi_video_V_id_V", "Type" : "Axis", "Direction" : "I"},
+			{"Name" : "s_axi_video_V_dest_V", "Type" : "Axis", "Direction" : "I"},
 			{"Name" : "axi_last_V_out", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "axi_data_V_out", "Type" : "Vld", "Direction" : "O"}],
 		"Loop" : [
@@ -111,13 +111,13 @@ set RtlHierarchyInfo {[
 
 set ArgLastReadFirstWriteLatency {
 	AXIVideo2BayerMat_0_4320_3848_2_3_Pipeline_loop_start_hunt {
-		in_ptr_V_data_V {Type I LastRead 0 FirstWrite -1}
-		in_ptr_V_keep_V {Type I LastRead 0 FirstWrite -1}
-		in_ptr_V_strb_V {Type I LastRead 0 FirstWrite -1}
-		in_ptr_V_user_V {Type I LastRead 0 FirstWrite -1}
-		in_ptr_V_last_V {Type I LastRead 0 FirstWrite -1}
-		in_ptr_V_id_V {Type I LastRead 0 FirstWrite -1}
-		in_ptr_V_dest_V {Type I LastRead 0 FirstWrite -1}
+		s_axi_video_V_data_V {Type I LastRead 0 FirstWrite -1}
+		s_axi_video_V_keep_V {Type I LastRead 0 FirstWrite -1}
+		s_axi_video_V_strb_V {Type I LastRead 0 FirstWrite -1}
+		s_axi_video_V_user_V {Type I LastRead 0 FirstWrite -1}
+		s_axi_video_V_last_V {Type I LastRead 0 FirstWrite -1}
+		s_axi_video_V_id_V {Type I LastRead 0 FirstWrite -1}
+		s_axi_video_V_dest_V {Type I LastRead 0 FirstWrite -1}
 		axi_last_V_out {Type O LastRead -1 FirstWrite 0}
 		axi_data_V_out {Type O LastRead -1 FirstWrite 0}}}
 
@@ -132,13 +132,13 @@ set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	in_ptr_V_data_V { axis {  { in_ptr_TVALID in_vld 0 1 }  { in_ptr_TDATA in_data 0 16 } } }
-	in_ptr_V_keep_V { axis {  { in_ptr_TKEEP in_data 0 2 } } }
-	in_ptr_V_strb_V { axis {  { in_ptr_TSTRB in_data 0 2 } } }
-	in_ptr_V_user_V { axis {  { in_ptr_TUSER in_data 0 1 } } }
-	in_ptr_V_last_V { axis {  { in_ptr_TLAST in_data 0 1 } } }
-	in_ptr_V_id_V { axis {  { in_ptr_TID in_data 0 1 } } }
-	in_ptr_V_dest_V { axis {  { in_ptr_TREADY in_acc 1 1 }  { in_ptr_TDEST in_data 0 1 } } }
+	s_axi_video_V_data_V { axis {  { s_axi_video_TVALID in_vld 0 1 }  { s_axi_video_TDATA in_data 0 16 } } }
+	s_axi_video_V_keep_V { axis {  { s_axi_video_TKEEP in_data 0 2 } } }
+	s_axi_video_V_strb_V { axis {  { s_axi_video_TSTRB in_data 0 2 } } }
+	s_axi_video_V_user_V { axis {  { s_axi_video_TUSER in_data 0 1 } } }
+	s_axi_video_V_last_V { axis {  { s_axi_video_TLAST in_data 0 1 } } }
+	s_axi_video_V_id_V { axis {  { s_axi_video_TID in_data 0 1 } } }
+	s_axi_video_V_dest_V { axis {  { s_axi_video_TREADY in_acc 1 1 }  { s_axi_video_TDEST in_data 0 1 } } }
 	axi_last_V_out { ap_vld {  { axi_last_V_out out_data 1 1 }  { axi_last_V_out_ap_vld out_vld 1 1 } } }
 	axi_data_V_out { ap_vld {  { axi_data_V_out out_data 1 16 }  { axi_data_V_out_ap_vld out_vld 1 1 } } }
 }

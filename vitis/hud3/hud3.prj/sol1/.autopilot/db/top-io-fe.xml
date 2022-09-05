@@ -1,18 +1,18 @@
 <root versionMajor = "1" versionMinor = "5">
-  <kernel src_name="extractEFrames_accel" language="c" hwCtrl="ap_ctrl_hs" mem_layout="fpga64-xilinx-none">
+  <kernel src_name="hud_accel" language="c" hwCtrl="ap_ctrl_hs" mem_layout="fpga64-xilinx-none">
     <args>
-      <arg id="0" access_type="r" src_name="in_ptr" src_type="stream&lt;hls::axis&lt;ap_uint&lt;16&gt;, 1, 1, 1&gt;, 0&gt;&amp;" src_isptr="1" src_bitwidth="64" src_size_or_depth="1">
-        <hw hw_usage="data" hw_interface="AXI-Stream" hw_name="in_ptr" hw_bitwidth="16" hw_size_or_depth="1" hw_kernel_support="true">
+      <arg id="0" access_type="r" src_name="s_axi_video" src_type="stream&lt;hls::axis&lt;ap_uint&lt;16&gt;, 1, 1, 1&gt;, 0&gt;&amp;" src_isptr="1" src_bitwidth="64" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="AXI-Stream" hw_name="s_axi_video" hw_bitwidth="16" hw_size_or_depth="1" hw_kernel_support="true">
           <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both"/>
         </hw>
       </arg>
-      <arg id="1" access_type="w" src_name="lef_ptr" src_type="stream&lt;hls::axis&lt;ap_uint&lt;16&gt;, 1, 1, 1&gt;, 0&gt;&amp;" src_isptr="1" src_bitwidth="64" src_size_or_depth="1">
-        <hw hw_usage="data" hw_interface="AXI-Stream" hw_name="lef_ptr" hw_bitwidth="16" hw_size_or_depth="1" hw_kernel_support="true">
+      <arg id="1" access_type="w" src_name="m_axis_video_lef" src_type="stream&lt;hls::axis&lt;ap_uint&lt;16&gt;, 1, 1, 1&gt;, 0&gt;&amp;" src_isptr="1" src_bitwidth="64" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="AXI-Stream" hw_name="m_axis_video_lef" hw_bitwidth="16" hw_size_or_depth="1" hw_kernel_support="true">
           <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both"/>
         </hw>
       </arg>
-      <arg id="2" access_type="w" src_name="sef_ptr" src_type="stream&lt;hls::axis&lt;ap_uint&lt;16&gt;, 1, 1, 1&gt;, 0&gt;&amp;" src_isptr="1" src_bitwidth="64" src_size_or_depth="1">
-        <hw hw_usage="data" hw_interface="AXI-Stream" hw_name="sef_ptr" hw_bitwidth="16" hw_size_or_depth="1" hw_kernel_support="true">
+      <arg id="2" access_type="w" src_name="m_axis_video_sef" src_type="stream&lt;hls::axis&lt;ap_uint&lt;16&gt;, 1, 1, 1&gt;, 0&gt;&amp;" src_isptr="1" src_bitwidth="64" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="AXI-Stream" hw_name="m_axis_video_sef" hw_bitwidth="16" hw_size_or_depth="1" hw_kernel_support="true">
           <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both"/>
         </hw>
       </arg>

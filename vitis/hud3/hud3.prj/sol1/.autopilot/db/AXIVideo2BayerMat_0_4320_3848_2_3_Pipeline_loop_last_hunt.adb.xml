@@ -19,7 +19,7 @@
 
 <Node id="13" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:0 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %in_ptr_V_data_V, void @empty_20, i32 0, i32 0, void @empty_19, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0
+newFuncRoot:0 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %s_axi_video_V_data_V, void @empty_20, i32 0, i32 0, void @empty_19, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -34,7 +34,7 @@ newFuncRoot:0 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i
 
 <Node id="14" bw="0" op_0_bw="0" op_1_bw="2" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:1 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i2 %in_ptr_V_keep_V, void @empty_20, i32 0, i32 0, void @empty_19, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0
+newFuncRoot:1 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i2 %s_axi_video_V_keep_V, void @empty_20, i32 0, i32 0, void @empty_19, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -49,7 +49,7 @@ newFuncRoot:1 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i
 
 <Node id="15" bw="0" op_0_bw="0" op_1_bw="2" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:2 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i2 %in_ptr_V_strb_V, void @empty_20, i32 0, i32 0, void @empty_19, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0
+newFuncRoot:2 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i2 %s_axi_video_V_strb_V, void @empty_20, i32 0, i32 0, void @empty_19, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -64,7 +64,7 @@ newFuncRoot:2 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i
 
 <Node id="16" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:3 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %in_ptr_V_user_V, void @empty_20, i32 0, i32 0, void @empty_19, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0
+newFuncRoot:3 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %s_axi_video_V_user_V, void @empty_20, i32 0, i32 0, void @empty_19, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -79,7 +79,7 @@ newFuncRoot:3 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i
 
 <Node id="17" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:4 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %in_ptr_V_last_V, void @empty_20, i32 0, i32 0, void @empty_19, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0
+newFuncRoot:4 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %s_axi_video_V_last_V, void @empty_20, i32 0, i32 0, void @empty_19, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -94,7 +94,7 @@ newFuncRoot:4 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i
 
 <Node id="18" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:5 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %in_ptr_V_id_V, void @empty_20, i32 0, i32 0, void @empty_19, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0
+newFuncRoot:5 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %s_axi_video_V_id_V, void @empty_20, i32 0, i32 0, void @empty_19, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -109,7 +109,7 @@ newFuncRoot:5 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i
 
 <Node id="19" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:6 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %in_ptr_V_dest_V, void @empty_20, i32 0, i32 0, void @empty_19, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0
+newFuncRoot:6 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %s_axi_video_V_dest_V, void @empty_20, i32 0, i32 0, void @empty_19, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -293,7 +293,7 @@ while.body12:2 %specloopname_ln283 = specloopname void @_ssdm_op_SpecLoopName, v
 
 <Node id="33" bw="24" op_0_bw="24" op_1_bw="16" op_2_bw="2" op_3_bw="2" op_4_bw="1" op_5_bw="1" op_6_bw="1" op_7_bw="1">
 <![CDATA[
-while.body12:3 %empty = read i24 @_ssdm_op_Read.axis.volatile.i16P0A.i2P0A.i2P0A.i1P0A.i1P0A.i1P0A.i1P0A, i16 %in_ptr_V_data_V, i2 %in_ptr_V_keep_V, i2 %in_ptr_V_strb_V, i1 %in_ptr_V_user_V, i1 %in_ptr_V_last_V, i1 %in_ptr_V_id_V, i1 %in_ptr_V_dest_V
+while.body12:3 %empty = read i24 @_ssdm_op_Read.axis.volatile.i16P0A.i2P0A.i2P0A.i1P0A.i1P0A.i1P0A.i1P0A, i16 %s_axi_video_V_data_V, i2 %s_axi_video_V_keep_V, i2 %s_axi_video_V_strb_V, i1 %s_axi_video_V_user_V, i1 %s_axi_video_V_last_V, i1 %s_axi_video_V_id_V, i1 %s_axi_video_V_dest_V
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -408,26 +408,26 @@ for.inc16.exitStub:1 %ret_ln0 = ret
 <port id="37" name="last_0_lcssa" dir="0" iftype="0">
 <core>NULL</core><StgValue><ssdm name="last_0_lcssa"/></StgValue>
 </port>
-<port id="38" name="in_ptr_V_data_V" dir="0" iftype="0">
-<core>NULL</core><StgValue><ssdm name="in_ptr_V_data_V"/></StgValue>
+<port id="38" name="s_axi_video_V_data_V" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="s_axi_video_V_data_V"/></StgValue>
 </port>
-<port id="39" name="in_ptr_V_keep_V" dir="0" iftype="0">
-<core>NULL</core><StgValue><ssdm name="in_ptr_V_keep_V"/></StgValue>
+<port id="39" name="s_axi_video_V_keep_V" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="s_axi_video_V_keep_V"/></StgValue>
 </port>
-<port id="40" name="in_ptr_V_strb_V" dir="0" iftype="0">
-<core>NULL</core><StgValue><ssdm name="in_ptr_V_strb_V"/></StgValue>
+<port id="40" name="s_axi_video_V_strb_V" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="s_axi_video_V_strb_V"/></StgValue>
 </port>
-<port id="41" name="in_ptr_V_user_V" dir="0" iftype="0">
-<core>NULL</core><StgValue><ssdm name="in_ptr_V_user_V"/></StgValue>
+<port id="41" name="s_axi_video_V_user_V" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="s_axi_video_V_user_V"/></StgValue>
 </port>
-<port id="42" name="in_ptr_V_last_V" dir="0" iftype="0">
-<core>NULL</core><StgValue><ssdm name="in_ptr_V_last_V"/></StgValue>
+<port id="42" name="s_axi_video_V_last_V" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="s_axi_video_V_last_V"/></StgValue>
 </port>
-<port id="43" name="in_ptr_V_id_V" dir="0" iftype="0">
-<core>NULL</core><StgValue><ssdm name="in_ptr_V_id_V"/></StgValue>
+<port id="43" name="s_axi_video_V_id_V" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="s_axi_video_V_id_V"/></StgValue>
 </port>
-<port id="44" name="in_ptr_V_dest_V" dir="0" iftype="0">
-<core>NULL</core><StgValue><ssdm name="in_ptr_V_dest_V"/></StgValue>
+<port id="44" name="s_axi_video_V_dest_V" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="s_axi_video_V_dest_V"/></StgValue>
 </port>
 <port id="45" name="axi_last_V_4_out" dir="1" iftype="0">
 <core>NULL</core><StgValue><ssdm name="axi_last_V_4_out"/></StgValue>
@@ -441,7 +441,7 @@ for.inc16.exitStub:1 %ret_ln0 = ret
 <dataflows>
 <dataflow id="48" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="47" toId="4">
 </dataflow>
-<dataflow id="49" from="in_ptr_V_data_V" to="specinterface_ln0" fromId="38" toId="4">
+<dataflow id="49" from="s_axi_video_V_data_V" to="specinterface_ln0" fromId="38" toId="4">
 </dataflow>
 <dataflow id="51" from="empty_20" to="specinterface_ln0" fromId="50" toId="4">
 </dataflow>
@@ -479,7 +479,7 @@ for.inc16.exitStub:1 %ret_ln0 = ret
 </dataflow>
 <dataflow id="72" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="47" toId="5">
 </dataflow>
-<dataflow id="73" from="in_ptr_V_keep_V" to="specinterface_ln0" fromId="39" toId="5">
+<dataflow id="73" from="s_axi_video_V_keep_V" to="specinterface_ln0" fromId="39" toId="5">
 </dataflow>
 <dataflow id="74" from="empty_20" to="specinterface_ln0" fromId="50" toId="5">
 </dataflow>
@@ -517,7 +517,7 @@ for.inc16.exitStub:1 %ret_ln0 = ret
 </dataflow>
 <dataflow id="91" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="47" toId="6">
 </dataflow>
-<dataflow id="92" from="in_ptr_V_strb_V" to="specinterface_ln0" fromId="40" toId="6">
+<dataflow id="92" from="s_axi_video_V_strb_V" to="specinterface_ln0" fromId="40" toId="6">
 </dataflow>
 <dataflow id="93" from="empty_20" to="specinterface_ln0" fromId="50" toId="6">
 </dataflow>
@@ -555,7 +555,7 @@ for.inc16.exitStub:1 %ret_ln0 = ret
 </dataflow>
 <dataflow id="110" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="47" toId="7">
 </dataflow>
-<dataflow id="111" from="in_ptr_V_user_V" to="specinterface_ln0" fromId="41" toId="7">
+<dataflow id="111" from="s_axi_video_V_user_V" to="specinterface_ln0" fromId="41" toId="7">
 </dataflow>
 <dataflow id="112" from="empty_20" to="specinterface_ln0" fromId="50" toId="7">
 </dataflow>
@@ -593,7 +593,7 @@ for.inc16.exitStub:1 %ret_ln0 = ret
 </dataflow>
 <dataflow id="129" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="47" toId="8">
 </dataflow>
-<dataflow id="130" from="in_ptr_V_last_V" to="specinterface_ln0" fromId="42" toId="8">
+<dataflow id="130" from="s_axi_video_V_last_V" to="specinterface_ln0" fromId="42" toId="8">
 </dataflow>
 <dataflow id="131" from="empty_20" to="specinterface_ln0" fromId="50" toId="8">
 </dataflow>
@@ -631,7 +631,7 @@ for.inc16.exitStub:1 %ret_ln0 = ret
 </dataflow>
 <dataflow id="148" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="47" toId="9">
 </dataflow>
-<dataflow id="149" from="in_ptr_V_id_V" to="specinterface_ln0" fromId="43" toId="9">
+<dataflow id="149" from="s_axi_video_V_id_V" to="specinterface_ln0" fromId="43" toId="9">
 </dataflow>
 <dataflow id="150" from="empty_20" to="specinterface_ln0" fromId="50" toId="9">
 </dataflow>
@@ -669,7 +669,7 @@ for.inc16.exitStub:1 %ret_ln0 = ret
 </dataflow>
 <dataflow id="167" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="47" toId="10">
 </dataflow>
-<dataflow id="168" from="in_ptr_V_dest_V" to="specinterface_ln0" fromId="44" toId="10">
+<dataflow id="168" from="s_axi_video_V_dest_V" to="specinterface_ln0" fromId="44" toId="10">
 </dataflow>
 <dataflow id="169" from="empty_20" to="specinterface_ln0" fromId="50" toId="10">
 </dataflow>
@@ -783,19 +783,19 @@ for.inc16.exitStub:1 %ret_ln0 = ret
 </dataflow>
 <dataflow id="224" from="_ssdm_op_Read.axis.volatile.i16P0A.i2P0A.i2P0A.i1P0A.i1P0A.i1P0A.i1P0A" to="empty" fromId="223" toId="22">
 </dataflow>
-<dataflow id="225" from="in_ptr_V_data_V" to="empty" fromId="38" toId="22">
+<dataflow id="225" from="s_axi_video_V_data_V" to="empty" fromId="38" toId="22">
 </dataflow>
-<dataflow id="226" from="in_ptr_V_keep_V" to="empty" fromId="39" toId="22">
+<dataflow id="226" from="s_axi_video_V_keep_V" to="empty" fromId="39" toId="22">
 </dataflow>
-<dataflow id="227" from="in_ptr_V_strb_V" to="empty" fromId="40" toId="22">
+<dataflow id="227" from="s_axi_video_V_strb_V" to="empty" fromId="40" toId="22">
 </dataflow>
-<dataflow id="228" from="in_ptr_V_user_V" to="empty" fromId="41" toId="22">
+<dataflow id="228" from="s_axi_video_V_user_V" to="empty" fromId="41" toId="22">
 </dataflow>
-<dataflow id="229" from="in_ptr_V_last_V" to="empty" fromId="42" toId="22">
+<dataflow id="229" from="s_axi_video_V_last_V" to="empty" fromId="42" toId="22">
 </dataflow>
-<dataflow id="230" from="in_ptr_V_id_V" to="empty" fromId="43" toId="22">
+<dataflow id="230" from="s_axi_video_V_id_V" to="empty" fromId="43" toId="22">
 </dataflow>
-<dataflow id="231" from="in_ptr_V_dest_V" to="empty" fromId="44" toId="22">
+<dataflow id="231" from="s_axi_video_V_dest_V" to="empty" fromId="44" toId="22">
 </dataflow>
 <dataflow id="232" from="empty" to="tmp_data_V" fromId="22" toId="23">
 </dataflow>

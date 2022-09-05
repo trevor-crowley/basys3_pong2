@@ -12,16 +12,16 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     id 29 \
-    name in_ptr_V_data_V \
+    name s_axi_video_V_data_V \
     reset_level 1 \
     sync_rst true \
-    corename {in_ptr} \
+    corename {s_axi_video} \
     metadata {  } \
     op interface \
-    ports { in_ptr_TVALID { I 1 bit } in_ptr_TDATA { I 16 vector } } \
+    ports { s_axi_video_TVALID { I 1 bit } s_axi_video_TDATA { I 16 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'in_ptr_V_data_V'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 's_axi_video_V_data_V'"
 }
 }
 
@@ -31,16 +31,16 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     id 30 \
-    name in_ptr_V_keep_V \
+    name s_axi_video_V_keep_V \
     reset_level 1 \
     sync_rst true \
-    corename {in_ptr} \
+    corename {s_axi_video} \
     metadata {  } \
     op interface \
-    ports { in_ptr_TKEEP { I 2 vector } } \
+    ports { s_axi_video_TKEEP { I 2 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'in_ptr_V_keep_V'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 's_axi_video_V_keep_V'"
 }
 }
 
@@ -50,16 +50,16 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     id 31 \
-    name in_ptr_V_strb_V \
+    name s_axi_video_V_strb_V \
     reset_level 1 \
     sync_rst true \
-    corename {in_ptr} \
+    corename {s_axi_video} \
     metadata {  } \
     op interface \
-    ports { in_ptr_TSTRB { I 2 vector } } \
+    ports { s_axi_video_TSTRB { I 2 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'in_ptr_V_strb_V'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 's_axi_video_V_strb_V'"
 }
 }
 
@@ -69,16 +69,16 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     id 32 \
-    name in_ptr_V_user_V \
+    name s_axi_video_V_user_V \
     reset_level 1 \
     sync_rst true \
-    corename {in_ptr} \
+    corename {s_axi_video} \
     metadata {  } \
     op interface \
-    ports { in_ptr_TUSER { I 1 vector } } \
+    ports { s_axi_video_TUSER { I 1 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'in_ptr_V_user_V'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 's_axi_video_V_user_V'"
 }
 }
 
@@ -88,16 +88,16 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     id 33 \
-    name in_ptr_V_last_V \
+    name s_axi_video_V_last_V \
     reset_level 1 \
     sync_rst true \
-    corename {in_ptr} \
+    corename {s_axi_video} \
     metadata {  } \
     op interface \
-    ports { in_ptr_TLAST { I 1 vector } } \
+    ports { s_axi_video_TLAST { I 1 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'in_ptr_V_last_V'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 's_axi_video_V_last_V'"
 }
 }
 
@@ -107,16 +107,16 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     id 34 \
-    name in_ptr_V_id_V \
+    name s_axi_video_V_id_V \
     reset_level 1 \
     sync_rst true \
-    corename {in_ptr} \
+    corename {s_axi_video} \
     metadata {  } \
     op interface \
-    ports { in_ptr_TID { I 1 vector } } \
+    ports { s_axi_video_TID { I 1 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'in_ptr_V_id_V'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 's_axi_video_V_id_V'"
 }
 }
 
@@ -126,16 +126,16 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     id 35 \
-    name in_ptr_V_dest_V \
+    name s_axi_video_V_dest_V \
     reset_level 1 \
     sync_rst true \
-    corename {in_ptr} \
+    corename {s_axi_video} \
     metadata {  } \
     op interface \
-    ports { in_ptr_TREADY { O 1 bit } in_ptr_TDEST { I 1 vector } } \
+    ports { s_axi_video_TREADY { O 1 bit } s_axi_video_TDEST { I 1 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'in_ptr_V_dest_V'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 's_axi_video_V_dest_V'"
 }
 }
 
@@ -280,14 +280,14 @@ if {${::AESL::PGuard_autoexp_gen}} {
 
 
 # flow_control definition:
-set InstName extractEFrames_accel_flow_control_loop_pipe_sequential_init_U
-set CompName extractEFrames_accel_flow_control_loop_pipe_sequential_init
+set InstName hud_accel_flow_control_loop_pipe_sequential_init_U
+set CompName hud_accel_flow_control_loop_pipe_sequential_init
 set name flow_control_loop_pipe_sequential_init
 if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
 if {[info proc ::AESL_LIB_VIRTEX::xil_gen_UPC_flow_control] == "::AESL_LIB_VIRTEX::xil_gen_UPC_flow_control"} {
 eval "::AESL_LIB_VIRTEX::xil_gen_UPC_flow_control { \
     name ${name} \
-    prefix extractEFrames_accel_ \
+    prefix hud_accel_ \
 }"
 } else {
 puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_UPC_flow_control, check your platform lib"

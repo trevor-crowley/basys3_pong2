@@ -12,16 +12,16 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     id 38 \
-    name in_ptr_V_data_V \
+    name s_axi_video_V_data_V \
     reset_level 1 \
     sync_rst true \
-    corename {in_ptr} \
+    corename {s_axi_video} \
     metadata {  } \
     op interface \
-    ports { in_ptr_TDATA { I 16 vector } } \
+    ports { s_axi_video_TDATA { I 16 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'in_ptr_V_data_V'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 's_axi_video_V_data_V'"
 }
 }
 
@@ -31,16 +31,16 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     id 39 \
-    name in_ptr_V_keep_V \
+    name s_axi_video_V_keep_V \
     reset_level 1 \
     sync_rst true \
-    corename {in_ptr} \
+    corename {s_axi_video} \
     metadata {  } \
     op interface \
-    ports { in_ptr_TKEEP { I 2 vector } } \
+    ports { s_axi_video_TKEEP { I 2 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'in_ptr_V_keep_V'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 's_axi_video_V_keep_V'"
 }
 }
 
@@ -50,16 +50,16 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     id 40 \
-    name in_ptr_V_strb_V \
+    name s_axi_video_V_strb_V \
     reset_level 1 \
     sync_rst true \
-    corename {in_ptr} \
+    corename {s_axi_video} \
     metadata {  } \
     op interface \
-    ports { in_ptr_TSTRB { I 2 vector } } \
+    ports { s_axi_video_TSTRB { I 2 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'in_ptr_V_strb_V'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 's_axi_video_V_strb_V'"
 }
 }
 
@@ -69,16 +69,16 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     id 41 \
-    name in_ptr_V_user_V \
+    name s_axi_video_V_user_V \
     reset_level 1 \
     sync_rst true \
-    corename {in_ptr} \
+    corename {s_axi_video} \
     metadata {  } \
     op interface \
-    ports { in_ptr_TUSER { I 1 vector } } \
+    ports { s_axi_video_TUSER { I 1 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'in_ptr_V_user_V'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 's_axi_video_V_user_V'"
 }
 }
 
@@ -88,16 +88,16 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     id 42 \
-    name in_ptr_V_last_V \
+    name s_axi_video_V_last_V \
     reset_level 1 \
     sync_rst true \
-    corename {in_ptr} \
+    corename {s_axi_video} \
     metadata {  } \
     op interface \
-    ports { in_ptr_TLAST { I 1 vector } } \
+    ports { s_axi_video_TLAST { I 1 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'in_ptr_V_last_V'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 's_axi_video_V_last_V'"
 }
 }
 
@@ -107,16 +107,16 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     id 43 \
-    name in_ptr_V_id_V \
+    name s_axi_video_V_id_V \
     reset_level 1 \
     sync_rst true \
-    corename {in_ptr} \
+    corename {s_axi_video} \
     metadata {  } \
     op interface \
-    ports { in_ptr_TID { I 1 vector } } \
+    ports { s_axi_video_TID { I 1 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'in_ptr_V_id_V'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 's_axi_video_V_id_V'"
 }
 }
 
@@ -126,16 +126,16 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     id 44 \
-    name in_ptr_V_dest_V \
+    name s_axi_video_V_dest_V \
     reset_level 1 \
     sync_rst true \
-    corename {in_ptr} \
+    corename {s_axi_video} \
     metadata {  } \
     op interface \
-    ports { in_ptr_TVALID { I 1 bit } in_ptr_TREADY { O 1 bit } in_ptr_TDEST { I 1 vector } } \
+    ports { s_axi_video_TVALID { I 1 bit } s_axi_video_TREADY { O 1 bit } s_axi_video_TDEST { I 1 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'in_ptr_V_dest_V'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 's_axi_video_V_dest_V'"
 }
 }
 
@@ -266,9 +266,9 @@ if {${::AESL::PGuard_autoexp_gen}} {
 
 # RegSlice definition:
 set ID 49
-set RegSliceName extractEFrames_accel_regslice_both
-set RegSliceInstName extractEFrames_accel_regslice_both_U
-set CoreName ap_simcore_extractEFrames_accel_regslice_both
+set RegSliceName hud_accel_regslice_both
+set RegSliceInstName hud_accel_regslice_both_U
+set CoreName ap_simcore_hud_accel_regslice_both
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $RegSliceName BINDTYPE interface TYPE interface_regslice INSTNAME $RegSliceInstName
 }
@@ -278,7 +278,7 @@ if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
 if {[info proc ::AESL_LIB_VIRTEX::xil_gen_regSlice] == "::AESL_LIB_VIRTEX::xil_gen_regSlice"} {
 eval "::AESL_LIB_VIRTEX::xil_gen_regSlice { \
     name ${RegSliceName} \
-    prefix extractEFrames_accel_ \
+    prefix hud_accel_ \
     sliceTypeList 0\
 }"
 } else {
@@ -289,9 +289,9 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 # RegSlice definition:
 set ID 50
-set RegSliceName extractEFrames_accel_regslice_both
-set RegSliceInstName extractEFrames_accel_regslice_both_U
-set CoreName ap_simcore_extractEFrames_accel_regslice_both
+set RegSliceName hud_accel_regslice_both
+set RegSliceInstName hud_accel_regslice_both_U
+set CoreName ap_simcore_hud_accel_regslice_both
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $RegSliceName BINDTYPE interface TYPE interface_regslice INSTNAME $RegSliceInstName
 }
@@ -301,7 +301,7 @@ if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
 if {[info proc ::AESL_LIB_VIRTEX::xil_gen_regSlice] == "::AESL_LIB_VIRTEX::xil_gen_regSlice"} {
 eval "::AESL_LIB_VIRTEX::xil_gen_regSlice { \
     name ${RegSliceName} \
-    prefix extractEFrames_accel_ \
+    prefix hud_accel_ \
     sliceTypeList 0\
 }"
 } else {
@@ -312,9 +312,9 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 # RegSlice definition:
 set ID 51
-set RegSliceName extractEFrames_accel_regslice_both
-set RegSliceInstName extractEFrames_accel_regslice_both_U
-set CoreName ap_simcore_extractEFrames_accel_regslice_both
+set RegSliceName hud_accel_regslice_both
+set RegSliceInstName hud_accel_regslice_both_U
+set CoreName ap_simcore_hud_accel_regslice_both
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $RegSliceName BINDTYPE interface TYPE interface_regslice INSTNAME $RegSliceInstName
 }
@@ -324,7 +324,7 @@ if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
 if {[info proc ::AESL_LIB_VIRTEX::xil_gen_regSlice] == "::AESL_LIB_VIRTEX::xil_gen_regSlice"} {
 eval "::AESL_LIB_VIRTEX::xil_gen_regSlice { \
     name ${RegSliceName} \
-    prefix extractEFrames_accel_ \
+    prefix hud_accel_ \
     sliceTypeList 0\
 }"
 } else {
@@ -335,9 +335,9 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 # RegSlice definition:
 set ID 52
-set RegSliceName extractEFrames_accel_regslice_both
-set RegSliceInstName extractEFrames_accel_regslice_both_U
-set CoreName ap_simcore_extractEFrames_accel_regslice_both
+set RegSliceName hud_accel_regslice_both
+set RegSliceInstName hud_accel_regslice_both_U
+set CoreName ap_simcore_hud_accel_regslice_both
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $RegSliceName BINDTYPE interface TYPE interface_regslice INSTNAME $RegSliceInstName
 }
@@ -347,7 +347,7 @@ if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
 if {[info proc ::AESL_LIB_VIRTEX::xil_gen_regSlice] == "::AESL_LIB_VIRTEX::xil_gen_regSlice"} {
 eval "::AESL_LIB_VIRTEX::xil_gen_regSlice { \
     name ${RegSliceName} \
-    prefix extractEFrames_accel_ \
+    prefix hud_accel_ \
     sliceTypeList 0\
 }"
 } else {
@@ -358,9 +358,9 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 # RegSlice definition:
 set ID 53
-set RegSliceName extractEFrames_accel_regslice_both
-set RegSliceInstName extractEFrames_accel_regslice_both_U
-set CoreName ap_simcore_extractEFrames_accel_regslice_both
+set RegSliceName hud_accel_regslice_both
+set RegSliceInstName hud_accel_regslice_both_U
+set CoreName ap_simcore_hud_accel_regslice_both
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $RegSliceName BINDTYPE interface TYPE interface_regslice INSTNAME $RegSliceInstName
 }
@@ -370,7 +370,7 @@ if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
 if {[info proc ::AESL_LIB_VIRTEX::xil_gen_regSlice] == "::AESL_LIB_VIRTEX::xil_gen_regSlice"} {
 eval "::AESL_LIB_VIRTEX::xil_gen_regSlice { \
     name ${RegSliceName} \
-    prefix extractEFrames_accel_ \
+    prefix hud_accel_ \
     sliceTypeList 0\
 }"
 } else {
@@ -381,9 +381,9 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 # RegSlice definition:
 set ID 54
-set RegSliceName extractEFrames_accel_regslice_both
-set RegSliceInstName extractEFrames_accel_regslice_both_U
-set CoreName ap_simcore_extractEFrames_accel_regslice_both
+set RegSliceName hud_accel_regslice_both
+set RegSliceInstName hud_accel_regslice_both_U
+set CoreName ap_simcore_hud_accel_regslice_both
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $RegSliceName BINDTYPE interface TYPE interface_regslice INSTNAME $RegSliceInstName
 }
@@ -393,7 +393,7 @@ if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
 if {[info proc ::AESL_LIB_VIRTEX::xil_gen_regSlice] == "::AESL_LIB_VIRTEX::xil_gen_regSlice"} {
 eval "::AESL_LIB_VIRTEX::xil_gen_regSlice { \
     name ${RegSliceName} \
-    prefix extractEFrames_accel_ \
+    prefix hud_accel_ \
     sliceTypeList 0\
 }"
 } else {
@@ -404,9 +404,9 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 # RegSlice definition:
 set ID 55
-set RegSliceName extractEFrames_accel_regslice_both
-set RegSliceInstName extractEFrames_accel_regslice_both_U
-set CoreName ap_simcore_extractEFrames_accel_regslice_both
+set RegSliceName hud_accel_regslice_both
+set RegSliceInstName hud_accel_regslice_both_U
+set CoreName ap_simcore_hud_accel_regslice_both
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $RegSliceName BINDTYPE interface TYPE interface_regslice INSTNAME $RegSliceInstName
 }
@@ -416,7 +416,7 @@ if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
 if {[info proc ::AESL_LIB_VIRTEX::xil_gen_regSlice] == "::AESL_LIB_VIRTEX::xil_gen_regSlice"} {
 eval "::AESL_LIB_VIRTEX::xil_gen_regSlice { \
     name ${RegSliceName} \
-    prefix extractEFrames_accel_ \
+    prefix hud_accel_ \
     sliceTypeList 0\
 }"
 } else {

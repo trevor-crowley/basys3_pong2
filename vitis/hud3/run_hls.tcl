@@ -27,7 +27,7 @@ open_project -reset $PROJ
 
 add_files "${CUR_DIR}/xf_hud_accel.cpp" -cflags " -I ${CUR_DIR}/build -I${XF_PROJ_ROOT}/L1/include -I ./ -D__SDSVHLS__ -std=c++0x" -csimflags " -I ${CUR_DIR}/build -I${XF_PROJ_ROOT}/L1/include -I ./ -D__SDSVHLS__ -std=c++0x"
 add_files -tb "${CUR_DIR}/xf_hud_tb.cpp" -cflags " -I ${CUR_DIR}/build -I${OPENCV_INCLUDE} -I${XF_PROJ_ROOT}/L1/include -I ./ -D__SDSVHLS__ -std=c++0x" -csimflags " -I ${CUR_DIR}/build -I${XF_PROJ_ROOT}/L1/include -I ./ -D__SDSVHLS__ -std=c++0x"
-set_top extractEFrames_accel
+set_top hud_accel
 
 open_solution -reset $SOLN
 

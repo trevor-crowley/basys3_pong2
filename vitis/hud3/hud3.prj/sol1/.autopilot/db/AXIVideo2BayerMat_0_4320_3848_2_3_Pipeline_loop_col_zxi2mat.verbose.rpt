@@ -3,13 +3,13 @@
 ================================================================
 == Vitis HLS Report for 'AXIVideo2BayerMat_0_4320_3848_2_3_Pipeline_loop_col_zxi2mat'
 ================================================================
-* Date:           Sun Sep  4 18:21:49 2022
+* Date:           Sun Sep  4 20:23:19 2022
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
 * Project:        hud3.prj
 * Solution:       sol1 (Vivado IP Flow Target)
-* Product family: artix7
-* Target device:  xc7a200t-fbg676-2
+* Product family: zynq
+* Target device:  xc7z045-ffg900-2
 
 
 ================================================================
@@ -20,7 +20,7 @@
     +--------+---------+----------+------------+
     |  Clock |  Target | Estimated| Uncertainty|
     +--------+---------+----------+------------+
-    |ap_clk  |  3.30 ns|  4.248 ns|     0.89 ns|
+    |ap_clk  |  3.30 ns|  4.196 ns|     0.89 ns|
     +--------+---------+----------+------------+
 
 + Latency: 
@@ -29,7 +29,7 @@
     |  Latency (cycles) |  Latency (absolute)  |  Interval  | Pipeline|
     |   min   |   max   |    min    |    max   | min |  max |   Type  |
     +---------+---------+-----------+----------+-----+------+---------+
-    |        4|     1927|  16.992 ns|  8.186 us|    4|  1927|       no|
+    |        4|     1927|  16.784 ns|  8.086 us|    4|  1927|       no|
     +---------+---------+-----------+----------+-----+------+---------+
 
     + Detail: 
@@ -54,16 +54,16 @@
 |       Name      | BRAM_18K| DSP |   FF   |   LUT  | URAM|
 +-----------------+---------+-----+--------+--------+-----+
 |DSP              |        -|    -|       -|       -|    -|
-|Expression       |        -|    -|       0|      49|    -|
+|Expression       |        -|    -|       0|      27|    -|
 |FIFO             |        -|    -|       -|       -|    -|
 |Instance         |        -|    -|       -|       -|    -|
 |Memory           |        -|    -|       -|       -|    -|
 |Multiplexer      |        -|    -|       -|      99|    -|
 |Register         |        -|    -|      53|       -|    -|
 +-----------------+---------+-----+--------+--------+-----+
-|Total            |        0|    0|      53|     148|    0|
+|Total            |        0|    0|      53|     126|    0|
 +-----------------+---------+-----+--------+--------+-----+
-|Available        |      730|  740|  269200|  134600|    0|
+|Available        |     1090|  900|  437200|  218600|    0|
 +-----------------+---------+-----+--------+--------+-----+
 |Utilization (%)  |        0|    0|      ~0|      ~0|    0|
 +-----------------+---------+-----+--------+--------+-----+
@@ -85,20 +85,20 @@
     +----------------------------------+----------+----+---+----+------------+------------+
     |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +----------------------------------+----------+----+---+----+------------+------------+
-    |j_6_fu_198_p2                     |         +|   0|  0|  18|          11|           1|
-    |ap_block_state1_pp0_stage0_iter0  |       and|   0|  0|   2|           1|           1|
-    |ap_block_state3_pp0_stage0_iter2  |       and|   0|  0|   2|           1|           1|
-    |ap_condition_245                  |       and|   0|  0|   2|           1|           1|
-    |ap_condition_249                  |       and|   0|  0|   2|           1|           1|
-    |ap_condition_252                  |       and|   0|  0|   2|           1|           1|
-    |ap_condition_257                  |       and|   0|  0|   2|           1|           1|
-    |ap_predicate_op36_read_state1     |       and|   0|  0|   2|           1|           1|
-    |icmp_ln67_fu_192_p2               |      icmp|   0|  0|  11|          11|          11|
-    |ap_block_pp0_stage0_01001         |        or|   0|  0|   2|           1|           1|
-    |or_ln74_fu_204_p2                 |        or|   0|  0|   2|           1|           1|
+    |j_6_fu_198_p2                     |         +|   0|  0|  11|          11|           1|
+    |ap_block_state1_pp0_stage0_iter0  |       and|   0|  0|   1|           1|           1|
+    |ap_block_state3_pp0_stage0_iter2  |       and|   0|  0|   1|           1|           1|
+    |ap_condition_245                  |       and|   0|  0|   1|           1|           1|
+    |ap_condition_249                  |       and|   0|  0|   1|           1|           1|
+    |ap_condition_252                  |       and|   0|  0|   1|           1|           1|
+    |ap_condition_257                  |       and|   0|  0|   1|           1|           1|
+    |ap_predicate_op36_read_state1     |       and|   0|  0|   1|           1|           1|
+    |icmp_ln67_fu_192_p2               |      icmp|   0|  0|   5|          11|          11|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|   1|           1|           1|
+    |or_ln74_fu_204_p2                 |        or|   0|  0|   1|           1|           1|
     |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
     +----------------------------------+----------+----+---+----+------------+------------+
-    |Total                             |          |   0|  0|  49|          32|          23|
+    |Total                             |          |   0|  0|  27|          32|          23|
     +----------------------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
@@ -113,9 +113,9 @@
     |ap_sig_allocacmp_j_5            |   9|          2|   11|         22|
     |axi_data_V_fu_84                |   9|          2|   16|         32|
     |axi_last_V_fu_80                |   9|          2|    1|          2|
-    |in_ptr_TDATA_blk_n              |   9|          2|    1|          2|
     |j_fu_76                         |   9|          2|   11|         22|
     |last_reg_151                    |   9|          2|    1|          2|
+    |s_axi_video_TDATA_blk_n         |   9|          2|    1|          2|
     +--------------------------------+----+-----------+-----+-----------+
     |Total                           |  99|         22|   46|         92|
     +--------------------------------+----+-----------+-----+-----------+
@@ -156,8 +156,8 @@
 |ap_done                       |  out|    1|  ap_ctrl_hs|  AXIVideo2BayerMat<0, 4320, 3848, 2, 3>_Pipeline_loop_col_zxi2mat|  return value|
 |ap_idle                       |  out|    1|  ap_ctrl_hs|  AXIVideo2BayerMat<0, 4320, 3848, 2, 3>_Pipeline_loop_col_zxi2mat|  return value|
 |ap_ready                      |  out|    1|  ap_ctrl_hs|  AXIVideo2BayerMat<0, 4320, 3848, 2, 3>_Pipeline_loop_col_zxi2mat|  return value|
-|in_ptr_TVALID                 |   in|    1|        axis|                                                   in_ptr_V_data_V|       pointer|
-|in_ptr_TDATA                  |   in|   16|        axis|                                                   in_ptr_V_data_V|       pointer|
+|s_axi_video_TVALID            |   in|    1|        axis|                                              s_axi_video_V_data_V|       pointer|
+|s_axi_video_TDATA             |   in|   16|        axis|                                              s_axi_video_V_data_V|       pointer|
 |InImg_data156_din             |  out|   16|     ap_fifo|                                                     InImg_data156|       pointer|
 |InImg_data156_num_data_valid  |   in|    3|     ap_fifo|                                                     InImg_data156|       pointer|
 |InImg_data156_fifo_cap        |   in|    3|     ap_fifo|                                                     InImg_data156|       pointer|
@@ -167,13 +167,13 @@
 |axi_data_V_2                  |   in|   16|     ap_none|                                                      axi_data_V_2|        scalar|
 |axi_last_V_2                  |   in|    1|     ap_none|                                                      axi_last_V_2|        scalar|
 |trunc_ln38_1                  |   in|   11|     ap_none|                                                      trunc_ln38_1|        scalar|
-|in_ptr_TREADY                 |  out|    1|        axis|                                                   in_ptr_V_dest_V|       pointer|
-|in_ptr_TDEST                  |   in|    1|        axis|                                                   in_ptr_V_dest_V|       pointer|
-|in_ptr_TKEEP                  |   in|    2|        axis|                                                   in_ptr_V_keep_V|       pointer|
-|in_ptr_TSTRB                  |   in|    2|        axis|                                                   in_ptr_V_strb_V|       pointer|
-|in_ptr_TUSER                  |   in|    1|        axis|                                                   in_ptr_V_user_V|       pointer|
-|in_ptr_TLAST                  |   in|    1|        axis|                                                   in_ptr_V_last_V|       pointer|
-|in_ptr_TID                    |   in|    1|        axis|                                                     in_ptr_V_id_V|       pointer|
+|s_axi_video_TREADY            |  out|    1|        axis|                                              s_axi_video_V_dest_V|       pointer|
+|s_axi_video_TDEST             |   in|    1|        axis|                                              s_axi_video_V_dest_V|       pointer|
+|s_axi_video_TKEEP             |   in|    2|        axis|                                              s_axi_video_V_keep_V|       pointer|
+|s_axi_video_TSTRB             |   in|    2|        axis|                                              s_axi_video_V_strb_V|       pointer|
+|s_axi_video_TUSER             |   in|    1|        axis|                                              s_axi_video_V_user_V|       pointer|
+|s_axi_video_TLAST             |   in|    1|        axis|                                              s_axi_video_V_last_V|       pointer|
+|s_axi_video_TID               |   in|    1|        axis|                                                s_axi_video_V_id_V|       pointer|
 |last_out                      |  out|    1|      ap_vld|                                                          last_out|       pointer|
 |last_out_ap_vld               |  out|    1|      ap_vld|                                                          last_out|       pointer|
 |axi_data_V_3_out              |  out|   16|      ap_vld|                                                  axi_data_V_3_out|       pointer|
@@ -221,46 +221,46 @@ IsGatedGlobalClock: 0
 
 * FSM state operations: 
 
-State 1 <SV = 0> <Delay = 4.24>
+State 1 <SV = 0> <Delay = 4.19>
 ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%j = alloca i32 1"   --->   Operation 6 'alloca' 'j' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%axi_last_V = alloca i32 1"   --->   Operation 7 'alloca' 'axi_last_V' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%axi_data_V = alloca i32 1"   --->   Operation 8 'alloca' 'axi_data_V' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %in_ptr_V_data_V, void @empty_20, i32 0, i32 0, void @empty_19, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i2 %in_ptr_V_keep_V, void @empty_20, i32 0, i32 0, void @empty_19, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i2 %in_ptr_V_strb_V, void @empty_20, i32 0, i32 0, void @empty_19, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %in_ptr_V_user_V, void @empty_20, i32 0, i32 0, void @empty_19, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %in_ptr_V_last_V, void @empty_20, i32 0, i32 0, void @empty_19, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %in_ptr_V_id_V, void @empty_20, i32 0, i32 0, void @empty_19, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %in_ptr_V_dest_V, void @empty_20, i32 0, i32 0, void @empty_19, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %s_axi_video_V_data_V, void @empty_20, i32 0, i32 0, void @empty_19, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i2 %s_axi_video_V_keep_V, void @empty_20, i32 0, i32 0, void @empty_19, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i2 %s_axi_video_V_strb_V, void @empty_20, i32 0, i32 0, void @empty_19, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %s_axi_video_V_user_V, void @empty_20, i32 0, i32 0, void @empty_19, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %s_axi_video_V_last_V, void @empty_20, i32 0, i32 0, void @empty_19, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %s_axi_video_V_id_V, void @empty_20, i32 0, i32 0, void @empty_19, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %s_axi_video_V_dest_V, void @empty_20, i32 0, i32 0, void @empty_19, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %InImg_data156, void @empty_16, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%trunc_ln38_1_read = read i11 @_ssdm_op_Read.ap_auto.i11, i11 %trunc_ln38_1"   --->   Operation 17 'read' 'trunc_ln38_1_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%axi_last_V_2_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %axi_last_V_2"   --->   Operation 18 'read' 'axi_last_V_2_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%axi_data_V_2_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %axi_data_V_2"   --->   Operation 19 'read' 'axi_data_V_2_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%start_2_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %start_2"   --->   Operation 20 'read' 'start_2_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 21 [1/1] (1.32ns)   --->   "%store_ln0 = store i16 %axi_data_V_2_read, i16 %axi_data_V"   --->   Operation 21 'store' 'store_ln0' <Predicate = true> <Delay = 1.32>
-ST_1 : Operation 22 [1/1] (1.32ns)   --->   "%store_ln0 = store i1 %axi_last_V_2_read, i1 %axi_last_V"   --->   Operation 22 'store' 'store_ln0' <Predicate = true> <Delay = 1.32>
-ST_1 : Operation 23 [1/1] (1.32ns)   --->   "%store_ln0 = store i11 0, i11 %j"   --->   Operation 23 'store' 'store_ln0' <Predicate = true> <Delay = 1.32>
-ST_1 : Operation 24 [1/1] (1.32ns)   --->   "%br_ln0 = br void %for.body6"   --->   Operation 24 'br' 'br_ln0' <Predicate = true> <Delay = 1.32>
+ST_1 : Operation 21 [1/1] (1.29ns)   --->   "%store_ln0 = store i16 %axi_data_V_2_read, i16 %axi_data_V"   --->   Operation 21 'store' 'store_ln0' <Predicate = true> <Delay = 1.29>
+ST_1 : Operation 22 [1/1] (1.29ns)   --->   "%store_ln0 = store i1 %axi_last_V_2_read, i1 %axi_last_V"   --->   Operation 22 'store' 'store_ln0' <Predicate = true> <Delay = 1.29>
+ST_1 : Operation 23 [1/1] (1.29ns)   --->   "%store_ln0 = store i11 0, i11 %j"   --->   Operation 23 'store' 'store_ln0' <Predicate = true> <Delay = 1.29>
+ST_1 : Operation 24 [1/1] (1.29ns)   --->   "%br_ln0 = br void %for.body6"   --->   Operation 24 'br' 'br_ln0' <Predicate = true> <Delay = 1.29>
 ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%last = phi i1 %axi_last_V_5, void %for.inc, i1 0, void %newFuncRoot"   --->   Operation 25 'phi' 'last' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%start = phi i1 0, void %for.inc, i1 %start_2_read, void %newFuncRoot"   --->   Operation 26 'phi' 'start' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%j_5 = load i11 %j" [xf_hud_accel.cpp:67]   --->   Operation 27 'load' 'j_5' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 28 [1/1] (1.52ns)   --->   "%icmp_ln67 = icmp_eq  i11 %j_5, i11 %trunc_ln38_1_read" [xf_hud_accel.cpp:67]   --->   Operation 28 'icmp' 'icmp_ln67' <Predicate = true> <Delay = 1.52> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.52> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%j_5 = load i11 %j" [/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:67]   --->   Operation 27 'load' 'j_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (1.88ns)   --->   "%icmp_ln67 = icmp_eq  i11 %j_5, i11 %trunc_ln38_1_read" [/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:67]   --->   Operation 28 'icmp' 'icmp_ln67' <Predicate = true> <Delay = 1.88> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 1, i64 1924, i64 1924"   --->   Operation 29 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 30 [1/1] (1.76ns)   --->   "%j_6 = add i11 %j_5, i11 1" [xf_hud_accel.cpp:67]   --->   Operation 30 'add' 'j_6' <Predicate = true> <Delay = 1.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%br_ln67 = br i1 %icmp_ln67, void %for.body6.split, void %loop_last_hunt.loopexit.exitStub" [xf_hud_accel.cpp:67]   --->   Operation 31 'br' 'br_ln67' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%specpipeline_ln70 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_18" [xf_hud_accel.cpp:70]   --->   Operation 32 'specpipeline' 'specpipeline_ln70' <Predicate = (!icmp_ln67)> <Delay = 0.00>
-ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%specloopname_ln38 = specloopname void @_ssdm_op_SpecLoopName, void @empty_9" [xf_hud_accel.cpp:38]   --->   Operation 33 'specloopname' 'specloopname_ln38' <Predicate = (!icmp_ln67)> <Delay = 0.00>
-ST_1 : Operation 34 [1/1] (0.80ns)   --->   "%or_ln74 = or i1 %start, i1 %last" [xf_hud_accel.cpp:74]   --->   Operation 34 'or' 'or_ln74' <Predicate = (!icmp_ln67)> <Delay = 0.80> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%br_ln74 = br i1 %or_ln74, void %if.else, void %for.inc" [xf_hud_accel.cpp:74]   --->   Operation 35 'br' 'br_ln74' <Predicate = (!icmp_ln67)> <Delay = 0.00>
-ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%empty = read i24 @_ssdm_op_Read.axis.volatile.i16P0A.i2P0A.i2P0A.i1P0A.i1P0A.i1P0A.i1P0A, i16 %in_ptr_V_data_V, i2 %in_ptr_V_keep_V, i2 %in_ptr_V_strb_V, i1 %in_ptr_V_user_V, i1 %in_ptr_V_last_V, i1 %in_ptr_V_id_V, i1 %in_ptr_V_dest_V"   --->   Operation 36 'read' 'empty' <Predicate = (!icmp_ln67 & !or_ln74)> <Delay = 0.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_1 : Operation 30 [1/1] (1.48ns)   --->   "%j_6 = add i11 %j_5, i11 1" [/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:67]   --->   Operation 30 'add' 'j_6' <Predicate = true> <Delay = 1.48> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%br_ln67 = br i1 %icmp_ln67, void %for.body6.split, void %loop_last_hunt.loopexit.exitStub" [/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:67]   --->   Operation 31 'br' 'br_ln67' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%specpipeline_ln70 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_18" [/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:70]   --->   Operation 32 'specpipeline' 'specpipeline_ln70' <Predicate = (!icmp_ln67)> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%specloopname_ln38 = specloopname void @_ssdm_op_SpecLoopName, void @empty_9" [/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:38]   --->   Operation 33 'specloopname' 'specloopname_ln38' <Predicate = (!icmp_ln67)> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.80ns)   --->   "%or_ln74 = or i1 %start, i1 %last" [/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:74]   --->   Operation 34 'or' 'or_ln74' <Predicate = (!icmp_ln67)> <Delay = 0.80> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%br_ln74 = br i1 %or_ln74, void %if.else, void %for.inc" [/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:74]   --->   Operation 35 'br' 'br_ln74' <Predicate = (!icmp_ln67)> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%empty = read i24 @_ssdm_op_Read.axis.volatile.i16P0A.i2P0A.i2P0A.i1P0A.i1P0A.i1P0A.i1P0A, i16 %s_axi_video_V_data_V, i2 %s_axi_video_V_keep_V, i2 %s_axi_video_V_strb_V, i1 %s_axi_video_V_user_V, i1 %s_axi_video_V_last_V, i1 %s_axi_video_V_id_V, i1 %s_axi_video_V_dest_V"   --->   Operation 36 'read' 'empty' <Predicate = (!icmp_ln67 & !or_ln74)> <Delay = 0.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
 ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%tmp_data_V = extractvalue i24 %empty"   --->   Operation 37 'extractvalue' 'tmp_data_V' <Predicate = (!icmp_ln67 & !or_ln74)> <Delay = 0.00>
 ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%tmp_last_V = extractvalue i24 %empty"   --->   Operation 38 'extractvalue' 'tmp_last_V' <Predicate = (!icmp_ln67 & !or_ln74)> <Delay = 0.00>
-ST_1 : Operation 39 [1/1] (1.32ns)   --->   "%store_ln283 = store i1 %tmp_last_V, i1 %axi_last_V"   --->   Operation 39 'store' 'store_ln283' <Predicate = (!icmp_ln67 & !or_ln74)> <Delay = 1.32>
-ST_1 : Operation 40 [1/1] (1.32ns)   --->   "%store_ln67 = store i11 %j_6, i11 %j" [xf_hud_accel.cpp:67]   --->   Operation 40 'store' 'store_ln67' <Predicate = (!icmp_ln67)> <Delay = 1.32>
-ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%br_ln67 = br void %for.body6" [xf_hud_accel.cpp:67]   --->   Operation 41 'br' 'br_ln67' <Predicate = (!icmp_ln67)> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (1.29ns)   --->   "%store_ln283 = store i1 %tmp_last_V, i1 %axi_last_V"   --->   Operation 39 'store' 'store_ln283' <Predicate = (!icmp_ln67 & !or_ln74)> <Delay = 1.29>
+ST_1 : Operation 40 [1/1] (1.29ns)   --->   "%store_ln67 = store i11 %j_6, i11 %j" [/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:67]   --->   Operation 40 'store' 'store_ln67' <Predicate = (!icmp_ln67)> <Delay = 1.29>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%br_ln67 = br void %for.body6" [/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:67]   --->   Operation 41 'br' 'br_ln67' <Predicate = (!icmp_ln67)> <Delay = 0.00>
 
-State 2 <SV = 1> <Delay = 1.32>
-ST_2 : Operation 42 [1/1] (1.32ns)   --->   "%store_ln283 = store i16 %tmp_data_V, i16 %axi_data_V"   --->   Operation 42 'store' 'store_ln283' <Predicate = (!icmp_ln67 & !or_ln74)> <Delay = 1.32>
+State 2 <SV = 1> <Delay = 1.29>
+ST_2 : Operation 42 [1/1] (1.29ns)   --->   "%store_ln283 = store i16 %tmp_data_V, i16 %axi_data_V"   --->   Operation 42 'store' 'store_ln283' <Predicate = (!icmp_ln67 & !or_ln74)> <Delay = 1.29>
 ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc"   --->   Operation 43 'br' 'br_ln0' <Predicate = (!icmp_ln67 & !or_ln74)> <Delay = 0.00>
 ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%axi_last_V_5 = load i1 %axi_last_V"   --->   Operation 44 'load' 'axi_last_V_5' <Predicate = (!icmp_ln67)> <Delay = 0.00>
 ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%axi_data_V_load = load i16 %axi_data_V"   --->   Operation 47 'load' 'axi_data_V_load' <Predicate = (icmp_ln67)> <Delay = 0.00>
@@ -270,7 +270,7 @@ ST_2 : Operation 50 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 
 
 State 3 <SV = 2> <Delay = 1.20>
 ST_3 : Operation 45 [1/1] (0.00ns)   --->   "%p_Val2_s = load i16 %axi_data_V" [/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 45 'load' 'p_Val2_s' <Predicate = (!icmp_ln67)> <Delay = 0.00>
-ST_3 : Operation 46 [1/1] (1.20ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i16P0A, i16 %InImg_data156, i16 %p_Val2_s" [/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 46 'write' 'write_ln174' <Predicate = (!icmp_ln67)> <Delay = 1.20> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.18> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 3> <FIFO>
+ST_3 : Operation 46 [1/1] (1.20ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i16P0A, i16 %InImg_data156, i16 %p_Val2_s" [/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 46 'write' 'write_ln174' <Predicate = (!icmp_ln67)> <Delay = 1.20> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 3> <FIFO>
 
 
 ============================================================
@@ -289,13 +289,13 @@ Port [ axi_data_V_2]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=
 Port [ axi_last_V_2]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
 Port [ trunc_ln38_1]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
 Port [ InImg_data156]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
-Port [ in_ptr_V_data_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
-Port [ in_ptr_V_keep_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
-Port [ in_ptr_V_strb_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
-Port [ in_ptr_V_user_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
-Port [ in_ptr_V_last_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
-Port [ in_ptr_V_id_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
-Port [ in_ptr_V_dest_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ s_axi_video_V_data_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ s_axi_video_V_keep_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ s_axi_video_V_strb_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ s_axi_video_V_user_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ s_axi_video_V_last_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ s_axi_video_V_id_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ s_axi_video_V_dest_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
 Port [ last_out]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
 Port [ axi_data_V_3_out]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
 ---------------- STG Properties END ------------------
@@ -399,66 +399,66 @@ ret_ln0               (ret              ) [ 0000]
 </bind>
 </comp>
 
-<comp id="10" class="1000" name="in_ptr_V_data_V">
+<comp id="10" class="1000" name="s_axi_video_V_data_V">
 <pin_list>
 <pin id="11" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="in_ptr_V_data_V"/></StgValue>
+<StgValue><ssdm name="s_axi_video_V_data_V"/></StgValue>
 </bind>
 </comp>
 
-<comp id="12" class="1000" name="in_ptr_V_keep_V">
+<comp id="12" class="1000" name="s_axi_video_V_keep_V">
 <pin_list>
 <pin id="13" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="in_ptr_V_keep_V"/></StgValue>
+<StgValue><ssdm name="s_axi_video_V_keep_V"/></StgValue>
 </bind>
 </comp>
 
-<comp id="14" class="1000" name="in_ptr_V_strb_V">
+<comp id="14" class="1000" name="s_axi_video_V_strb_V">
 <pin_list>
 <pin id="15" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="in_ptr_V_strb_V"/></StgValue>
+<StgValue><ssdm name="s_axi_video_V_strb_V"/></StgValue>
 </bind>
 </comp>
 
-<comp id="16" class="1000" name="in_ptr_V_user_V">
+<comp id="16" class="1000" name="s_axi_video_V_user_V">
 <pin_list>
 <pin id="17" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="in_ptr_V_user_V"/></StgValue>
+<StgValue><ssdm name="s_axi_video_V_user_V"/></StgValue>
 </bind>
 </comp>
 
-<comp id="18" class="1000" name="in_ptr_V_last_V">
+<comp id="18" class="1000" name="s_axi_video_V_last_V">
 <pin_list>
 <pin id="19" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="in_ptr_V_last_V"/></StgValue>
+<StgValue><ssdm name="s_axi_video_V_last_V"/></StgValue>
 </bind>
 </comp>
 
-<comp id="20" class="1000" name="in_ptr_V_id_V">
+<comp id="20" class="1000" name="s_axi_video_V_id_V">
 <pin_list>
 <pin id="21" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="in_ptr_V_id_V"/></StgValue>
+<StgValue><ssdm name="s_axi_video_V_id_V"/></StgValue>
 </bind>
 </comp>
 
-<comp id="22" class="1000" name="in_ptr_V_dest_V">
+<comp id="22" class="1000" name="s_axi_video_V_dest_V">
 <pin_list>
 <pin id="23" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="in_ptr_V_dest_V"/></StgValue>
+<StgValue><ssdm name="s_axi_video_V_dest_V"/></StgValue>
 </bind>
 </comp>
 
@@ -1265,13 +1265,13 @@ ret_ln0               (ret              ) [ 0000]
 * FSMD analyzer results:
   - Output states:
 	Port: InImg_data156 | {3 }
-	Port: in_ptr_V_data_V | {}
-	Port: in_ptr_V_keep_V | {}
-	Port: in_ptr_V_strb_V | {}
-	Port: in_ptr_V_user_V | {}
-	Port: in_ptr_V_last_V | {}
-	Port: in_ptr_V_id_V | {}
-	Port: in_ptr_V_dest_V | {}
+	Port: s_axi_video_V_data_V | {}
+	Port: s_axi_video_V_keep_V | {}
+	Port: s_axi_video_V_strb_V | {}
+	Port: s_axi_video_V_user_V | {}
+	Port: s_axi_video_V_last_V | {}
+	Port: s_axi_video_V_id_V | {}
+	Port: s_axi_video_V_dest_V | {}
 	Port: last_out | {2 }
 	Port: axi_data_V_3_out | {2 }
  - Input state : 
@@ -1280,13 +1280,13 @@ ret_ln0               (ret              ) [ 0000]
 	Port: AXIVideo2BayerMat<0, 4320, 3848, 2, 3>_Pipeline_loop_col_zxi2mat : axi_last_V_2 | {1 }
 	Port: AXIVideo2BayerMat<0, 4320, 3848, 2, 3>_Pipeline_loop_col_zxi2mat : trunc_ln38_1 | {1 }
 	Port: AXIVideo2BayerMat<0, 4320, 3848, 2, 3>_Pipeline_loop_col_zxi2mat : InImg_data156 | {}
-	Port: AXIVideo2BayerMat<0, 4320, 3848, 2, 3>_Pipeline_loop_col_zxi2mat : in_ptr_V_data_V | {1 }
-	Port: AXIVideo2BayerMat<0, 4320, 3848, 2, 3>_Pipeline_loop_col_zxi2mat : in_ptr_V_keep_V | {1 }
-	Port: AXIVideo2BayerMat<0, 4320, 3848, 2, 3>_Pipeline_loop_col_zxi2mat : in_ptr_V_strb_V | {1 }
-	Port: AXIVideo2BayerMat<0, 4320, 3848, 2, 3>_Pipeline_loop_col_zxi2mat : in_ptr_V_user_V | {1 }
-	Port: AXIVideo2BayerMat<0, 4320, 3848, 2, 3>_Pipeline_loop_col_zxi2mat : in_ptr_V_last_V | {1 }
-	Port: AXIVideo2BayerMat<0, 4320, 3848, 2, 3>_Pipeline_loop_col_zxi2mat : in_ptr_V_id_V | {1 }
-	Port: AXIVideo2BayerMat<0, 4320, 3848, 2, 3>_Pipeline_loop_col_zxi2mat : in_ptr_V_dest_V | {1 }
+	Port: AXIVideo2BayerMat<0, 4320, 3848, 2, 3>_Pipeline_loop_col_zxi2mat : s_axi_video_V_data_V | {1 }
+	Port: AXIVideo2BayerMat<0, 4320, 3848, 2, 3>_Pipeline_loop_col_zxi2mat : s_axi_video_V_keep_V | {1 }
+	Port: AXIVideo2BayerMat<0, 4320, 3848, 2, 3>_Pipeline_loop_col_zxi2mat : s_axi_video_V_strb_V | {1 }
+	Port: AXIVideo2BayerMat<0, 4320, 3848, 2, 3>_Pipeline_loop_col_zxi2mat : s_axi_video_V_user_V | {1 }
+	Port: AXIVideo2BayerMat<0, 4320, 3848, 2, 3>_Pipeline_loop_col_zxi2mat : s_axi_video_V_last_V | {1 }
+	Port: AXIVideo2BayerMat<0, 4320, 3848, 2, 3>_Pipeline_loop_col_zxi2mat : s_axi_video_V_id_V | {1 }
+	Port: AXIVideo2BayerMat<0, 4320, 3848, 2, 3>_Pipeline_loop_col_zxi2mat : s_axi_video_V_dest_V | {1 }
   - Chain level:
 	State 1
 		store_ln0 : 1
@@ -1314,11 +1314,11 @@ ret_ln0               (ret              ) [ 0000]
 |----------|-------------------------------|---------|---------|
 | Operation|        Functional Unit        |    FF   |   LUT   |
 |----------|-------------------------------|---------|---------|
-|    add   |           j_6_fu_198          |    0    |    18   |
+|    add   |           j_6_fu_198          |    0    |    11   |
 |----------|-------------------------------|---------|---------|
-|   icmp   |        icmp_ln67_fu_192       |    0    |    11   |
+|   icmp   |        icmp_ln67_fu_192       |    0    |    5    |
 |----------|-------------------------------|---------|---------|
-|    or    |         or_ln74_fu_204        |    0    |    2    |
+|    or    |         or_ln74_fu_204        |    0    |    1    |
 |----------|-------------------------------|---------|---------|
 |          |  trunc_ln38_1_read_read_fu_88 |    0    |    0    |
 |          |  axi_last_V_2_read_read_fu_94 |    0    |    0    |
@@ -1333,7 +1333,7 @@ ret_ln0               (ret              ) [ 0000]
 |extractvalue|       tmp_data_V_fu_210       |    0    |    0    |
 |          |       tmp_last_V_fu_214       |    0    |    0    |
 |----------|-------------------------------|---------|---------|
-|   Total  |                               |    0    |    31   |
+|   Total  |                               |    0    |    17   |
 |----------|-------------------------------|---------|---------|
 
 Memories:
@@ -1369,10 +1369,10 @@ N/A
 +-----------+--------+--------+
 |           |   FF   |   LUT  |
 +-----------+--------+--------+
-|  Function |    0   |   31   |
+|  Function |    0   |   17   |
 |   Memory  |    -   |    -   |
 |Multiplexer|    -   |    -   |
 |  Register |   49   |    -   |
 +-----------+--------+--------+
-|   Total   |   49   |   31   |
+|   Total   |   49   |   17   |
 +-----------+--------+--------+

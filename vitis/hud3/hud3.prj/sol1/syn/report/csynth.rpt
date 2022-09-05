@@ -1,55 +1,55 @@
 
 
 ================================================================
-== Synthesis Summary Report of 'extractEFrames_accel'
+== Synthesis Summary Report of 'hud_accel'
 ================================================================
 + General Information: 
-    * Date:           Sun Sep  4 18:21:52 2022
+    * Date:           Sun Sep  4 20:23:21 2022
     * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
     * Project:        hud3.prj
     * Solution:       sol1 (Vivado IP Flow Target)
-    * Product family: artix7
-    * Target device:  xc7a200t-fbg676-2
+    * Product family: zynq
+    * Target device:  xc7z045-ffg900-2
     
 
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +-------------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+---------+----+------------+-----------+-----+
-    |                              Modules                              |  Issue |       | Latency |  Latency  | Iteration|         | Trip |          |         |    |            |           |     |
-    |                              & Loops                              |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   | DSP|     FF     |    LUT    | URAM|
-    +-------------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+---------+----+------------+-----------+-----+
-    |+ extractEFrames_accel*                                            |  Timing|  -3.03|        -|          -|         -|        -|     -|  dataflow|  16 (2%)|   -|  2175 (~0%)|  3678 (2%)|    -|
-    | + Block_entry5_proc                                               |       -|   0.63|        0|      0.000|         -|        0|     -|        no|        -|   -|    74 (~0%)|   84 (~0%)|    -|
-    | + AXIVideo2BayerMat_0_4320_3848_2_3_s                             |  Timing|  -1.84|  8363527|  3.553e+07|         -|  8363527|     -|        no|        -|   -|   151 (~0%)|  424 (~0%)|    -|
-    |  + AXIVideo2BayerMat_0_4320_3848_2_3_Pipeline_loop_start_hunt     |       -|   1.09|        2|      6.600|         -|        2|     -|        no|        -|   -|     3 (~0%)|   33 (~0%)|    -|
-    |   o loop_start_hunt                                               |       -|   2.41|        0|      0.000|         1|        1|     0|       yes|        -|   -|           -|          -|    -|
-    |  o loop_row_axi2mat                                               |       -|   2.41|  8363521|  3.553e+07|      1936|        -|  4320|        no|        -|   -|           -|          -|    -|
-    |   + AXIVideo2BayerMat_0_4320_3848_2_3_Pipeline_loop_col_zxi2mat   |  Timing|  -1.84|     1927|  8.186e+03|         -|     1927|     -|        no|        -|   -|    53 (~0%)|  148 (~0%)|    -|
-    |    o loop_col_zxi2mat                                             |       -|   2.41|     1925|  8.177e+03|         3|        1|  1924|       yes|        -|   -|           -|          -|    -|
-    |   + AXIVideo2BayerMat_0_4320_3848_2_3_Pipeline_loop_last_hunt     |  Timing|  -0.24|        2|      6.600|         -|        2|     -|        no|        -|   -|     4 (~0%)|   51 (~0%)|    -|
-    |    o loop_last_hunt                                               |       -|   2.41|        0|      0.000|         1|        1|     0|       yes|        -|   -|           -|          -|    -|
-    | + extractExposureFrames_0_8_8_2160_3840_2_3_3_3_0_s               |  Timing|  -3.03|        -|          -|         -|        -|     -|        no|  16 (2%)|   -|   613 (~0%)|  1743 (1%)|    -|
-    |  + extract                                                        |  Timing|  -3.03|        -|          -|         -|        -|     -|        no|        -|   -|   596 (~0%)|  1670 (1%)|    -|
-    |   + extract_Pipeline_LAST_LINES_VITIS_LOOP_177_4                  |  Timing|  -3.03|       52|    282.900|         -|       52|     -|        no|        -|   -|    98 (~0%)|  334 (~0%)|    -|
-    |    o LAST_LINES_VITIS_LOOP_177_4                                  |       -|   2.41|       50|    272.019|         3|        1|    49|       yes|        -|   -|           -|          -|    -|
-    |   o BUFFER_LINES                                                  |       -|   2.41|       84|    456.992|        12|        -|     7|        no|        -|   -|           -|          -|    -|
-    |    + extract_Pipeline_VITIS_LOOP_113_1                            |  Timing|  -0.68|        9|     29.700|         -|        9|     -|        no|        -|   -|    25 (~0%)|   78 (~0%)|    -|
-    |     o VITIS_LOOP_113_1                                            |       -|   2.41|        7|     23.100|         2|        1|     7|       yes|        -|   -|           -|          -|    -|
-    |   o SPLIT_LINES                                                   |       -|   2.41|        -|          -|      4316|        -|     -|        no|        -|   -|           -|          -|    -|
-    |    + extract_Pipeline_VITIS_LOOP_133_2                            |  Timing|  -0.68|     2154|  7.108e+03|         -|     2154|     -|        no|        -|   -|    25 (~0%)|   78 (~0%)|    -|
-    |     o VITIS_LOOP_133_2                                            |       -|   2.41|     2152|  7.102e+03|         2|        1|  2152|       yes|        -|   -|           -|          -|    -|
-    |    + extract_Pipeline_VITIS_LOOP_145_3                            |  Timing|  -0.68|     2156|  7.115e+03|         -|     2156|     -|        no|        -|   -|   211 (~0%)|  174 (~0%)|    -|
-    |     o VITIS_LOOP_145_3                                            |       -|   2.41|     2154|  7.108e+03|         4|        1|  2152|       yes|        -|   -|           -|          -|    -|
-    | + GRAYMat2AXIvideo_0_2160_3840_2_3_s                              |  Timing|  -0.68|  4160163|  1.373e+07|         -|  4160163|     -|        no|        -|   -|    87 (~0%)|  248 (~0%)|    -|
-    |  o loop_row_mat2axi                                               |       -|   2.41|  4160160|  1.373e+07|      1926|        -|  2160|        no|        -|   -|           -|          -|    -|
-    |   + GRAYMat2AXIvideo_0_2160_3840_2_3_Pipeline_loop_col_mat2axi    |  Timing|  -0.68|     1923|  6.346e+03|         -|     1923|     -|        no|        -|   -|    18 (~0%)|  116 (~0%)|    -|
-    |    o loop_col_mat2axi                                             |       -|   2.41|     1921|  6.339e+03|         2|        1|  1920|       yes|        -|   -|           -|          -|    -|
-    | + GRAYMat2AXIvideo_0_2160_3840_2_3_1                              |  Timing|  -0.68|  4160163|  1.373e+07|         -|  4160163|     -|        no|        -|   -|    75 (~0%)|  239 (~0%)|    -|
-    |  o loop_row_mat2axi                                               |       -|   2.41|  4160160|  1.373e+07|      1926|        -|  2160|        no|        -|   -|           -|          -|    -|
-    |   + GRAYMat2AXIvideo_0_2160_3840_2_3_1_Pipeline_loop_col_mat2axi  |  Timing|  -0.68|     1923|  6.346e+03|         -|     1923|     -|        no|        -|   -|    18 (~0%)|  116 (~0%)|    -|
-    |    o loop_col_mat2axi                                             |       -|   2.41|     1921|  6.339e+03|         2|        1|  1920|       yes|        -|   -|           -|          -|    -|
-    +-------------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+---------+----+------------+-----------+-----+
+    +-------------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+---------+----+------------+------------+-----+
+    |                              Modules                              |  Issue |       | Latency |  Latency  | Iteration|         | Trip |          |         |    |            |            |     |
+    |                              & Loops                              |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   | DSP|     FF     |     LUT    | URAM|
+    +-------------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+---------+----+------------+------------+-----+
+    |+ hud_accel*                                                       |  Timing|  -3.04|        -|          -|         -|        -|     -|  dataflow|  16 (1%)|   -|  2175 (~0%)|   3332 (1%)|    -|
+    | + Block_entry5_proc                                               |       -|   0.86|        0|      0.000|         -|        0|     -|        no|        -|   -|    74 (~0%)|    76 (~0%)|    -|
+    | + AXIVideo2BayerMat_0_4320_3848_2_3_s                             |  Timing|  -1.79|  8363527|  3.509e+07|         -|  8363527|     -|        no|        -|   -|   151 (~0%)|   379 (~0%)|    -|
+    |  + AXIVideo2BayerMat_0_4320_3848_2_3_Pipeline_loop_start_hunt     |       -|   1.11|        2|      6.600|         -|        2|     -|        no|        -|   -|     3 (~0%)|    32 (~0%)|    -|
+    |   o loop_start_hunt                                               |       -|   2.41|        0|      0.000|         1|        1|     0|       yes|        -|   -|           -|           -|    -|
+    |  o loop_row_axi2mat                                               |       -|   2.41|  8363521|  3.509e+07|      1936|        -|  4320|        no|        -|   -|           -|           -|    -|
+    |   + AXIVideo2BayerMat_0_4320_3848_2_3_Pipeline_loop_col_zxi2mat   |  Timing|  -1.79|     1927|  8.086e+03|         -|     1927|     -|        no|        -|   -|    53 (~0%)|   126 (~0%)|    -|
+    |    o loop_col_zxi2mat                                             |       -|   2.41|     1925|  8.077e+03|         3|        1|  1924|       yes|        -|   -|           -|           -|    -|
+    |   + AXIVideo2BayerMat_0_4320_3848_2_3_Pipeline_loop_last_hunt     |  Timing|  -0.19|        2|      6.600|         -|        2|     -|        no|        -|   -|     4 (~0%)|    50 (~0%)|    -|
+    |    o loop_last_hunt                                               |       -|   2.41|        0|      0.000|         1|        1|     0|       yes|        -|   -|           -|           -|    -|
+    | + extractExposureFrames_0_8_8_2160_3840_2_3_3_3_0_s               |  Timing|  -3.04|        -|          -|         -|        -|     -|        no|  16 (1%)|   -|   613 (~0%)|  1577 (~0%)|    -|
+    |  + extract                                                        |  Timing|  -3.04|        -|          -|         -|        -|     -|        no|        -|   -|   596 (~0%)|  1505 (~0%)|    -|
+    |   + extract_Pipeline_LAST_LINES_VITIS_LOOP_177_4                  |  Timing|  -3.04|       52|    283.634|         -|       52|     -|        no|        -|   -|    98 (~0%)|   286 (~0%)|    -|
+    |    o LAST_LINES_VITIS_LOOP_177_4                                  |       -|   2.41|       50|    272.725|         3|        1|    49|       yes|        -|   -|           -|           -|    -|
+    |   o BUFFER_LINES                                                  |       -|   2.41|       84|    458.178|        12|        -|     7|        no|        -|   -|           -|           -|    -|
+    |    + extract_Pipeline_VITIS_LOOP_113_1                            |  Timing|  -0.77|        9|     29.700|         -|        9|     -|        no|        -|   -|    25 (~0%)|    64 (~0%)|    -|
+    |     o VITIS_LOOP_113_1                                            |       -|   2.41|        7|     23.100|         2|        1|     7|       yes|        -|   -|           -|           -|    -|
+    |   o SPLIT_LINES                                                   |       -|   2.41|        -|          -|      4316|        -|     -|        no|        -|   -|           -|           -|    -|
+    |    + extract_Pipeline_VITIS_LOOP_133_2                            |  Timing|  -0.77|     2154|  7.108e+03|         -|     2154|     -|        no|        -|   -|    25 (~0%)|    64 (~0%)|    -|
+    |     o VITIS_LOOP_133_2                                            |       -|   2.41|     2152|  7.102e+03|         2|        1|  2152|       yes|        -|   -|           -|           -|    -|
+    |    + extract_Pipeline_VITIS_LOOP_145_3                            |  Timing|  -0.77|     2156|  7.115e+03|         -|     2156|     -|        no|        -|   -|   211 (~0%)|   152 (~0%)|    -|
+    |     o VITIS_LOOP_145_3                                            |       -|   2.41|     2154|  7.108e+03|         4|        1|  2152|       yes|        -|   -|           -|           -|    -|
+    | + GRAYMat2AXIvideo_0_2160_3840_2_3_s                              |  Timing|  -0.77|  4160163|  1.373e+07|         -|  4160163|     -|        no|        -|   -|    87 (~0%)|   193 (~0%)|    -|
+    |  o loop_row_mat2axi                                               |       -|   2.41|  4160160|  1.373e+07|      1926|        -|  2160|        no|        -|   -|           -|           -|    -|
+    |   + GRAYMat2AXIvideo_0_2160_3840_2_3_Pipeline_loop_col_mat2axi    |  Timing|  -0.77|     1923|  6.346e+03|         -|     1923|     -|        no|        -|   -|    18 (~0%)|    91 (~0%)|    -|
+    |    o loop_col_mat2axi                                             |       -|   2.41|     1921|  6.339e+03|         2|        1|  1920|       yes|        -|   -|           -|           -|    -|
+    | + GRAYMat2AXIvideo_0_2160_3840_2_3_1                              |  Timing|  -0.77|  4160163|  1.373e+07|         -|  4160163|     -|        no|        -|   -|    75 (~0%)|   184 (~0%)|    -|
+    |  o loop_row_mat2axi                                               |       -|   2.41|  4160160|  1.373e+07|      1926|        -|  2160|        no|        -|   -|           -|           -|    -|
+    |   + GRAYMat2AXIvideo_0_2160_3840_2_3_1_Pipeline_loop_col_mat2axi  |  Timing|  -0.77|     1923|  6.346e+03|         -|     1923|     -|        no|        -|   -|    18 (~0%)|    91 (~0%)|    -|
+    |    o loop_col_mat2axi                                             |       -|   2.41|     1921|  6.339e+03|         2|        1|  1920|       yes|        -|   -|           -|           -|    -|
+    +-------------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+---------+----+------------+------------+-----+
 
 
 ================================================================
@@ -75,13 +75,13 @@
 +---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
 
 * AXIS
-+-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
-| Interface | Register Mode | TDATA | TDEST | TID | TKEEP | TLAST | TREADY | TSTRB | TUSER | TVALID |
-+-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
-| in_ptr    | both          | 16    | 1     | 1   | 2     | 1     | 1      | 2     | 1     | 1      |
-| lef_ptr   | both          | 16    | 1     | 1   | 2     | 1     | 1      | 2     | 1     | 1      |
-| sef_ptr   | both          | 16    | 1     | 1   | 2     | 1     | 1      | 2     | 1     | 1      |
-+-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
++------------------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| Interface        | Register Mode | TDATA | TDEST | TID | TKEEP | TLAST | TREADY | TSTRB | TUSER | TVALID |
++------------------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| m_axis_video_lef | both          | 16    | 1     | 1   | 2     | 1     | 1      | 2     | 1     | 1      |
+| m_axis_video_sef | both          | 16    | 1     | 1   | 2     | 1     | 1      | 2     | 1     | 1      |
+| s_axi_video      | both          | 16    | 1     | 1   | 2     | 1     | 1      | 2     | 1     | 1      |
++------------------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
 
 * TOP LEVEL CONTROL
 +-----------+------------+-----------+
@@ -98,26 +98,26 @@
 == SW I/O Information
 ================================================================
 * Top Function Arguments
-+----------+-----------+---------------------------------------------+
-| Argument | Direction | Datatype                                    |
-+----------+-----------+---------------------------------------------+
-| in_ptr   | in        | stream<hls::axis<ap_uint<16>, 1, 1, 1>, 0>& |
-| lef_ptr  | out       | stream<hls::axis<ap_uint<16>, 1, 1, 1>, 0>& |
-| sef_ptr  | out       | stream<hls::axis<ap_uint<16>, 1, 1, 1>, 0>& |
-| height   | in        | ap_uint<16>                                 |
-| width    | in        | ap_uint<16>                                 |
-+----------+-----------+---------------------------------------------+
++------------------+-----------+---------------------------------------------+
+| Argument         | Direction | Datatype                                    |
++------------------+-----------+---------------------------------------------+
+| s_axi_video      | in        | stream<hls::axis<ap_uint<16>, 1, 1, 1>, 0>& |
+| m_axis_video_lef | out       | stream<hls::axis<ap_uint<16>, 1, 1, 1>, 0>& |
+| m_axis_video_sef | out       | stream<hls::axis<ap_uint<16>, 1, 1, 1>, 0>& |
+| height           | in        | ap_uint<16>                                 |
+| width            | in        | ap_uint<16>                                 |
++------------------+-----------+---------------------------------------------+
 
 * SW-to-HW Mapping
-+----------+---------------+-----------+----------------------------------+
-| Argument | HW Interface  | HW Type   | HW Info                          |
-+----------+---------------+-----------+----------------------------------+
-| in_ptr   | in_ptr        | interface |                                  |
-| lef_ptr  | lef_ptr       | interface |                                  |
-| sef_ptr  | sef_ptr       | interface |                                  |
-| height   | s_axi_control | register  | name=height offset=0x10 range=32 |
-| width    | s_axi_control | register  | name=width offset=0x18 range=32  |
-+----------+---------------+-----------+----------------------------------+
++------------------+------------------+-----------+----------------------------------+
+| Argument         | HW Interface     | HW Type   | HW Info                          |
++------------------+------------------+-----------+----------------------------------+
+| s_axi_video      | s_axi_video      | interface |                                  |
+| m_axis_video_lef | m_axis_video_lef | interface |                                  |
+| m_axis_video_sef | m_axis_video_sef | interface |                                  |
+| height           | s_axi_control    | register  | name=height offset=0x10 range=32 |
+| width            | s_axi_control    | register  | name=width offset=0x18 range=32  |
++------------------+------------------+-----------+----------------------------------+
 
 
 ================================================================
@@ -133,7 +133,7 @@
 +------------------------------------------------------------------+-----+--------+--------------------------+------+--------+---------+
 | Name                                                             | DSP | Pragma | Variable                 | Op   | Impl   | Latency |
 +------------------------------------------------------------------+-----+--------+--------------------------+------+--------+---------+
-| + extractEFrames_accel                                           | 0   |        |                          |      |        |         |
+| + hud_accel                                                      | 0   |        |                          |      |        |         |
 |   InImg_rows_channel_U                                           | -   |        | InImg_rows_channel       | fifo | srl    | 0       |
 |   LEF_Img_cols_channel_U                                         | -   |        | LEF_Img_cols_channel     | fifo | srl    | 0       |
 |   SEF_Img_rows_channel_U                                         | -   |        | SEF_Img_rows_channel     | fifo | srl    | 0       |
@@ -182,7 +182,7 @@
 +------------------------------------------------------+------+------+--------+------------------+---------+------+---------+
 | Name                                                 | BRAM | URAM | Pragma | Variable         | Storage | Impl | Latency |
 +------------------------------------------------------+------+------+--------+------------------+---------+------+---------+
-| + extractEFrames_accel                               | 16   | 0    |        |                  |         |      |         |
+| + hud_accel                                          | 16   | 0    |        |                  |         |      |         |
 |   LEF_Img_rows_c_U                                   | -    | -    |        | LEF_Img_rows_c   | fifo    | srl  | 0       |
 |   InImg_cols_c_U                                     | -    | -    |        | InImg_cols_c     | fifo    | srl  | 0       |
 |   InImg_data_U                                       | -    | -    |        | InImg_data       | fifo    | srl  | 0       |
@@ -226,9 +226,9 @@
 | resource      | variable=val core=RAM_S2P_BRAM           | ../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:731 in linebuffer<rows, cols, t, mem_type, reshape_factor>, val | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead |
 | resource      | variable=val core=RAM_T2P_BRAM           | ../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:741 in linebuffer<rows, cols, t, mem_type, reshape_factor>, val | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead |
 | array_reshape | variable=val factor=RESHAPE_FACTOR dim=1 | ../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:759 in linebuffer<rows, cols, t, mem_type, reshape_factor>, val | 'factor' in '#pragma HLS array_reshape' is ignored                         |
-| interface     | axis port=&in_ptr register               | xf_hud_accel.cpp:178 in extracteframes_accel, &in_ptr                                                                                         | extra token before variable expression is ignored                          |
-| interface     | axis port=&lef_ptr register              | xf_hud_accel.cpp:179 in extracteframes_accel, &lef_ptr                                                                                        | extra token before variable expression is ignored                          |
-| interface     | axis port=&sef_ptr register              | xf_hud_accel.cpp:180 in extracteframes_accel, &sef_ptr                                                                                        | extra token before variable expression is ignored                          |
+| interface     | axis port=&s_axi_video register          | xf_hud_accel.cpp:178 in hud_accel, &s_axi_video                                                                                               | extra token before variable expression is ignored                          |
+| interface     | axis port=&m_axis_video_lef register     | xf_hud_accel.cpp:179 in hud_accel, &m_axis_video_lef                                                                                          | extra token before variable expression is ignored                          |
+| interface     | axis port=&m_axis_video_sef register     | xf_hud_accel.cpp:180 in hud_accel, &m_axis_video_sef                                                                                          | extra token before variable expression is ignored                          |
 +---------------+------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
 
 * Valid Pragma Syntax
@@ -446,10 +446,10 @@
 | loop_flatten    | off                                              | xf_hud_accel.cpp:128 in graymat2axivideo                                                                                                                                                                                  |
 | pipeline        | II = 1                                           | xf_hud_accel.cpp:129 in graymat2axivideo                                                                                                                                                                                  |
 | loop_tripcount  | avg=COLS/NPPC max=COLS/NPPC                      | xf_hud_accel.cpp:130 in graymat2axivideo                                                                                                                                                                                  |
-| interface       | s_axilite port=height                            | xf_hud_accel.cpp:182 in extracteframes_accel, height                                                                                                                                                                      |
-| interface       | s_axilite port=width                             | xf_hud_accel.cpp:183 in extracteframes_accel, width                                                                                                                                                                       |
-| interface       | s_axilite port=return                            | xf_hud_accel.cpp:184 in extracteframes_accel, return                                                                                                                                                                      |
-| dataflow        |                                                  | xf_hud_accel.cpp:199 in extracteframes_accel                                                                                                                                                                              |
+| interface       | s_axilite port=height                            | xf_hud_accel.cpp:182 in hud_accel, height                                                                                                                                                                                 |
+| interface       | s_axilite port=width                             | xf_hud_accel.cpp:183 in hud_accel, width                                                                                                                                                                                  |
+| interface       | s_axilite port=return                            | xf_hud_accel.cpp:184 in hud_accel, return                                                                                                                                                                                 |
+| dataflow        |                                                  | xf_hud_accel.cpp:199 in hud_accel                                                                                                                                                                                         |
 +-----------------+--------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 

@@ -174,7 +174,7 @@ entry:2 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %SE
 
 <Node id="14" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="1" op_3_bw="1" op_4_bw="1" op_5_bw="2" op_6_bw="2" op_7_bw="16" op_8_bw="0" op_9_bw="32" op_10_bw="32" op_11_bw="0" op_12_bw="32" op_13_bw="32" op_14_bw="0" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32" op_19_bw="32" op_20_bw="32" op_21_bw="0" op_22_bw="0" op_23_bw="32" op_24_bw="32">
 <![CDATA[
-entry:3 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %sef_ptr_V_dest_V, i1 %sef_ptr_V_id_V, i1 %sef_ptr_V_last_V, i1 %sef_ptr_V_user_V, i2 %sef_ptr_V_strb_V, i2 %sef_ptr_V_keep_V, i16 %sef_ptr_V_data_V, void @empty_20, i32 1, i32 1, void @empty_19, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0
+entry:3 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %m_axis_video_sef_V_dest_V, i1 %m_axis_video_sef_V_id_V, i1 %m_axis_video_sef_V_last_V, i1 %m_axis_video_sef_V_user_V, i2 %m_axis_video_sef_V_strb_V, i2 %m_axis_video_sef_V_keep_V, i16 %m_axis_video_sef_V_data_V, void @empty_20, i32 1, i32 1, void @empty_19, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -408,7 +408,7 @@ for.body6.preheader:1 %empty = wait i32 @_ssdm_op_Wait
 
 <Node id="36" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="11" op_3_bw="12" op_4_bw="16" op_5_bw="16" op_6_bw="2" op_7_bw="2" op_8_bw="1" op_9_bw="1" op_10_bw="1" op_11_bw="1" op_12_bw="0">
 <![CDATA[
-for.body6.preheader:2 %call_ln109 = call void @GRAYMat2AXIvideo<0, 2160, 3840, 2, 3>.1_Pipeline_loop_col_mat2axi, i1 %sof_load, i11 %cols, i12 %sub, i16 %SEF_Img_data158, i16 %sef_ptr_V_data_V, i2 %sef_ptr_V_keep_V, i2 %sef_ptr_V_strb_V, i1 %sef_ptr_V_user_V, i1 %sef_ptr_V_last_V, i1 %sef_ptr_V_id_V, i1 %sef_ptr_V_dest_V
+for.body6.preheader:2 %call_ln109 = call void @GRAYMat2AXIvideo<0, 2160, 3840, 2, 3>.1_Pipeline_loop_col_mat2axi, i1 %sof_load, i11 %cols, i12 %sub, i16 %SEF_Img_data158, i16 %m_axis_video_sef_V_data_V, i2 %m_axis_video_sef_V_keep_V, i2 %m_axis_video_sef_V_strb_V, i1 %m_axis_video_sef_V_user_V, i1 %m_axis_video_sef_V_last_V, i1 %m_axis_video_sef_V_id_V, i1 %m_axis_video_sef_V_dest_V
 
 ]]></Node>
 <StgValue><ssdm name="call_ln109"/></StgValue>
@@ -427,7 +427,7 @@ for.body6.preheader:2 %call_ln109 = call void @GRAYMat2AXIvideo<0, 2160, 3840, 2
 
 <Node id="36" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="11" op_3_bw="12" op_4_bw="16" op_5_bw="16" op_6_bw="2" op_7_bw="2" op_8_bw="1" op_9_bw="1" op_10_bw="1" op_11_bw="1" op_12_bw="0">
 <![CDATA[
-for.body6.preheader:2 %call_ln109 = call void @GRAYMat2AXIvideo<0, 2160, 3840, 2, 3>.1_Pipeline_loop_col_mat2axi, i1 %sof_load, i11 %cols, i12 %sub, i16 %SEF_Img_data158, i16 %sef_ptr_V_data_V, i2 %sef_ptr_V_keep_V, i2 %sef_ptr_V_strb_V, i1 %sef_ptr_V_user_V, i1 %sef_ptr_V_last_V, i1 %sef_ptr_V_id_V, i1 %sef_ptr_V_dest_V
+for.body6.preheader:2 %call_ln109 = call void @GRAYMat2AXIvideo<0, 2160, 3840, 2, 3>.1_Pipeline_loop_col_mat2axi, i1 %sof_load, i11 %cols, i12 %sub, i16 %SEF_Img_data158, i16 %m_axis_video_sef_V_data_V, i2 %m_axis_video_sef_V_keep_V, i2 %m_axis_video_sef_V_strb_V, i1 %m_axis_video_sef_V_user_V, i1 %m_axis_video_sef_V_last_V, i1 %m_axis_video_sef_V_id_V, i1 %m_axis_video_sef_V_dest_V
 
 ]]></Node>
 <StgValue><ssdm name="call_ln109"/></StgValue>

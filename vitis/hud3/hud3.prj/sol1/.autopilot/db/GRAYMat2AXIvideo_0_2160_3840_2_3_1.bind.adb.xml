@@ -174,7 +174,7 @@ entry:2 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %SE
 
 <Node id="14" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="1" op_3_bw="1" op_4_bw="1" op_5_bw="2" op_6_bw="2" op_7_bw="16" op_8_bw="0" op_9_bw="32" op_10_bw="32" op_11_bw="0" op_12_bw="32" op_13_bw="32" op_14_bw="0" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32" op_19_bw="32" op_20_bw="32" op_21_bw="0" op_22_bw="0" op_23_bw="32" op_24_bw="32">
 <![CDATA[
-entry:3 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %sef_ptr_V_dest_V, i1 %sef_ptr_V_id_V, i1 %sef_ptr_V_last_V, i1 %sef_ptr_V_user_V, i2 %sef_ptr_V_strb_V, i2 %sef_ptr_V_keep_V, i16 %sef_ptr_V_data_V, void @empty_20, i32 1, i32 1, void @empty_19, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0
+entry:3 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %m_axis_video_sef_V_dest_V, i1 %m_axis_video_sef_V_id_V, i1 %m_axis_video_sef_V_last_V, i1 %m_axis_video_sef_V_user_V, i2 %m_axis_video_sef_V_strb_V, i2 %m_axis_video_sef_V_keep_V, i16 %m_axis_video_sef_V_data_V, void @empty_20, i32 1, i32 1, void @empty_19, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -408,7 +408,7 @@ for.body6.preheader:1 %empty = wait i32 @_ssdm_op_Wait
 
 <Node id="36" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="11" op_3_bw="12" op_4_bw="16" op_5_bw="16" op_6_bw="2" op_7_bw="2" op_8_bw="1" op_9_bw="1" op_10_bw="1" op_11_bw="1" op_12_bw="0">
 <![CDATA[
-for.body6.preheader:2 %call_ln109 = call void @GRAYMat2AXIvideo<0, 2160, 3840, 2, 3>.1_Pipeline_loop_col_mat2axi, i1 %sof_load, i11 %cols, i12 %sub, i16 %SEF_Img_data158, i16 %sef_ptr_V_data_V, i2 %sef_ptr_V_keep_V, i2 %sef_ptr_V_strb_V, i1 %sef_ptr_V_user_V, i1 %sef_ptr_V_last_V, i1 %sef_ptr_V_id_V, i1 %sef_ptr_V_dest_V
+for.body6.preheader:2 %call_ln109 = call void @GRAYMat2AXIvideo<0, 2160, 3840, 2, 3>.1_Pipeline_loop_col_mat2axi, i1 %sof_load, i11 %cols, i12 %sub, i16 %SEF_Img_data158, i16 %m_axis_video_sef_V_data_V, i2 %m_axis_video_sef_V_keep_V, i2 %m_axis_video_sef_V_strb_V, i1 %m_axis_video_sef_V_user_V, i1 %m_axis_video_sef_V_last_V, i1 %m_axis_video_sef_V_id_V, i1 %m_axis_video_sef_V_dest_V
 
 ]]></Node>
 <StgValue><ssdm name="call_ln109"/></StgValue>
@@ -427,7 +427,7 @@ for.body6.preheader:2 %call_ln109 = call void @GRAYMat2AXIvideo<0, 2160, 3840, 2
 
 <Node id="36" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="11" op_3_bw="12" op_4_bw="16" op_5_bw="16" op_6_bw="2" op_7_bw="2" op_8_bw="1" op_9_bw="1" op_10_bw="1" op_11_bw="1" op_12_bw="0">
 <![CDATA[
-for.body6.preheader:2 %call_ln109 = call void @GRAYMat2AXIvideo<0, 2160, 3840, 2, 3>.1_Pipeline_loop_col_mat2axi, i1 %sof_load, i11 %cols, i12 %sub, i16 %SEF_Img_data158, i16 %sef_ptr_V_data_V, i2 %sef_ptr_V_keep_V, i2 %sef_ptr_V_strb_V, i1 %sef_ptr_V_user_V, i1 %sef_ptr_V_last_V, i1 %sef_ptr_V_id_V, i1 %sef_ptr_V_dest_V
+for.body6.preheader:2 %call_ln109 = call void @GRAYMat2AXIvideo<0, 2160, 3840, 2, 3>.1_Pipeline_loop_col_mat2axi, i1 %sof_load, i11 %cols, i12 %sub, i16 %SEF_Img_data158, i16 %m_axis_video_sef_V_data_V, i2 %m_axis_video_sef_V_keep_V, i2 %m_axis_video_sef_V_strb_V, i1 %m_axis_video_sef_V_user_V, i1 %m_axis_video_sef_V_last_V, i1 %m_axis_video_sef_V_id_V, i1 %m_axis_video_sef_V_dest_V
 
 ]]></Node>
 <StgValue><ssdm name="call_ln109"/></StgValue>
@@ -526,26 +526,26 @@ for.end42.loopexit:0 %ret_ln164 = ret
 <port id="45" name="SEF_Img_data158" dir="0" iftype="3">
 <core>NULL</core><StgValue><ssdm name="SEF_Img_data158"/></StgValue>
 </port>
-<port id="46" name="sef_ptr_V_data_V" dir="1" iftype="0">
-<core>NULL</core><StgValue><ssdm name="sef_ptr_V_data_V"/></StgValue>
+<port id="46" name="m_axis_video_sef_V_data_V" dir="1" iftype="0">
+<core>NULL</core><StgValue><ssdm name="m_axis_video_sef_V_data_V"/></StgValue>
 </port>
-<port id="47" name="sef_ptr_V_keep_V" dir="1" iftype="0">
-<core>NULL</core><StgValue><ssdm name="sef_ptr_V_keep_V"/></StgValue>
+<port id="47" name="m_axis_video_sef_V_keep_V" dir="1" iftype="0">
+<core>NULL</core><StgValue><ssdm name="m_axis_video_sef_V_keep_V"/></StgValue>
 </port>
-<port id="48" name="sef_ptr_V_strb_V" dir="1" iftype="0">
-<core>NULL</core><StgValue><ssdm name="sef_ptr_V_strb_V"/></StgValue>
+<port id="48" name="m_axis_video_sef_V_strb_V" dir="1" iftype="0">
+<core>NULL</core><StgValue><ssdm name="m_axis_video_sef_V_strb_V"/></StgValue>
 </port>
-<port id="49" name="sef_ptr_V_user_V" dir="1" iftype="0">
-<core>NULL</core><StgValue><ssdm name="sef_ptr_V_user_V"/></StgValue>
+<port id="49" name="m_axis_video_sef_V_user_V" dir="1" iftype="0">
+<core>NULL</core><StgValue><ssdm name="m_axis_video_sef_V_user_V"/></StgValue>
 </port>
-<port id="50" name="sef_ptr_V_last_V" dir="1" iftype="0">
-<core>NULL</core><StgValue><ssdm name="sef_ptr_V_last_V"/></StgValue>
+<port id="50" name="m_axis_video_sef_V_last_V" dir="1" iftype="0">
+<core>NULL</core><StgValue><ssdm name="m_axis_video_sef_V_last_V"/></StgValue>
 </port>
-<port id="51" name="sef_ptr_V_id_V" dir="1" iftype="0">
-<core>NULL</core><StgValue><ssdm name="sef_ptr_V_id_V"/></StgValue>
+<port id="51" name="m_axis_video_sef_V_id_V" dir="1" iftype="0">
+<core>NULL</core><StgValue><ssdm name="m_axis_video_sef_V_id_V"/></StgValue>
 </port>
-<port id="52" name="sef_ptr_V_dest_V" dir="1" iftype="0">
-<core>NULL</core><StgValue><ssdm name="sef_ptr_V_dest_V"/></StgValue>
+<port id="52" name="m_axis_video_sef_V_dest_V" dir="1" iftype="0">
+<core>NULL</core><StgValue><ssdm name="m_axis_video_sef_V_dest_V"/></StgValue>
 </port>
 </ports>
 
@@ -615,19 +615,19 @@ for.end42.loopexit:0 %ret_ln164 = ret
 </dataflow>
 <dataflow id="95" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="71" toId="14">
 </dataflow>
-<dataflow id="96" from="sef_ptr_V_dest_V" to="specinterface_ln0" fromId="52" toId="14">
+<dataflow id="96" from="m_axis_video_sef_V_dest_V" to="specinterface_ln0" fromId="52" toId="14">
 </dataflow>
-<dataflow id="97" from="sef_ptr_V_id_V" to="specinterface_ln0" fromId="51" toId="14">
+<dataflow id="97" from="m_axis_video_sef_V_id_V" to="specinterface_ln0" fromId="51" toId="14">
 </dataflow>
-<dataflow id="98" from="sef_ptr_V_last_V" to="specinterface_ln0" fromId="50" toId="14">
+<dataflow id="98" from="m_axis_video_sef_V_last_V" to="specinterface_ln0" fromId="50" toId="14">
 </dataflow>
-<dataflow id="99" from="sef_ptr_V_user_V" to="specinterface_ln0" fromId="49" toId="14">
+<dataflow id="99" from="m_axis_video_sef_V_user_V" to="specinterface_ln0" fromId="49" toId="14">
 </dataflow>
-<dataflow id="100" from="sef_ptr_V_strb_V" to="specinterface_ln0" fromId="48" toId="14">
+<dataflow id="100" from="m_axis_video_sef_V_strb_V" to="specinterface_ln0" fromId="48" toId="14">
 </dataflow>
-<dataflow id="101" from="sef_ptr_V_keep_V" to="specinterface_ln0" fromId="47" toId="14">
+<dataflow id="101" from="m_axis_video_sef_V_keep_V" to="specinterface_ln0" fromId="47" toId="14">
 </dataflow>
-<dataflow id="102" from="sef_ptr_V_data_V" to="specinterface_ln0" fromId="46" toId="14">
+<dataflow id="102" from="m_axis_video_sef_V_data_V" to="specinterface_ln0" fromId="46" toId="14">
 </dataflow>
 <dataflow id="104" from="empty_20" to="specinterface_ln0" fromId="103" toId="14">
 </dataflow>
@@ -717,19 +717,19 @@ for.end42.loopexit:0 %ret_ln164 = ret
 </dataflow>
 <dataflow id="158" from="SEF_Img_data158" to="call_ln109" fromId="45" toId="29">
 </dataflow>
-<dataflow id="159" from="sef_ptr_V_data_V" to="call_ln109" fromId="46" toId="29">
+<dataflow id="159" from="m_axis_video_sef_V_data_V" to="call_ln109" fromId="46" toId="29">
 </dataflow>
-<dataflow id="160" from="sef_ptr_V_keep_V" to="call_ln109" fromId="47" toId="29">
+<dataflow id="160" from="m_axis_video_sef_V_keep_V" to="call_ln109" fromId="47" toId="29">
 </dataflow>
-<dataflow id="161" from="sef_ptr_V_strb_V" to="call_ln109" fromId="48" toId="29">
+<dataflow id="161" from="m_axis_video_sef_V_strb_V" to="call_ln109" fromId="48" toId="29">
 </dataflow>
-<dataflow id="162" from="sef_ptr_V_user_V" to="call_ln109" fromId="49" toId="29">
+<dataflow id="162" from="m_axis_video_sef_V_user_V" to="call_ln109" fromId="49" toId="29">
 </dataflow>
-<dataflow id="163" from="sef_ptr_V_last_V" to="call_ln109" fromId="50" toId="29">
+<dataflow id="163" from="m_axis_video_sef_V_last_V" to="call_ln109" fromId="50" toId="29">
 </dataflow>
-<dataflow id="164" from="sef_ptr_V_id_V" to="call_ln109" fromId="51" toId="29">
+<dataflow id="164" from="m_axis_video_sef_V_id_V" to="call_ln109" fromId="51" toId="29">
 </dataflow>
-<dataflow id="165" from="sef_ptr_V_dest_V" to="call_ln109" fromId="52" toId="29">
+<dataflow id="165" from="m_axis_video_sef_V_dest_V" to="call_ln109" fromId="52" toId="29">
 </dataflow>
 <dataflow id="166" from="GRAYMat2AXIvideo<0, 2160, 3840, 2, 3>.1_Pipeline_loop_col_mat2axi" to="call_ln109" fromId="153" toId="30">
 </dataflow>
@@ -741,19 +741,19 @@ for.end42.loopexit:0 %ret_ln164 = ret
 </dataflow>
 <dataflow id="170" from="SEF_Img_data158" to="call_ln109" fromId="45" toId="30">
 </dataflow>
-<dataflow id="171" from="sef_ptr_V_data_V" to="call_ln109" fromId="46" toId="30">
+<dataflow id="171" from="m_axis_video_sef_V_data_V" to="call_ln109" fromId="46" toId="30">
 </dataflow>
-<dataflow id="172" from="sef_ptr_V_keep_V" to="call_ln109" fromId="47" toId="30">
+<dataflow id="172" from="m_axis_video_sef_V_keep_V" to="call_ln109" fromId="47" toId="30">
 </dataflow>
-<dataflow id="173" from="sef_ptr_V_strb_V" to="call_ln109" fromId="48" toId="30">
+<dataflow id="173" from="m_axis_video_sef_V_strb_V" to="call_ln109" fromId="48" toId="30">
 </dataflow>
-<dataflow id="174" from="sef_ptr_V_user_V" to="call_ln109" fromId="49" toId="30">
+<dataflow id="174" from="m_axis_video_sef_V_user_V" to="call_ln109" fromId="49" toId="30">
 </dataflow>
-<dataflow id="175" from="sef_ptr_V_last_V" to="call_ln109" fromId="50" toId="30">
+<dataflow id="175" from="m_axis_video_sef_V_last_V" to="call_ln109" fromId="50" toId="30">
 </dataflow>
-<dataflow id="176" from="sef_ptr_V_id_V" to="call_ln109" fromId="51" toId="30">
+<dataflow id="176" from="m_axis_video_sef_V_id_V" to="call_ln109" fromId="51" toId="30">
 </dataflow>
-<dataflow id="177" from="sef_ptr_V_dest_V" to="call_ln109" fromId="52" toId="30">
+<dataflow id="177" from="m_axis_video_sef_V_dest_V" to="call_ln109" fromId="52" toId="30">
 </dataflow>
 <dataflow id="179" from="StgValue_178" to="store_ln0" fromId="178" toId="31">
 </dataflow>

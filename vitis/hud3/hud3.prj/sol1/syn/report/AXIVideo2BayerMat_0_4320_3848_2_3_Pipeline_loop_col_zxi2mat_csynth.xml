@@ -6,8 +6,8 @@
 
 <UserAssignments>
 <unit>ns</unit>
-<ProductFamily>artix7</ProductFamily>
-<Part>xc7a200t-fbg676-2</Part>
+<ProductFamily>zynq</ProductFamily>
+<Part>xc7z045-ffg900-2</Part>
 <TopModelName>AXIVideo2BayerMat_0_4320_3848_2_3_Pipeline_loop_col_zxi2mat</TopModelName>
 <TargetClockPeriod>3.30</TargetClockPeriod>
 <ClockUncertainty>0.89</ClockUncertainty>
@@ -18,16 +18,16 @@
 <PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>4.248</EstimatedClockPeriod>
+<EstimatedClockPeriod>4.196</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
 <Best-caseLatency>4</Best-caseLatency>
 <Average-caseLatency>1927</Average-caseLatency>
 <Worst-caseLatency>1927</Worst-caseLatency>
-<Best-caseRealTimeLatency>16.992 ns</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>8.186 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>8.186 us</Worst-caseRealTimeLatency>
+<Best-caseRealTimeLatency>16.784 ns</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>8.086 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>8.086 us</Worst-caseRealTimeLatency>
 <Interval-min>4</Interval-min>
 <Interval-max>1927</Interval-max>
 </SummaryOfOverallLatency>
@@ -48,7 +48,7 @@
 <AbsoluteTimeLatency>
 <range>
 <min>8</min>
-<max>8177</max>
+<max>8077</max>
 </range>
 </AbsoluteTimeLatency>
 <PipelineII>1</PipelineII>
@@ -62,16 +62,16 @@
 <AreaEstimates>
 <Resources>
 <FF>53</FF>
-<LUT>148</LUT>
+<LUT>126</LUT>
 <BRAM_18K>0</BRAM_18K>
 <DSP>0</DSP>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>
-<BRAM_18K>730</BRAM_18K>
-<DSP>740</DSP>
-<FF>269200</FF>
-<LUT>134600</LUT>
+<BRAM_18K>1090</BRAM_18K>
+<DSP>900</DSP>
+<FF>437200</FF>
+<LUT>218600</LUT>
 <URAM>0</URAM>
 </AvailableResources>
 </AreaEstimates>
@@ -144,8 +144,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>in_ptr_TVALID</name>
-<Object>in_ptr_V_data_V</Object>
+<name>s_axi_video_TVALID</name>
+<Object>s_axi_video_V_data_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -155,8 +155,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>in_ptr_TDATA</name>
-<Object>in_ptr_V_data_V</Object>
+<name>s_axi_video_TDATA</name>
+<Object>s_axi_video_V_data_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -265,8 +265,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>in_ptr_TREADY</name>
-<Object>in_ptr_V_dest_V</Object>
+<name>s_axi_video_TREADY</name>
+<Object>s_axi_video_V_dest_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -276,8 +276,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>in_ptr_TDEST</name>
-<Object>in_ptr_V_dest_V</Object>
+<name>s_axi_video_TDEST</name>
+<Object>s_axi_video_V_dest_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -287,8 +287,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>in_ptr_TKEEP</name>
-<Object>in_ptr_V_keep_V</Object>
+<name>s_axi_video_TKEEP</name>
+<Object>s_axi_video_V_keep_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -298,8 +298,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>in_ptr_TSTRB</name>
-<Object>in_ptr_V_strb_V</Object>
+<name>s_axi_video_TSTRB</name>
+<Object>s_axi_video_V_strb_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -309,8 +309,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>in_ptr_TUSER</name>
-<Object>in_ptr_V_user_V</Object>
+<name>s_axi_video_TUSER</name>
+<Object>s_axi_video_V_user_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -320,8 +320,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>in_ptr_TLAST</name>
-<Object>in_ptr_V_last_V</Object>
+<name>s_axi_video_TLAST</name>
+<Object>s_axi_video_V_last_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -331,8 +331,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>in_ptr_TID</name>
-<Object>in_ptr_V_id_V</Object>
+<name>s_axi_video_TID</name>
+<Object>s_axi_video_V_id_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>

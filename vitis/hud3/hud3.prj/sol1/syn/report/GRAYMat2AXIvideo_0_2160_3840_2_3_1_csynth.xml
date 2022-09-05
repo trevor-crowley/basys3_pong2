@@ -6,8 +6,8 @@
 
 <UserAssignments>
 <unit>ns</unit>
-<ProductFamily>artix7</ProductFamily>
-<Part>xc7a200t-fbg676-2</Part>
+<ProductFamily>zynq</ProductFamily>
+<Part>xc7z045-ffg900-2</Part>
 <TopModelName>GRAYMat2AXIvideo_0_2160_3840_2_3_1</TopModelName>
 <TargetClockPeriod>3.30</TargetClockPeriod>
 <ClockUncertainty>0.89</ClockUncertainty>
@@ -18,7 +18,7 @@
 <PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>3.088</EstimatedClockPeriod>
+<EstimatedClockPeriod>3.180</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
@@ -66,16 +66,16 @@
 <AreaEstimates>
 <Resources>
 <FF>75</FF>
-<LUT>239</LUT>
+<LUT>184</LUT>
 <BRAM_18K>0</BRAM_18K>
 <DSP>0</DSP>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>
-<BRAM_18K>730</BRAM_18K>
-<DSP>740</DSP>
-<FF>269200</FF>
-<LUT>134600</LUT>
+<BRAM_18K>1090</BRAM_18K>
+<DSP>900</DSP>
+<FF>437200</FF>
+<LUT>218600</LUT>
 <URAM>0</URAM>
 </AvailableResources>
 </AreaEstimates>
@@ -236,8 +236,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>sef_ptr_TDATA</name>
-<Object>sef_ptr_V_data_V</Object>
+<name>m_axis_video_sef_TDATA</name>
+<Object>m_axis_video_sef_V_data_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -247,8 +247,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>sef_ptr_TVALID</name>
-<Object>sef_ptr_V_dest_V</Object>
+<name>m_axis_video_sef_TVALID</name>
+<Object>m_axis_video_sef_V_dest_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -258,8 +258,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>sef_ptr_TREADY</name>
-<Object>sef_ptr_V_dest_V</Object>
+<name>m_axis_video_sef_TREADY</name>
+<Object>m_axis_video_sef_V_dest_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -269,8 +269,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>sef_ptr_TDEST</name>
-<Object>sef_ptr_V_dest_V</Object>
+<name>m_axis_video_sef_TDEST</name>
+<Object>m_axis_video_sef_V_dest_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -280,8 +280,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>sef_ptr_TKEEP</name>
-<Object>sef_ptr_V_keep_V</Object>
+<name>m_axis_video_sef_TKEEP</name>
+<Object>m_axis_video_sef_V_keep_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -291,8 +291,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>sef_ptr_TSTRB</name>
-<Object>sef_ptr_V_strb_V</Object>
+<name>m_axis_video_sef_TSTRB</name>
+<Object>m_axis_video_sef_V_strb_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -302,8 +302,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>sef_ptr_TUSER</name>
-<Object>sef_ptr_V_user_V</Object>
+<name>m_axis_video_sef_TUSER</name>
+<Object>m_axis_video_sef_V_user_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -313,8 +313,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>sef_ptr_TLAST</name>
-<Object>sef_ptr_V_last_V</Object>
+<name>m_axis_video_sef_TLAST</name>
+<Object>m_axis_video_sef_V_last_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -324,8 +324,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>sef_ptr_TID</name>
-<Object>sef_ptr_V_id_V</Object>
+<name>m_axis_video_sef_TID</name>
+<Object>m_axis_video_sef_V_id_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>

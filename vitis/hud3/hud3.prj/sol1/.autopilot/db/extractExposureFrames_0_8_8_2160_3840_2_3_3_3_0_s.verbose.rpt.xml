@@ -1,13 +1,13 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'extractExposureFrames_0_8_8_2160_3840_2_3_3_3_0_s'" level="0">
-<item name = "Date">Sun Sep  4 18:21:50 2022
+<item name = "Date">Sun Sep  4 20:23:20 2022
 </item>
 <item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)</item>
 <item name = "Project">hud3.prj</item>
 <item name = "Solution">sol1 (Vivado IP Flow Target)</item>
-<item name = "Product family">artix7</item>
-<item name = "Target device">xc7a200t-fbg676-2</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z045-ffg900-2</item>
 </section>
 
 <section name = "Performance Estimates" level="0">
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">3.30 ns, 5.440 ns, 0.89 ns</column>
+<column name="ap_clk">3.30 ns, 5.454 ns, 0.89 ns</column>
 </table>
 </item>
 </section>
@@ -48,21 +48,21 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 2, -</column>
+<column name="Expression">-, -, 0, 1, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">-, -, 596, 1670, -</column>
+<column name="Instance">-, -, 596, 1505, -</column>
 <column name="Memory">16, -, 0, 0, -</column>
 <column name="Multiplexer">-, -, -, 71, -</column>
 <column name="Register">-, -, 17, -, -</column>
-<specialColumn name="Available">730, 740, 269200, 134600, 0</specialColumn>
-<specialColumn name="Utilization (%)">2, 0, ~0, 1, 0</specialColumn>
+<specialColumn name="Available">1090, 900, 437200, 218600, 0</specialColumn>
+<specialColumn name="Utilization (%)">1, 0, ~0, ~0, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="grp_extract_fu_102">extract, 0, 0, 596, 1670, 0</column>
+<column name="grp_extract_fu_102">extract, 0, 0, 596, 1505, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -87,7 +87,7 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state1">or, 0, 0, 1, 1, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">

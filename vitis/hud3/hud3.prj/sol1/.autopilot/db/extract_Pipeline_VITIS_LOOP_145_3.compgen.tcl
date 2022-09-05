@@ -1,7 +1,7 @@
 # This script segment is generated automatically by AutoPilot
 
 set id 77
-set name extractEFrames_accel_mux_832_16_1_1
+set name hud_accel_mux_832_16_1_1
 set corename simcore_mux
 set op mux
 set stage_num 1
@@ -366,14 +366,14 @@ if {${::AESL::PGuard_autoexp_gen}} {
 
 
 # flow_control definition:
-set InstName extractEFrames_accel_flow_control_loop_pipe_sequential_init_U
-set CompName extractEFrames_accel_flow_control_loop_pipe_sequential_init
+set InstName hud_accel_flow_control_loop_pipe_sequential_init_U
+set CompName hud_accel_flow_control_loop_pipe_sequential_init
 set name flow_control_loop_pipe_sequential_init
 if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
 if {[info proc ::AESL_LIB_VIRTEX::xil_gen_UPC_flow_control] == "::AESL_LIB_VIRTEX::xil_gen_UPC_flow_control"} {
 eval "::AESL_LIB_VIRTEX::xil_gen_UPC_flow_control { \
     name ${name} \
-    prefix extractEFrames_accel_ \
+    prefix hud_accel_ \
 }"
 } else {
 puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_UPC_flow_control, check your platform lib"

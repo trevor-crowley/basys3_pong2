@@ -308,7 +308,7 @@ entry:13 %empty = wait i32 @_ssdm_op_Wait
 
 <Node id="26" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="2" op_3_bw="2" op_4_bw="1" op_5_bw="1" op_6_bw="1" op_7_bw="1" op_8_bw="1" op_9_bw="16" op_10_bw="0">
 <![CDATA[
-entry:14 %call_ln0 = call void @AXIVideo2BayerMat<0, 4320, 3848, 2, 3>_Pipeline_loop_start_hunt, i16 %in_ptr_V_data_V, i2 %in_ptr_V_keep_V, i2 %in_ptr_V_strb_V, i1 %in_ptr_V_user_V, i1 %in_ptr_V_last_V, i1 %in_ptr_V_id_V, i1 %in_ptr_V_dest_V, i1 %axi_last_V_loc, i16 %axi_data_V_2
+entry:14 %call_ln0 = call void @AXIVideo2BayerMat<0, 4320, 3848, 2, 3>_Pipeline_loop_start_hunt, i16 %s_axi_video_V_data_V, i2 %s_axi_video_V_keep_V, i2 %s_axi_video_V_strb_V, i1 %s_axi_video_V_user_V, i1 %s_axi_video_V_last_V, i1 %s_axi_video_V_id_V, i1 %s_axi_video_V_dest_V, i1 %axi_last_V_loc, i16 %axi_data_V_2
 
 ]]></Node>
 <StgValue><ssdm name="call_ln0"/></StgValue>
@@ -326,7 +326,7 @@ entry:14 %call_ln0 = call void @AXIVideo2BayerMat<0, 4320, 3848, 2, 3>_Pipeline_
 
 <Node id="26" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="2" op_3_bw="2" op_4_bw="1" op_5_bw="1" op_6_bw="1" op_7_bw="1" op_8_bw="1" op_9_bw="16" op_10_bw="0">
 <![CDATA[
-entry:14 %call_ln0 = call void @AXIVideo2BayerMat<0, 4320, 3848, 2, 3>_Pipeline_loop_start_hunt, i16 %in_ptr_V_data_V, i2 %in_ptr_V_keep_V, i2 %in_ptr_V_strb_V, i1 %in_ptr_V_user_V, i1 %in_ptr_V_last_V, i1 %in_ptr_V_id_V, i1 %in_ptr_V_dest_V, i1 %axi_last_V_loc, i16 %axi_data_V_2
+entry:14 %call_ln0 = call void @AXIVideo2BayerMat<0, 4320, 3848, 2, 3>_Pipeline_loop_start_hunt, i16 %s_axi_video_V_data_V, i2 %s_axi_video_V_keep_V, i2 %s_axi_video_V_strb_V, i1 %s_axi_video_V_user_V, i1 %s_axi_video_V_last_V, i1 %s_axi_video_V_id_V, i1 %s_axi_video_V_dest_V, i1 %axi_last_V_loc, i16 %axi_data_V_2
 
 ]]></Node>
 <StgValue><ssdm name="call_ln0"/></StgValue>
@@ -374,7 +374,7 @@ entry:11 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %I
 
 <Node id="24" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="1" op_3_bw="1" op_4_bw="1" op_5_bw="2" op_6_bw="2" op_7_bw="16" op_8_bw="0" op_9_bw="32" op_10_bw="32" op_11_bw="0" op_12_bw="32" op_13_bw="32" op_14_bw="0" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32" op_19_bw="32" op_20_bw="32" op_21_bw="0" op_22_bw="0" op_23_bw="32" op_24_bw="32">
 <![CDATA[
-entry:12 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %in_ptr_V_dest_V, i1 %in_ptr_V_id_V, i1 %in_ptr_V_last_V, i1 %in_ptr_V_user_V, i2 %in_ptr_V_strb_V, i2 %in_ptr_V_keep_V, i16 %in_ptr_V_data_V, void @empty_20, i32 1, i32 1, void @empty_19, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0
+entry:12 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %s_axi_video_V_dest_V, i1 %s_axi_video_V_id_V, i1 %s_axi_video_V_last_V, i1 %s_axi_video_V_user_V, i2 %s_axi_video_V_strb_V, i2 %s_axi_video_V_keep_V, i16 %s_axi_video_V_data_V, void @empty_20, i32 1, i32 1, void @empty_19, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -629,7 +629,7 @@ for.body6.preheader:1 %empty_57 = wait i32 @_ssdm_op_Wait
 
 <Node id="48" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="16" op_3_bw="1" op_4_bw="11" op_5_bw="16" op_6_bw="16" op_7_bw="2" op_8_bw="2" op_9_bw="1" op_10_bw="1" op_11_bw="1" op_12_bw="1" op_13_bw="1" op_14_bw="16" op_15_bw="0" op_16_bw="0" op_17_bw="0">
 <![CDATA[
-for.body6.preheader:2 %call_ln38 = call void @AXIVideo2BayerMat<0, 4320, 3848, 2, 3>_Pipeline_loop_col_zxi2mat, i1 %start_load, i16 %axi_data_V, i1 %axi_last_V_2, i11 %trunc_ln38_1, i16 %InImg_data156, i16 %in_ptr_V_data_V, i2 %in_ptr_V_keep_V, i2 %in_ptr_V_strb_V, i1 %in_ptr_V_user_V, i1 %in_ptr_V_last_V, i1 %in_ptr_V_id_V, i1 %in_ptr_V_dest_V, i1 %last_loc, i16 %axi_data_V_3_loc
+for.body6.preheader:2 %call_ln38 = call void @AXIVideo2BayerMat<0, 4320, 3848, 2, 3>_Pipeline_loop_col_zxi2mat, i1 %start_load, i16 %axi_data_V, i1 %axi_last_V_2, i11 %trunc_ln38_1, i16 %InImg_data156, i16 %s_axi_video_V_data_V, i2 %s_axi_video_V_keep_V, i2 %s_axi_video_V_strb_V, i1 %s_axi_video_V_user_V, i1 %s_axi_video_V_last_V, i1 %s_axi_video_V_id_V, i1 %s_axi_video_V_dest_V, i1 %last_loc, i16 %axi_data_V_3_loc
 
 ]]></Node>
 <StgValue><ssdm name="call_ln38"/></StgValue>
@@ -663,7 +663,7 @@ for.end18.loopexit:0 %ret_ln98 = ret
 
 <Node id="48" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="16" op_3_bw="1" op_4_bw="11" op_5_bw="16" op_6_bw="16" op_7_bw="2" op_8_bw="2" op_9_bw="1" op_10_bw="1" op_11_bw="1" op_12_bw="1" op_13_bw="1" op_14_bw="16" op_15_bw="0" op_16_bw="0" op_17_bw="0">
 <![CDATA[
-for.body6.preheader:2 %call_ln38 = call void @AXIVideo2BayerMat<0, 4320, 3848, 2, 3>_Pipeline_loop_col_zxi2mat, i1 %start_load, i16 %axi_data_V, i1 %axi_last_V_2, i11 %trunc_ln38_1, i16 %InImg_data156, i16 %in_ptr_V_data_V, i2 %in_ptr_V_keep_V, i2 %in_ptr_V_strb_V, i1 %in_ptr_V_user_V, i1 %in_ptr_V_last_V, i1 %in_ptr_V_id_V, i1 %in_ptr_V_dest_V, i1 %last_loc, i16 %axi_data_V_3_loc
+for.body6.preheader:2 %call_ln38 = call void @AXIVideo2BayerMat<0, 4320, 3848, 2, 3>_Pipeline_loop_col_zxi2mat, i1 %start_load, i16 %axi_data_V, i1 %axi_last_V_2, i11 %trunc_ln38_1, i16 %InImg_data156, i16 %s_axi_video_V_data_V, i2 %s_axi_video_V_keep_V, i2 %s_axi_video_V_strb_V, i1 %s_axi_video_V_user_V, i1 %s_axi_video_V_last_V, i1 %s_axi_video_V_id_V, i1 %s_axi_video_V_dest_V, i1 %last_loc, i16 %axi_data_V_3_loc
 
 ]]></Node>
 <StgValue><ssdm name="call_ln38"/></StgValue>
@@ -839,7 +839,7 @@ loop_last_hunt:3 %empty_59 = wait i32 @_ssdm_op_Wait
 
 <Node id="59" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="16" op_3_bw="1" op_4_bw="16" op_5_bw="2" op_6_bw="2" op_7_bw="1" op_8_bw="1" op_9_bw="1" op_10_bw="1" op_11_bw="1" op_12_bw="16" op_13_bw="0" op_14_bw="0" op_15_bw="0" op_16_bw="0" op_17_bw="0" op_18_bw="0">
 <![CDATA[
-loop_last_hunt:4 %call_ln0 = call void @AXIVideo2BayerMat<0, 4320, 3848, 2, 3>_Pipeline_loop_last_hunt, i1 %axi_last_2_lcssa, i16 %axi_data_2_lcssa, i1 %last_0_lcssa, i16 %in_ptr_V_data_V, i2 %in_ptr_V_keep_V, i2 %in_ptr_V_strb_V, i1 %in_ptr_V_user_V, i1 %in_ptr_V_last_V, i1 %in_ptr_V_id_V, i1 %in_ptr_V_dest_V, i1 %axi_last_V_4_loc, i16 %axi_data_V_2
+loop_last_hunt:4 %call_ln0 = call void @AXIVideo2BayerMat<0, 4320, 3848, 2, 3>_Pipeline_loop_last_hunt, i1 %axi_last_2_lcssa, i16 %axi_data_2_lcssa, i1 %last_0_lcssa, i16 %s_axi_video_V_data_V, i2 %s_axi_video_V_keep_V, i2 %s_axi_video_V_strb_V, i1 %s_axi_video_V_user_V, i1 %s_axi_video_V_last_V, i1 %s_axi_video_V_id_V, i1 %s_axi_video_V_dest_V, i1 %axi_last_V_4_loc, i16 %axi_data_V_2
 
 ]]></Node>
 <StgValue><ssdm name="call_ln0"/></StgValue>
@@ -857,7 +857,7 @@ loop_last_hunt:4 %call_ln0 = call void @AXIVideo2BayerMat<0, 4320, 3848, 2, 3>_P
 
 <Node id="59" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="16" op_3_bw="1" op_4_bw="16" op_5_bw="2" op_6_bw="2" op_7_bw="1" op_8_bw="1" op_9_bw="1" op_10_bw="1" op_11_bw="1" op_12_bw="16" op_13_bw="0" op_14_bw="0" op_15_bw="0" op_16_bw="0" op_17_bw="0" op_18_bw="0">
 <![CDATA[
-loop_last_hunt:4 %call_ln0 = call void @AXIVideo2BayerMat<0, 4320, 3848, 2, 3>_Pipeline_loop_last_hunt, i1 %axi_last_2_lcssa, i16 %axi_data_2_lcssa, i1 %last_0_lcssa, i16 %in_ptr_V_data_V, i2 %in_ptr_V_keep_V, i2 %in_ptr_V_strb_V, i1 %in_ptr_V_user_V, i1 %in_ptr_V_last_V, i1 %in_ptr_V_id_V, i1 %in_ptr_V_dest_V, i1 %axi_last_V_4_loc, i16 %axi_data_V_2
+loop_last_hunt:4 %call_ln0 = call void @AXIVideo2BayerMat<0, 4320, 3848, 2, 3>_Pipeline_loop_last_hunt, i1 %axi_last_2_lcssa, i16 %axi_data_2_lcssa, i1 %last_0_lcssa, i16 %s_axi_video_V_data_V, i2 %s_axi_video_V_keep_V, i2 %s_axi_video_V_strb_V, i1 %s_axi_video_V_user_V, i1 %s_axi_video_V_last_V, i1 %s_axi_video_V_id_V, i1 %s_axi_video_V_dest_V, i1 %axi_last_V_4_loc, i16 %axi_data_V_2
 
 ]]></Node>
 <StgValue><ssdm name="call_ln0"/></StgValue>
@@ -900,26 +900,26 @@ loop_last_hunt:7 %br_ln61 = br void %loop_col_zxi2mat
 
 
 <ports>
-<port id="77" name="in_ptr_V_data_V" dir="0" iftype="0">
-<core>NULL</core><StgValue><ssdm name="in_ptr_V_data_V"/></StgValue>
+<port id="77" name="s_axi_video_V_data_V" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="s_axi_video_V_data_V"/></StgValue>
 </port>
-<port id="78" name="in_ptr_V_keep_V" dir="0" iftype="0">
-<core>NULL</core><StgValue><ssdm name="in_ptr_V_keep_V"/></StgValue>
+<port id="78" name="s_axi_video_V_keep_V" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="s_axi_video_V_keep_V"/></StgValue>
 </port>
-<port id="79" name="in_ptr_V_strb_V" dir="0" iftype="0">
-<core>NULL</core><StgValue><ssdm name="in_ptr_V_strb_V"/></StgValue>
+<port id="79" name="s_axi_video_V_strb_V" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="s_axi_video_V_strb_V"/></StgValue>
 </port>
-<port id="80" name="in_ptr_V_user_V" dir="0" iftype="0">
-<core>NULL</core><StgValue><ssdm name="in_ptr_V_user_V"/></StgValue>
+<port id="80" name="s_axi_video_V_user_V" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="s_axi_video_V_user_V"/></StgValue>
 </port>
-<port id="81" name="in_ptr_V_last_V" dir="0" iftype="0">
-<core>NULL</core><StgValue><ssdm name="in_ptr_V_last_V"/></StgValue>
+<port id="81" name="s_axi_video_V_last_V" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="s_axi_video_V_last_V"/></StgValue>
 </port>
-<port id="82" name="in_ptr_V_id_V" dir="0" iftype="0">
-<core>NULL</core><StgValue><ssdm name="in_ptr_V_id_V"/></StgValue>
+<port id="82" name="s_axi_video_V_id_V" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="s_axi_video_V_id_V"/></StgValue>
 </port>
-<port id="83" name="in_ptr_V_dest_V" dir="0" iftype="0">
-<core>NULL</core><StgValue><ssdm name="in_ptr_V_dest_V"/></StgValue>
+<port id="83" name="s_axi_video_V_dest_V" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="s_axi_video_V_dest_V"/></StgValue>
 </port>
 <port id="84" name="p_read" dir="0" iftype="0">
 <core>NULL</core><StgValue><ssdm name="p_read"/></StgValue>
@@ -985,19 +985,19 @@ loop_last_hunt:7 %br_ln61 = br void %loop_col_zxi2mat
 </dataflow>
 <dataflow id="122" from="AXIVideo2BayerMat<0, 4320, 3848, 2, 3>_Pipeline_loop_start_hunt" to="call_ln0" fromId="121" toId="26">
 </dataflow>
-<dataflow id="123" from="in_ptr_V_data_V" to="call_ln0" fromId="77" toId="26">
+<dataflow id="123" from="s_axi_video_V_data_V" to="call_ln0" fromId="77" toId="26">
 </dataflow>
-<dataflow id="124" from="in_ptr_V_keep_V" to="call_ln0" fromId="78" toId="26">
+<dataflow id="124" from="s_axi_video_V_keep_V" to="call_ln0" fromId="78" toId="26">
 </dataflow>
-<dataflow id="125" from="in_ptr_V_strb_V" to="call_ln0" fromId="79" toId="26">
+<dataflow id="125" from="s_axi_video_V_strb_V" to="call_ln0" fromId="79" toId="26">
 </dataflow>
-<dataflow id="126" from="in_ptr_V_user_V" to="call_ln0" fromId="80" toId="26">
+<dataflow id="126" from="s_axi_video_V_user_V" to="call_ln0" fromId="80" toId="26">
 </dataflow>
-<dataflow id="127" from="in_ptr_V_last_V" to="call_ln0" fromId="81" toId="26">
+<dataflow id="127" from="s_axi_video_V_last_V" to="call_ln0" fromId="81" toId="26">
 </dataflow>
-<dataflow id="128" from="in_ptr_V_id_V" to="call_ln0" fromId="82" toId="26">
+<dataflow id="128" from="s_axi_video_V_id_V" to="call_ln0" fromId="82" toId="26">
 </dataflow>
-<dataflow id="129" from="in_ptr_V_dest_V" to="call_ln0" fromId="83" toId="26">
+<dataflow id="129" from="s_axi_video_V_dest_V" to="call_ln0" fromId="83" toId="26">
 </dataflow>
 <dataflow id="130" from="axi_last_V_loc" to="call_ln0" fromId="20" toId="26">
 </dataflow>
@@ -1005,19 +1005,19 @@ loop_last_hunt:7 %br_ln61 = br void %loop_col_zxi2mat
 </dataflow>
 <dataflow id="132" from="AXIVideo2BayerMat<0, 4320, 3848, 2, 3>_Pipeline_loop_start_hunt" to="call_ln0" fromId="121" toId="27">
 </dataflow>
-<dataflow id="133" from="in_ptr_V_data_V" to="call_ln0" fromId="77" toId="27">
+<dataflow id="133" from="s_axi_video_V_data_V" to="call_ln0" fromId="77" toId="27">
 </dataflow>
-<dataflow id="134" from="in_ptr_V_keep_V" to="call_ln0" fromId="78" toId="27">
+<dataflow id="134" from="s_axi_video_V_keep_V" to="call_ln0" fromId="78" toId="27">
 </dataflow>
-<dataflow id="135" from="in_ptr_V_strb_V" to="call_ln0" fromId="79" toId="27">
+<dataflow id="135" from="s_axi_video_V_strb_V" to="call_ln0" fromId="79" toId="27">
 </dataflow>
-<dataflow id="136" from="in_ptr_V_user_V" to="call_ln0" fromId="80" toId="27">
+<dataflow id="136" from="s_axi_video_V_user_V" to="call_ln0" fromId="80" toId="27">
 </dataflow>
-<dataflow id="137" from="in_ptr_V_last_V" to="call_ln0" fromId="81" toId="27">
+<dataflow id="137" from="s_axi_video_V_last_V" to="call_ln0" fromId="81" toId="27">
 </dataflow>
-<dataflow id="138" from="in_ptr_V_id_V" to="call_ln0" fromId="82" toId="27">
+<dataflow id="138" from="s_axi_video_V_id_V" to="call_ln0" fromId="82" toId="27">
 </dataflow>
-<dataflow id="139" from="in_ptr_V_dest_V" to="call_ln0" fromId="83" toId="27">
+<dataflow id="139" from="s_axi_video_V_dest_V" to="call_ln0" fromId="83" toId="27">
 </dataflow>
 <dataflow id="140" from="axi_last_V_loc" to="call_ln0" fromId="20" toId="27">
 </dataflow>
@@ -1101,19 +1101,19 @@ loop_last_hunt:7 %br_ln61 = br void %loop_col_zxi2mat
 </dataflow>
 <dataflow id="190" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="142" toId="30">
 </dataflow>
-<dataflow id="191" from="in_ptr_V_dest_V" to="specinterface_ln0" fromId="83" toId="30">
+<dataflow id="191" from="s_axi_video_V_dest_V" to="specinterface_ln0" fromId="83" toId="30">
 </dataflow>
-<dataflow id="192" from="in_ptr_V_id_V" to="specinterface_ln0" fromId="82" toId="30">
+<dataflow id="192" from="s_axi_video_V_id_V" to="specinterface_ln0" fromId="82" toId="30">
 </dataflow>
-<dataflow id="193" from="in_ptr_V_last_V" to="specinterface_ln0" fromId="81" toId="30">
+<dataflow id="193" from="s_axi_video_V_last_V" to="specinterface_ln0" fromId="81" toId="30">
 </dataflow>
-<dataflow id="194" from="in_ptr_V_user_V" to="specinterface_ln0" fromId="80" toId="30">
+<dataflow id="194" from="s_axi_video_V_user_V" to="specinterface_ln0" fromId="80" toId="30">
 </dataflow>
-<dataflow id="195" from="in_ptr_V_strb_V" to="specinterface_ln0" fromId="79" toId="30">
+<dataflow id="195" from="s_axi_video_V_strb_V" to="specinterface_ln0" fromId="79" toId="30">
 </dataflow>
-<dataflow id="196" from="in_ptr_V_keep_V" to="specinterface_ln0" fromId="78" toId="30">
+<dataflow id="196" from="s_axi_video_V_keep_V" to="specinterface_ln0" fromId="78" toId="30">
 </dataflow>
-<dataflow id="197" from="in_ptr_V_data_V" to="specinterface_ln0" fromId="77" toId="30">
+<dataflow id="197" from="s_axi_video_V_data_V" to="specinterface_ln0" fromId="77" toId="30">
 </dataflow>
 <dataflow id="199" from="empty_20" to="specinterface_ln0" fromId="198" toId="30">
 </dataflow>
@@ -1217,19 +1217,19 @@ loop_last_hunt:7 %br_ln61 = br void %loop_col_zxi2mat
 </dataflow>
 <dataflow id="254" from="InImg_data156" to="call_ln38" fromId="86" toId="46">
 </dataflow>
-<dataflow id="255" from="in_ptr_V_data_V" to="call_ln38" fromId="77" toId="46">
+<dataflow id="255" from="s_axi_video_V_data_V" to="call_ln38" fromId="77" toId="46">
 </dataflow>
-<dataflow id="256" from="in_ptr_V_keep_V" to="call_ln38" fromId="78" toId="46">
+<dataflow id="256" from="s_axi_video_V_keep_V" to="call_ln38" fromId="78" toId="46">
 </dataflow>
-<dataflow id="257" from="in_ptr_V_strb_V" to="call_ln38" fromId="79" toId="46">
+<dataflow id="257" from="s_axi_video_V_strb_V" to="call_ln38" fromId="79" toId="46">
 </dataflow>
-<dataflow id="258" from="in_ptr_V_user_V" to="call_ln38" fromId="80" toId="46">
+<dataflow id="258" from="s_axi_video_V_user_V" to="call_ln38" fromId="80" toId="46">
 </dataflow>
-<dataflow id="259" from="in_ptr_V_last_V" to="call_ln38" fromId="81" toId="46">
+<dataflow id="259" from="s_axi_video_V_last_V" to="call_ln38" fromId="81" toId="46">
 </dataflow>
-<dataflow id="260" from="in_ptr_V_id_V" to="call_ln38" fromId="82" toId="46">
+<dataflow id="260" from="s_axi_video_V_id_V" to="call_ln38" fromId="82" toId="46">
 </dataflow>
-<dataflow id="261" from="in_ptr_V_dest_V" to="call_ln38" fromId="83" toId="46">
+<dataflow id="261" from="s_axi_video_V_dest_V" to="call_ln38" fromId="83" toId="46">
 </dataflow>
 <dataflow id="262" from="last_loc" to="call_ln38" fromId="19" toId="46">
 </dataflow>
@@ -1247,19 +1247,19 @@ loop_last_hunt:7 %br_ln61 = br void %loop_col_zxi2mat
 </dataflow>
 <dataflow id="269" from="InImg_data156" to="call_ln38" fromId="86" toId="48">
 </dataflow>
-<dataflow id="270" from="in_ptr_V_data_V" to="call_ln38" fromId="77" toId="48">
+<dataflow id="270" from="s_axi_video_V_data_V" to="call_ln38" fromId="77" toId="48">
 </dataflow>
-<dataflow id="271" from="in_ptr_V_keep_V" to="call_ln38" fromId="78" toId="48">
+<dataflow id="271" from="s_axi_video_V_keep_V" to="call_ln38" fromId="78" toId="48">
 </dataflow>
-<dataflow id="272" from="in_ptr_V_strb_V" to="call_ln38" fromId="79" toId="48">
+<dataflow id="272" from="s_axi_video_V_strb_V" to="call_ln38" fromId="79" toId="48">
 </dataflow>
-<dataflow id="273" from="in_ptr_V_user_V" to="call_ln38" fromId="80" toId="48">
+<dataflow id="273" from="s_axi_video_V_user_V" to="call_ln38" fromId="80" toId="48">
 </dataflow>
-<dataflow id="274" from="in_ptr_V_last_V" to="call_ln38" fromId="81" toId="48">
+<dataflow id="274" from="s_axi_video_V_last_V" to="call_ln38" fromId="81" toId="48">
 </dataflow>
-<dataflow id="275" from="in_ptr_V_id_V" to="call_ln38" fromId="82" toId="48">
+<dataflow id="275" from="s_axi_video_V_id_V" to="call_ln38" fromId="82" toId="48">
 </dataflow>
-<dataflow id="276" from="in_ptr_V_dest_V" to="call_ln38" fromId="83" toId="48">
+<dataflow id="276" from="s_axi_video_V_dest_V" to="call_ln38" fromId="83" toId="48">
 </dataflow>
 <dataflow id="277" from="last_loc" to="call_ln38" fromId="19" toId="48">
 </dataflow>
@@ -1340,19 +1340,19 @@ loop_last_hunt:7 %br_ln61 = br void %loop_col_zxi2mat
 </dataflow>
 <dataflow id="304" from="last_0_lcssa" to="call_ln0" fromId="57" toId="59">
 </dataflow>
-<dataflow id="305" from="in_ptr_V_data_V" to="call_ln0" fromId="77" toId="59">
+<dataflow id="305" from="s_axi_video_V_data_V" to="call_ln0" fromId="77" toId="59">
 </dataflow>
-<dataflow id="306" from="in_ptr_V_keep_V" to="call_ln0" fromId="78" toId="59">
+<dataflow id="306" from="s_axi_video_V_keep_V" to="call_ln0" fromId="78" toId="59">
 </dataflow>
-<dataflow id="307" from="in_ptr_V_strb_V" to="call_ln0" fromId="79" toId="59">
+<dataflow id="307" from="s_axi_video_V_strb_V" to="call_ln0" fromId="79" toId="59">
 </dataflow>
-<dataflow id="308" from="in_ptr_V_user_V" to="call_ln0" fromId="80" toId="59">
+<dataflow id="308" from="s_axi_video_V_user_V" to="call_ln0" fromId="80" toId="59">
 </dataflow>
-<dataflow id="309" from="in_ptr_V_last_V" to="call_ln0" fromId="81" toId="59">
+<dataflow id="309" from="s_axi_video_V_last_V" to="call_ln0" fromId="81" toId="59">
 </dataflow>
-<dataflow id="310" from="in_ptr_V_id_V" to="call_ln0" fromId="82" toId="59">
+<dataflow id="310" from="s_axi_video_V_id_V" to="call_ln0" fromId="82" toId="59">
 </dataflow>
-<dataflow id="311" from="in_ptr_V_dest_V" to="call_ln0" fromId="83" toId="59">
+<dataflow id="311" from="s_axi_video_V_dest_V" to="call_ln0" fromId="83" toId="59">
 </dataflow>
 <dataflow id="312" from="axi_last_V_4_loc" to="call_ln0" fromId="17" toId="59">
 </dataflow>
@@ -1366,19 +1366,19 @@ loop_last_hunt:7 %br_ln61 = br void %loop_col_zxi2mat
 </dataflow>
 <dataflow id="317" from="last_0_lcssa" to="call_ln0" fromId="57" toId="60">
 </dataflow>
-<dataflow id="318" from="in_ptr_V_data_V" to="call_ln0" fromId="77" toId="60">
+<dataflow id="318" from="s_axi_video_V_data_V" to="call_ln0" fromId="77" toId="60">
 </dataflow>
-<dataflow id="319" from="in_ptr_V_keep_V" to="call_ln0" fromId="78" toId="60">
+<dataflow id="319" from="s_axi_video_V_keep_V" to="call_ln0" fromId="78" toId="60">
 </dataflow>
-<dataflow id="320" from="in_ptr_V_strb_V" to="call_ln0" fromId="79" toId="60">
+<dataflow id="320" from="s_axi_video_V_strb_V" to="call_ln0" fromId="79" toId="60">
 </dataflow>
-<dataflow id="321" from="in_ptr_V_user_V" to="call_ln0" fromId="80" toId="60">
+<dataflow id="321" from="s_axi_video_V_user_V" to="call_ln0" fromId="80" toId="60">
 </dataflow>
-<dataflow id="322" from="in_ptr_V_last_V" to="call_ln0" fromId="81" toId="60">
+<dataflow id="322" from="s_axi_video_V_last_V" to="call_ln0" fromId="81" toId="60">
 </dataflow>
-<dataflow id="323" from="in_ptr_V_id_V" to="call_ln0" fromId="82" toId="60">
+<dataflow id="323" from="s_axi_video_V_id_V" to="call_ln0" fromId="82" toId="60">
 </dataflow>
-<dataflow id="324" from="in_ptr_V_dest_V" to="call_ln0" fromId="83" toId="60">
+<dataflow id="324" from="s_axi_video_V_dest_V" to="call_ln0" fromId="83" toId="60">
 </dataflow>
 <dataflow id="325" from="axi_last_V_4_loc" to="call_ln0" fromId="17" toId="60">
 </dataflow>

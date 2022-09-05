@@ -4,9 +4,9 @@
     </ReportVersion>
     <UserAssignments>
         <unit>ns</unit>
-        <ProductFamily>artix7</ProductFamily>
-        <Part>xc7a200t-fbg676-2</Part>
-        <TopModelName>extractEFrames_accel</TopModelName>
+        <ProductFamily>zynq</ProductFamily>
+        <Part>xc7z045-ffg900-2</Part>
+        <TopModelName>hud_accel</TopModelName>
         <TargetClockPeriod>3.30</TargetClockPeriod>
         <ClockUncertainty>0.89</ClockUncertainty>
         <FlowTarget>vivado</FlowTarget>
@@ -15,7 +15,7 @@
         <PipelineType>dataflow</PipelineType>
         <SummaryOfTimingAnalysis>
             <unit>ns</unit>
-            <EstimatedClockPeriod>5.440</EstimatedClockPeriod>
+            <EstimatedClockPeriod>5.454</EstimatedClockPeriod>
         </SummaryOfTimingAnalysis>
         <SummaryOfOverallLatency>
             <unit>clock cycles</unit>
@@ -34,15 +34,15 @@
         <Resources>
             <BRAM_18K>16</BRAM_18K>
             <FF>2175</FF>
-            <LUT>3678</LUT>
+            <LUT>3332</LUT>
             <DSP>0</DSP>
             <URAM>0</URAM>
         </Resources>
         <AvailableResources>
-            <BRAM_18K>730</BRAM_18K>
-            <DSP>740</DSP>
-            <FF>269200</FF>
-            <LUT>134600</LUT>
+            <BRAM_18K>1090</BRAM_18K>
+            <DSP>900</DSP>
+            <FF>437200</FF>
+            <LUT>218600</LUT>
             <URAM>0</URAM>
         </AvailableResources>
     </AreaEstimates>
@@ -236,7 +236,7 @@
         </RtlPorts>
         <RtlPorts>
             <name>ap_clk</name>
-            <Object>extractEFrames_accel</Object>
+            <Object>hud_accel</Object>
             <Type>return value</Type>
             <Scope/>
             <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -247,7 +247,7 @@
         </RtlPorts>
         <RtlPorts>
             <name>ap_rst_n</name>
-            <Object>extractEFrames_accel</Object>
+            <Object>hud_accel</Object>
             <Type>return value</Type>
             <Scope/>
             <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -258,7 +258,7 @@
         </RtlPorts>
         <RtlPorts>
             <name>interrupt</name>
-            <Object>extractEFrames_accel</Object>
+            <Object>hud_accel</Object>
             <Type>return value</Type>
             <Scope/>
             <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -268,8 +268,8 @@
             <Attribute>unknown</Attribute>
         </RtlPorts>
         <RtlPorts>
-            <name>in_ptr_TDATA</name>
-            <Object>in_ptr_V_data_V</Object>
+            <name>s_axi_video_TDATA</name>
+            <Object>s_axi_video_V_data_V</Object>
             <Type>pointer</Type>
             <Scope/>
             <IOProtocol>axis</IOProtocol>
@@ -280,8 +280,8 @@
             <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
-            <name>in_ptr_TKEEP</name>
-            <Object>in_ptr_V_keep_V</Object>
+            <name>s_axi_video_TKEEP</name>
+            <Object>s_axi_video_V_keep_V</Object>
             <Type>pointer</Type>
             <Scope/>
             <IOProtocol>axis</IOProtocol>
@@ -292,8 +292,8 @@
             <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
-            <name>in_ptr_TSTRB</name>
-            <Object>in_ptr_V_strb_V</Object>
+            <name>s_axi_video_TSTRB</name>
+            <Object>s_axi_video_V_strb_V</Object>
             <Type>pointer</Type>
             <Scope/>
             <IOProtocol>axis</IOProtocol>
@@ -304,8 +304,8 @@
             <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
-            <name>in_ptr_TUSER</name>
-            <Object>in_ptr_V_user_V</Object>
+            <name>s_axi_video_TUSER</name>
+            <Object>s_axi_video_V_user_V</Object>
             <Type>pointer</Type>
             <Scope/>
             <IOProtocol>axis</IOProtocol>
@@ -316,8 +316,8 @@
             <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
-            <name>in_ptr_TLAST</name>
-            <Object>in_ptr_V_last_V</Object>
+            <name>s_axi_video_TLAST</name>
+            <Object>s_axi_video_V_last_V</Object>
             <Type>pointer</Type>
             <Scope/>
             <IOProtocol>axis</IOProtocol>
@@ -328,8 +328,8 @@
             <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
-            <name>in_ptr_TID</name>
-            <Object>in_ptr_V_id_V</Object>
+            <name>s_axi_video_TID</name>
+            <Object>s_axi_video_V_id_V</Object>
             <Type>pointer</Type>
             <Scope/>
             <IOProtocol>axis</IOProtocol>
@@ -340,8 +340,8 @@
             <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
-            <name>in_ptr_TDEST</name>
-            <Object>in_ptr_V_dest_V</Object>
+            <name>s_axi_video_TDEST</name>
+            <Object>s_axi_video_V_dest_V</Object>
             <Type>pointer</Type>
             <Scope/>
             <IOProtocol>axis</IOProtocol>
@@ -352,8 +352,8 @@
             <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
-            <name>in_ptr_TVALID</name>
-            <Object>in_ptr_V_dest_V</Object>
+            <name>s_axi_video_TVALID</name>
+            <Object>s_axi_video_V_dest_V</Object>
             <Type>pointer</Type>
             <Scope/>
             <IOProtocol>axis</IOProtocol>
@@ -364,8 +364,8 @@
             <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
-            <name>in_ptr_TREADY</name>
-            <Object>in_ptr_V_dest_V</Object>
+            <name>s_axi_video_TREADY</name>
+            <Object>s_axi_video_V_dest_V</Object>
             <Type>pointer</Type>
             <Scope/>
             <IOProtocol>axis</IOProtocol>
@@ -376,8 +376,8 @@
             <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
-            <name>lef_ptr_TDATA</name>
-            <Object>lef_ptr_V_data_V</Object>
+            <name>m_axis_video_lef_TDATA</name>
+            <Object>m_axis_video_lef_V_data_V</Object>
             <Type>pointer</Type>
             <Scope/>
             <IOProtocol>axis</IOProtocol>
@@ -388,8 +388,8 @@
             <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
-            <name>lef_ptr_TKEEP</name>
-            <Object>lef_ptr_V_keep_V</Object>
+            <name>m_axis_video_lef_TKEEP</name>
+            <Object>m_axis_video_lef_V_keep_V</Object>
             <Type>pointer</Type>
             <Scope/>
             <IOProtocol>axis</IOProtocol>
@@ -400,8 +400,8 @@
             <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
-            <name>lef_ptr_TSTRB</name>
-            <Object>lef_ptr_V_strb_V</Object>
+            <name>m_axis_video_lef_TSTRB</name>
+            <Object>m_axis_video_lef_V_strb_V</Object>
             <Type>pointer</Type>
             <Scope/>
             <IOProtocol>axis</IOProtocol>
@@ -412,8 +412,8 @@
             <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
-            <name>lef_ptr_TUSER</name>
-            <Object>lef_ptr_V_user_V</Object>
+            <name>m_axis_video_lef_TUSER</name>
+            <Object>m_axis_video_lef_V_user_V</Object>
             <Type>pointer</Type>
             <Scope/>
             <IOProtocol>axis</IOProtocol>
@@ -424,8 +424,8 @@
             <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
-            <name>lef_ptr_TLAST</name>
-            <Object>lef_ptr_V_last_V</Object>
+            <name>m_axis_video_lef_TLAST</name>
+            <Object>m_axis_video_lef_V_last_V</Object>
             <Type>pointer</Type>
             <Scope/>
             <IOProtocol>axis</IOProtocol>
@@ -436,8 +436,8 @@
             <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
-            <name>lef_ptr_TID</name>
-            <Object>lef_ptr_V_id_V</Object>
+            <name>m_axis_video_lef_TID</name>
+            <Object>m_axis_video_lef_V_id_V</Object>
             <Type>pointer</Type>
             <Scope/>
             <IOProtocol>axis</IOProtocol>
@@ -448,8 +448,8 @@
             <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
-            <name>lef_ptr_TDEST</name>
-            <Object>lef_ptr_V_dest_V</Object>
+            <name>m_axis_video_lef_TDEST</name>
+            <Object>m_axis_video_lef_V_dest_V</Object>
             <Type>pointer</Type>
             <Scope/>
             <IOProtocol>axis</IOProtocol>
@@ -460,8 +460,8 @@
             <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
-            <name>lef_ptr_TVALID</name>
-            <Object>lef_ptr_V_dest_V</Object>
+            <name>m_axis_video_lef_TVALID</name>
+            <Object>m_axis_video_lef_V_dest_V</Object>
             <Type>pointer</Type>
             <Scope/>
             <IOProtocol>axis</IOProtocol>
@@ -472,8 +472,8 @@
             <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
-            <name>lef_ptr_TREADY</name>
-            <Object>lef_ptr_V_dest_V</Object>
+            <name>m_axis_video_lef_TREADY</name>
+            <Object>m_axis_video_lef_V_dest_V</Object>
             <Type>pointer</Type>
             <Scope/>
             <IOProtocol>axis</IOProtocol>
@@ -484,8 +484,8 @@
             <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
-            <name>sef_ptr_TDATA</name>
-            <Object>sef_ptr_V_data_V</Object>
+            <name>m_axis_video_sef_TDATA</name>
+            <Object>m_axis_video_sef_V_data_V</Object>
             <Type>pointer</Type>
             <Scope/>
             <IOProtocol>axis</IOProtocol>
@@ -496,8 +496,8 @@
             <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
-            <name>sef_ptr_TKEEP</name>
-            <Object>sef_ptr_V_keep_V</Object>
+            <name>m_axis_video_sef_TKEEP</name>
+            <Object>m_axis_video_sef_V_keep_V</Object>
             <Type>pointer</Type>
             <Scope/>
             <IOProtocol>axis</IOProtocol>
@@ -508,8 +508,8 @@
             <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
-            <name>sef_ptr_TSTRB</name>
-            <Object>sef_ptr_V_strb_V</Object>
+            <name>m_axis_video_sef_TSTRB</name>
+            <Object>m_axis_video_sef_V_strb_V</Object>
             <Type>pointer</Type>
             <Scope/>
             <IOProtocol>axis</IOProtocol>
@@ -520,8 +520,8 @@
             <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
-            <name>sef_ptr_TUSER</name>
-            <Object>sef_ptr_V_user_V</Object>
+            <name>m_axis_video_sef_TUSER</name>
+            <Object>m_axis_video_sef_V_user_V</Object>
             <Type>pointer</Type>
             <Scope/>
             <IOProtocol>axis</IOProtocol>
@@ -532,8 +532,8 @@
             <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
-            <name>sef_ptr_TLAST</name>
-            <Object>sef_ptr_V_last_V</Object>
+            <name>m_axis_video_sef_TLAST</name>
+            <Object>m_axis_video_sef_V_last_V</Object>
             <Type>pointer</Type>
             <Scope/>
             <IOProtocol>axis</IOProtocol>
@@ -544,8 +544,8 @@
             <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
-            <name>sef_ptr_TID</name>
-            <Object>sef_ptr_V_id_V</Object>
+            <name>m_axis_video_sef_TID</name>
+            <Object>m_axis_video_sef_V_id_V</Object>
             <Type>pointer</Type>
             <Scope/>
             <IOProtocol>axis</IOProtocol>
@@ -556,8 +556,8 @@
             <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
-            <name>sef_ptr_TDEST</name>
-            <Object>sef_ptr_V_dest_V</Object>
+            <name>m_axis_video_sef_TDEST</name>
+            <Object>m_axis_video_sef_V_dest_V</Object>
             <Type>pointer</Type>
             <Scope/>
             <IOProtocol>axis</IOProtocol>
@@ -568,8 +568,8 @@
             <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
-            <name>sef_ptr_TVALID</name>
-            <Object>sef_ptr_V_dest_V</Object>
+            <name>m_axis_video_sef_TVALID</name>
+            <Object>m_axis_video_sef_V_dest_V</Object>
             <Type>pointer</Type>
             <Scope/>
             <IOProtocol>axis</IOProtocol>
@@ -580,8 +580,8 @@
             <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
-            <name>sef_ptr_TREADY</name>
-            <Object>sef_ptr_V_dest_V</Object>
+            <name>m_axis_video_sef_TREADY</name>
+            <Object>m_axis_video_sef_V_dest_V</Object>
             <Type>pointer</Type>
             <Scope/>
             <IOProtocol>axis</IOProtocol>
@@ -594,7 +594,7 @@
     </InterfaceSummary>
     <RTLDesignHierarchy>
         <TopModule MAX_DEPTH="5">
-            <ModuleName>extractEFrames_accel</ModuleName>
+            <ModuleName>hud_accel</ModuleName>
             <InstancesList>
                 <Instance>
                     <InstName>Block_entry5_proc_U0</InstName>
@@ -720,7 +720,7 @@
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>3.30</TargetClockPeriod>
                     <ClockUncertainty>0.89</ClockUncertainty>
-                    <EstimatedClockPeriod>1.780</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>1.546</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>0</Best-caseLatency>
@@ -736,16 +736,16 @@
             <AreaEstimates>
                 <Resources>
                     <FF>74</FF>
-                    <AVAIL_FF>269200</AVAIL_FF>
+                    <AVAIL_FF>437200</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>84</LUT>
-                    <AVAIL_LUT>134600</AVAIL_LUT>
+                    <LUT>76</LUT>
+                    <AVAIL_LUT>218600</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
-                    <AVAIL_BRAM>730</AVAIL_BRAM>
+                    <AVAIL_BRAM>1090</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
                     <DSP>0</DSP>
-                    <AVAIL_DSP>740</AVAIL_DSP>
+                    <AVAIL_DSP>900</AVAIL_DSP>
                     <UTIL_DSP>0</UTIL_DSP>
                     <URAM>0</URAM>
                     <AVAIL_URAM>0</AVAIL_URAM>
@@ -753,7 +753,7 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="InImg_cols_fu_42_p2" SOURCE="xf_hud_accel.cpp:191" URAM="0" VARIABLE="InImg_cols"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="InImg_cols_fu_42_p2" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:191" URAM="0" VARIABLE="InImg_cols"/>
             </BindNodes>
         </Module>
         <Module>
@@ -765,7 +765,7 @@
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>3.30</TargetClockPeriod>
                     <ClockUncertainty>0.89</ClockUncertainty>
-                    <EstimatedClockPeriod>1.324</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>1.298</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>2</Best-caseLatency>
@@ -793,16 +793,16 @@
             <AreaEstimates>
                 <Resources>
                     <FF>3</FF>
-                    <AVAIL_FF>269200</AVAIL_FF>
+                    <AVAIL_FF>437200</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>33</LUT>
-                    <AVAIL_LUT>134600</AVAIL_LUT>
+                    <LUT>32</LUT>
+                    <AVAIL_LUT>218600</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
-                    <AVAIL_BRAM>730</AVAIL_BRAM>
+                    <AVAIL_BRAM>1090</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
                     <DSP>0</DSP>
-                    <AVAIL_DSP>740</AVAIL_DSP>
+                    <AVAIL_DSP>900</AVAIL_DSP>
                     <UTIL_DSP>0</UTIL_DSP>
                     <URAM>0</URAM>
                     <AVAIL_URAM>0</AVAIL_URAM>
@@ -819,15 +819,15 @@
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>3.30</TargetClockPeriod>
                     <ClockUncertainty>0.89</ClockUncertainty>
-                    <EstimatedClockPeriod>4.248</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>4.196</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>4</Best-caseLatency>
                     <Average-caseLatency>1927</Average-caseLatency>
                     <Worst-caseLatency>1927</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>16.992 ns</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>8.186 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>8.186 us</Worst-caseRealTimeLatency>
+                    <Best-caseRealTimeLatency>16.784 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>8.086 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>8.086 us</Worst-caseRealTimeLatency>
                     <PipelineInitiationInterval>4 ~ 1927</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
@@ -841,7 +841,7 @@
                             </range>
                         </TripCount>
                         <Latency>2 ~ 1925</Latency>
-                        <AbsoluteTimeLatency>8.496 ns ~ 8.177 us</AbsoluteTimeLatency>
+                        <AbsoluteTimeLatency>8.392 ns ~ 8.077 us</AbsoluteTimeLatency>
                         <PipelineII>1</PipelineII>
                         <PipelineDepth>3</PipelineDepth>
                         <PipelineType>yes</PipelineType>
@@ -852,16 +852,16 @@
             <AreaEstimates>
                 <Resources>
                     <FF>53</FF>
-                    <AVAIL_FF>269200</AVAIL_FF>
+                    <AVAIL_FF>437200</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>148</LUT>
-                    <AVAIL_LUT>134600</AVAIL_LUT>
+                    <LUT>126</LUT>
+                    <AVAIL_LUT>218600</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
-                    <AVAIL_BRAM>730</AVAIL_BRAM>
+                    <AVAIL_BRAM>1090</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
                     <DSP>0</DSP>
-                    <AVAIL_DSP>740</AVAIL_DSP>
+                    <AVAIL_DSP>900</AVAIL_DSP>
                     <UTIL_DSP>0</UTIL_DSP>
                     <URAM>0</URAM>
                     <AVAIL_URAM>0</AVAIL_URAM>
@@ -869,7 +869,7 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_col_zxi2mat" OPTYPE="add" PRAGMA="" RTLNAME="j_6_fu_198_p2" SOURCE="xf_hud_accel.cpp:67" URAM="0" VARIABLE="j_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_col_zxi2mat" OPTYPE="add" PRAGMA="" RTLNAME="j_6_fu_198_p2" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:67" URAM="0" VARIABLE="j_6"/>
             </BindNodes>
         </Module>
         <Module>
@@ -881,7 +881,7 @@
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>3.30</TargetClockPeriod>
                     <ClockUncertainty>0.89</ClockUncertainty>
-                    <EstimatedClockPeriod>2.648</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>2.596</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>2</Best-caseLatency>
@@ -909,16 +909,16 @@
             <AreaEstimates>
                 <Resources>
                     <FF>4</FF>
-                    <AVAIL_FF>269200</AVAIL_FF>
+                    <AVAIL_FF>437200</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>51</LUT>
-                    <AVAIL_LUT>134600</AVAIL_LUT>
+                    <LUT>50</LUT>
+                    <AVAIL_LUT>218600</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
-                    <AVAIL_BRAM>730</AVAIL_BRAM>
+                    <AVAIL_BRAM>1090</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
                     <DSP>0</DSP>
-                    <AVAIL_DSP>740</AVAIL_DSP>
+                    <AVAIL_DSP>900</AVAIL_DSP>
                     <UTIL_DSP>0</UTIL_DSP>
                     <URAM>0</URAM>
                     <AVAIL_URAM>0</AVAIL_URAM>
@@ -935,15 +935,15 @@
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>3.30</TargetClockPeriod>
                     <ClockUncertainty>0.89</ClockUncertainty>
-                    <EstimatedClockPeriod>4.248</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>4.196</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>7</Best-caseLatency>
                     <Average-caseLatency>4199047</Average-caseLatency>
                     <Worst-caseLatency>8363527</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>29.736 ns</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>17.838 ms</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>35.528 ms</Worst-caseRealTimeLatency>
+                    <Best-caseRealTimeLatency>29.372 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>17.619 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>35.093 ms</Worst-caseRealTimeLatency>
                     <PipelineInitiationInterval>7 ~ 8363527</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
@@ -957,7 +957,7 @@
                             </range>
                         </TripCount>
                         <Latency>1 ~ 8363521</Latency>
-                        <AbsoluteTimeLatency>4.248 ns ~ 35.528 ms</AbsoluteTimeLatency>
+                        <AbsoluteTimeLatency>4.196 ns ~ 35.093 ms</AbsoluteTimeLatency>
                         <IterationLatency>
                             <range>
                                 <min>8</min>
@@ -976,16 +976,16 @@
             <AreaEstimates>
                 <Resources>
                     <FF>151</FF>
-                    <AVAIL_FF>269200</AVAIL_FF>
+                    <AVAIL_FF>437200</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>424</LUT>
-                    <AVAIL_LUT>134600</AVAIL_LUT>
+                    <LUT>379</LUT>
+                    <AVAIL_LUT>218600</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
-                    <AVAIL_BRAM>730</AVAIL_BRAM>
+                    <AVAIL_BRAM>1090</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
                     <DSP>0</DSP>
-                    <AVAIL_DSP>740</AVAIL_DSP>
+                    <AVAIL_DSP>900</AVAIL_DSP>
                     <UTIL_DSP>0</UTIL_DSP>
                     <URAM>0</URAM>
                     <AVAIL_URAM>0</AVAIL_URAM>
@@ -993,7 +993,7 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_row_axi2mat" OPTYPE="add" PRAGMA="" RTLNAME="i_6_fu_288_p2" SOURCE="xf_hud_accel.cpp:61" URAM="0" VARIABLE="i_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_row_axi2mat" OPTYPE="add" PRAGMA="" RTLNAME="i_6_fu_288_p2" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:61" URAM="0" VARIABLE="i_6"/>
             </BindNodes>
         </Module>
         <Module>
@@ -1005,7 +1005,7 @@
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>3.30</TargetClockPeriod>
                     <ClockUncertainty>0.89</ClockUncertainty>
-                    <EstimatedClockPeriod>3.088</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>3.180</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>9</Best-caseLatency>
@@ -1033,16 +1033,16 @@
             <AreaEstimates>
                 <Resources>
                     <FF>25</FF>
-                    <AVAIL_FF>269200</AVAIL_FF>
+                    <AVAIL_FF>437200</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>78</LUT>
-                    <AVAIL_LUT>134600</AVAIL_LUT>
+                    <LUT>64</LUT>
+                    <AVAIL_LUT>218600</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
-                    <AVAIL_BRAM>730</AVAIL_BRAM>
+                    <AVAIL_BRAM>1090</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
                     <DSP>0</DSP>
-                    <AVAIL_DSP>740</AVAIL_DSP>
+                    <AVAIL_DSP>900</AVAIL_DSP>
                     <UTIL_DSP>0</UTIL_DSP>
                     <URAM>0</URAM>
                     <AVAIL_URAM>0</AVAIL_URAM>
@@ -1062,7 +1062,7 @@
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>3.30</TargetClockPeriod>
                     <ClockUncertainty>0.89</ClockUncertainty>
-                    <EstimatedClockPeriod>3.088</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>3.180</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>3</Best-caseLatency>
@@ -1095,16 +1095,16 @@
             <AreaEstimates>
                 <Resources>
                     <FF>25</FF>
-                    <AVAIL_FF>269200</AVAIL_FF>
+                    <AVAIL_FF>437200</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>78</LUT>
-                    <AVAIL_LUT>134600</AVAIL_LUT>
+                    <LUT>64</LUT>
+                    <AVAIL_LUT>218600</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
-                    <AVAIL_BRAM>730</AVAIL_BRAM>
+                    <AVAIL_BRAM>1090</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
                     <DSP>0</DSP>
-                    <AVAIL_DSP>740</AVAIL_DSP>
+                    <AVAIL_DSP>900</AVAIL_DSP>
                     <UTIL_DSP>0</UTIL_DSP>
                     <URAM>0</URAM>
                     <AVAIL_URAM>0</AVAIL_URAM>
@@ -1124,7 +1124,7 @@
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>3.30</TargetClockPeriod>
                     <ClockUncertainty>0.89</ClockUncertainty>
-                    <EstimatedClockPeriod>3.088</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>3.180</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>5</Best-caseLatency>
@@ -1157,16 +1157,16 @@
             <AreaEstimates>
                 <Resources>
                     <FF>211</FF>
-                    <AVAIL_FF>269200</AVAIL_FF>
+                    <AVAIL_FF>437200</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>174</LUT>
-                    <AVAIL_LUT>134600</AVAIL_LUT>
+                    <LUT>152</LUT>
+                    <AVAIL_LUT>218600</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
-                    <AVAIL_BRAM>730</AVAIL_BRAM>
+                    <AVAIL_BRAM>1090</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
                     <DSP>0</DSP>
-                    <AVAIL_DSP>740</AVAIL_DSP>
+                    <AVAIL_DSP>900</AVAIL_DSP>
                     <UTIL_DSP>0</UTIL_DSP>
                     <URAM>0</URAM>
                     <AVAIL_URAM>0</AVAIL_URAM>
@@ -1186,15 +1186,15 @@
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>3.30</TargetClockPeriod>
                     <ClockUncertainty>0.89</ClockUncertainty>
-                    <EstimatedClockPeriod>5.440</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>5.454</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>52</Best-caseLatency>
                     <Average-caseLatency>52</Average-caseLatency>
                     <Worst-caseLatency>52</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>0.283 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>0.283 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>0.283 us</Worst-caseRealTimeLatency>
+                    <Best-caseRealTimeLatency>0.284 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.284 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.284 us</Worst-caseRealTimeLatency>
                     <PipelineInitiationInterval>52</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
@@ -1203,7 +1203,7 @@
                         <Name>LAST_LINES_VITIS_LOOP_177_4</Name>
                         <TripCount>49</TripCount>
                         <Latency>50</Latency>
-                        <AbsoluteTimeLatency>0.272 us</AbsoluteTimeLatency>
+                        <AbsoluteTimeLatency>0.273 us</AbsoluteTimeLatency>
                         <PipelineII>1</PipelineII>
                         <PipelineDepth>3</PipelineDepth>
                         <PipelineType>yes</PipelineType>
@@ -1214,16 +1214,16 @@
             <AreaEstimates>
                 <Resources>
                     <FF>98</FF>
-                    <AVAIL_FF>269200</AVAIL_FF>
+                    <AVAIL_FF>437200</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>334</LUT>
-                    <AVAIL_LUT>134600</AVAIL_LUT>
+                    <LUT>286</LUT>
+                    <AVAIL_LUT>218600</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
-                    <AVAIL_BRAM>730</AVAIL_BRAM>
+                    <AVAIL_BRAM>1090</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
                     <DSP>0</DSP>
-                    <AVAIL_DSP>740</AVAIL_DSP>
+                    <AVAIL_DSP>900</AVAIL_DSP>
                     <UTIL_DSP>0</UTIL_DSP>
                     <URAM>0</URAM>
                     <AVAIL_URAM>0</AVAIL_URAM>
@@ -1246,7 +1246,7 @@
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>3.30</TargetClockPeriod>
                     <ClockUncertainty>0.89</ClockUncertainty>
-                    <EstimatedClockPeriod>5.440</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>5.454</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>undef</Best-caseLatency>
@@ -1263,7 +1263,7 @@
                         <Name>BUFFER_LINES</Name>
                         <TripCount>7</TripCount>
                         <Latency>14 ~ 84</Latency>
-                        <AbsoluteTimeLatency>76.165 ns ~ 0.457 us</AbsoluteTimeLatency>
+                        <AbsoluteTimeLatency>76.363 ns ~ 0.458 us</AbsoluteTimeLatency>
                         <IterationLatency>
                             <range>
                                 <min>2</min>
@@ -1299,16 +1299,16 @@
             <AreaEstimates>
                 <Resources>
                     <FF>596</FF>
-                    <AVAIL_FF>269200</AVAIL_FF>
+                    <AVAIL_FF>437200</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>1670</LUT>
-                    <AVAIL_LUT>134600</AVAIL_LUT>
-                    <UTIL_LUT>1</UTIL_LUT>
+                    <LUT>1505</LUT>
+                    <AVAIL_LUT>218600</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
-                    <AVAIL_BRAM>730</AVAIL_BRAM>
+                    <AVAIL_BRAM>1090</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
                     <DSP>0</DSP>
-                    <AVAIL_DSP>740</AVAIL_DSP>
+                    <AVAIL_DSP>900</AVAIL_DSP>
                     <UTIL_DSP>0</UTIL_DSP>
                     <URAM>0</URAM>
                     <AVAIL_URAM>0</AVAIL_URAM>
@@ -1329,7 +1329,7 @@
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>3.30</TargetClockPeriod>
                     <ClockUncertainty>0.89</ClockUncertainty>
-                    <EstimatedClockPeriod>5.440</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>5.454</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>undef</Best-caseLatency>
@@ -1345,16 +1345,16 @@
             <AreaEstimates>
                 <Resources>
                     <BRAM_18K>16</BRAM_18K>
-                    <AVAIL_BRAM>730</AVAIL_BRAM>
-                    <UTIL_BRAM>2</UTIL_BRAM>
+                    <AVAIL_BRAM>1090</AVAIL_BRAM>
+                    <UTIL_BRAM>1</UTIL_BRAM>
                     <FF>613</FF>
-                    <AVAIL_FF>269200</AVAIL_FF>
+                    <AVAIL_FF>437200</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>1743</LUT>
-                    <AVAIL_LUT>134600</AVAIL_LUT>
-                    <UTIL_LUT>1</UTIL_LUT>
+                    <LUT>1577</LUT>
+                    <AVAIL_LUT>218600</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
                     <DSP>0</DSP>
-                    <AVAIL_DSP>740</AVAIL_DSP>
+                    <AVAIL_DSP>900</AVAIL_DSP>
                     <UTIL_DSP>0</UTIL_DSP>
                     <URAM>0</URAM>
                     <AVAIL_URAM>0</AVAIL_URAM>
@@ -1381,7 +1381,7 @@
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>3.30</TargetClockPeriod>
                     <ClockUncertainty>0.89</ClockUncertainty>
-                    <EstimatedClockPeriod>3.088</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>3.180</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>4</Best-caseLatency>
@@ -1414,16 +1414,16 @@
             <AreaEstimates>
                 <Resources>
                     <FF>18</FF>
-                    <AVAIL_FF>269200</AVAIL_FF>
+                    <AVAIL_FF>437200</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>116</LUT>
-                    <AVAIL_LUT>134600</AVAIL_LUT>
+                    <LUT>91</LUT>
+                    <AVAIL_LUT>218600</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
-                    <AVAIL_BRAM>730</AVAIL_BRAM>
+                    <AVAIL_BRAM>1090</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
                     <DSP>0</DSP>
-                    <AVAIL_DSP>740</AVAIL_DSP>
+                    <AVAIL_DSP>900</AVAIL_DSP>
                     <UTIL_DSP>0</UTIL_DSP>
                     <URAM>0</URAM>
                     <AVAIL_URAM>0</AVAIL_URAM>
@@ -1431,7 +1431,7 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_col_mat2axi" OPTYPE="add" PRAGMA="" RTLNAME="j_2_fu_160_p2" SOURCE="xf_hud_accel.cpp:126" URAM="0" VARIABLE="j_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_col_mat2axi" OPTYPE="add" PRAGMA="" RTLNAME="j_2_fu_160_p2" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:126" URAM="0" VARIABLE="j_2"/>
             </BindNodes>
         </Module>
         <Module>
@@ -1443,7 +1443,7 @@
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>3.30</TargetClockPeriod>
                     <ClockUncertainty>0.89</ClockUncertainty>
-                    <EstimatedClockPeriod>3.088</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>3.180</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>3</Best-caseLatency>
@@ -1483,16 +1483,16 @@
             <AreaEstimates>
                 <Resources>
                     <FF>87</FF>
-                    <AVAIL_FF>269200</AVAIL_FF>
+                    <AVAIL_FF>437200</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>248</LUT>
-                    <AVAIL_LUT>134600</AVAIL_LUT>
+                    <LUT>193</LUT>
+                    <AVAIL_LUT>218600</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
-                    <AVAIL_BRAM>730</AVAIL_BRAM>
+                    <AVAIL_BRAM>1090</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
                     <DSP>0</DSP>
-                    <AVAIL_DSP>740</AVAIL_DSP>
+                    <AVAIL_DSP>900</AVAIL_DSP>
                     <UTIL_DSP>0</UTIL_DSP>
                     <URAM>0</URAM>
                     <AVAIL_URAM>0</AVAIL_URAM>
@@ -1500,8 +1500,8 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="sub_fu_146_p2" SOURCE="xf_hud_accel.cpp:109" URAM="0" VARIABLE="sub"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_row_mat2axi" OPTYPE="add" PRAGMA="" RTLNAME="i_4_fu_165_p2" SOURCE="xf_hud_accel.cpp:121" URAM="0" VARIABLE="i_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="sub_fu_146_p2" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:109" URAM="0" VARIABLE="sub"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_row_mat2axi" OPTYPE="add" PRAGMA="" RTLNAME="i_4_fu_165_p2" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:121" URAM="0" VARIABLE="i_4"/>
             </BindNodes>
         </Module>
         <Module>
@@ -1513,7 +1513,7 @@
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>3.30</TargetClockPeriod>
                     <ClockUncertainty>0.89</ClockUncertainty>
-                    <EstimatedClockPeriod>3.088</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>3.180</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>4</Best-caseLatency>
@@ -1546,16 +1546,16 @@
             <AreaEstimates>
                 <Resources>
                     <FF>18</FF>
-                    <AVAIL_FF>269200</AVAIL_FF>
+                    <AVAIL_FF>437200</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>116</LUT>
-                    <AVAIL_LUT>134600</AVAIL_LUT>
+                    <LUT>91</LUT>
+                    <AVAIL_LUT>218600</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
-                    <AVAIL_BRAM>730</AVAIL_BRAM>
+                    <AVAIL_BRAM>1090</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
                     <DSP>0</DSP>
-                    <AVAIL_DSP>740</AVAIL_DSP>
+                    <AVAIL_DSP>900</AVAIL_DSP>
                     <UTIL_DSP>0</UTIL_DSP>
                     <URAM>0</URAM>
                     <AVAIL_URAM>0</AVAIL_URAM>
@@ -1563,7 +1563,7 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_col_mat2axi" OPTYPE="add" PRAGMA="" RTLNAME="j_4_fu_160_p2" SOURCE="xf_hud_accel.cpp:126" URAM="0" VARIABLE="j_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_col_mat2axi" OPTYPE="add" PRAGMA="" RTLNAME="j_4_fu_160_p2" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:126" URAM="0" VARIABLE="j_4"/>
             </BindNodes>
         </Module>
         <Module>
@@ -1575,7 +1575,7 @@
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>3.30</TargetClockPeriod>
                     <ClockUncertainty>0.89</ClockUncertainty>
-                    <EstimatedClockPeriod>3.088</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>3.180</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>3</Best-caseLatency>
@@ -1615,16 +1615,16 @@
             <AreaEstimates>
                 <Resources>
                     <FF>75</FF>
-                    <AVAIL_FF>269200</AVAIL_FF>
+                    <AVAIL_FF>437200</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>239</LUT>
-                    <AVAIL_LUT>134600</AVAIL_LUT>
+                    <LUT>184</LUT>
+                    <AVAIL_LUT>218600</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
-                    <AVAIL_BRAM>730</AVAIL_BRAM>
+                    <AVAIL_BRAM>1090</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
                     <DSP>0</DSP>
-                    <AVAIL_DSP>740</AVAIL_DSP>
+                    <AVAIL_DSP>900</AVAIL_DSP>
                     <UTIL_DSP>0</UTIL_DSP>
                     <URAM>0</URAM>
                     <AVAIL_URAM>0</AVAIL_URAM>
@@ -1632,17 +1632,17 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="sub_fu_134_p2" SOURCE="xf_hud_accel.cpp:109" URAM="0" VARIABLE="sub"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_row_mat2axi" OPTYPE="add" PRAGMA="" RTLNAME="i_2_fu_153_p2" SOURCE="xf_hud_accel.cpp:121" URAM="0" VARIABLE="i_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="sub_fu_134_p2" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:109" URAM="0" VARIABLE="sub"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_row_mat2axi" OPTYPE="add" PRAGMA="" RTLNAME="i_2_fu_153_p2" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:121" URAM="0" VARIABLE="i_2"/>
             </BindNodes>
         </Module>
         <Module>
-            <Name>extractEFrames_accel</Name>
+            <Name>hud_accel</Name>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>3.30</TargetClockPeriod>
                     <ClockUncertainty>0.89</ClockUncertainty>
-                    <EstimatedClockPeriod>5.440</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>5.454</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>undef</Best-caseLatency>
@@ -1659,16 +1659,16 @@
             <AreaEstimates>
                 <Resources>
                     <BRAM_18K>16</BRAM_18K>
-                    <AVAIL_BRAM>730</AVAIL_BRAM>
-                    <UTIL_BRAM>2</UTIL_BRAM>
+                    <AVAIL_BRAM>1090</AVAIL_BRAM>
+                    <UTIL_BRAM>1</UTIL_BRAM>
                     <FF>2175</FF>
-                    <AVAIL_FF>269200</AVAIL_FF>
+                    <AVAIL_FF>437200</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>3678</LUT>
-                    <AVAIL_LUT>134600</AVAIL_LUT>
-                    <UTIL_LUT>2</UTIL_LUT>
+                    <LUT>3332</LUT>
+                    <AVAIL_LUT>218600</AVAIL_LUT>
+                    <UTIL_LUT>1</UTIL_LUT>
                     <DSP>0</DSP>
-                    <AVAIL_DSP>740</AVAIL_DSP>
+                    <AVAIL_DSP>900</AVAIL_DSP>
                     <UTIL_DSP>0</UTIL_DSP>
                     <URAM>0</URAM>
                     <AVAIL_URAM>0</AVAIL_URAM>
@@ -1676,17 +1676,17 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="LEF_Img_rows_c_U" SOURCE="xf_hud_accel.cpp:199" URAM="0" VARIABLE="LEF_Img_rows_c"/>
-                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="InImg_cols_c_U" SOURCE="xf_hud_accel.cpp:199" URAM="0" VARIABLE="InImg_cols_c"/>
-                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="InImg_data_U" SOURCE="xf_hud_accel.cpp:190" URAM="0" VARIABLE="InImg_data"/>
-                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="LEF_Img_data_U" SOURCE="xf_hud_accel.cpp:192" URAM="0" VARIABLE="LEF_Img_data"/>
-                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="SEF_Img_data_U" SOURCE="xf_hud_accel.cpp:193" URAM="0" VARIABLE="SEF_Img_data"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="InImg_rows_channel_U" SOURCE="xf_hud_accel.cpp:199" URAM="0" VARIABLE="InImg_rows_channel"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="LEF_Img_cols_channel_U" SOURCE="xf_hud_accel.cpp:199" URAM="0" VARIABLE="LEF_Img_cols_channel"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="SEF_Img_rows_channel_U" SOURCE="xf_hud_accel.cpp:199" URAM="0" VARIABLE="SEF_Img_rows_channel"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="SEF_Img_cols_channel_U" SOURCE="xf_hud_accel.cpp:199" URAM="0" VARIABLE="SEF_Img_cols_channel"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="InImg_cols_c15_channel_U" SOURCE="xf_hud_accel.cpp:199" URAM="0" VARIABLE="InImg_cols_c15_channel"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="LEF_Img_rows_c16_channel_U" SOURCE="xf_hud_accel.cpp:199" URAM="0" VARIABLE="LEF_Img_rows_c16_channel"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="LEF_Img_rows_c_U" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:199" URAM="0" VARIABLE="LEF_Img_rows_c"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="InImg_cols_c_U" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:199" URAM="0" VARIABLE="InImg_cols_c"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="InImg_data_U" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:190" URAM="0" VARIABLE="InImg_data"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="LEF_Img_data_U" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:192" URAM="0" VARIABLE="LEF_Img_data"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="SEF_Img_data_U" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:193" URAM="0" VARIABLE="SEF_Img_data"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="InImg_rows_channel_U" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:199" URAM="0" VARIABLE="InImg_rows_channel"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="LEF_Img_cols_channel_U" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:199" URAM="0" VARIABLE="LEF_Img_cols_channel"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="SEF_Img_rows_channel_U" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:199" URAM="0" VARIABLE="SEF_Img_rows_channel"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="SEF_Img_cols_channel_U" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:199" URAM="0" VARIABLE="SEF_Img_cols_channel"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="InImg_cols_c15_channel_U" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:199" URAM="0" VARIABLE="InImg_cols_c15_channel"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="LEF_Img_rows_c16_channel_U" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:199" URAM="0" VARIABLE="LEF_Img_rows_c16_channel"/>
             </BindNodes>
         </Module>
     </ModuleInformation>
@@ -1772,22 +1772,21 @@
         <config_storage>
             <ENTRY auto_srl_max_bits="1024 fifo" auto_srl_max_depth="2 fifo" impl="autosrl fifo" type="fifo"/>
         </config_storage>
-        <config_export description="hud" display_name="hud3" library="test1" output="/home/trevor/Documents/xilinx/basys3_pong2/wrk" vendor="trevor" version="1.0"/>
     </UserConfigCommands>
     <Args>
-        <Arg ArgName="in_ptr" index="0" direction="in" srcType="stream&lt;hls::axis&lt;ap_uint&lt;16&gt;, 1, 1, 1&gt;, 0&gt;&amp;" srcSize="64">
+        <Arg ArgName="s_axi_video" index="0" direction="in" srcType="stream&lt;hls::axis&lt;ap_uint&lt;16&gt;, 1, 1, 1&gt;, 0&gt;&amp;" srcSize="64">
             <hwRefs>
-                <hwRef type="interface" interface="in_ptr" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_video" name="" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="lef_ptr" index="1" direction="out" srcType="stream&lt;hls::axis&lt;ap_uint&lt;16&gt;, 1, 1, 1&gt;, 0&gt;&amp;" srcSize="64">
+        <Arg ArgName="m_axis_video_lef" index="1" direction="out" srcType="stream&lt;hls::axis&lt;ap_uint&lt;16&gt;, 1, 1, 1&gt;, 0&gt;&amp;" srcSize="64">
             <hwRefs>
-                <hwRef type="interface" interface="lef_ptr" name="" usage="data" direction="out"/>
+                <hwRef type="interface" interface="m_axis_video_lef" name="" usage="data" direction="out"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="sef_ptr" index="2" direction="out" srcType="stream&lt;hls::axis&lt;ap_uint&lt;16&gt;, 1, 1, 1&gt;, 0&gt;&amp;" srcSize="64">
+        <Arg ArgName="m_axis_video_sef" index="2" direction="out" srcType="stream&lt;hls::axis&lt;ap_uint&lt;16&gt;, 1, 1, 1&gt;, 0&gt;&amp;" srcSize="64">
             <hwRefs>
-                <hwRef type="interface" interface="sef_ptr" name="" usage="data" direction="out"/>
+                <hwRef type="interface" interface="m_axis_video_sef" name="" usage="data" direction="out"/>
             </hwRefs>
         </Arg>
         <Arg ArgName="height" index="3" direction="in" srcType="ap_uint&lt;16&gt;" srcSize="16">
@@ -1876,7 +1875,7 @@
         </Interface>
         <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
             <busParams>
-                <busParam busParamName="ASSOCIATED_BUSIF">s_axi_control:in_ptr:lef_ptr:sef_ptr</busParam>
+                <busParam busParamName="ASSOCIATED_BUSIF">s_axi_control:s_axi_video:m_axis_video_lef:m_axis_video_sef</busParam>
                 <busParam busParamName="ASSOCIATED_RESET">ap_rst_n</busParam>
             </busParams>
             <portMaps>
@@ -1908,52 +1907,52 @@
                 <port>interrupt</port>
             </ports>
         </Interface>
-        <Interface InterfaceName="in_ptr" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="16" portPrefix="in_ptr_">
+        <Interface InterfaceName="s_axi_video" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="16" portPrefix="s_axi_video_">
             <ports>
-                <port>in_ptr_TDATA</port>
-                <port>in_ptr_TDEST</port>
-                <port>in_ptr_TID</port>
-                <port>in_ptr_TKEEP</port>
-                <port>in_ptr_TLAST</port>
-                <port>in_ptr_TREADY</port>
-                <port>in_ptr_TSTRB</port>
-                <port>in_ptr_TUSER</port>
-                <port>in_ptr_TVALID</port>
+                <port>s_axi_video_TDATA</port>
+                <port>s_axi_video_TDEST</port>
+                <port>s_axi_video_TID</port>
+                <port>s_axi_video_TKEEP</port>
+                <port>s_axi_video_TLAST</port>
+                <port>s_axi_video_TREADY</port>
+                <port>s_axi_video_TSTRB</port>
+                <port>s_axi_video_TUSER</port>
+                <port>s_axi_video_TVALID</port>
             </ports>
             <constraints>
-                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="in_ptr"/>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="s_axi_video"/>
             </constraints>
         </Interface>
-        <Interface InterfaceName="lef_ptr" type="axi4stream" busTypeName="axis" mode="master" dataWidth="16" portPrefix="lef_ptr_">
+        <Interface InterfaceName="m_axis_video_lef" type="axi4stream" busTypeName="axis" mode="master" dataWidth="16" portPrefix="m_axis_video_lef_">
             <ports>
-                <port>lef_ptr_TDATA</port>
-                <port>lef_ptr_TDEST</port>
-                <port>lef_ptr_TID</port>
-                <port>lef_ptr_TKEEP</port>
-                <port>lef_ptr_TLAST</port>
-                <port>lef_ptr_TREADY</port>
-                <port>lef_ptr_TSTRB</port>
-                <port>lef_ptr_TUSER</port>
-                <port>lef_ptr_TVALID</port>
+                <port>m_axis_video_lef_TDATA</port>
+                <port>m_axis_video_lef_TDEST</port>
+                <port>m_axis_video_lef_TID</port>
+                <port>m_axis_video_lef_TKEEP</port>
+                <port>m_axis_video_lef_TLAST</port>
+                <port>m_axis_video_lef_TREADY</port>
+                <port>m_axis_video_lef_TSTRB</port>
+                <port>m_axis_video_lef_TUSER</port>
+                <port>m_axis_video_lef_TVALID</port>
             </ports>
             <constraints>
-                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="lef_ptr"/>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="m_axis_video_lef"/>
             </constraints>
         </Interface>
-        <Interface InterfaceName="sef_ptr" type="axi4stream" busTypeName="axis" mode="master" dataWidth="16" portPrefix="sef_ptr_">
+        <Interface InterfaceName="m_axis_video_sef" type="axi4stream" busTypeName="axis" mode="master" dataWidth="16" portPrefix="m_axis_video_sef_">
             <ports>
-                <port>sef_ptr_TDATA</port>
-                <port>sef_ptr_TDEST</port>
-                <port>sef_ptr_TID</port>
-                <port>sef_ptr_TKEEP</port>
-                <port>sef_ptr_TLAST</port>
-                <port>sef_ptr_TREADY</port>
-                <port>sef_ptr_TSTRB</port>
-                <port>sef_ptr_TUSER</port>
-                <port>sef_ptr_TVALID</port>
+                <port>m_axis_video_sef_TDATA</port>
+                <port>m_axis_video_sef_TDEST</port>
+                <port>m_axis_video_sef_TID</port>
+                <port>m_axis_video_sef_TKEEP</port>
+                <port>m_axis_video_sef_TLAST</port>
+                <port>m_axis_video_sef_TREADY</port>
+                <port>m_axis_video_sef_TSTRB</port>
+                <port>m_axis_video_sef_TUSER</port>
+                <port>m_axis_video_sef_TVALID</port>
             </ports>
             <constraints>
-                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="sef_ptr"/>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="m_axis_video_sef"/>
             </constraints>
         </Interface>
     </Interfaces>
@@ -1979,9 +1978,9 @@
             <item name="AXIS">
                 <table isCollapsed="0">
                     <keys size="11">Interface, Register Mode, TDATA, TDEST, TID, TKEEP, TLAST, TREADY, TSTRB, TUSER, TVALID</keys>
-                    <column name="in_ptr">both, 16, 1, 1, 2, 1, 1, 2, 1, 1, </column>
-                    <column name="lef_ptr">both, 16, 1, 1, 2, 1, 1, 2, 1, 1, </column>
-                    <column name="sef_ptr">both, 16, 1, 1, 2, 1, 1, 2, 1, 1, </column>
+                    <column name="m_axis_video_lef">both, 16, 1, 1, 2, 1, 1, 2, 1, 1, </column>
+                    <column name="m_axis_video_sef">both, 16, 1, 1, 2, 1, 1, 2, 1, 1, </column>
+                    <column name="s_axi_video">both, 16, 1, 1, 2, 1, 1, 2, 1, 1, </column>
                 </table>
             </item>
             <item name="TOP LEVEL CONTROL">
@@ -2000,9 +1999,9 @@
             <item name="Top Function Arguments">
                 <table isCollapsed="1">
                     <keys size="3">Argument, Direction, Datatype</keys>
-                    <column name="in_ptr">in, stream&lt;hls::axis&lt;ap_uint&lt;16&gt; 1 1 1&gt; 0&gt;&amp;</column>
-                    <column name="lef_ptr">out, stream&lt;hls::axis&lt;ap_uint&lt;16&gt; 1 1 1&gt; 0&gt;&amp;</column>
-                    <column name="sef_ptr">out, stream&lt;hls::axis&lt;ap_uint&lt;16&gt; 1 1 1&gt; 0&gt;&amp;</column>
+                    <column name="s_axi_video">in, stream&lt;hls::axis&lt;ap_uint&lt;16&gt; 1 1 1&gt; 0&gt;&amp;</column>
+                    <column name="m_axis_video_lef">out, stream&lt;hls::axis&lt;ap_uint&lt;16&gt; 1 1 1&gt; 0&gt;&amp;</column>
+                    <column name="m_axis_video_sef">out, stream&lt;hls::axis&lt;ap_uint&lt;16&gt; 1 1 1&gt; 0&gt;&amp;</column>
                     <column name="height">in, ap_uint&lt;16&gt;</column>
                     <column name="width">in, ap_uint&lt;16&gt;</column>
                 </table>
@@ -2010,9 +2009,9 @@
             <item name="SW-to-HW Mapping">
                 <table isCollapsed="1">
                     <keys size="4">Argument, HW Interface, HW Type, HW Info</keys>
-                    <column name="in_ptr">in_ptr, interface, , </column>
-                    <column name="lef_ptr">lef_ptr, interface, , </column>
-                    <column name="sef_ptr">sef_ptr, interface, , </column>
+                    <column name="s_axi_video">s_axi_video, interface, , </column>
+                    <column name="m_axis_video_lef">m_axis_video_lef, interface, , </column>
+                    <column name="m_axis_video_sef">m_axis_video_sef, interface, , </column>
                     <column name="height">s_axi_control, register, name=height offset=0x10 range=32, </column>
                     <column name="width">s_axi_control, register, name=width offset=0x18 range=32, </column>
                 </table>
@@ -2265,19 +2264,19 @@
         <Pragma type="loop_flatten" location="xf_hud_accel.cpp:128" status="valid" parentFunction="graymat2axivideo" variable="" isDirective="0" options="off"/>
         <Pragma type="pipeline" location="xf_hud_accel.cpp:129" status="valid" parentFunction="graymat2axivideo" variable="" isDirective="0" options="II = 1"/>
         <Pragma type="loop_tripcount" location="xf_hud_accel.cpp:130" status="valid" parentFunction="graymat2axivideo" variable="" isDirective="0" options="avg=COLS/NPPC max=COLS/NPPC"/>
-        <Pragma type="interface" location="xf_hud_accel.cpp:178" status="warning" parentFunction="extracteframes_accel" variable="&amp;in_ptr" isDirective="0" options="axis port=&amp;in_ptr register">
+        <Pragma type="interface" location="xf_hud_accel.cpp:178" status="warning" parentFunction="hud_accel" variable="&amp;s_axi_video" isDirective="0" options="axis port=&amp;s_axi_video register">
             <Msg msg_id="207-5529" msg_severity="WARNING" msg_body="extra token before variable expression is ignored"/>
         </Pragma>
-        <Pragma type="interface" location="xf_hud_accel.cpp:179" status="warning" parentFunction="extracteframes_accel" variable="&amp;lef_ptr" isDirective="0" options="axis port=&amp;lef_ptr register">
+        <Pragma type="interface" location="xf_hud_accel.cpp:179" status="warning" parentFunction="hud_accel" variable="&amp;m_axis_video_lef" isDirective="0" options="axis port=&amp;m_axis_video_lef register">
             <Msg msg_id="207-5529" msg_severity="WARNING" msg_body="extra token before variable expression is ignored"/>
         </Pragma>
-        <Pragma type="interface" location="xf_hud_accel.cpp:180" status="warning" parentFunction="extracteframes_accel" variable="&amp;sef_ptr" isDirective="0" options="axis port=&amp;sef_ptr register">
+        <Pragma type="interface" location="xf_hud_accel.cpp:180" status="warning" parentFunction="hud_accel" variable="&amp;m_axis_video_sef" isDirective="0" options="axis port=&amp;m_axis_video_sef register">
             <Msg msg_id="207-5529" msg_severity="WARNING" msg_body="extra token before variable expression is ignored"/>
         </Pragma>
-        <Pragma type="interface" location="xf_hud_accel.cpp:182" status="valid" parentFunction="extracteframes_accel" variable="height" isDirective="0" options="s_axilite port=height"/>
-        <Pragma type="interface" location="xf_hud_accel.cpp:183" status="valid" parentFunction="extracteframes_accel" variable="width" isDirective="0" options="s_axilite port=width"/>
-        <Pragma type="interface" location="xf_hud_accel.cpp:184" status="valid" parentFunction="extracteframes_accel" variable="return" isDirective="0" options="s_axilite port=return"/>
-        <Pragma type="dataflow" location="xf_hud_accel.cpp:199" status="valid" parentFunction="extracteframes_accel" variable="" isDirective="0" options=""/>
+        <Pragma type="interface" location="xf_hud_accel.cpp:182" status="valid" parentFunction="hud_accel" variable="height" isDirective="0" options="s_axilite port=height"/>
+        <Pragma type="interface" location="xf_hud_accel.cpp:183" status="valid" parentFunction="hud_accel" variable="width" isDirective="0" options="s_axilite port=width"/>
+        <Pragma type="interface" location="xf_hud_accel.cpp:184" status="valid" parentFunction="hud_accel" variable="return" isDirective="0" options="s_axilite port=return"/>
+        <Pragma type="dataflow" location="xf_hud_accel.cpp:199" status="valid" parentFunction="hud_accel" variable="" isDirective="0" options=""/>
     </PragmaReport>
 </profile>
 

@@ -1,13 +1,13 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'extract_Pipeline_VITIS_LOOP_113_1'" level="0">
-<item name = "Date">Sun Sep  4 18:21:50 2022
+<item name = "Date">Sun Sep  4 20:23:19 2022
 </item>
 <item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)</item>
 <item name = "Project">hud3.prj</item>
 <item name = "Solution">sol1 (Vivado IP Flow Target)</item>
-<item name = "Product family">artix7</item>
-<item name = "Target device">xc7a200t-fbg676-2</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z045-ffg900-2</item>
 </section>
 
 <section name = "Performance Estimates" level="0">
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">3.30 ns, 3.088 ns, 0.89 ns</column>
+<column name="ap_clk">3.30 ns, 3.180 ns, 0.89 ns</column>
 </table>
 </item>
 </section>
@@ -48,13 +48,13 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 33, -</column>
+<column name="Expression">-, -, 0, 19, -</column>
 <column name="FIFO">-, -, -, -, -</column>
 <column name="Instance">-, -, -, -, -</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, 45, -</column>
 <column name="Register">-, -, 25, -, -</column>
-<specialColumn name="Available">730, 740, 269200, 134600, 0</specialColumn>
+<specialColumn name="Available">1090, 900, 437200, 218600, 0</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
 </table>
 </item>
@@ -78,9 +78,9 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln113_fu_236_p2">+, 0, 0, 18, 11, 1</column>
-<column name="ap_block_pp0_stage0_11001">and, 0, 0, 2, 1, 1</column>
-<column name="icmp_ln113_fu_230_p2">icmp, 0, 0, 11, 11, 11</column>
+<column name="add_ln113_fu_236_p2">+, 0, 0, 11, 11, 1</column>
+<column name="ap_block_pp0_stage0_11001">and, 0, 0, 1, 1, 1</column>
+<column name="icmp_ln113_fu_230_p2">icmp, 0, 0, 5, 11, 11</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>

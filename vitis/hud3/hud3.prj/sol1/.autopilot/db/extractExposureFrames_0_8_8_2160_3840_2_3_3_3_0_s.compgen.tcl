@@ -3,7 +3,7 @@
 # Memory (RAM/ROM)  definition:
 set ID 120
 set hasByteEnable 0
-set MemName extractEFrames_accel_extractExposureFrames_0_8_8_2160_3840_2_3_3_3_0_s_extractor_buff_0_RAM_S2P_BRbkb
+set MemName hud_accel_extractExposureFrames_0_8_8_2160_3840_2_3_3_3_0_s_extractor_buff_0_RAM_S2P_BRbkb
 set CoreName ap_simcore_mem
 set PortList { 1 0 }
 set DataWd 16
@@ -16,7 +16,7 @@ set ROMData { }
 set HasInitializer 0
 set Initializer $ROMData
 set NumOfStage 3
-set DelayBudget 1.381
+set DelayBudget 1.38
 if {${::AESL::PGuard_simmodel_gen}} {
 if {[info proc ap_gen_simcore_mem] == "ap_gen_simcore_mem"} {
     eval "ap_gen_simcore_mem { \

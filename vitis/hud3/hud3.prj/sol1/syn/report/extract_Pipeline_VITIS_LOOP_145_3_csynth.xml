@@ -6,8 +6,8 @@
 
 <UserAssignments>
 <unit>ns</unit>
-<ProductFamily>artix7</ProductFamily>
-<Part>xc7a200t-fbg676-2</Part>
+<ProductFamily>zynq</ProductFamily>
+<Part>xc7z045-ffg900-2</Part>
 <TopModelName>extract_Pipeline_VITIS_LOOP_145_3</TopModelName>
 <TargetClockPeriod>3.30</TargetClockPeriod>
 <ClockUncertainty>0.89</ClockUncertainty>
@@ -18,7 +18,7 @@
 <PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>3.088</EstimatedClockPeriod>
+<EstimatedClockPeriod>3.180</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
@@ -62,16 +62,16 @@
 <AreaEstimates>
 <Resources>
 <FF>211</FF>
-<LUT>174</LUT>
+<LUT>152</LUT>
 <BRAM_18K>0</BRAM_18K>
 <DSP>0</DSP>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>
-<BRAM_18K>730</BRAM_18K>
-<DSP>740</DSP>
-<FF>269200</FF>
-<LUT>134600</LUT>
+<BRAM_18K>1090</BRAM_18K>
+<DSP>900</DSP>
+<FF>437200</FF>
+<LUT>218600</LUT>
 <URAM>0</URAM>
 </AvailableResources>
 </AreaEstimates>

@@ -46,10 +46,10 @@ newFuncRoot:0 %col_2 = alloca i32 1
 
 <Node id="16" bw="32" op_0_bw="32">
 <![CDATA[
-newFuncRoot:1 %empty_30 = alloca i32 1
+newFuncRoot:1 %empty_34 = alloca i32 1
 
 ]]></Node>
-<StgValue><ssdm name="empty_30"/></StgValue>
+<StgValue><ssdm name="empty_34"/></StgValue>
 </operation>
 
 <operation id="8" st_id="1" stage="1" lat="1">
@@ -301,7 +301,7 @@ newFuncRoot:17 %store_ln0 = store i14 0, i14 %indvar_flatten
 
 <Node id="33" bw="0" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-newFuncRoot:18 %store_ln95 = store i32 %tmp, i32 %empty_30
+newFuncRoot:18 %store_ln95 = store i32 %tmp, i32 %empty_34
 
 ]]></Node>
 <StgValue><ssdm name="store_ln95"/></StgValue>
@@ -841,7 +841,7 @@ for.inc116:3 %store_ln177 = store i11 %add_ln177, i11 %col_2
 
 <Node id="37" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-for.body93:0 %p_load = load i32 %empty_30
+for.body93:0 %p_load = load i32 %empty_34
 
 ]]></Node>
 <StgValue><ssdm name="p_load"/></StgValue>
@@ -1121,7 +1121,7 @@ if.then95:15 %this_buff_7_load = load i11 %this_buff_7_addr
 
 <Node id="86" bw="0" op_0_bw="32" op_1_bw="32" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-for.inc116:2 %store_ln177 = store i32 %select_ln176_1, i32 %empty_30
+for.inc116:2 %store_ln177 = store i32 %select_ln176_1, i32 %empty_34
 
 ]]></Node>
 <StgValue><ssdm name="store_ln177"/></StgValue>

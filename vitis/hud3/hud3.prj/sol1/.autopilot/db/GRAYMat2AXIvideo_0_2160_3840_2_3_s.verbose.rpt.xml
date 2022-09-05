@@ -1,13 +1,13 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'GRAYMat2AXIvideo_0_2160_3840_2_3_s'" level="0">
-<item name = "Date">Sun Sep  4 18:21:51 2022
+<item name = "Date">Sun Sep  4 20:23:20 2022
 </item>
 <item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)</item>
 <item name = "Project">hud3.prj</item>
 <item name = "Solution">sol1 (Vivado IP Flow Target)</item>
-<item name = "Product family">artix7</item>
-<item name = "Target device">xc7a200t-fbg676-2</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z045-ffg900-2</item>
 </section>
 
 <section name = "Performance Estimates" level="0">
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">3.30 ns, 3.088 ns, 0.89 ns</column>
+<column name="ap_clk">3.30 ns, 3.180 ns, 0.89 ns</column>
 </table>
 </item>
 </section>
@@ -49,13 +49,13 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 67, -</column>
+<column name="Expression">-, -, 0, 37, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">-, -, 18, 116, -</column>
+<column name="Instance">-, -, 18, 91, -</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, 65, -</column>
 <column name="Register">-, -, 69, -, -</column>
-<specialColumn name="Available">730, 740, 269200, 134600, 0</specialColumn>
+<specialColumn name="Available">1090, 900, 437200, 218600, 0</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
 </table>
 </item>
@@ -63,7 +63,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="grp_GRAYMat2AXIvideo_0_2160_3840_2_3_Pipeline_loop_col_mat2axi_fu_100">GRAYMat2AXIvideo_0_2160_3840_2_3_Pipeline_loop_col_mat2axi, 0, 0, 18, 116, 0</column>
+<column name="grp_GRAYMat2AXIvideo_0_2160_3840_2_3_Pipeline_loop_col_mat2axi_fu_100">GRAYMat2AXIvideo_0_2160_3840_2_3_Pipeline_loop_col_mat2axi, 0, 0, 18, 91, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -80,13 +80,13 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="i_4_fu_165_p2">+, 0, 0, 19, 12, 1</column>
-<column name="sub_fu_146_p2">+, 0, 0, 19, 12, 2</column>
-<column name="ap_block_state5_on_subcall_done">and, 0, 0, 2, 1, 1</column>
-<column name="grp_GRAYMat2AXIvideo_0_2160_3840_2_3_Pipeline_loop_col_mat2axi_fu_100_lef_ptr_TREADY">and, 0, 0, 2, 1, 1</column>
-<column name="cmp45_fu_152_p2">icmp, 0, 0, 11, 11, 1</column>
-<column name="icmp_ln121_fu_160_p2">icmp, 0, 0, 12, 12, 12</column>
-<column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
+<column name="i_4_fu_165_p2">+, 0, 0, 12, 12, 1</column>
+<column name="sub_fu_146_p2">+, 0, 0, 12, 12, 2</column>
+<column name="ap_block_state5_on_subcall_done">and, 0, 0, 1, 1, 1</column>
+<column name="grp_GRAYMat2AXIvideo_0_2160_3840_2_3_Pipeline_loop_col_mat2axi_fu_100_m_axis_video_lef_TREADY">and, 0, 0, 1, 1, 1</column>
+<column name="cmp45_fu_152_p2">icmp, 0, 0, 5, 11, 1</column>
+<column name="icmp_ln121_fu_160_p2">icmp, 0, 0, 5, 12, 12</column>
+<column name="ap_block_state1">or, 0, 0, 1, 1, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -137,15 +137,15 @@
 <column name="LEF_Img_data157_fifo_cap">in, 3, ap_fifo, LEF_Img_data157, pointer</column>
 <column name="LEF_Img_data157_empty_n">in, 1, ap_fifo, LEF_Img_data157, pointer</column>
 <column name="LEF_Img_data157_read">out, 1, ap_fifo, LEF_Img_data157, pointer</column>
-<column name="lef_ptr_TDATA">out, 16, axis, lef_ptr_V_data_V, pointer</column>
-<column name="lef_ptr_TVALID">out, 1, axis, lef_ptr_V_dest_V, pointer</column>
-<column name="lef_ptr_TREADY">in, 1, axis, lef_ptr_V_dest_V, pointer</column>
-<column name="lef_ptr_TDEST">out, 1, axis, lef_ptr_V_dest_V, pointer</column>
-<column name="lef_ptr_TKEEP">out, 2, axis, lef_ptr_V_keep_V, pointer</column>
-<column name="lef_ptr_TSTRB">out, 2, axis, lef_ptr_V_strb_V, pointer</column>
-<column name="lef_ptr_TUSER">out, 1, axis, lef_ptr_V_user_V, pointer</column>
-<column name="lef_ptr_TLAST">out, 1, axis, lef_ptr_V_last_V, pointer</column>
-<column name="lef_ptr_TID">out, 1, axis, lef_ptr_V_id_V, pointer</column>
+<column name="m_axis_video_lef_TDATA">out, 16, axis, m_axis_video_lef_V_data_V, pointer</column>
+<column name="m_axis_video_lef_TVALID">out, 1, axis, m_axis_video_lef_V_dest_V, pointer</column>
+<column name="m_axis_video_lef_TREADY">in, 1, axis, m_axis_video_lef_V_dest_V, pointer</column>
+<column name="m_axis_video_lef_TDEST">out, 1, axis, m_axis_video_lef_V_dest_V, pointer</column>
+<column name="m_axis_video_lef_TKEEP">out, 2, axis, m_axis_video_lef_V_keep_V, pointer</column>
+<column name="m_axis_video_lef_TSTRB">out, 2, axis, m_axis_video_lef_V_strb_V, pointer</column>
+<column name="m_axis_video_lef_TUSER">out, 1, axis, m_axis_video_lef_V_user_V, pointer</column>
+<column name="m_axis_video_lef_TLAST">out, 1, axis, m_axis_video_lef_V_last_V, pointer</column>
+<column name="m_axis_video_lef_TID">out, 1, axis, m_axis_video_lef_V_id_V, pointer</column>
 </table>
 </item>
 </section>

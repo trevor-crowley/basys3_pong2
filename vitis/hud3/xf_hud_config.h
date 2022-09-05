@@ -48,9 +48,9 @@ typedef ap_axiu<AXI_WIDTH_OUT, 1, 1, 1> OutVideoStrmBus_t_e_s;
 typedef hls::stream<InVideoStrmBus_t_e_s> InVideoStrm_t_e_s;
 typedef hls::stream<OutVideoStrmBus_t_e_s> OutVideoStrm_t_e_s;
 
-void extractEFrames_accel(InVideoStrm_t_e_s& in_ptr,
-                          OutVideoStrm_t_e_s& lef_ptr,
-                          OutVideoStrm_t_e_s& sef_ptr,
+void hud_accel(InVideoStrm_t_e_s& s_axi_video,
+                          OutVideoStrm_t_e_s& m_axis_video_lef,
+                          OutVideoStrm_t_e_s& m_axis_video_sef,
                           ap_uint<IMAGE_SIZE_WIDTH> height,
                           ap_uint<IMAGE_SIZE_WIDTH> width);
 

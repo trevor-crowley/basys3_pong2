@@ -3,13 +3,13 @@
 ================================================================
 == Vitis HLS Report for 'Block_entry5_proc'
 ================================================================
-* Date:           Sun Sep  4 18:21:47 2022
+* Date:           Sun Sep  4 20:23:17 2022
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
 * Project:        hud3.prj
 * Solution:       sol1 (Vivado IP Flow Target)
-* Product family: artix7
-* Target device:  xc7a200t-fbg676-2
+* Product family: zynq
+* Target device:  xc7z045-ffg900-2
 
 
 ================================================================
@@ -20,7 +20,7 @@
     +--------+---------+----------+------------+
     |  Clock |  Target | Estimated| Uncertainty|
     +--------+---------+----------+------------+
-    |ap_clk  |  3.30 ns|  1.780 ns|     0.89 ns|
+    |ap_clk  |  3.30 ns|  1.546 ns|     0.89 ns|
     +--------+---------+----------+------------+
 
 + Latency: 
@@ -74,20 +74,20 @@ IsGatedGlobalClock: 0
 
 * FSM state operations: 
 
-State 1 <SV = 0> <Delay = 1.77>
+State 1 <SV = 0> <Delay = 1.54>
 ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%width_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %width"   --->   Operation 2 'read' 'width_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%height_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %height"   --->   Operation 3 'read' 'height_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%LEF_Img_rows = trunc i16 %height_read" [xf_hud_accel.cpp:191]   --->   Operation 4 'trunc' 'LEF_Img_rows' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%InImg_rows = bitconcatenate i13 @_ssdm_op_BitConcatenate.i13.i12.i1, i12 %LEF_Img_rows, i1 0" [xf_hud_accel.cpp:191]   --->   Operation 5 'bitconcatenate' 'InImg_rows' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%LEF_Img_cols = trunc i16 %width_read" [xf_hud_accel.cpp:191]   --->   Operation 6 'trunc' 'LEF_Img_cols' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 7 [1/1] (1.77ns)   --->   "%InImg_cols = add i12 %LEF_Img_cols, i12 8" [xf_hud_accel.cpp:191]   --->   Operation 7 'add' 'InImg_cols' <Predicate = true> <Delay = 1.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%mrv = insertvalue i73 <undef>, i13 %InImg_rows" [xf_hud_accel.cpp:191]   --->   Operation 8 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue i73 %mrv, i12 %LEF_Img_cols" [xf_hud_accel.cpp:191]   --->   Operation 9 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%mrv_2 = insertvalue i73 %mrv_1, i12 %LEF_Img_rows" [xf_hud_accel.cpp:191]   --->   Operation 10 'insertvalue' 'mrv_2' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%mrv_3 = insertvalue i73 %mrv_2, i12 %LEF_Img_cols" [xf_hud_accel.cpp:191]   --->   Operation 11 'insertvalue' 'mrv_3' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%mrv_4 = insertvalue i73 %mrv_3, i12 %InImg_cols" [xf_hud_accel.cpp:191]   --->   Operation 12 'insertvalue' 'mrv_4' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%mrv_5 = insertvalue i73 %mrv_4, i12 %LEF_Img_rows" [xf_hud_accel.cpp:191]   --->   Operation 13 'insertvalue' 'mrv_5' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%ret_ln191 = ret i73 %mrv_5" [xf_hud_accel.cpp:191]   --->   Operation 14 'ret' 'ret_ln191' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%LEF_Img_rows = trunc i16 %height_read" [/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:191]   --->   Operation 4 'trunc' 'LEF_Img_rows' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%InImg_rows = bitconcatenate i13 @_ssdm_op_BitConcatenate.i13.i12.i1, i12 %LEF_Img_rows, i1 0" [/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:191]   --->   Operation 5 'bitconcatenate' 'InImg_rows' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%LEF_Img_cols = trunc i16 %width_read" [/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:191]   --->   Operation 6 'trunc' 'LEF_Img_cols' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (1.54ns)   --->   "%InImg_cols = add i12 %LEF_Img_cols, i12 8" [/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:191]   --->   Operation 7 'add' 'InImg_cols' <Predicate = true> <Delay = 1.54> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%mrv = insertvalue i73 <undef>, i13 %InImg_rows" [/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:191]   --->   Operation 8 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue i73 %mrv, i12 %LEF_Img_cols" [/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:191]   --->   Operation 9 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%mrv_2 = insertvalue i73 %mrv_1, i12 %LEF_Img_rows" [/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:191]   --->   Operation 10 'insertvalue' 'mrv_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%mrv_3 = insertvalue i73 %mrv_2, i12 %LEF_Img_cols" [/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:191]   --->   Operation 11 'insertvalue' 'mrv_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%mrv_4 = insertvalue i73 %mrv_3, i12 %InImg_cols" [/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:191]   --->   Operation 12 'insertvalue' 'mrv_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%mrv_5 = insertvalue i73 %mrv_4, i12 %LEF_Img_rows" [/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:191]   --->   Operation 13 'insertvalue' 'mrv_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%ret_ln191 = ret i73 %mrv_5" [/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:191]   --->   Operation 14 'ret' 'ret_ln191' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -95,10 +95,10 @@ ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%ret_ln191 = ret i73 %mrv_5" [xf_hu
 ============================================================
 Target clock period: 3.3ns, clock uncertainty: 0.891ns.
 
- <State 1>: 1.78ns
+ <State 1>: 1.55ns
 The critical path consists of the following:
 	wire read operation ('width_read') on port 'width' [3]  (0 ns)
-	'add' operation ('_cols', xf_hud_accel.cpp:191) [8]  (1.78 ns)
+	'add' operation ('_cols', /home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:191) [8]  (1.55 ns)
 
 
 ============================================================
