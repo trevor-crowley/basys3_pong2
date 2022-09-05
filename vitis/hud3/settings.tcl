@@ -1,6 +1,6 @@
 set XPART xc7z045-ffg900-2
 set CSIM 1
-set CSYNTH 1
+set CSYNTH 0
 set COSIM 0
 set VIVADO_SYN 0
 set VIVADO_IMPL 0
