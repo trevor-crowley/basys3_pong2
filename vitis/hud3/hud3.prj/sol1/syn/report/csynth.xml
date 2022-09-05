@@ -1,0 +1,2283 @@
+<profile>
+    <ReportVersion>
+        <Version>2022.1</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>artix7</ProductFamily>
+        <Part>xc7a200t-fbg676-2</Part>
+        <TopModelName>extractEFrames_accel</TopModelName>
+        <TargetClockPeriod>3.30</TargetClockPeriod>
+        <ClockUncertainty>0.89</ClockUncertainty>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>dataflow</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>5.440</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>undef</Best-caseLatency>
+            <Average-caseLatency>undef</Average-caseLatency>
+            <Worst-caseLatency>undef</Worst-caseLatency>
+            <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+            <DataflowPipelineThroughput>undef</DataflowPipelineThroughput>
+            <Interval-min>undef</Interval-min>
+            <Interval-max>undef</Interval-max>
+        </SummaryOfOverallLatency>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <BRAM_18K>16</BRAM_18K>
+            <FF>2175</FF>
+            <LUT>3678</LUT>
+            <DSP>0</DSP>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>730</BRAM_18K>
+            <DSP>740</DSP>
+            <FF>269200</FF>
+            <LUT>134600</LUT>
+            <URAM>0</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>s_axi_control_AWVALID</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_AWREADY</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_AWADDR</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>5</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WVALID</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WREADY</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WDATA</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WSTRB</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>4</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_ARVALID</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_ARREADY</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_ARADDR</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>5</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RVALID</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RREADY</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RDATA</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RRESP</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_BVALID</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_BREADY</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_BRESP</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>extractEFrames_accel</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst_n</name>
+            <Object>extractEFrames_accel</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>interrupt</name>
+            <Object>extractEFrames_accel</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_ptr_TDATA</name>
+            <Object>in_ptr_V_data_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_ptr_TKEEP</name>
+            <Object>in_ptr_V_keep_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>2</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_ptr_TSTRB</name>
+            <Object>in_ptr_V_strb_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>2</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_ptr_TUSER</name>
+            <Object>in_ptr_V_user_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_ptr_TLAST</name>
+            <Object>in_ptr_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_ptr_TID</name>
+            <Object>in_ptr_V_id_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_ptr_TDEST</name>
+            <Object>in_ptr_V_dest_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_ptr_TVALID</name>
+            <Object>in_ptr_V_dest_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_ptr_TREADY</name>
+            <Object>in_ptr_V_dest_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>lef_ptr_TDATA</name>
+            <Object>lef_ptr_V_data_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>lef_ptr_TKEEP</name>
+            <Object>lef_ptr_V_keep_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>lef_ptr_TSTRB</name>
+            <Object>lef_ptr_V_strb_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>lef_ptr_TUSER</name>
+            <Object>lef_ptr_V_user_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>lef_ptr_TLAST</name>
+            <Object>lef_ptr_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>lef_ptr_TID</name>
+            <Object>lef_ptr_V_id_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>lef_ptr_TDEST</name>
+            <Object>lef_ptr_V_dest_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>lef_ptr_TVALID</name>
+            <Object>lef_ptr_V_dest_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>lef_ptr_TREADY</name>
+            <Object>lef_ptr_V_dest_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>sef_ptr_TDATA</name>
+            <Object>sef_ptr_V_data_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>sef_ptr_TKEEP</name>
+            <Object>sef_ptr_V_keep_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>sef_ptr_TSTRB</name>
+            <Object>sef_ptr_V_strb_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>sef_ptr_TUSER</name>
+            <Object>sef_ptr_V_user_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>sef_ptr_TLAST</name>
+            <Object>sef_ptr_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>sef_ptr_TID</name>
+            <Object>sef_ptr_V_id_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>sef_ptr_TDEST</name>
+            <Object>sef_ptr_V_dest_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>sef_ptr_TVALID</name>
+            <Object>sef_ptr_V_dest_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>sef_ptr_TREADY</name>
+            <Object>sef_ptr_V_dest_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="5">
+            <ModuleName>extractEFrames_accel</ModuleName>
+            <InstancesList>
+                <Instance>
+                    <InstName>Block_entry5_proc_U0</InstName>
+                    <ModuleName>Block_entry5_proc</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>148</ID>
+                    <BindInstances>InImg_cols_fu_42_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>AXIVideo2BayerMat_0_4320_3848_2_3_U0</InstName>
+                    <ModuleName>AXIVideo2BayerMat_0_4320_3848_2_3_s</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>154</ID>
+                    <InstancesList>
+                        <Instance>
+                            <InstName>grp_AXIVideo2BayerMat_0_4320_3848_2_3_Pipeline_loop_start_hunt_fu_179</InstName>
+                            <ModuleName>AXIVideo2BayerMat_0_4320_3848_2_3_Pipeline_loop_start_hunt</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>179</ID>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_AXIVideo2BayerMat_0_4320_3848_2_3_Pipeline_loop_col_zxi2mat_fu_199</InstName>
+                            <ModuleName>AXIVideo2BayerMat_0_4320_3848_2_3_Pipeline_loop_col_zxi2mat</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>199</ID>
+                            <BindInstances>j_6_fu_198_p2</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_AXIVideo2BayerMat_0_4320_3848_2_3_Pipeline_loop_last_hunt_fu_226</InstName>
+                            <ModuleName>AXIVideo2BayerMat_0_4320_3848_2_3_Pipeline_loop_last_hunt</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>226</ID>
+                        </Instance>
+                    </InstancesList>
+                    <BindInstances>i_6_fu_288_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>extractExposureFrames_0_8_8_2160_3840_2_3_3_3_0_U0</InstName>
+                    <ModuleName>extractExposureFrames_0_8_8_2160_3840_2_3_3_3_0_s</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>176</ID>
+                    <InstancesList>
+                        <Instance>
+                            <InstName>grp_extract_fu_102</InstName>
+                            <ModuleName>extract</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>102</ID>
+                            <InstancesList>
+                                <Instance>
+                                    <InstName>grp_extract_Pipeline_VITIS_LOOP_113_1_fu_116</InstName>
+                                    <ModuleName>extract_Pipeline_VITIS_LOOP_113_1</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>116</ID>
+                                    <BindInstances>add_ln113_fu_236_p2</BindInstances>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_extract_Pipeline_VITIS_LOOP_133_2_fu_138</InstName>
+                                    <ModuleName>extract_Pipeline_VITIS_LOOP_133_2</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>138</ID>
+                                    <BindInstances>add_ln133_fu_262_p2</BindInstances>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_extract_Pipeline_VITIS_LOOP_145_3_fu_162</InstName>
+                                    <ModuleName>extract_Pipeline_VITIS_LOOP_145_3</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>162</ID>
+                                    <BindInstances>add_ln145_fu_239_p2</BindInstances>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_extract_Pipeline_LAST_LINES_VITIS_LOOP_177_4_fu_190</InstName>
+                                    <ModuleName>extract_Pipeline_LAST_LINES_VITIS_LOOP_177_4</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>190</ID>
+                                    <BindInstances>add_ln197_fu_347_p2 add_ln176_fu_271_p2 add_ln177_fu_322_p2</BindInstances>
+                                </Instance>
+                            </InstancesList>
+                            <BindInstances>add_ln125_fu_263_p2 add_ln165_fu_323_p2 add_ln170_fu_346_p2 row_3_fu_329_p2 sub_ln176_fu_306_p2</BindInstances>
+                        </Instance>
+                    </InstancesList>
+                    <BindInstances>extractor_buff_0_U extractor_buff_1_U extractor_buff_2_U extractor_buff_3_U extractor_buff_4_U extractor_buff_5_U extractor_buff_6_U extractor_buff_7_U</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>GRAYMat2AXIvideo_0_2160_3840_2_3_U0</InstName>
+                    <ModuleName>GRAYMat2AXIvideo_0_2160_3840_2_3_s</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>186</ID>
+                    <InstancesList>
+                        <Instance>
+                            <InstName>grp_GRAYMat2AXIvideo_0_2160_3840_2_3_Pipeline_loop_col_mat2axi_fu_100</InstName>
+                            <ModuleName>GRAYMat2AXIvideo_0_2160_3840_2_3_Pipeline_loop_col_mat2axi</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>100</ID>
+                            <BindInstances>j_2_fu_160_p2</BindInstances>
+                        </Instance>
+                    </InstancesList>
+                    <BindInstances>sub_fu_146_p2 i_4_fu_165_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>GRAYMat2AXIvideo_0_2160_3840_2_3_1_U0</InstName>
+                    <ModuleName>GRAYMat2AXIvideo_0_2160_3840_2_3_1</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>207</ID>
+                    <InstancesList>
+                        <Instance>
+                            <InstName>grp_GRAYMat2AXIvideo_0_2160_3840_2_3_1_Pipeline_loop_col_mat2axi_fu_88</InstName>
+                            <ModuleName>GRAYMat2AXIvideo_0_2160_3840_2_3_1_Pipeline_loop_col_mat2axi</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>88</ID>
+                            <BindInstances>j_4_fu_160_p2</BindInstances>
+                        </Instance>
+                    </InstancesList>
+                    <BindInstances>sub_fu_134_p2 i_2_fu_153_p2</BindInstances>
+                </Instance>
+            </InstancesList>
+            <BindInstances>LEF_Img_rows_c_U InImg_cols_c_U InImg_data_U LEF_Img_data_U SEF_Img_data_U InImg_rows_channel_U LEF_Img_cols_channel_U SEF_Img_rows_channel_U SEF_Img_cols_channel_U InImg_cols_c15_channel_U LEF_Img_rows_c16_channel_U</BindInstances>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>Block_entry5_proc</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.30</TargetClockPeriod>
+                    <ClockUncertainty>0.89</ClockUncertainty>
+                    <EstimatedClockPeriod>1.780</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>0</Best-caseLatency>
+                    <Average-caseLatency>0</Average-caseLatency>
+                    <Worst-caseLatency>0</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>0</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>74</FF>
+                    <AVAIL_FF>269200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>84</LUT>
+                    <AVAIL_LUT>134600</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>730</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>740</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="InImg_cols_fu_42_p2" SOURCE="xf_hud_accel.cpp:191" URAM="0" VARIABLE="InImg_cols"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>AXIVideo2BayerMat_0_4320_3848_2_3_Pipeline_loop_start_hunt</Name>
+            <Loops>
+                <loop_start_hunt/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.30</TargetClockPeriod>
+                    <ClockUncertainty>0.89</ClockUncertainty>
+                    <EstimatedClockPeriod>1.324</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>2</Best-caseLatency>
+                    <Average-caseLatency>2</Average-caseLatency>
+                    <Worst-caseLatency>2</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>6.600 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>6.600 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>6.600 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>2</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <loop_start_hunt>
+                        <Name>loop_start_hunt</Name>
+                        <TripCount>0</TripCount>
+                        <Latency>0</Latency>
+                        <AbsoluteTimeLatency>0 ns</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>1</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </loop_start_hunt>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>3</FF>
+                    <AVAIL_FF>269200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>33</LUT>
+                    <AVAIL_LUT>134600</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>730</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>740</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+        </Module>
+        <Module>
+            <Name>AXIVideo2BayerMat_0_4320_3848_2_3_Pipeline_loop_col_zxi2mat</Name>
+            <Loops>
+                <loop_col_zxi2mat/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.30</TargetClockPeriod>
+                    <ClockUncertainty>0.89</ClockUncertainty>
+                    <EstimatedClockPeriod>4.248</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>4</Best-caseLatency>
+                    <Average-caseLatency>1927</Average-caseLatency>
+                    <Worst-caseLatency>1927</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>16.992 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>8.186 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>8.186 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>4 ~ 1927</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <loop_col_zxi2mat>
+                        <Name>loop_col_zxi2mat</Name>
+                        <TripCount>
+                            <range>
+                                <min>1</min>
+                                <max>1924</max>
+                            </range>
+                        </TripCount>
+                        <Latency>2 ~ 1925</Latency>
+                        <AbsoluteTimeLatency>8.496 ns ~ 8.177 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>3</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </loop_col_zxi2mat>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>53</FF>
+                    <AVAIL_FF>269200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>148</LUT>
+                    <AVAIL_LUT>134600</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>730</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>740</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_col_zxi2mat" OPTYPE="add" PRAGMA="" RTLNAME="j_6_fu_198_p2" SOURCE="xf_hud_accel.cpp:67" URAM="0" VARIABLE="j_6"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>AXIVideo2BayerMat_0_4320_3848_2_3_Pipeline_loop_last_hunt</Name>
+            <Loops>
+                <loop_last_hunt/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.30</TargetClockPeriod>
+                    <ClockUncertainty>0.89</ClockUncertainty>
+                    <EstimatedClockPeriod>2.648</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>2</Best-caseLatency>
+                    <Average-caseLatency>2</Average-caseLatency>
+                    <Worst-caseLatency>2</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>6.600 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>6.600 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>6.600 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>2</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <loop_last_hunt>
+                        <Name>loop_last_hunt</Name>
+                        <TripCount>0</TripCount>
+                        <Latency>0</Latency>
+                        <AbsoluteTimeLatency>0 ns</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>1</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </loop_last_hunt>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>4</FF>
+                    <AVAIL_FF>269200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>51</LUT>
+                    <AVAIL_LUT>134600</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>730</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>740</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+        </Module>
+        <Module>
+            <Name>AXIVideo2BayerMat_0_4320_3848_2_3_s</Name>
+            <Loops>
+                <loop_row_axi2mat/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.30</TargetClockPeriod>
+                    <ClockUncertainty>0.89</ClockUncertainty>
+                    <EstimatedClockPeriod>4.248</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>7</Best-caseLatency>
+                    <Average-caseLatency>4199047</Average-caseLatency>
+                    <Worst-caseLatency>8363527</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>29.736 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>17.838 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>35.528 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>7 ~ 8363527</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <loop_row_axi2mat>
+                        <Name>loop_row_axi2mat</Name>
+                        <TripCount>
+                            <range>
+                                <min>0</min>
+                                <max>4320</max>
+                            </range>
+                        </TripCount>
+                        <Latency>1 ~ 8363521</Latency>
+                        <AbsoluteTimeLatency>4.248 ns ~ 35.528 ms</AbsoluteTimeLatency>
+                        <IterationLatency>
+                            <range>
+                                <min>8</min>
+                                <max>1936</max>
+                            </range>
+                        </IterationLatency>
+                        <PipelineDepth>8 ~ 1936</PipelineDepth>
+                        <PipelineType>no</PipelineType>
+                        <InstanceList>
+                            <Instance>grp_AXIVideo2BayerMat_0_4320_3848_2_3_Pipeline_loop_col_zxi2mat_fu_199</Instance>
+                            <Instance>grp_AXIVideo2BayerMat_0_4320_3848_2_3_Pipeline_loop_last_hunt_fu_226</Instance>
+                        </InstanceList>
+                    </loop_row_axi2mat>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>151</FF>
+                    <AVAIL_FF>269200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>424</LUT>
+                    <AVAIL_LUT>134600</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>730</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>740</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_row_axi2mat" OPTYPE="add" PRAGMA="" RTLNAME="i_6_fu_288_p2" SOURCE="xf_hud_accel.cpp:61" URAM="0" VARIABLE="i_6"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>extract_Pipeline_VITIS_LOOP_113_1</Name>
+            <Loops>
+                <VITIS_LOOP_113_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.30</TargetClockPeriod>
+                    <ClockUncertainty>0.89</ClockUncertainty>
+                    <EstimatedClockPeriod>3.088</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>9</Best-caseLatency>
+                    <Average-caseLatency>9</Average-caseLatency>
+                    <Worst-caseLatency>9</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>29.700 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>29.700 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>29.700 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>9</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_113_1>
+                        <Name>VITIS_LOOP_113_1</Name>
+                        <TripCount>7</TripCount>
+                        <Latency>7</Latency>
+                        <AbsoluteTimeLatency>23.100 ns</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_113_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>25</FF>
+                    <AVAIL_FF>269200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>78</LUT>
+                    <AVAIL_LUT>134600</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>730</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>740</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_113_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln113_fu_236_p2" SOURCE="/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:113" URAM="0" VARIABLE="add_ln113"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>extract_Pipeline_VITIS_LOOP_133_2</Name>
+            <Loops>
+                <VITIS_LOOP_133_2/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.30</TargetClockPeriod>
+                    <ClockUncertainty>0.89</ClockUncertainty>
+                    <EstimatedClockPeriod>3.088</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>3</Best-caseLatency>
+                    <Average-caseLatency>1078</Average-caseLatency>
+                    <Worst-caseLatency>2154</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>9.900 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>3.557 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>7.108 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>3 ~ 2154</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_133_2>
+                        <Name>VITIS_LOOP_133_2</Name>
+                        <TripCount>
+                            <range>
+                                <min>1</min>
+                                <max>2152</max>
+                            </range>
+                        </TripCount>
+                        <Latency>1 ~ 2152</Latency>
+                        <AbsoluteTimeLatency>3.300 ns ~ 7.102 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_133_2>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>25</FF>
+                    <AVAIL_FF>269200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>78</LUT>
+                    <AVAIL_LUT>134600</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>730</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>740</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_133_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln133_fu_262_p2" SOURCE="/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:133" URAM="0" VARIABLE="add_ln133"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>extract_Pipeline_VITIS_LOOP_145_3</Name>
+            <Loops>
+                <VITIS_LOOP_145_3/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.30</TargetClockPeriod>
+                    <ClockUncertainty>0.89</ClockUncertainty>
+                    <EstimatedClockPeriod>3.088</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>5</Best-caseLatency>
+                    <Average-caseLatency>1080</Average-caseLatency>
+                    <Worst-caseLatency>2156</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>16.500 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>3.564 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>7.115 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>5 ~ 2156</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_145_3>
+                        <Name>VITIS_LOOP_145_3</Name>
+                        <TripCount>
+                            <range>
+                                <min>1</min>
+                                <max>2152</max>
+                            </range>
+                        </TripCount>
+                        <Latency>3 ~ 2154</Latency>
+                        <AbsoluteTimeLatency>9.900 ns ~ 7.108 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>4</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_145_3>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>211</FF>
+                    <AVAIL_FF>269200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>174</LUT>
+                    <AVAIL_LUT>134600</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>730</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>740</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_145_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln145_fu_239_p2" SOURCE="/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:145" URAM="0" VARIABLE="add_ln145"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>extract_Pipeline_LAST_LINES_VITIS_LOOP_177_4</Name>
+            <Loops>
+                <LAST_LINES_VITIS_LOOP_177_4/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.30</TargetClockPeriod>
+                    <ClockUncertainty>0.89</ClockUncertainty>
+                    <EstimatedClockPeriod>5.440</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>52</Best-caseLatency>
+                    <Average-caseLatency>52</Average-caseLatency>
+                    <Worst-caseLatency>52</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.283 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.283 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.283 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>52</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <LAST_LINES_VITIS_LOOP_177_4>
+                        <Name>LAST_LINES_VITIS_LOOP_177_4</Name>
+                        <TripCount>49</TripCount>
+                        <Latency>50</Latency>
+                        <AbsoluteTimeLatency>0.272 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>3</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </LAST_LINES_VITIS_LOOP_177_4>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>98</FF>
+                    <AVAIL_FF>269200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>334</LUT>
+                    <AVAIL_LUT>134600</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>730</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>740</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="LAST_LINES_VITIS_LOOP_177_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln197_fu_347_p2" SOURCE="/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:197" URAM="0" VARIABLE="add_ln197"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="LAST_LINES_VITIS_LOOP_177_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln176_fu_271_p2" SOURCE="/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:176" URAM="0" VARIABLE="add_ln176"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="LAST_LINES_VITIS_LOOP_177_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln177_fu_322_p2" SOURCE="/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:177" URAM="0" VARIABLE="add_ln177"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>extract</Name>
+            <Loops>
+                <BUFFER_LINES/>
+                <SPLIT_LINES/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.30</TargetClockPeriod>
+                    <ClockUncertainty>0.89</ClockUncertainty>
+                    <EstimatedClockPeriod>5.440</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <BUFFER_LINES>
+                        <Name>BUFFER_LINES</Name>
+                        <TripCount>7</TripCount>
+                        <Latency>14 ~ 84</Latency>
+                        <AbsoluteTimeLatency>76.165 ns ~ 0.457 us</AbsoluteTimeLatency>
+                        <IterationLatency>
+                            <range>
+                                <min>2</min>
+                                <max>12</max>
+                            </range>
+                        </IterationLatency>
+                        <PipelineDepth>2 ~ 12</PipelineDepth>
+                        <PipelineType>no</PipelineType>
+                        <InstanceList>
+                            <Instance>grp_extract_Pipeline_VITIS_LOOP_113_1_fu_116</Instance>
+                        </InstanceList>
+                    </BUFFER_LINES>
+                    <SPLIT_LINES>
+                        <Name>SPLIT_LINES</Name>
+                        <TripCount>undef</TripCount>
+                        <Latency>undef</Latency>
+                        <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+                        <IterationLatency>
+                            <range>
+                                <min>9</min>
+                                <max>4316</max>
+                            </range>
+                        </IterationLatency>
+                        <PipelineDepth>9 ~ 4316</PipelineDepth>
+                        <PipelineType>no</PipelineType>
+                        <InstanceList>
+                            <Instance>grp_extract_Pipeline_VITIS_LOOP_133_2_fu_138</Instance>
+                            <Instance>grp_extract_Pipeline_VITIS_LOOP_145_3_fu_162</Instance>
+                        </InstanceList>
+                    </SPLIT_LINES>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>596</FF>
+                    <AVAIL_FF>269200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>1670</LUT>
+                    <AVAIL_LUT>134600</AVAIL_LUT>
+                    <UTIL_LUT>1</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>730</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>740</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="BUFFER_LINES" OPTYPE="add" PRAGMA="" RTLNAME="add_ln125_fu_263_p2" SOURCE="/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:125" URAM="0" VARIABLE="add_ln125"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="SPLIT_LINES" OPTYPE="add" PRAGMA="" RTLNAME="add_ln165_fu_323_p2" SOURCE="/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:165" URAM="0" VARIABLE="add_ln165"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="SPLIT_LINES" OPTYPE="add" PRAGMA="" RTLNAME="add_ln170_fu_346_p2" SOURCE="/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:170" URAM="0" VARIABLE="add_ln170"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="SPLIT_LINES" OPTYPE="add" PRAGMA="" RTLNAME="row_3_fu_329_p2" SOURCE="/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:131" URAM="0" VARIABLE="row_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln176_fu_306_p2" SOURCE="/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:176" URAM="0" VARIABLE="sub_ln176"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>extractExposureFrames_0_8_8_2160_3840_2_3_3_3_0_s</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.30</TargetClockPeriod>
+                    <ClockUncertainty>0.89</ClockUncertainty>
+                    <EstimatedClockPeriod>5.440</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>16</BRAM_18K>
+                    <AVAIL_BRAM>730</AVAIL_BRAM>
+                    <UTIL_BRAM>2</UTIL_BRAM>
+                    <FF>613</FF>
+                    <AVAIL_FF>269200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>1743</LUT>
+                    <AVAIL_LUT>134600</AVAIL_LUT>
+                    <UTIL_LUT>1</UTIL_LUT>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>740</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="extractor_buff_0_U" SOURCE="" URAM="0" VARIABLE="extractor_buff_0"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="extractor_buff_1_U" SOURCE="" URAM="0" VARIABLE="extractor_buff_1"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="extractor_buff_2_U" SOURCE="" URAM="0" VARIABLE="extractor_buff_2"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="extractor_buff_3_U" SOURCE="" URAM="0" VARIABLE="extractor_buff_3"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="extractor_buff_4_U" SOURCE="" URAM="0" VARIABLE="extractor_buff_4"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="extractor_buff_5_U" SOURCE="" URAM="0" VARIABLE="extractor_buff_5"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="extractor_buff_6_U" SOURCE="" URAM="0" VARIABLE="extractor_buff_6"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="extractor_buff_7_U" SOURCE="" URAM="0" VARIABLE="extractor_buff_7"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>GRAYMat2AXIvideo_0_2160_3840_2_3_Pipeline_loop_col_mat2axi</Name>
+            <Loops>
+                <loop_col_mat2axi/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.30</TargetClockPeriod>
+                    <ClockUncertainty>0.89</ClockUncertainty>
+                    <EstimatedClockPeriod>3.088</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>4</Best-caseLatency>
+                    <Average-caseLatency>1923</Average-caseLatency>
+                    <Worst-caseLatency>1923</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>13.200 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>6.346 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>6.346 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>4 ~ 1923</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <loop_col_mat2axi>
+                        <Name>loop_col_mat2axi</Name>
+                        <TripCount>
+                            <range>
+                                <min>1</min>
+                                <max>1920</max>
+                            </range>
+                        </TripCount>
+                        <Latency>2 ~ 1921</Latency>
+                        <AbsoluteTimeLatency>6.600 ns ~ 6.339 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </loop_col_mat2axi>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>18</FF>
+                    <AVAIL_FF>269200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>116</LUT>
+                    <AVAIL_LUT>134600</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>730</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>740</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_col_mat2axi" OPTYPE="add" PRAGMA="" RTLNAME="j_2_fu_160_p2" SOURCE="xf_hud_accel.cpp:126" URAM="0" VARIABLE="j_2"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>GRAYMat2AXIvideo_0_2160_3840_2_3_s</Name>
+            <Loops>
+                <loop_row_mat2axi/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.30</TargetClockPeriod>
+                    <ClockUncertainty>0.89</ClockUncertainty>
+                    <EstimatedClockPeriod>3.088</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>3</Best-caseLatency>
+                    <Average-caseLatency>2082243</Average-caseLatency>
+                    <Worst-caseLatency>4160163</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>9.900 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>6.871 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>13.729 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>3 ~ 4160163</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <loop_row_mat2axi>
+                        <Name>loop_row_mat2axi</Name>
+                        <TripCount>
+                            <range>
+                                <min>0</min>
+                                <max>2160</max>
+                            </range>
+                        </TripCount>
+                        <Latency>0 ~ 4160160</Latency>
+                        <AbsoluteTimeLatency>0 ns ~ 13.729 ms</AbsoluteTimeLatency>
+                        <IterationLatency>
+                            <range>
+                                <min>2</min>
+                                <max>1926</max>
+                            </range>
+                        </IterationLatency>
+                        <PipelineDepth>2 ~ 1926</PipelineDepth>
+                        <PipelineType>no</PipelineType>
+                        <InstanceList>
+                            <Instance>grp_GRAYMat2AXIvideo_0_2160_3840_2_3_Pipeline_loop_col_mat2axi_fu_100</Instance>
+                        </InstanceList>
+                    </loop_row_mat2axi>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>87</FF>
+                    <AVAIL_FF>269200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>248</LUT>
+                    <AVAIL_LUT>134600</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>730</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>740</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="sub_fu_146_p2" SOURCE="xf_hud_accel.cpp:109" URAM="0" VARIABLE="sub"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_row_mat2axi" OPTYPE="add" PRAGMA="" RTLNAME="i_4_fu_165_p2" SOURCE="xf_hud_accel.cpp:121" URAM="0" VARIABLE="i_4"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>GRAYMat2AXIvideo_0_2160_3840_2_3_1_Pipeline_loop_col_mat2axi</Name>
+            <Loops>
+                <loop_col_mat2axi/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.30</TargetClockPeriod>
+                    <ClockUncertainty>0.89</ClockUncertainty>
+                    <EstimatedClockPeriod>3.088</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>4</Best-caseLatency>
+                    <Average-caseLatency>1923</Average-caseLatency>
+                    <Worst-caseLatency>1923</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>13.200 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>6.346 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>6.346 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>4 ~ 1923</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <loop_col_mat2axi>
+                        <Name>loop_col_mat2axi</Name>
+                        <TripCount>
+                            <range>
+                                <min>1</min>
+                                <max>1920</max>
+                            </range>
+                        </TripCount>
+                        <Latency>2 ~ 1921</Latency>
+                        <AbsoluteTimeLatency>6.600 ns ~ 6.339 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </loop_col_mat2axi>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>18</FF>
+                    <AVAIL_FF>269200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>116</LUT>
+                    <AVAIL_LUT>134600</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>730</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>740</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_col_mat2axi" OPTYPE="add" PRAGMA="" RTLNAME="j_4_fu_160_p2" SOURCE="xf_hud_accel.cpp:126" URAM="0" VARIABLE="j_4"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>GRAYMat2AXIvideo_0_2160_3840_2_3_1</Name>
+            <Loops>
+                <loop_row_mat2axi/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.30</TargetClockPeriod>
+                    <ClockUncertainty>0.89</ClockUncertainty>
+                    <EstimatedClockPeriod>3.088</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>3</Best-caseLatency>
+                    <Average-caseLatency>2082243</Average-caseLatency>
+                    <Worst-caseLatency>4160163</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>9.900 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>6.871 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>13.729 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>3 ~ 4160163</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <loop_row_mat2axi>
+                        <Name>loop_row_mat2axi</Name>
+                        <TripCount>
+                            <range>
+                                <min>0</min>
+                                <max>2160</max>
+                            </range>
+                        </TripCount>
+                        <Latency>0 ~ 4160160</Latency>
+                        <AbsoluteTimeLatency>0 ns ~ 13.729 ms</AbsoluteTimeLatency>
+                        <IterationLatency>
+                            <range>
+                                <min>2</min>
+                                <max>1926</max>
+                            </range>
+                        </IterationLatency>
+                        <PipelineDepth>2 ~ 1926</PipelineDepth>
+                        <PipelineType>no</PipelineType>
+                        <InstanceList>
+                            <Instance>grp_GRAYMat2AXIvideo_0_2160_3840_2_3_1_Pipeline_loop_col_mat2axi_fu_88</Instance>
+                        </InstanceList>
+                    </loop_row_mat2axi>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>75</FF>
+                    <AVAIL_FF>269200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>239</LUT>
+                    <AVAIL_LUT>134600</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>730</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>740</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="sub_fu_134_p2" SOURCE="xf_hud_accel.cpp:109" URAM="0" VARIABLE="sub"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_row_mat2axi" OPTYPE="add" PRAGMA="" RTLNAME="i_2_fu_153_p2" SOURCE="xf_hud_accel.cpp:121" URAM="0" VARIABLE="i_2"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>extractEFrames_accel</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.30</TargetClockPeriod>
+                    <ClockUncertainty>0.89</ClockUncertainty>
+                    <EstimatedClockPeriod>5.440</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <DataflowPipelineThroughput>undef</DataflowPipelineThroughput>
+                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <PipelineType>dataflow</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>16</BRAM_18K>
+                    <AVAIL_BRAM>730</AVAIL_BRAM>
+                    <UTIL_BRAM>2</UTIL_BRAM>
+                    <FF>2175</FF>
+                    <AVAIL_FF>269200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>3678</LUT>
+                    <AVAIL_LUT>134600</AVAIL_LUT>
+                    <UTIL_LUT>2</UTIL_LUT>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>740</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="LEF_Img_rows_c_U" SOURCE="xf_hud_accel.cpp:199" URAM="0" VARIABLE="LEF_Img_rows_c"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="InImg_cols_c_U" SOURCE="xf_hud_accel.cpp:199" URAM="0" VARIABLE="InImg_cols_c"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="InImg_data_U" SOURCE="xf_hud_accel.cpp:190" URAM="0" VARIABLE="InImg_data"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="LEF_Img_data_U" SOURCE="xf_hud_accel.cpp:192" URAM="0" VARIABLE="LEF_Img_data"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="SEF_Img_data_U" SOURCE="xf_hud_accel.cpp:193" URAM="0" VARIABLE="SEF_Img_data"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="InImg_rows_channel_U" SOURCE="xf_hud_accel.cpp:199" URAM="0" VARIABLE="InImg_rows_channel"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="LEF_Img_cols_channel_U" SOURCE="xf_hud_accel.cpp:199" URAM="0" VARIABLE="LEF_Img_cols_channel"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="SEF_Img_rows_channel_U" SOURCE="xf_hud_accel.cpp:199" URAM="0" VARIABLE="SEF_Img_rows_channel"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="SEF_Img_cols_channel_U" SOURCE="xf_hud_accel.cpp:199" URAM="0" VARIABLE="SEF_Img_cols_channel"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="InImg_cols_c15_channel_U" SOURCE="xf_hud_accel.cpp:199" URAM="0" VARIABLE="InImg_cols_c15_channel"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="LEF_Img_rows_c16_channel_U" SOURCE="xf_hud_accel.cpp:199" URAM="0" VARIABLE="LEF_Img_rows_c16_channel"/>
+            </BindNodes>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation>
+        <FIFOInst>
+            <Name>InImg_data_U</Name>
+            <ParentInst/>
+            <StaticDepth>3</StaticDepth>
+            <RuntimeDepth>mOutPtr</RuntimeDepth>
+            <InterfaceList>
+                <Interface>clk</Interface>
+                <Interface>reset</Interface>
+                <Interface>if_write</Interface>
+                <Interface>if_din</Interface>
+                <Interface>if_full_n</Interface>
+                <Interface>if_read</Interface>
+                <Interface>if_empty_n</Interface>
+            </InterfaceList>
+        </FIFOInst>
+        <FIFOInst>
+            <Name>LEF_Img_data_U</Name>
+            <ParentInst/>
+            <StaticDepth>3</StaticDepth>
+            <RuntimeDepth>mOutPtr</RuntimeDepth>
+            <InterfaceList>
+                <Interface>clk</Interface>
+                <Interface>reset</Interface>
+                <Interface>if_write</Interface>
+                <Interface>if_din</Interface>
+                <Interface>if_full_n</Interface>
+                <Interface>if_read</Interface>
+                <Interface>if_empty_n</Interface>
+            </InterfaceList>
+        </FIFOInst>
+        <FIFOInst>
+            <Name>SEF_Img_data_U</Name>
+            <ParentInst/>
+            <StaticDepth>3</StaticDepth>
+            <RuntimeDepth>mOutPtr</RuntimeDepth>
+            <InterfaceList>
+                <Interface>clk</Interface>
+                <Interface>reset</Interface>
+                <Interface>if_write</Interface>
+                <Interface>if_din</Interface>
+                <Interface>if_full_n</Interface>
+                <Interface>if_read</Interface>
+                <Interface>if_empty_n</Interface>
+            </InterfaceList>
+        </FIFOInst>
+    </FIFOInformation>
+    <UserConfigCommands>
+        <config_op>
+            <ENTRY impl="all mul" latency="-1 mul" op="mul" precision="mul standard"/>
+            <ENTRY impl="all add" latency="-1 add" op="add" precision="add standard"/>
+            <ENTRY impl="all sub" latency="-1 sub" op="sub" precision="sub standard"/>
+            <ENTRY impl="all fadd" latency="-1 fadd" op="fadd" precision="fadd standard"/>
+            <ENTRY impl="all fsub" latency="-1 fsub" op="fsub" precision="fsub standard"/>
+            <ENTRY impl="all fdiv" latency="-1 fdiv" op="fdiv" precision="fdiv standard"/>
+            <ENTRY impl="all fexp" latency="-1 fexp" op="fexp" precision="fexp standard"/>
+            <ENTRY impl="all flog" latency="-1 flog" op="flog" precision="flog standard"/>
+            <ENTRY impl="all fmul" latency="-1 fmul" op="fmul" precision="fmul standard"/>
+            <ENTRY impl="all frsqrt" latency="-1 frsqrt" op="frsqrt" precision="frsqrt standard"/>
+            <ENTRY impl="all frecip" latency="-1 frecip" op="frecip" precision="frecip standard"/>
+            <ENTRY impl="all fsqrt" latency="-1 fsqrt" op="fsqrt" precision="fsqrt standard"/>
+            <ENTRY impl="all dadd" latency="-1 dadd" op="dadd" precision="dadd standard"/>
+            <ENTRY impl="all dsub" latency="-1 dsub" op="dsub" precision="dsub standard"/>
+            <ENTRY impl="all ddiv" latency="-1 ddiv" op="ddiv" precision="ddiv standard"/>
+            <ENTRY impl="all dexp" latency="-1 dexp" op="dexp" precision="dexp standard"/>
+            <ENTRY impl="all dlog" latency="-1 dlog" op="dlog" precision="dlog standard"/>
+            <ENTRY impl="all dmul" latency="-1 dmul" op="dmul" precision="dmul standard"/>
+            <ENTRY impl="all drsqrt" latency="-1 drsqrt" op="drsqrt" precision="drsqrt standard"/>
+            <ENTRY impl="all drecip" latency="-1 drecip" op="drecip" precision="drecip standard"/>
+            <ENTRY impl="all dsqrt" latency="-1 dsqrt" op="dsqrt" precision="dsqrt standard"/>
+            <ENTRY impl="all hadd" latency="-1 hadd" op="hadd" precision="hadd standard"/>
+            <ENTRY impl="all hsub" latency="-1 hsub" op="hsub" precision="hsub standard"/>
+            <ENTRY impl="all hdiv" latency="-1 hdiv" op="hdiv" precision="hdiv standard"/>
+            <ENTRY impl="all hmul" latency="-1 hmul" op="hmul" precision="hmul standard"/>
+            <ENTRY impl="all hsqrt" latency="-1 hsqrt" op="hsqrt" precision="hsqrt standard"/>
+            <ENTRY impl="all facc" latency="-1 facc" op="facc" precision="facc standard"/>
+            <ENTRY impl="all fmacc" latency="-1 fmacc" op="fmacc" precision="fmacc standard"/>
+            <ENTRY impl="all fmadd" latency="-1 fmadd" op="fmadd" precision="fmadd standard"/>
+        </config_op>
+        <config_storage>
+            <ENTRY auto_srl_max_bits="1024 fifo" auto_srl_max_depth="2 fifo" impl="autosrl fifo" type="fifo"/>
+        </config_storage>
+        <config_export description="hud" display_name="hud3" library="test1" output="/home/trevor/Documents/xilinx/basys3_pong2/wrk" vendor="trevor" version="1.0"/>
+    </UserConfigCommands>
+    <Args>
+        <Arg ArgName="in_ptr" index="0" direction="in" srcType="stream&lt;hls::axis&lt;ap_uint&lt;16&gt;, 1, 1, 1&gt;, 0&gt;&amp;" srcSize="64">
+            <hwRefs>
+                <hwRef type="interface" interface="in_ptr" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="lef_ptr" index="1" direction="out" srcType="stream&lt;hls::axis&lt;ap_uint&lt;16&gt;, 1, 1, 1&gt;, 0&gt;&amp;" srcSize="64">
+            <hwRefs>
+                <hwRef type="interface" interface="lef_ptr" name="" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="sef_ptr" index="2" direction="out" srcType="stream&lt;hls::axis&lt;ap_uint&lt;16&gt;, 1, 1, 1&gt;, 0&gt;&amp;" srcSize="64">
+            <hwRefs>
+                <hwRef type="interface" interface="sef_ptr" name="" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="height" index="3" direction="in" srcType="ap_uint&lt;16&gt;" srcSize="16">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="height" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="width" index="4" direction="in" srcType="ap_uint&lt;16&gt;" srcSize="16">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="width" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="s_axi_control" type="axi4lite" busTypeName="aximm" mode="slave" dataWidth="32" addrWidth="5" portPrefix="s_axi_control_" paramPrefix="C_S_AXI_CONTROL_">
+            <ports>
+                <port>s_axi_control_ARADDR</port>
+                <port>s_axi_control_ARREADY</port>
+                <port>s_axi_control_ARVALID</port>
+                <port>s_axi_control_AWADDR</port>
+                <port>s_axi_control_AWREADY</port>
+                <port>s_axi_control_AWVALID</port>
+                <port>s_axi_control_BREADY</port>
+                <port>s_axi_control_BRESP</port>
+                <port>s_axi_control_BVALID</port>
+                <port>s_axi_control_RDATA</port>
+                <port>s_axi_control_RREADY</port>
+                <port>s_axi_control_RRESP</port>
+                <port>s_axi_control_RVALID</port>
+                <port>s_axi_control_WDATA</port>
+                <port>s_axi_control_WREADY</port>
+                <port>s_axi_control_WSTRB</port>
+                <port>s_axi_control_WVALID</port>
+            </ports>
+            <registers>
+                <register offset="0x00" name="CTRL" access="RW" description="Control signals" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="AP_START" access="RW" description="Control signal Register for 'ap_start'."/>
+                        <field offset="1" width="1" name="AP_DONE" access="R" description="Control signal Register for 'ap_done'."/>
+                        <field offset="2" width="1" name="AP_IDLE" access="R" description="Control signal Register for 'ap_idle'."/>
+                        <field offset="3" width="1" name="AP_READY" access="R" description="Control signal Register for 'ap_ready'."/>
+                        <field offset="4" width="3" name="RESERVED_1" access="R" description="Reserved.  0s on read."/>
+                        <field offset="7" width="1" name="AUTO_RESTART" access="RW" description="Control signal Register for 'auto_restart'."/>
+                        <field offset="8" width="1" name="RESERVED_2" access="R" description="Reserved.  0s on read."/>
+                        <field offset="9" width="1" name="INTERRUPT" access="R" description="Control signal Register for 'interrupt'."/>
+                        <field offset="10" width="22" name="RESERVED_3" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x04" name="GIER" access="RW" description="Global Interrupt Enable Register" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="Enable" access="RW" description="Master enable for the device interrupt output to the system interrupt controller: 0 = Disabled, 1 = Enabled"/>
+                        <field offset="1" width="31" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x08" name="IP_IER" access="RW" description="IP Interrupt Enable Register" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="CHAN0_INT_EN" access="RW" description="Enable Channel 0 (ap_done) Interrupt.  0 = Disabled, 1 = Enabled."/>
+                        <field offset="1" width="1" name="CHAN1_INT_EN" access="RW" description="Enable Channel 1 (ap_ready) Interrupt.  0 = Disabled, 1 = Enabled."/>
+                        <field offset="2" width="30" name="RESERVED_0" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x0c" name="IP_ISR" access="RW" description="IP Interrupt Status Register" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="CHAN0_INT_ST" access="R" description="Channel 0 (ap_done) Interrupt Status. 0 = No Channel 0 interrupt, 1 = Channel 0 interrupt."/>
+                        <field offset="1" width="1" name="CHAN1_INT_ST" access="R" description="Channel 1 (ap_ready) Interrupt Status. 0 = No Channel 1 interrupt, 1 = Channel 1 interrupt."/>
+                        <field offset="2" width="30" name="RESERVED_0" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x10" name="height" access="W" description="Data signal of height" range="32">
+                    <fields>
+                        <field offset="0" width="16" name="height" access="W" description="Bit 15 to 0 of height"/>
+                        <field offset="16" width="16" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x18" name="width" access="W" description="Data signal of width" range="32">
+                    <fields>
+                        <field offset="0" width="16" name="width" access="W" description="Bit 15 to 0 of width"/>
+                        <field offset="16" width="16" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+            </registers>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="16" argName="height"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="24" argName="width"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_BUSIF">s_axi_control:in_ptr:lef_ptr:sef_ptr</busParam>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst_n</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst_n" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_LOW</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst_n">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst_n</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="interrupt" type="interrupt" busTypeName="interrupt" mode="master" dataWidth="1">
+            <busParams>
+                <busParam busParamName="SENSITIVITY">LEVEL_HIGH</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="interrupt">INTERRUPT</portMap>
+            </portMaps>
+            <ports>
+                <port>interrupt</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="in_ptr" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="16" portPrefix="in_ptr_">
+            <ports>
+                <port>in_ptr_TDATA</port>
+                <port>in_ptr_TDEST</port>
+                <port>in_ptr_TID</port>
+                <port>in_ptr_TKEEP</port>
+                <port>in_ptr_TLAST</port>
+                <port>in_ptr_TREADY</port>
+                <port>in_ptr_TSTRB</port>
+                <port>in_ptr_TUSER</port>
+                <port>in_ptr_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="in_ptr"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="lef_ptr" type="axi4stream" busTypeName="axis" mode="master" dataWidth="16" portPrefix="lef_ptr_">
+            <ports>
+                <port>lef_ptr_TDATA</port>
+                <port>lef_ptr_TDEST</port>
+                <port>lef_ptr_TID</port>
+                <port>lef_ptr_TKEEP</port>
+                <port>lef_ptr_TLAST</port>
+                <port>lef_ptr_TREADY</port>
+                <port>lef_ptr_TSTRB</port>
+                <port>lef_ptr_TUSER</port>
+                <port>lef_ptr_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="lef_ptr"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="sef_ptr" type="axi4stream" busTypeName="axis" mode="master" dataWidth="16" portPrefix="sef_ptr_">
+            <ports>
+                <port>sef_ptr_TDATA</port>
+                <port>sef_ptr_TDEST</port>
+                <port>sef_ptr_TID</port>
+                <port>sef_ptr_TKEEP</port>
+                <port>sef_ptr_TLAST</port>
+                <port>sef_ptr_TREADY</port>
+                <port>sef_ptr_TSTRB</port>
+                <port>sef_ptr_TUSER</port>
+                <port>sef_ptr_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="sef_ptr"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="S_AXILITE Interfaces">
+                <table isCollapsed="0">
+                    <keys size="5">Interface, Data Width, Address Width, Offset, Register</keys>
+                    <column name="s_axi_control">32, 5, 16, 0, , , , , </column>
+                </table>
+            </item>
+            <item name="S_AXILITE Registers">
+                <table isCollapsed="0">
+                    <keys size="7">Interface, Register, Offset, Width, Access, Description, Bit Fields</keys>
+                    <column name="s_axi_control">CTRL, 0x00, 32, RW, Control signals, 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT</column>
+                    <column name="s_axi_control">GIER, 0x04, 32, RW, Global Interrupt Enable Register, 0=Enable</column>
+                    <column name="s_axi_control">IP_IER, 0x08, 32, RW, IP Interrupt Enable Register, 0=CHAN0_INT_EN 1=CHAN1_INT_EN</column>
+                    <column name="s_axi_control">IP_ISR, 0x0c, 32, RW, IP Interrupt Status Register, 0=CHAN0_INT_ST 1=CHAN1_INT_ST</column>
+                    <column name="s_axi_control">height, 0x10, 32, W, Data signal of height, </column>
+                    <column name="s_axi_control">width, 0x18, 32, W, Data signal of width, </column>
+                </table>
+            </item>
+            <item name="AXIS">
+                <table isCollapsed="0">
+                    <keys size="11">Interface, Register Mode, TDATA, TDEST, TID, TKEEP, TLAST, TREADY, TSTRB, TUSER, TVALID</keys>
+                    <column name="in_ptr">both, 16, 1, 1, 2, 1, 1, 2, 1, 1, </column>
+                    <column name="lef_ptr">both, 16, 1, 1, 2, 1, 1, 2, 1, 1, </column>
+                    <column name="sef_ptr">both, 16, 1, 1, 2, 1, 1, 2, 1, 1, </column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk, </column>
+                    <column name="ap_rst_n">reset, ap_rst_n, </column>
+                    <column name="interrupt">interrupt, interrupt, </column>
+                    <column name="ap_ctrl">ap_ctrl_hs, , </column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="in_ptr">in, stream&lt;hls::axis&lt;ap_uint&lt;16&gt; 1 1 1&gt; 0&gt;&amp;</column>
+                    <column name="lef_ptr">out, stream&lt;hls::axis&lt;ap_uint&lt;16&gt; 1 1 1&gt; 0&gt;&amp;</column>
+                    <column name="sef_ptr">out, stream&lt;hls::axis&lt;ap_uint&lt;16&gt; 1 1 1&gt; 0&gt;&amp;</column>
+                    <column name="height">in, ap_uint&lt;16&gt;</column>
+                    <column name="width">in, ap_uint&lt;16&gt;</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table isCollapsed="1">
+                    <keys size="4">Argument, HW Interface, HW Type, HW Info</keys>
+                    <column name="in_ptr">in_ptr, interface, , </column>
+                    <column name="lef_ptr">lef_ptr, interface, , </column>
+                    <column name="sef_ptr">sef_ptr, interface, , </column>
+                    <column name="height">s_axi_control, register, name=height offset=0x10 range=32, </column>
+                    <column name="width">s_axi_control, register, name=width offset=0x18 range=32, </column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <ReportBurst>
+        <section name="M_AXI Burst Information" level="0" HEADER_NOTE="Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings."/>
+    </ReportBurst>
+    <PragmaReport>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_axi_io.hpp:28" status="valid" parentFunction="axigetbitfields" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_axi_io.hpp:37" status="valid" parentFunction="axigetbitfields" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_axi_io.hpp:47" status="valid" parentFunction="axigetbitfields" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_axi_io.hpp:57" status="valid" parentFunction="axigetbitfields" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_axi_io.hpp:65" status="valid" parentFunction="axisetbitfields" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_axi_io.hpp:74" status="valid" parentFunction="axisetbitfields" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_axi_io.hpp:84" status="valid" parentFunction="axisetbitfields" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_axi_io.hpp:94" status="valid" parentFunction="axisetbitfields" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:245" status="valid" parentFunction="scalar&lt;n, t&gt;" variable="" isDirective="0" options=""/>
+        <Pragma type="array_partition" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:246" status="valid" parentFunction="scalar&lt;n, t&gt;" variable="val" isDirective="0" options="variable=val dim=1 complete"/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:252" status="valid" parentFunction="scalar&lt;n, t&gt;" variable="" isDirective="0" options=""/>
+        <Pragma type="array_partition" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:253" status="valid" parentFunction="scalar&lt;n, t&gt;" variable="val" isDirective="0" options="variable=val dim=1 complete"/>
+        <Pragma type="array_partition" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:260" status="valid" parentFunction="scalar&lt;n, t&gt;" variable="val" isDirective="0" options="variable=val dim=1 complete"/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:261" status="valid" parentFunction="scalar&lt;n, t&gt;" variable="" isDirective="0" options=""/>
+        <Pragma type="array_partition" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:269" status="valid" parentFunction="scalar&lt;n, t&gt;" variable="val" isDirective="0" options="variable=val dim=1 complete"/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:270" status="valid" parentFunction="scalar&lt;n, t&gt;" variable="" isDirective="0" options=""/>
+        <Pragma type="array_partition" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:279" status="valid" parentFunction="scalar&lt;n, t&gt;" variable="val" isDirective="0" options="variable=val dim=1 complete"/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:280" status="valid" parentFunction="scalar&lt;n, t&gt;" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:305" status="valid" parentFunction="operator=" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:309" status="valid" parentFunction="operator=" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:318" status="valid" parentFunction="operator+" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:323" status="valid" parentFunction="operator+" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:333" status="valid" parentFunction="operator+" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:338" status="valid" parentFunction="operator+" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:348" status="valid" parentFunction="operator-" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:353" status="valid" parentFunction="operator-" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:363" status="valid" parentFunction="operator-" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:368" status="valid" parentFunction="operator-" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:378" status="valid" parentFunction="operator*" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:383" status="valid" parentFunction="operator*" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:393" status="valid" parentFunction="operator*" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:398" status="valid" parentFunction="operator*" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:408" status="valid" parentFunction="operator/" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:413" status="valid" parentFunction="operator/" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:423" status="valid" parentFunction="operator/" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:428" status="valid" parentFunction="operator/" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:584" status="valid" parentFunction="type" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:592" status="valid" parentFunction="depth" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:599" status="valid" parentFunction="channels" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:607" status="valid" parentFunction="init" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:654" status="valid" parentFunction="mat&lt;t, rows, cols, npc, xfcvdepth&gt;" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:663" status="valid" parentFunction="mat&lt;t, rows, cols, npc, xfcvdepth&gt;" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:672" status="valid" parentFunction="mat&lt;t, rows, cols, npc, xfcvdepth&gt;" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:681" status="valid" parentFunction="mat&lt;t, rows, cols, npc, xfcvdepth&gt;" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:708" status="valid" parentFunction="copyto" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:742" status="valid" parentFunction="copyfrom" variable="" isDirective="0" options=""/>
+        <Pragma type="bind_op" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:956" status="valid" parentFunction="addrbound" variable="mul_rows_cols" isDirective="0" options="variable=mul_rows_cols op=mul impl=dsp latency=2"/>
+        <Pragma type="loop_tripcount" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:991" status="valid" parentFunction="axi2axistream" variable="" isDirective="0" options="min=1 max=ADDRBOUND"/>
+        <Pragma type="pipeline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:992" status="valid" parentFunction="axi2axistream" variable="" isDirective="0" options=""/>
+        <Pragma type="loop_tripcount" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1005" status="valid" parentFunction="axi2axistream" variable="" isDirective="0" options="min=1 max=ADDRBOUND"/>
+        <Pragma type="pipeline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1006" status="valid" parentFunction="axi2axistream" variable="" isDirective="0" options=""/>
+        <Pragma type="loop_tripcount" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1026" status="valid" parentFunction="axi2axistream" variable="" isDirective="0" options="min=1 max=ROWS"/>
+        <Pragma type="loop_tripcount" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1030" status="valid" parentFunction="axi2axistream" variable="" isDirective="0" options="min=1 max=COLS_ADDRBOUND"/>
+        <Pragma type="pipeline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1031" status="valid" parentFunction="axi2axistream" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="loop_tripcount" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1064" status="valid" parentFunction="axistream2matstream" variable="" isDirective="0" options="min=1 max=LOOPBOUND"/>
+        <Pragma type="pipeline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1065" status="valid" parentFunction="axistream2matstream" variable="" isDirective="0" options=""/>
+        <Pragma type="loop_tripcount" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1108" status="valid" parentFunction="matstream2mat" variable="" isDirective="0" options="min=1 max=LOOPBOUND"/>
+        <Pragma type="pipeline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1109" status="valid" parentFunction="matstream2mat" variable="" isDirective="0" options=""/>
+        <Pragma type="dataflow" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1121" status="valid" parentFunction="axistream2mat" variable="" isDirective="0" options=""/>
+        <Pragma type="dataflow" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1134" status="valid" parentFunction="axistream2mat" variable="" isDirective="0" options=""/>
+        <Pragma type="dataflow" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1149" status="valid" parentFunction="axi2mat" variable="" isDirective="0" options=""/>
+        <Pragma type="dataflow" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1172" status="valid" parentFunction="axi2mat" variable="" isDirective="0" options=""/>
+        <Pragma type="dataflow" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1184" status="valid" parentFunction="axi2mat" variable="" isDirective="0" options=""/>
+        <Pragma type="dataflow" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1207" status="valid" parentFunction="axi2mat" variable="" isDirective="0" options=""/>
+        <Pragma type="loop_tripcount" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1281" status="valid" parentFunction="mat2matstream" variable="" isDirective="0" options="min=1 max=LOOPBOUND"/>
+        <Pragma type="pipeline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1282" status="valid" parentFunction="mat2matstream" variable="" isDirective="0" options=""/>
+        <Pragma type="loop_tripcount" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1311" status="valid" parentFunction="matstream2axistream" variable="" isDirective="0" options="min=1 max=ROWS"/>
+        <Pragma type="loop_tripcount" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1316" status="valid" parentFunction="matstream2axistream" variable="" isDirective="0" options="min=1 max=COLS_BOUND_PER_NPC"/>
+        <Pragma type="pipeline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1317" status="valid" parentFunction="matstream2axistream" variable="" isDirective="0" options=""/>
+        <Pragma type="dataflow" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1359" status="valid" parentFunction="mat2axistream" variable="" isDirective="0" options=""/>
+        <Pragma type="dataflow" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1372" status="valid" parentFunction="mat2axistream" variable="" isDirective="0" options=""/>
+        <Pragma type="loop_tripcount" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1389" status="valid" parentFunction="axistream2axi" variable="" isDirective="0" options="min=1 max=ADDRBOUND"/>
+        <Pragma type="pipeline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1390" status="valid" parentFunction="axistream2axi" variable="" isDirective="0" options=""/>
+        <Pragma type="loop_tripcount" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1404" status="valid" parentFunction="axistream2axi" variable="" isDirective="0" options="min=1 max=ADDRBOUND"/>
+        <Pragma type="pipeline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1405" status="valid" parentFunction="axistream2axi" variable="" isDirective="0" options=""/>
+        <Pragma type="dataflow" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1419" status="valid" parentFunction="mat2axi" variable="" isDirective="0" options=""/>
+        <Pragma type="dataflow" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1446" status="valid" parentFunction="mat2axi" variable="" isDirective="0" options=""/>
+        <Pragma type="dataflow" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1477" status="valid" parentFunction="mat2axi" variable="" isDirective="0" options=""/>
+        <Pragma type="dataflow" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1507" status="valid" parentFunction="mat2axi" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:34" status="valid" parentFunction="ptr2xfmat" variable="" isDirective="0" options="OFF"/>
+        <Pragma type="pipeline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:39" status="valid" parentFunction="ptr2xfmat" variable="" isDirective="0" options="II = 1"/>
+        <Pragma type="loop_tripcount" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:40" status="valid" parentFunction="ptr2xfmat" variable="" isDirective="0" options="min = c_TRIP_COUNT max = c_TRIP_COUNT"/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:52" status="valid" parentFunction="xfmat2ptr" variable="" isDirective="0" options="OFF"/>
+        <Pragma type="pipeline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:58" status="valid" parentFunction="xfmat2ptr" variable="" isDirective="0" options="II = 1"/>
+        <Pragma type="loop_tripcount" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:59" status="valid" parentFunction="xfmat2ptr" variable="" isDirective="0" options="min = c_TRIP_COUNT max = c_TRIP_COUNT"/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:74" status="valid" parentFunction="xfduplicatemat_ptrmat" variable="" isDirective="0" options="OFF"/>
+        <Pragma type="pipeline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:80" status="valid" parentFunction="xfduplicatemat_ptrmat" variable="" isDirective="0" options="II = 1"/>
+        <Pragma type="loop_tripcount" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:81" status="valid" parentFunction="xfduplicatemat_ptrmat" variable="" isDirective="0" options="min = c_TRIP_COUNT max = c_TRIP_COUNT"/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:100" status="valid" parentFunction="xfduplicatemat_ptrmat2" variable="" isDirective="0" options="OFF"/>
+        <Pragma type="pipeline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:106" status="valid" parentFunction="xfduplicatemat_ptrmat2" variable="" isDirective="0" options="II = 1"/>
+        <Pragma type="loop_tripcount" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:107" status="valid" parentFunction="xfduplicatemat_ptrmat2" variable="" isDirective="0" options="min = c_TRIP_COUNT max = c_TRIP_COUNT"/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:128" status="valid" parentFunction="xfduplicatemat_ptr_mat_axi" variable="" isDirective="0" options="OFF"/>
+        <Pragma type="pipeline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:134" status="valid" parentFunction="xfduplicatemat_ptr_mat_axi" variable="" isDirective="0" options="II = 1"/>
+        <Pragma type="loop_tripcount" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:135" status="valid" parentFunction="xfduplicatemat_ptr_mat_axi" variable="" isDirective="0" options="min = c_TRIP_COUNT max = c_TRIP_COUNT"/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:155" status="valid" parentFunction="xfmat2axi_strm" variable="" isDirective="0" options="OFF"/>
+        <Pragma type="pipeline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:161" status="valid" parentFunction="xfmat2axi_strm" variable="" isDirective="0" options="II = 1"/>
+        <Pragma type="loop_tripcount" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:162" status="valid" parentFunction="xfmat2axi_strm" variable="" isDirective="0" options="min = c_TRIP_COUNT max = c_TRIP_COUNT"/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:178" status="valid" parentFunction="axi_strm2xfmat" variable="" isDirective="0" options="OFF"/>
+        <Pragma type="pipeline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:184" status="valid" parentFunction="axi_strm2xfmat" variable="" isDirective="0" options="II = 1"/>
+        <Pragma type="loop_tripcount" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:185" status="valid" parentFunction="axi_strm2xfmat" variable="" isDirective="0" options="min = c_TRIP_COUNT max = c_TRIP_COUNT"/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:201" status="valid" parentFunction="xfduplicatemat_ptr_axi" variable="" isDirective="0" options="OFF"/>
+        <Pragma type="pipeline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:207" status="valid" parentFunction="xfduplicatemat_ptr_axi" variable="" isDirective="0" options="II = 1"/>
+        <Pragma type="loop_tripcount" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:208" status="valid" parentFunction="xfduplicatemat_ptr_axi" variable="" isDirective="0" options="min = c_TRIP_COUNT max = c_TRIP_COUNT"/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:230" status="valid" parentFunction="xfsetborder" variable="" isDirective="0" options="OFF"/>
+        <Pragma type="unroll" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:242" status="valid" parentFunction="xfsetborder" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:244" status="valid" parentFunction="xfsetborder" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:299" status="valid" parentFunction="xfpackpixels" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:305" status="valid" parentFunction="xfpackpixels" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:317" status="valid" parentFunction="xfextractpixels" variable="" isDirective="0" options="off"/>
+        <Pragma type="unroll" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:326" status="valid" parentFunction="xfextractpixels" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:349" status="valid" parentFunction="xfextractdata" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:369" status="valid" parentFunction="xfcopydata" variable="" isDirective="0" options=""/>
+        <Pragma type="loop_tripcount" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:377" status="valid" parentFunction="xfcopydata" variable="" isDirective="0" options="min=6 max=6"/>
+        <Pragma type="unroll" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:378" status="valid" parentFunction="xfcopydata" variable="" isDirective="0" options=""/>
+        <Pragma type="loop_tripcount" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:448" status="valid" parentFunction="xfduplicatestream" variable="" isDirective="0" options="min=IN_BH max=IN_BH"/>
+        <Pragma type="loop_flatten" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:449" status="valid" parentFunction="xfduplicatestream" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:453" status="valid" parentFunction="xfduplicatestream" variable="" isDirective="0" options=""/>
+        <Pragma type="loop_tripcount" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:454" status="valid" parentFunction="xfduplicatestream" variable="" isDirective="0" options="min=IN_BW max=IN_BW"/>
+        <Pragma type="loop_tripcount" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:479" status="valid" parentFunction="array2hlsstrm" variable="" isDirective="0" options="min=1 max=TRIPCOUNT"/>
+        <Pragma type="pipeline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:480" status="valid" parentFunction="array2hlsstrm" variable="" isDirective="0" options=""/>
+        <Pragma type="loop_tripcount" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:515" status="valid" parentFunction="hlsstrm2xfmat" variable="" isDirective="0" options="min=1 max=TRIPCOUNT"/>
+        <Pragma type="pipeline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:516" status="valid" parentFunction="hlsstrm2xfmat" variable="" isDirective="0" options=""/>
+        <Pragma type="loop_tripcount" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:596" status="valid" parentFunction="axistrm2hlsstrm" variable="" isDirective="0" options="min=1 max=TRIPCOUNT"/>
+        <Pragma type="pipeline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:597" status="valid" parentFunction="axistrm2hlsstrm" variable="" isDirective="0" options=""/>
+        <Pragma type="dataflow" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:607" status="valid" parentFunction="axistrm2xfmat" variable="" isDirective="0" options=""/>
+        <Pragma type="loop_tripcount" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:656" status="valid" parentFunction="xfmat2hlsstrm" variable="" isDirective="0" options="min=1 max=TRIPCOUNT"/>
+        <Pragma type="pipeline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:657" status="valid" parentFunction="xfmat2hlsstrm" variable="" isDirective="0" options=""/>
+        <Pragma type="loop_tripcount" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:702" status="valid" parentFunction="hlsstrm2array" variable="" isDirective="0" options="min=1 max=TRIPCOUNT"/>
+        <Pragma type="pipeline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:703" status="valid" parentFunction="hlsstrm2array" variable="" isDirective="0" options=""/>
+        <Pragma type="loop_tripcount" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:753" status="valid" parentFunction="hlsstrm2axistrm" variable="" isDirective="0" options="min=1 max=TRIPCOUNT"/>
+        <Pragma type="pipeline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:754" status="valid" parentFunction="hlsstrm2axistrm" variable="" isDirective="0" options=""/>
+        <Pragma type="dataflow" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:765" status="valid" parentFunction="xfmat2axistrm" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:46" status="valid" parentFunction="window&lt;rows, cols, t&gt;" variable="" isDirective="0" options=""/>
+        <Pragma type="array_partition" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:47" status="valid" parentFunction="window&lt;rows, cols, t&gt;" variable="val" isDirective="0" options="variable=val dim=1 complete"/>
+        <Pragma type="array_partition" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:48" status="valid" parentFunction="window&lt;rows, cols, t&gt;" variable="val" isDirective="0" options="variable=val dim=2 complete"/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:112" status="valid" parentFunction="shift_pixels_left" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:124" status="valid" parentFunction="shift_pixels_left" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:128" status="valid" parentFunction="shift_pixels_left" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:156" status="valid" parentFunction="shift_pixels_right" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:168" status="valid" parentFunction="shift_pixels_right" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:172" status="valid" parentFunction="shift_pixels_right" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:200" status="valid" parentFunction="shift_pixels_up" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:212" status="valid" parentFunction="shift_pixels_up" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:216" status="valid" parentFunction="shift_pixels_up" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:244" status="valid" parentFunction="shift_pixels_down" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:256" status="valid" parentFunction="shift_pixels_down" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:260" status="valid" parentFunction="shift_pixels_down" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:287" status="valid" parentFunction="insert_pixel" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:320" status="valid" parentFunction="insert_row" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:332" status="valid" parentFunction="insert_row" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:359" status="valid" parentFunction="insert_top_row" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:392" status="valid" parentFunction="insert_bottom_row" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:425" status="valid" parentFunction="insert_col" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:437" status="valid" parentFunction="insert_col" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:464" status="valid" parentFunction="insert_left_col" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:497" status="valid" parentFunction="insert_right_col" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:530" status="valid" parentFunction="getval" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:542" status="valid" parentFunction="operator()" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:579" status="valid" parentFunction="shift_left" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:592" status="valid" parentFunction="shift_right" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:605" status="valid" parentFunction="shift_up" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:618" status="valid" parentFunction="shift_down" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:631" status="valid" parentFunction="insert" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:644" status="valid" parentFunction="insert_top" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:657" status="valid" parentFunction="insert_bottom" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:670" status="valid" parentFunction="insert_left" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:683" status="valid" parentFunction="insert_right" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:700" status="valid" parentFunction="linebuffer&lt;rows, cols, t, mem_type, reshape_factor&gt;" variable="" isDirective="0" options=""/>
+        <Pragma type="dependence" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:701" status="valid" parentFunction="linebuffer&lt;rows, cols, t, mem_type, reshape_factor&gt;" variable="val" isDirective="0" options="variable=val inter false"/>
+        <Pragma type="dependence" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:702" status="valid" parentFunction="linebuffer&lt;rows, cols, t, mem_type, reshape_factor&gt;" variable="val" isDirective="0" options="variable=val intra false"/>
+        <Pragma type="resource" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:711" status="warning" parentFunction="linebuffer&lt;rows, cols, t, mem_type, reshape_factor&gt;" variable="val" isDirective="0" options="variable=val core=RAM_1P_BRAM">
+            <Msg msg_id="207-5525" msg_severity="WARNING" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead"/>
+        </Pragma>
+        <Pragma type="resource" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:716" status="invalid" parentFunction="linebuffer&lt;rows, cols, t, mem_type, reshape_factor&gt;" variable="val" isDirective="0" options="variable=val core=RAM_1P_URAM">
+            <Msg msg_id="207-5525" msg_severity="WARNING" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead"/>
+            <Msg msg_id="207-5560" msg_severity="WARNING" msg_body="Resource with core_name: RAM_1P_URAM pragma is ignored, because current platform doesn't support the core"/>
+        </Pragma>
+        <Pragma type="resource" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:721" status="warning" parentFunction="linebuffer&lt;rows, cols, t, mem_type, reshape_factor&gt;" variable="val" isDirective="0" options="variable=val core=RAM_2P_BRAM">
+            <Msg msg_id="207-5525" msg_severity="WARNING" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead"/>
+        </Pragma>
+        <Pragma type="resource" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:726" status="invalid" parentFunction="linebuffer&lt;rows, cols, t, mem_type, reshape_factor&gt;" variable="val" isDirective="0" options="variable=val core=RAM_2P_URAM">
+            <Msg msg_id="207-5525" msg_severity="WARNING" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead"/>
+            <Msg msg_id="207-5560" msg_severity="WARNING" msg_body="Resource with core_name: RAM_2P_URAM pragma is ignored, because current platform doesn't support the core"/>
+        </Pragma>
+        <Pragma type="resource" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:731" status="warning" parentFunction="linebuffer&lt;rows, cols, t, mem_type, reshape_factor&gt;" variable="val" isDirective="0" options="variable=val core=RAM_S2P_BRAM">
+            <Msg msg_id="207-5525" msg_severity="WARNING" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead"/>
+        </Pragma>
+        <Pragma type="resource" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:736" status="invalid" parentFunction="linebuffer&lt;rows, cols, t, mem_type, reshape_factor&gt;" variable="val" isDirective="0" options="variable=val core=RAM_S2P_URAM">
+            <Msg msg_id="207-5525" msg_severity="WARNING" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead"/>
+            <Msg msg_id="207-5560" msg_severity="WARNING" msg_body="Resource with core_name: RAM_S2P_URAM pragma is ignored, because current platform doesn't support the core"/>
+        </Pragma>
+        <Pragma type="resource" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:741" status="warning" parentFunction="linebuffer&lt;rows, cols, t, mem_type, reshape_factor&gt;" variable="val" isDirective="0" options="variable=val core=RAM_T2P_BRAM">
+            <Msg msg_id="207-5525" msg_severity="WARNING" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead"/>
+        </Pragma>
+        <Pragma type="resource" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:746" status="invalid" parentFunction="linebuffer&lt;rows, cols, t, mem_type, reshape_factor&gt;" variable="val" isDirective="0" options="variable=val core=RAM_T2P_URAM">
+            <Msg msg_id="207-5525" msg_severity="WARNING" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead"/>
+            <Msg msg_id="207-5560" msg_severity="WARNING" msg_body="Resource with core_name: RAM_T2P_URAM pragma is ignored, because current platform doesn't support the core"/>
+        </Pragma>
+        <Pragma type="array_partition" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:755" status="valid" parentFunction="linebuffer&lt;rows, cols, t, mem_type, reshape_factor&gt;" variable="val" isDirective="0" options="variable=val complete dim=1"/>
+        <Pragma type="array_reshape" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:759" status="warning" parentFunction="linebuffer&lt;rows, cols, t, mem_type, reshape_factor&gt;" variable="val" isDirective="0" options="variable=val factor=RESHAPE_FACTOR dim=1">
+            <Msg msg_id="207-5527" msg_severity="WARNING" msg_body="'factor' in '#pragma HLS array_reshape' is ignored"/>
+        </Pragma>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:813" status="valid" parentFunction="shift_pixels_down" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:826" status="valid" parentFunction="shift_pixels_down" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:856" status="valid" parentFunction="shift_pixels_up" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:869" status="valid" parentFunction="shift_pixels_up" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:898" status="valid" parentFunction="insert_bottom_row" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:931" status="valid" parentFunction="insert_top_row" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:964" status="valid" parentFunction="get_col" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:970" status="valid" parentFunction="get_col" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:981" status="valid" parentFunction="getval" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:992" status="valid" parentFunction="operator()" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:1004" status="valid" parentFunction="shift_down" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:1016" status="valid" parentFunction="shift_up" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:1028" status="valid" parentFunction="insert_bottom" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:1040" status="valid" parentFunction="insert_top" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:64" status="valid" parentFunction="initialize" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:84" status="valid" parentFunction="exposureframesextract&lt;src_t, n_rows, n_cols, max_rows, max_cols, nppc, xfcvdepth_in_1, xfcvdepth_lef, xfcvdepth_sef, use_uram&gt;" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:99" status="valid" parentFunction="extract" variable="" isDirective="0" options="OFF"/>
+        <Pragma type="pipeline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:115" status="valid" parentFunction="extract" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="loop_tripcount" location="../../../../../repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:116" status="valid" parentFunction="extract" variable="" isDirective="0" options="min=_TC1 max=_TC1"/>
+        <Pragma type="pipeline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:135" status="valid" parentFunction="extract" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="loop_tripcount" location="../../../../../repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:136" status="valid" parentFunction="extract" variable="" isDirective="0" options="min=1 max=_TC2"/>
+        <Pragma type="pipeline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:147" status="valid" parentFunction="extract" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="loop_tripcount" location="../../../../../repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:148" status="valid" parentFunction="extract" variable="" isDirective="0" options="min=1 max=_TC2"/>
+        <Pragma type="pipeline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:179" status="valid" parentFunction="extract" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="loop_tripcount" location="../../../../../repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:180" status="valid" parentFunction="extract" variable="" isDirective="0" options="min=_TC1 max=_TC1"/>
+        <Pragma type="inline" location="../../../../../repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:219" status="valid" parentFunction="extractexposureframes" variable="" isDirective="0" options="OFF"/>
+        <Pragma type="inline" location="xf_hud_accel.cpp:36" status="valid" parentFunction="axivideo2bayermat" variable="" isDirective="0" options="OFF"/>
+        <Pragma type="pipeline" location="xf_hud_accel.cpp:52" status="valid" parentFunction="axivideo2bayermat" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="loop_tripcount" location="xf_hud_accel.cpp:53" status="valid" parentFunction="axivideo2bayermat" variable="" isDirective="0" options="avg=0 max=0"/>
+        <Pragma type="loop_tripcount" location="xf_hud_accel.cpp:64" status="valid" parentFunction="axivideo2bayermat" variable="" isDirective="0" options="avg=ROWS max=ROWS"/>
+        <Pragma type="loop_flatten" location="xf_hud_accel.cpp:69" status="valid" parentFunction="axivideo2bayermat" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="xf_hud_accel.cpp:70" status="valid" parentFunction="axivideo2bayermat" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="loop_tripcount" location="xf_hud_accel.cpp:71" status="valid" parentFunction="axivideo2bayermat" variable="" isDirective="0" options="avg=COLS/NPPC max=COLS/NPPC"/>
+        <Pragma type="pipeline" location="xf_hud_accel.cpp:88" status="valid" parentFunction="axivideo2bayermat" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="loop_tripcount" location="xf_hud_accel.cpp:89" status="valid" parentFunction="axivideo2bayermat" variable="" isDirective="0" options="avg=0 max=0"/>
+        <Pragma type="inline" location="xf_hud_accel.cpp:103" status="valid" parentFunction="graymat2axivideo" variable="" isDirective="0" options="OFF"/>
+        <Pragma type="loop_tripcount" location="xf_hud_accel.cpp:123" status="valid" parentFunction="graymat2axivideo" variable="" isDirective="0" options="avg=ROWS max=ROWS"/>
+        <Pragma type="loop_flatten" location="xf_hud_accel.cpp:128" status="valid" parentFunction="graymat2axivideo" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="xf_hud_accel.cpp:129" status="valid" parentFunction="graymat2axivideo" variable="" isDirective="0" options="II = 1"/>
+        <Pragma type="loop_tripcount" location="xf_hud_accel.cpp:130" status="valid" parentFunction="graymat2axivideo" variable="" isDirective="0" options="avg=COLS/NPPC max=COLS/NPPC"/>
+        <Pragma type="interface" location="xf_hud_accel.cpp:178" status="warning" parentFunction="extracteframes_accel" variable="&amp;in_ptr" isDirective="0" options="axis port=&amp;in_ptr register">
+            <Msg msg_id="207-5529" msg_severity="WARNING" msg_body="extra token before variable expression is ignored"/>
+        </Pragma>
+        <Pragma type="interface" location="xf_hud_accel.cpp:179" status="warning" parentFunction="extracteframes_accel" variable="&amp;lef_ptr" isDirective="0" options="axis port=&amp;lef_ptr register">
+            <Msg msg_id="207-5529" msg_severity="WARNING" msg_body="extra token before variable expression is ignored"/>
+        </Pragma>
+        <Pragma type="interface" location="xf_hud_accel.cpp:180" status="warning" parentFunction="extracteframes_accel" variable="&amp;sef_ptr" isDirective="0" options="axis port=&amp;sef_ptr register">
+            <Msg msg_id="207-5529" msg_severity="WARNING" msg_body="extra token before variable expression is ignored"/>
+        </Pragma>
+        <Pragma type="interface" location="xf_hud_accel.cpp:182" status="valid" parentFunction="extracteframes_accel" variable="height" isDirective="0" options="s_axilite port=height"/>
+        <Pragma type="interface" location="xf_hud_accel.cpp:183" status="valid" parentFunction="extracteframes_accel" variable="width" isDirective="0" options="s_axilite port=width"/>
+        <Pragma type="interface" location="xf_hud_accel.cpp:184" status="valid" parentFunction="extracteframes_accel" variable="return" isDirective="0" options="s_axilite port=return"/>
+        <Pragma type="dataflow" location="xf_hud_accel.cpp:199" status="valid" parentFunction="extracteframes_accel" variable="" isDirective="0" options=""/>
+    </PragmaReport>
+</profile>
+

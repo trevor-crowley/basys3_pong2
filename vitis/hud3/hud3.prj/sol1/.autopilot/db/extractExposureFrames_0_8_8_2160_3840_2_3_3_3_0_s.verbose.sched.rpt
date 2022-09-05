@@ -1,0 +1,147 @@
+
+
+================================================================
+== Vitis HLS Report for 'extractExposureFrames_0_8_8_2160_3840_2_3_3_3_0_s'
+================================================================
+* Date:           Sun Sep  4 18:21:48 2022
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        hud3.prj
+* Solution:       sol1 (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a200t-fbg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.30 ns|  5.440 ns|     0.89 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.40>
+ST_1 : Operation 4 [1/1] (1.20ns)   --->   "%p_read_1 = read i12 @_ssdm_op_Read.ap_auto.i12, i12 %p_read"   --->   Operation 4 'read' 'p_read_1' <Predicate = true> <Delay = 1.20> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.18> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 5 [1/1] (1.20ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_fifo.i12P0A, i12 %LEF_Img_rows_c, i12 %p_read_1"   --->   Operation 5 'write' 'write_ln0' <Predicate = true> <Delay = 1.20> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.18> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 12> <Depth = 2> <FIFO>
+ST_1 : Operation 6 [1/1] (1.20ns)   --->   "%p_hdrSrc_cols_read = read i12 @_ssdm_op_Read.ap_fifo.i12P0A, i12 %p_hdrSrc_cols"   --->   Operation 6 'read' 'p_hdrSrc_cols_read' <Predicate = true> <Delay = 1.20> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.18> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 12> <Depth = 2> <FIFO>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%extractor_buff_0 = alloca i64 1"   --->   Operation 7 'alloca' 'extractor_buff_0' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_S2P_BRAM">   --->   Core 93 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1924> <RAM>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%extractor_buff_1 = alloca i64 1"   --->   Operation 8 'alloca' 'extractor_buff_1' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_S2P_BRAM">   --->   Core 93 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1924> <RAM>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%extractor_buff_2 = alloca i64 1"   --->   Operation 9 'alloca' 'extractor_buff_2' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_S2P_BRAM">   --->   Core 93 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1924> <RAM>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%extractor_buff_3 = alloca i64 1"   --->   Operation 10 'alloca' 'extractor_buff_3' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_S2P_BRAM">   --->   Core 93 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1924> <RAM>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%extractor_buff_4 = alloca i64 1"   --->   Operation 11 'alloca' 'extractor_buff_4' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_S2P_BRAM">   --->   Core 93 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1924> <RAM>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%extractor_buff_5 = alloca i64 1"   --->   Operation 12 'alloca' 'extractor_buff_5' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_S2P_BRAM">   --->   Core 93 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1924> <RAM>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%extractor_buff_6 = alloca i64 1"   --->   Operation 13 'alloca' 'extractor_buff_6' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_S2P_BRAM">   --->   Core 93 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1924> <RAM>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%extractor_buff_7 = alloca i64 1"   --->   Operation 14 'alloca' 'extractor_buff_7' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_S2P_BRAM">   --->   Core 93 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1924> <RAM>
+
+State 2 <SV = 1> <Delay = 1.52>
+ST_2 : Operation 15 [2/2] (1.52ns)   --->   "%call_ln226 = call void @extract, i16 %extractor_buff_0, i16 %extractor_buff_1, i16 %extractor_buff_2, i16 %extractor_buff_3, i16 %extractor_buff_4, i16 %extractor_buff_5, i16 %extractor_buff_6, i16 %extractor_buff_7, i12 %p_hdrSrc_cols_read, i16 %InImg_data156, i12 %p_read_1, i16 %LEF_Img_data157, i16 %SEF_Img_data158" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:226]   --->   Operation 15 'call' 'call_ln226' <Predicate = true> <Delay = 1.52> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i12 %LEF_Img_rows_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i12 %p_hdrSrc_cols, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 18 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %SEF_Img_data158, void @empty_16, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 18 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 19 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %LEF_Img_data157, void @empty_16, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 19 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %InImg_data156, void @empty_16, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%specmemcore_ln731 = specmemcore void @_ssdm_op_SpecMemCore, i16 %extractor_buff_7, i64 666, i64 25, i64 18446744073709551615" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:731]   --->   Operation 21 'specmemcore' 'specmemcore_ln731' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%specmemcore_ln731 = specmemcore void @_ssdm_op_SpecMemCore, i16 %extractor_buff_6, i64 666, i64 25, i64 18446744073709551615" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:731]   --->   Operation 22 'specmemcore' 'specmemcore_ln731' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%specmemcore_ln731 = specmemcore void @_ssdm_op_SpecMemCore, i16 %extractor_buff_5, i64 666, i64 25, i64 18446744073709551615" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:731]   --->   Operation 23 'specmemcore' 'specmemcore_ln731' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%specmemcore_ln731 = specmemcore void @_ssdm_op_SpecMemCore, i16 %extractor_buff_4, i64 666, i64 25, i64 18446744073709551615" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:731]   --->   Operation 24 'specmemcore' 'specmemcore_ln731' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%specmemcore_ln731 = specmemcore void @_ssdm_op_SpecMemCore, i16 %extractor_buff_3, i64 666, i64 25, i64 18446744073709551615" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:731]   --->   Operation 25 'specmemcore' 'specmemcore_ln731' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%specmemcore_ln731 = specmemcore void @_ssdm_op_SpecMemCore, i16 %extractor_buff_2, i64 666, i64 25, i64 18446744073709551615" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:731]   --->   Operation 26 'specmemcore' 'specmemcore_ln731' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%specmemcore_ln731 = specmemcore void @_ssdm_op_SpecMemCore, i16 %extractor_buff_1, i64 666, i64 25, i64 18446744073709551615" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:731]   --->   Operation 27 'specmemcore' 'specmemcore_ln731' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%specmemcore_ln731 = specmemcore void @_ssdm_op_SpecMemCore, i16 %extractor_buff_0, i64 666, i64 25, i64 18446744073709551615" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:731]   --->   Operation 28 'specmemcore' 'specmemcore_ln731' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 29 [1/2] (0.00ns)   --->   "%call_ln226 = call void @extract, i16 %extractor_buff_0, i16 %extractor_buff_1, i16 %extractor_buff_2, i16 %extractor_buff_3, i16 %extractor_buff_4, i16 %extractor_buff_5, i16 %extractor_buff_6, i16 %extractor_buff_7, i12 %p_hdrSrc_cols_read, i16 %InImg_data156, i12 %p_read_1, i16 %LEF_Img_data157, i16 %SEF_Img_data158" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:226]   --->   Operation 29 'call' 'call_ln226' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 30 [1/1] (0.00ns)   --->   "%ret_ln229 = ret" [/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:229]   --->   Operation 30 'ret' 'ret_ln229' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.3ns, clock uncertainty: 0.891ns.
+
+ <State 1>: 2.41ns
+The critical path consists of the following:
+	wire read operation ('p_read_1') on port 'p_read' [8]  (1.2 ns)
+	fifo write operation ('write_ln0') on port 'LEF_Img_rows_c' [9]  (1.2 ns)
+
+ <State 2>: 1.52ns
+The critical path consists of the following:
+	'call' operation ('call_ln226', /home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp:226) to 'extract' [31]  (1.52 ns)
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
