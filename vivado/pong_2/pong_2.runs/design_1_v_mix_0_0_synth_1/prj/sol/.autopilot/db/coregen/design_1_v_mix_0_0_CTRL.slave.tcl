@@ -1,0 +1,4 @@
+dict set slaves design_1_v_mix_0_0_CTRL {ports {width {type i_ap_none width 16} height {type i_ap_none width 16} video_format {type i_ap_none width 16} background_Y_R {type i_ap_none width 16} background_U_G {type i_ap_none width 16} background_V_B {type i_ap_none width 16} layerEnable {type i_ap_none width 32} layerAlpha_1 {type i_ap_none width 16} layerStartX_1 {type i_ap_none width 16} layerStartY_1 {type i_ap_none width 16} layerWidth_1 {type i_ap_none width 16} layerStride_1 {type i_ap_none width 16} layerHeight_1 {type i_ap_none width 16} layerScaleFactor_1 {type i_ap_none width 8} reserve {type i_ap_none width 16} ap_start {type ap_ctrl width 1} ap_done {type ap_ctrl width 1} ap_ready {type ap_ctrl width 1} ap_idle {type ap_ctrl width 1}} mems {} has_ctrl 1}
+set datawidth 32
+set addrwidth 32
+set intr_clr_mode COR

@@ -12,7 +12,7 @@ set_part {xc7z045-ffg900-2}
 create_clock -period 3.3 -name default
 config_interface -m_axi_latency 0
 source "./hud3.prj/sol1/directives.tcl"
-csim_design -ldflags {-L /usr/local/lib -lopencv_imgcodecs -lopencv_imgproc -lopencv_core -lopencv_highgui -lopencv_flann -lopencv_features2d} -argv {/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/data/128x128_1.png /home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/data/128x128_2.png} -clean
+csim_design -ldflags {-L /usr/local/lib -lopencv_imgcodecs -lopencv_imgproc -lopencv_core -lopencv_highgui -lopencv_flann -lopencv_features2d} -argv {/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/data/128x128_1.png /home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/data/128x128_2.png}
 csynth_design
 cosim_design -ldflags {-L /usr/local/lib -lopencv_imgcodecs -lopencv_imgproc -lopencv_core -lopencv_highgui -lopencv_flann -lopencv_features2d}
 export_design -format ip_catalog

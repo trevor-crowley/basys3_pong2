@@ -1,0 +1,428 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'tpgBackground_Pipeline_VITIS_LOOP_520_2'" level="0">
+<item name = "Date">Mon Sep  5 13:06:27 2022
+</item>
+<item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)</item>
+<item name = "Project">prj</item>
+<item name = "Solution">sol (Vivado IP Flow Target)</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a35t-cpg236-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">20.00 ns, 10.830 ns, 5.40 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_tpgPatternDPColorSquare_fu_927">tpgPatternDPColorSquare, 2, 2, 40.000 ns, 40.000 ns, 1, 1, yes</column>
+<column name="grp_tpgPatternCheckerBoard_fu_970">tpgPatternCheckerBoard, 2, 2, 40.000 ns, 40.000 ns, 1, 1, yes</column>
+<column name="grp_tpgPatternTartanColorBars_fu_1001">tpgPatternTartanColorBars, 2, 2, 40.000 ns, 40.000 ns, 1, 1, yes</column>
+<column name="grp_tpgPatternCrossHatch_fu_1032">tpgPatternCrossHatch, 1, 1, 20.000 ns, 20.000 ns, 1, 1, yes</column>
+<column name="grp_reg_int_s_fu_1465">reg_int_s, 1, 1, 20.000 ns, 20.000 ns, 1, 1, yes</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_520_2">?, ?, 13, 1, 1, ?, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, 9, -, -, -</column>
+<column name="Expression">-, -, 0, 892, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">0, 0, 320, 1644, -</column>
+<column name="Memory">5, -, 70, 11, -</column>
+<column name="Multiplexer">-, -, -, 592, -</column>
+<column name="Register">-, -, 1277, 512, -</column>
+<specialColumn name="Available">100, 90, 41600, 20800, 0</specialColumn>
+<specialColumn name="Utilization (%)">5, 10, 4, 17, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="mul_8ns_6ns_13_1_1_U44">mul_8ns_6ns_13_1_1, 0, 0, 0, 42, 0</column>
+<column name="mux_32_8_1_1_U45">mux_32_8_1_1, 0, 0, 0, 13, 0</column>
+<column name="grp_reg_int_s_fu_1465">reg_int_s, 0, 0, 33, 13, 0</column>
+<column name="grp_tpgPatternCheckerBoard_fu_970">tpgPatternCheckerBoard, 0, 0, 68, 373, 0</column>
+<column name="grp_tpgPatternCrossHatch_fu_1032">tpgPatternCrossHatch, 0, 0, 53, 435, 0</column>
+<column name="grp_tpgPatternDPColorSquare_fu_927">tpgPatternDPColorSquare, 0, 0, 102, 399, 0</column>
+<column name="grp_tpgPatternTartanColorBars_fu_1001">tpgPatternTartanColorBars, 0, 0, 64, 369, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+<column name="am_addmul_16ns_1s_16ns_17_4_1_U46">am_addmul_16ns_1s_16ns_17_4_1, (i0 + i1) * i0</column>
+<column name="mac_muladd_16s_16s_16ns_16_4_1_U52">mac_muladd_16s_16s_16ns_16_4_1, i0 + i1 * i2</column>
+<column name="mac_muladd_8ns_6s_16s_16_4_1_U53">mac_muladd_8ns_6s_16s_16_4_1, i0 * i1 + i2</column>
+<column name="mac_muladd_8ns_7ns_13ns_15_4_1_U47">mac_muladd_8ns_7ns_13ns_15_4_1, i0 * i1 + i2</column>
+<column name="mac_muladd_8ns_7s_16s_16_4_1_U51">mac_muladd_8ns_7s_16s_16_4_1, i0 + i1 * i2</column>
+<column name="mac_muladd_8ns_8ns_15ns_16_4_1_U50">mac_muladd_8ns_8ns_15ns_16_4_1, i0 * i1 + i2</column>
+<column name="mac_muladd_8ns_8s_15ns_16_4_1_U49">mac_muladd_8ns_8s_15ns_16_4_1, i0 * i1 + i2</column>
+<column name="mac_muladd_8ns_8s_16s_16_4_1_U48">mac_muladd_8ns_8s_16s_16_4_1, i0 * i1 + i2</column>
+<column name="mul_mul_20s_8ns_28_4_1_U54">mul_mul_20s_8ns_28_4_1, i0 * i1</column>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="bluYuv_U">tpgBackground_Pipeline_VITIS_LOOP_520_2_bluYuv_ROM_AUTO_1R, 0, 8, 1, 0, 3, 8, 1, 24</column>
+<column name="grnYuv_U">tpgBackground_Pipeline_VITIS_LOOP_520_2_grnYuv_ROM_AUTO_1R, 0, 8, 1, 0, 3, 8, 1, 24</column>
+<column name="redYuv_U">tpgBackground_Pipeline_VITIS_LOOP_520_2_redYuv_ROM_AUTO_1R, 0, 8, 1, 0, 3, 8, 1, 24</column>
+<column name="tpgSinTableArray_9bit_U">tpgBackground_Pipeline_VITIS_LOOP_520_2_tpgSinTableArray_9bit_ROM_AUTO_1R, 2, 0, 0, 0, 2048, 9, 1, 18432</column>
+<column name="tpgSinTableArray_U">tpgBackground_Pipeline_VITIS_LOOP_520_2_tpgSinTableArray_ROM_AUTO_1R, 3, 0, 0, 0, 2048, 20, 1, 40960</column>
+<column name="tpgBarSelYuv_u_U">tpgPatternCheckerBoard_tpgBarSelYuv_u17_ROM_AUTO_1R, 0, 8, 1, 0, 8, 8, 1, 64</column>
+<column name="tpgBarSelYuv_v_U">tpgPatternCheckerBoard_tpgBarSelYuv_v19_ROM_AUTO_1R, 0, 8, 1, 0, 8, 8, 1, 64</column>
+<column name="tpgBarSelYuv_y_U">tpgPatternCheckerBoard_tpgBarSelYuv_y21_ROM_AUTO_1R, 0, 8, 1, 0, 8, 8, 1, 64</column>
+<column name="blkYuv_U">tpgPatternCrossHatch_blkYuv_1_ROM_AUTO_1R, 0, 8, 1, 0, 3, 8, 1, 24</column>
+<column name="whiYuv_U">tpgPatternCrossHatch_whiYuv_1_ROM_AUTO_1R, 0, 8, 1, 0, 3, 8, 1, 24</column>
+<column name="tpgBarSelRgb_b_U">tpgPatternDPColorSquare_DPtpgBarSelRgb_VESA_b_ROM_AUTO_1R, 0, 2, 1, 0, 8, 2, 1, 16</column>
+<column name="tpgBarSelRgb_g_U">tpgPatternDPColorSquare_DPtpgBarSelRgb_VESA_g_ROM_AUTO_1R, 0, 2, 1, 0, 8, 2, 1, 16</column>
+<column name="tpgBarSelRgb_r_U">tpgPatternDPColorSquare_DPtpgBarSelRgb_VESA_r_ROM_AUTO_1R, 0, 2, 1, 0, 8, 2, 1, 16</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln1039_fu_2758_p2">+, 0, 0, 15, 8, 1</column>
+<column name="add_ln1056_fu_1820_p2">+, 0, 0, 15, 8, 1</column>
+<column name="add_ln1212_fu_1684_p2">+, 0, 0, 11, 3, 1</column>
+<column name="add_ln1236_fu_1291_p2">+, 0, 0, 16, 9, 8</column>
+<column name="add_ln1240_1_fu_1323_p2">+, 0, 0, 16, 9, 8</column>
+<column name="add_ln1240_fu_1152_p2">+, 0, 0, 18, 11, 10</column>
+<column name="add_ln1244_1_fu_1355_p2">+, 0, 0, 16, 9, 8</column>
+<column name="add_ln1244_fu_1163_p2">+, 0, 0, 18, 11, 11</column>
+<column name="add_ln1257_2_fu_1499_p2">+, 0, 0, 24, 17, 17</column>
+<column name="add_ln1257_3_fu_1505_p2">+, 0, 0, 23, 16, 16</column>
+<column name="add_ln1258_2_fu_1524_p2">+, 0, 0, 24, 17, 17</column>
+<column name="add_ln1259_2_fu_2336_p2">+, 0, 0, 24, 17, 17</column>
+<column name="add_ln1259_3_fu_2332_p2">+, 0, 0, 23, 16, 16</column>
+<column name="add_ln1296_fu_1602_p2">+, 0, 0, 23, 16, 16</column>
+<column name="add_ln1298_fu_1614_p2">+, 0, 0, 23, 16, 16</column>
+<column name="add_ln1314_fu_2532_p2">+, 0, 0, 15, 8, 8</column>
+<column name="add_ln1500_fu_2281_p2">+, 0, 0, 15, 8, 1</column>
+<column name="add_ln1619_fu_1967_p2">+, 0, 0, 23, 16, 1</column>
+<column name="add_ln232_fu_1410_p2">+, 0, 0, 18, 11, 1</column>
+<column name="add_ln528_fu_1645_p2">+, 0, 0, 23, 16, 16</column>
+<column name="grp_fu_2910_p2">+, 0, 0, 23, 16, 16</column>
+<column name="ret_V_fu_1399_p2">+, 0, 0, 19, 12, 1</column>
+<column name="x_3_fu_1135_p2">+, 0, 0, 23, 16, 1</column>
+<column name="sub_ln1311_1_fu_2509_p2">-, 0, 0, 15, 1, 8</column>
+<column name="sub_ln1311_fu_2493_p2">-, 0, 0, 34, 1, 27</column>
+<column name="sub_ln232_fu_1416_p2">-, 0, 0, 18, 11, 11</column>
+<column name="and_ln1219_fu_1216_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln1292_fu_1186_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln1616_fu_1943_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln1817_fu_2164_p2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_pp0_stage0_01001">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_2678">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_2683">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_2685">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_2689">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_2693">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_2699">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_2708">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_2712">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_2717">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln1027_fu_1129_p2">icmp, 0, 0, 13, 16, 1</column>
+<column name="icmp_ln1050_fu_1276_p2">icmp, 0, 0, 13, 16, 1</column>
+<column name="icmp_ln1073_fu_1405_p2">icmp, 0, 0, 12, 12, 12</column>
+<column name="icmp_ln1285_fu_1180_p2">icmp, 0, 0, 13, 16, 1</column>
+<column name="icmp_ln1584_fu_1141_p2">icmp, 0, 0, 11, 8, 1</column>
+<column name="icmp_ln520_fu_1123_p2">icmp, 0, 0, 13, 16, 16</column>
+<column name="or_ln1050_fu_1270_p2">or, 0, 0, 16, 16, 16</column>
+<column name="or_ln1099_fu_1796_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln1120_fu_1780_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln1141_fu_1764_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln1162_fu_1748_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln1183_fu_1732_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln1285_fu_1174_p2">or, 0, 0, 16, 16, 16</column>
+<column name="b_1_fu_2360_p3">select, 0, 0, 8, 1, 2</column>
+<column name="b_2_fu_2368_p3">select, 0, 0, 8, 1, 8</column>
+<column name="b_fu_1375_p3">select, 0, 0, 8, 1, 2</column>
+<column name="conv2_i_i_i_cast_cast_fu_1067_p3">select, 0, 0, 2, 1, 2</column>
+<column name="g_1_fu_1574_p3">select, 0, 0, 8, 1, 2</column>
+<column name="g_2_fu_1588_p3">select, 0, 0, 8, 1, 8</column>
+<column name="g_fu_1343_p3">select, 0, 0, 8, 1, 2</column>
+<column name="r_1_fu_1548_p3">select, 0, 0, 8, 1, 2</column>
+<column name="r_2_fu_1582_p3">select, 0, 0, 8, 1, 8</column>
+<column name="r_fu_1311_p3">select, 0, 0, 8, 1, 2</column>
+<column name="select_ln1099_fu_1800_p3">select, 0, 0, 2, 1, 2</column>
+<column name="select_ln1120_fu_1784_p3">select, 0, 0, 2, 1, 2</column>
+<column name="select_ln1141_fu_1768_p3">select, 0, 0, 2, 1, 2</column>
+<column name="select_ln1162_fu_1752_p3">select, 0, 0, 2, 1, 2</column>
+<column name="select_ln1183_fu_1736_p3">select, 0, 0, 2, 1, 2</column>
+<column name="select_ln1311_fu_2524_p3">select, 0, 0, 8, 1, 8</column>
+<column name="select_ln1487_fu_2268_p3">select, 0, 0, 8, 1, 8</column>
+<column name="select_ln1584_fu_1911_p3">select, 0, 0, 16, 1, 1</column>
+<column name="select_ln232_fu_2204_p3">select, 0, 0, 8, 1, 8</column>
+<column name="select_ln259_1_fu_1882_p3">select, 0, 0, 2, 1, 2</column>
+<column name="select_ln259_fu_2745_p3">select, 0, 0, 8, 1, 8</column>
+<column name="select_ln260_1_fu_2751_p3">select, 0, 0, 9, 1, 8</column>
+<column name="select_ln260_2_fu_2274_p3">select, 0, 0, 9, 1, 8</column>
+<column name="select_ln260_3_fu_2712_p3">select, 0, 0, 9, 1, 8</column>
+<column name="select_ln260_4_fu_2538_p3">select, 0, 0, 9, 1, 8</column>
+<column name="tmp_1_fu_1955_p2">select, 0, 0, 8, 1, 1</column>
+<column name="tmp_1_fu_1955_p3">select, 0, 0, 8, 1, 1</column>
+<column name="tmp_1_fu_1955_p4">select, 0, 0, 3, 1, 3</column>
+<column name="tmp_val_3_fu_1922_p3">select, 0, 0, 8, 1, 1</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+<column name="xor_ln1236_fu_1297_p2">xor, 0, 0, 9, 8, 9</column>
+<column name="xor_ln1240_fu_1329_p2">xor, 0, 0, 9, 8, 9</column>
+<column name="xor_ln1244_fu_1361_p2">xor, 0, 0, 9, 8, 9</column>
+<column name="xor_ln1544_1_fu_2080_p2">xor, 0, 0, 2, 1, 1</column>
+<column name="xor_ln1544_2_fu_2126_p2">xor, 0, 0, 2, 1, 1</column>
+<column name="xor_ln1544_fu_2034_p2">xor, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_done_int">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
+<column name="ap_sig_allocacmp_x_2">9, 2, 16, 32</column>
+<column name="hBarSel_2">13, 3, 8, 24</column>
+<column name="hBarSel_4_loc_1_out_o">13, 3, 8, 24</column>
+<column name="hdata_flag_1_fu_458">9, 2, 1, 2</column>
+<column name="hdata_loc_1_out_o">9, 2, 16, 32</column>
+<column name="lhs_out_o">17, 4, 11, 44</column>
+<column name="ovrlayYUV_blk_n">9, 2, 1, 2</column>
+<column name="p_0_0_0_0_0488_out_o">106, 21, 8, 168</column>
+<column name="p_0_1_0_0_0490_out_o">134, 28, 8, 224</column>
+<column name="p_0_2_0_0_0492_out_o">106, 21, 8, 168</column>
+<column name="phi_mul_fu_446">9, 2, 16, 32</column>
+<column name="rampVal">13, 3, 8, 24</column>
+<column name="rampVal_2_flag_1_fu_454">9, 2, 1, 2</column>
+<column name="rampVal_2_loc_1_out_o">9, 2, 16, 32</column>
+<column name="rampVal_3_flag_1_fu_462">9, 2, 1, 2</column>
+<column name="rampVal_3_loc_1_out_o">9, 2, 16, 32</column>
+<column name="rampVal_loc_1_out_o">13, 3, 16, 48</column>
+<column name="xBar_V">17, 4, 11, 44</column>
+<column name="x_fu_450">9, 2, 16, 32</column>
+<column name="zonePlateVAddr">13, 3, 16, 48</column>
+<column name="zonePlateVAddr_loc_1_out_o">13, 3, 16, 48</column>
+<column name="zonePlateVDelta">13, 3, 16, 48</column>
+<column name="zonePlateVDelta_loc_1_out_o">13, 3, 16, 48</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="add_ln1259_reg_3251">16, 0, 16, 0</column>
+<column name="and_ln1219_reg_3192">1, 0, 1, 0</column>
+<column name="and_ln1292_reg_3188">1, 0, 1, 0</column>
+<column name="ap_CS_fsm">1, 0, 1, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter10">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter11">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter12">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter3">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter4">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter5">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter6">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter7">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter8">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter9">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter10_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter11_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter1_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter2_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter3_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter4_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter5_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter6_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter7_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter8_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter9_reg">1, 0, 1, 0</column>
+<column name="bSerie_V">28, 0, 28, 0</column>
+<column name="b_reg_3211">8, 0, 8, 0</column>
+<column name="gSerie_V">28, 0, 28, 0</column>
+<column name="g_2_reg_3269">8, 0, 8, 0</column>
+<column name="g_reg_3206">8, 0, 8, 0</column>
+<column name="grp_tpgPatternCheckerBoard_fu_970_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_tpgPatternCrossHatch_fu_1032_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_tpgPatternDPColorSquare_fu_927_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_tpgPatternTartanColorBars_fu_1001_ap_start_reg">1, 0, 1, 0</column>
+<column name="hdata_flag_1_fu_458">1, 0, 1, 0</column>
+<column name="icmp_ln1027_reg_3158">1, 0, 1, 0</column>
+<column name="icmp_ln1050_reg_3196">1, 0, 1, 0</column>
+<column name="icmp_ln1073_reg_3232">1, 0, 1, 0</column>
+<column name="icmp_ln1285_reg_3184">1, 0, 1, 0</column>
+<column name="icmp_ln1584_reg_3164">1, 0, 1, 0</column>
+<column name="icmp_ln520_reg_3154">1, 0, 1, 0</column>
+<column name="phi_mul_fu_446">16, 0, 16, 0</column>
+<column name="rSerie_V">28, 0, 28, 0</column>
+<column name="r_2_reg_3262">8, 0, 8, 0</column>
+<column name="r_reg_3200">8, 0, 8, 0</column>
+<column name="rampVal_2_flag_1_fu_454">1, 0, 1, 0</column>
+<column name="rampVal_3_flag_1_fu_462">1, 0, 1, 0</column>
+<column name="trunc_ln520_reg_3137">1, 0, 1, 0</column>
+<column name="x_2_reg_3129">16, 0, 16, 0</column>
+<column name="x_fu_450">16, 0, 16, 0</column>
+<column name="zext_ln1032_cast_reg_3124">8, 0, 16, 8</column>
+<column name="zext_ln1257_1_reg_3225">8, 0, 16, 8</column>
+<column name="zext_ln1257_reg_3219">8, 0, 15, 7</column>
+<column name="add_ln1259_reg_3251">64, 32, 16, 0</column>
+<column name="and_ln1219_reg_3192">64, 32, 1, 0</column>
+<column name="and_ln1292_reg_3188">64, 32, 1, 0</column>
+<column name="b_reg_3211">64, 32, 8, 0</column>
+<column name="g_2_reg_3269">64, 32, 8, 0</column>
+<column name="g_reg_3206">64, 32, 8, 0</column>
+<column name="icmp_ln1027_reg_3158">64, 32, 1, 0</column>
+<column name="icmp_ln1050_reg_3196">64, 32, 1, 0</column>
+<column name="icmp_ln1073_reg_3232">64, 32, 1, 0</column>
+<column name="icmp_ln1285_reg_3184">64, 32, 1, 0</column>
+<column name="icmp_ln1584_reg_3164">64, 32, 1, 0</column>
+<column name="icmp_ln520_reg_3154">64, 32, 1, 0</column>
+<column name="r_2_reg_3262">64, 32, 8, 0</column>
+<column name="r_reg_3200">64, 32, 8, 0</column>
+<column name="trunc_ln520_reg_3137">64, 32, 1, 0</column>
+<column name="x_2_reg_3129">64, 32, 16, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, tpgBackground_Pipeline_VITIS_LOOP_520_2, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, tpgBackground_Pipeline_VITIS_LOOP_520_2, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, tpgBackground_Pipeline_VITIS_LOOP_520_2, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, tpgBackground_Pipeline_VITIS_LOOP_520_2, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, tpgBackground_Pipeline_VITIS_LOOP_520_2, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, tpgBackground_Pipeline_VITIS_LOOP_520_2, return value</column>
+<column name="ovrlayYUV_din">out, 24, ap_fifo, ovrlayYUV, pointer</column>
+<column name="ovrlayYUV_num_data_valid">in, 5, ap_fifo, ovrlayYUV, pointer</column>
+<column name="ovrlayYUV_fifo_cap">in, 5, ap_fifo, ovrlayYUV, pointer</column>
+<column name="ovrlayYUV_full_n">in, 1, ap_fifo, ovrlayYUV, pointer</column>
+<column name="ovrlayYUV_write">out, 1, ap_fifo, ovrlayYUV, pointer</column>
+<column name="rampVal_3_flag_0">in, 1, ap_none, rampVal_3_flag_0, scalar</column>
+<column name="hdata_flag_0">in, 1, ap_none, hdata_flag_0, scalar</column>
+<column name="rampVal_2_flag_0">in, 1, ap_none, rampVal_2_flag_0, scalar</column>
+<column name="loopWidth">in, 16, ap_stable, loopWidth, scalar</column>
+<column name="conv2_i_i_i390">in, 8, ap_stable, conv2_i_i_i390, scalar</column>
+<column name="conv2_i_i_i373">in, 8, ap_stable, conv2_i_i_i373, scalar</column>
+<column name="conv2_i_i_i356">in, 8, ap_stable, conv2_i_i_i356, scalar</column>
+<column name="conv2_i_i_i337_cast_cast">in, 5, ap_stable, conv2_i_i_i337_cast_cast, scalar</column>
+<column name="conv2_i_i_i_cast">in, 1, ap_stable, conv2_i_i_i_cast, scalar</column>
+<column name="select_ln260">in, 8, ap_none, select_ln260, scalar</column>
+<column name="conv2_i_i10_i354_cast_cast_cast_cast">in, 3, ap_stable, conv2_i_i10_i354_cast_cast_cast_cast, scalar</column>
+<column name="conv2_i_i10_i335">in, 8, ap_stable, conv2_i_i10_i335, scalar</column>
+<column name="conv2_i_i10_i329">in, 8, ap_stable, conv2_i_i10_i329, scalar</column>
+<column name="rampStart_1">in, 8, ap_none, rampStart_1, scalar</column>
+<column name="Zplate_Hor_Control_Start">in, 16, ap_stable, Zplate_Hor_Control_Start, scalar</column>
+<column name="bckgndId_load">in, 8, ap_stable, bckgndId_load, scalar</column>
+<column name="cmp2_i322">in, 1, ap_stable, cmp2_i322, scalar</column>
+<column name="zext_ln1032">in, 8, ap_none, zext_ln1032, scalar</column>
+<column name="y">in, 16, ap_none, y, scalar</column>
+<column name="cmp6_i">in, 1, ap_stable, cmp6_i, scalar</column>
+<column name="select_ln1099_1">in, 2, ap_stable, select_ln1099_1, scalar</column>
+<column name="cmp57_i">in, 1, ap_stable, cmp57_i, scalar</column>
+<column name="barWidth_cast">in, 11, ap_stable, barWidth_cast, scalar</column>
+<column name="barWidth">in, 11, ap_stable, barWidth, scalar</column>
+<column name="shl_ln">in, 16, ap_none, shl_ln, scalar</column>
+<column name="Zplate_Ver_Control_Start">in, 16, ap_stable, Zplate_Ver_Control_Start, scalar</column>
+<column name="Zplate_Hor_Control_Delta">in, 16, ap_stable, Zplate_Hor_Control_Delta, scalar</column>
+<column name="cmp12_i">in, 1, ap_none, cmp12_i, scalar</column>
+<column name="Zplate_Ver_Control_Delta">in, 16, ap_stable, Zplate_Ver_Control_Delta, scalar</column>
+<column name="trunc_ln7">in, 14, ap_stable, trunc_ln7, scalar</column>
+<column name="trunc_ln">in, 14, ap_stable, trunc_ln, scalar</column>
+<column name="colorFormatLocal">in, 8, ap_stable, colorFormatLocal, scalar</column>
+<column name="loopHeight">in, 16, ap_stable, loopHeight, scalar</column>
+<column name="add_ln1488">in, 8, ap_none, add_ln1488, scalar</column>
+<column name="cmp85_i">in, 1, ap_stable, cmp85_i, scalar</column>
+<column name="or_ln1592">in, 1, ap_none, or_ln1592, scalar</column>
+<column name="or_ln1592_1">in, 1, ap_none, or_ln1592_1, scalar</column>
+<column name="or_ln1592_2">in, 1, ap_none, or_ln1592_2, scalar</column>
+<column name="dpDynamicRange_load">in, 8, ap_stable, dpDynamicRange_load, scalar</column>
+<column name="dpYUVCoef_load">in, 8, ap_stable, dpYUVCoef_load, scalar</column>
+<column name="rampVal_3_flag_1_out">out, 1, ap_vld, rampVal_3_flag_1_out, pointer</column>
+<column name="rampVal_3_flag_1_out_ap_vld">out, 1, ap_vld, rampVal_3_flag_1_out, pointer</column>
+<column name="rampVal_3_new_1_out">out, 16, ap_vld, rampVal_3_new_1_out, pointer</column>
+<column name="rampVal_3_new_1_out_ap_vld">out, 1, ap_vld, rampVal_3_new_1_out, pointer</column>
+<column name="rampVal_3_loc_1_out_i">in, 16, ap_ovld, rampVal_3_loc_1_out, pointer</column>
+<column name="rampVal_3_loc_1_out_o">out, 16, ap_ovld, rampVal_3_loc_1_out, pointer</column>
+<column name="rampVal_3_loc_1_out_o_ap_vld">out, 1, ap_ovld, rampVal_3_loc_1_out, pointer</column>
+<column name="rampVal_loc_1_out_i">in, 16, ap_ovld, rampVal_loc_1_out, pointer</column>
+<column name="rampVal_loc_1_out_o">out, 16, ap_ovld, rampVal_loc_1_out, pointer</column>
+<column name="rampVal_loc_1_out_o_ap_vld">out, 1, ap_ovld, rampVal_loc_1_out, pointer</column>
+<column name="hBarSel_4_loc_1_out_i">in, 8, ap_ovld, hBarSel_4_loc_1_out, pointer</column>
+<column name="hBarSel_4_loc_1_out_o">out, 8, ap_ovld, hBarSel_4_loc_1_out, pointer</column>
+<column name="hBarSel_4_loc_1_out_o_ap_vld">out, 1, ap_ovld, hBarSel_4_loc_1_out, pointer</column>
+<column name="lhs_out_i">in, 11, ap_ovld, lhs_out, pointer</column>
+<column name="lhs_out_o">out, 11, ap_ovld, lhs_out, pointer</column>
+<column name="lhs_out_o_ap_vld">out, 1, ap_ovld, lhs_out, pointer</column>
+<column name="zonePlateVAddr_loc_1_out_i">in, 16, ap_ovld, zonePlateVAddr_loc_1_out, pointer</column>
+<column name="zonePlateVAddr_loc_1_out_o">out, 16, ap_ovld, zonePlateVAddr_loc_1_out, pointer</column>
+<column name="zonePlateVAddr_loc_1_out_o_ap_vld">out, 1, ap_ovld, zonePlateVAddr_loc_1_out, pointer</column>
+<column name="zonePlateVDelta_loc_1_out_i">in, 16, ap_ovld, zonePlateVDelta_loc_1_out, pointer</column>
+<column name="zonePlateVDelta_loc_1_out_o">out, 16, ap_ovld, zonePlateVDelta_loc_1_out, pointer</column>
+<column name="zonePlateVDelta_loc_1_out_o_ap_vld">out, 1, ap_ovld, zonePlateVDelta_loc_1_out, pointer</column>
+<column name="hdata_flag_1_out">out, 1, ap_vld, hdata_flag_1_out, pointer</column>
+<column name="hdata_flag_1_out_ap_vld">out, 1, ap_vld, hdata_flag_1_out, pointer</column>
+<column name="hdata_new_1_out">out, 16, ap_vld, hdata_new_1_out, pointer</column>
+<column name="hdata_new_1_out_ap_vld">out, 1, ap_vld, hdata_new_1_out, pointer</column>
+<column name="hdata_loc_1_out_i">in, 16, ap_ovld, hdata_loc_1_out, pointer</column>
+<column name="hdata_loc_1_out_o">out, 16, ap_ovld, hdata_loc_1_out, pointer</column>
+<column name="hdata_loc_1_out_o_ap_vld">out, 1, ap_ovld, hdata_loc_1_out, pointer</column>
+<column name="rampVal_2_flag_1_out">out, 1, ap_vld, rampVal_2_flag_1_out, pointer</column>
+<column name="rampVal_2_flag_1_out_ap_vld">out, 1, ap_vld, rampVal_2_flag_1_out, pointer</column>
+<column name="rampVal_2_new_1_out">out, 16, ap_vld, rampVal_2_new_1_out, pointer</column>
+<column name="rampVal_2_new_1_out_ap_vld">out, 1, ap_vld, rampVal_2_new_1_out, pointer</column>
+<column name="rampVal_2_loc_1_out_i">in, 16, ap_ovld, rampVal_2_loc_1_out, pointer</column>
+<column name="rampVal_2_loc_1_out_o">out, 16, ap_ovld, rampVal_2_loc_1_out, pointer</column>
+<column name="rampVal_2_loc_1_out_o_ap_vld">out, 1, ap_ovld, rampVal_2_loc_1_out, pointer</column>
+<column name="p_0_2_0_0_0492_out_i">in, 8, ap_ovld, p_0_2_0_0_0492_out, pointer</column>
+<column name="p_0_2_0_0_0492_out_o">out, 8, ap_ovld, p_0_2_0_0_0492_out, pointer</column>
+<column name="p_0_2_0_0_0492_out_o_ap_vld">out, 1, ap_ovld, p_0_2_0_0_0492_out, pointer</column>
+<column name="p_0_1_0_0_0490_out_i">in, 8, ap_ovld, p_0_1_0_0_0490_out, pointer</column>
+<column name="p_0_1_0_0_0490_out_o">out, 8, ap_ovld, p_0_1_0_0_0490_out, pointer</column>
+<column name="p_0_1_0_0_0490_out_o_ap_vld">out, 1, ap_ovld, p_0_1_0_0_0490_out, pointer</column>
+<column name="p_0_0_0_0_0488_out_i">in, 8, ap_ovld, p_0_0_0_0_0488_out, pointer</column>
+<column name="p_0_0_0_0_0488_out_o">out, 8, ap_ovld, p_0_0_0_0_0488_out, pointer</column>
+<column name="p_0_0_0_0_0488_out_o_ap_vld">out, 1, ap_ovld, p_0_0_0_0_0488_out, pointer</column>
+<column name="rampVal">out, 8, ap_vld, rampVal, pointer</column>
+<column name="rampVal_ap_vld">out, 1, ap_vld, rampVal, pointer</column>
+<column name="hBarSel_2">out, 8, ap_vld, hBarSel_2, pointer</column>
+<column name="hBarSel_2_ap_vld">out, 1, ap_vld, hBarSel_2, pointer</column>
+<column name="xBar_V">out, 11, ap_vld, xBar_V, pointer</column>
+<column name="xBar_V_ap_vld">out, 1, ap_vld, xBar_V, pointer</column>
+<column name="s">in, 32, ap_none, s, pointer</column>
+<column name="zonePlateVAddr">out, 16, ap_vld, zonePlateVAddr, pointer</column>
+<column name="zonePlateVAddr_ap_vld">out, 1, ap_vld, zonePlateVAddr, pointer</column>
+<column name="zonePlateVDelta">out, 16, ap_vld, zonePlateVDelta, pointer</column>
+<column name="zonePlateVDelta_ap_vld">out, 1, ap_vld, zonePlateVDelta, pointer</column>
+</table>
+</item>
+</section>
+</profile>

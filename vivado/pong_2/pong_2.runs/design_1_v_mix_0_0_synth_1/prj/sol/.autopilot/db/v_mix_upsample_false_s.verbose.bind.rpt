@@ -1,0 +1,785 @@
+
+
+================================================================
+== Vitis HLS Report for 'v_mix_upsample_false_s'
+================================================================
+* Date:           Mon Sep  5 13:08:59 2022
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        prj
+* Solution:       sol (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  20.00 ns|  7.816 ns|     5.40 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+--------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval   | Pipeline|
+    |   min   |   max   |    min    |    max    | min |   max  |   Type  |
+    +---------+---------+-----------+-----------+-----+--------+---------+
+    |        1|   643201|  20.000 ns|  12.864 ms|    1|  643201|       no|
+    +---------+---------+-----------+-----------+-----+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------------------------------------+-----------------------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |                                                         |                                               |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+        |                         Instance                        |                     Module                    |   min   |   max   |    min    |    max    | min | max |   Type  |
+        +---------------------------------------------------------+-----------------------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |grp_v_mix_upsample_false_Pipeline_VITIS_LOOP_62_2_fu_98  |v_mix_upsample_false_Pipeline_VITIS_LOOP_62_2  |        2|      802|  40.000 ns|  16.040 us|    2|  802|       no|
+        +---------------------------------------------------------+-----------------------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip  |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  |  Count  | Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |- VITIS_LOOP_60_1  |        0|   643200|   4 ~ 804|          -|          -|  0 ~ 800|        no|
+        +-------------------+---------+---------+----------+-----------+-----------+---------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 7.81>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i10 %HwReg_layerHeight_1, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 4 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (3.90ns)   --->   "%HwReg_layerHeight_1_read = read i10 @_ssdm_op_Read.ap_fifo.i10P0A, i10 %HwReg_layerHeight_1"   --->   Operation 5 'read' 'HwReg_layerHeight_1_read' <Predicate = true> <Delay = 3.90> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 10> <Depth = 2> <FIFO>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i10 %HwReg_layerHeight_1_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (3.90ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_fifo.i10P0A, i10 %HwReg_layerHeight_1_c, i10 %HwReg_layerHeight_1_read"   --->   Operation 7 'write' 'write_ln0' <Predicate = true> <Delay = 3.90> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 10> <Depth = 2> <FIFO>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i10 %HwReg_layerWidth_1, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (3.90ns)   --->   "%HwReg_layerWidth_1_read = read i10 @_ssdm_op_Read.ap_fifo.i10P0A, i10 %HwReg_layerWidth_1"   --->   Operation 9 'read' 'HwReg_layerWidth_1_read' <Predicate = true> <Delay = 3.90> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 10> <Depth = 2> <FIFO>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i10 %HwReg_layerWidth_1_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (3.90ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_fifo.i10P0A, i10 %HwReg_layerWidth_1_c, i10 %HwReg_layerWidth_1_read"   --->   Operation 11 'write' 'write_ln0' <Predicate = true> <Delay = 3.90> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 10> <Depth = 2> <FIFO>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %p_read1, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (3.90ns)   --->   "%p_read = read i1 @_ssdm_op_Read.ap_fifo.i1P0A, i1 %p_read1" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:49->/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:664]   --->   Operation 13 'read' 'p_read' <Predicate = true> <Delay = 3.90> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 2> <FIFO>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %srcLayer1Rgb, void @empty_42, i32 0, i32 0, void @empty_38, i32 0, i32 0, void @empty_38, void @empty_38, void @empty_38, i32 0, i32 0, i32 0, i32 0, void @empty_38, void @empty_38, i32 4294967295, i32 0"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %srcLayer1x, void @empty_42, i32 0, i32 0, void @empty_38, i32 0, i32 0, void @empty_38, void @empty_38, void @empty_38, i32 0, i32 0, i32 0, i32 0, void @empty_38, void @empty_38, i32 4294967295, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%br_ln58 = br i1 %p_read, void %v_mix_upsample<false>.exit, void %VITIS_LOOP_62_2.i.preheader" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:58->/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:664]   --->   Operation 16 'br' 'br_ln58' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%y = alloca i32 1"   --->   Operation 17 'alloca' 'y' <Predicate = (p_read)> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (1.61ns)   --->   "%store_ln60 = store i10 0, i10 %y" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:60->/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:664]   --->   Operation 18 'store' 'store_ln60' <Predicate = (p_read)> <Delay = 1.61>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%br_ln60 = br void %VITIS_LOOP_62_2.i" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:60->/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:664]   --->   Operation 19 'br' 'br_ln60' <Predicate = (p_read)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 5.01>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%y_7 = load i10 %y" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:60->/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:664]   --->   Operation 20 'load' 'y_7' <Predicate = (p_read)> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (1.70ns)   --->   "%icmp_ln60 = icmp_eq  i10 %y_7, i10 %HwReg_layerHeight_1_read" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:60->/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:664]   --->   Operation 21 'icmp' 'icmp_ln60' <Predicate = (p_read)> <Delay = 1.70> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.70> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 0, i64 800, i64 0"   --->   Operation 22 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = (p_read)> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (2.12ns)   --->   "%y_8 = add i10 %y_7, i10 1" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:60->/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:664]   --->   Operation 23 'add' 'y_8' <Predicate = (p_read)> <Delay = 2.12> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%br_ln60 = br i1 %icmp_ln60, void %VITIS_LOOP_62_2.split.i, void %v_mix_upsample<false>.exit.loopexit" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:60->/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:664]   --->   Operation 24 'br' 'br_ln60' <Predicate = (p_read)> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%empty = wait i32 @_ssdm_op_Wait"   --->   Operation 25 'wait' 'empty' <Predicate = (p_read & !icmp_ln60)> <Delay = 0.00>
+ST_2 : Operation 26 [2/2] (3.31ns)   --->   "%call_ln0 = call void @v_mix_upsample<false>_Pipeline_VITIS_LOOP_62_2, i10 %HwReg_layerWidth_1_read, i24 %srcLayer1Rgb, i24 %srcLayer1x"   --->   Operation 26 'call' 'call_ln0' <Predicate = (p_read & !icmp_ln60)> <Delay = 3.31> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 27 [1/1] (1.61ns)   --->   "%store_ln60 = store i10 %y_8, i10 %y" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:60->/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:664]   --->   Operation 27 'store' 'store_ln60' <Predicate = (p_read & !icmp_ln60)> <Delay = 1.61>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%br_ln0 = br void %v_mix_upsample<false>.exit"   --->   Operation 28 'br' 'br_ln0' <Predicate = (p_read & icmp_ln60)> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%ret_ln664 = ret" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:664]   --->   Operation 29 'ret' 'ret_ln664' <Predicate = (icmp_ln60) | (!p_read)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 30 [1/1] (0.00ns)   --->   "%specloopname_ln52 = specloopname void @_ssdm_op_SpecLoopName, void @empty_41" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:52->/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:664]   --->   Operation 30 'specloopname' 'specloopname_ln52' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 31 [1/2] (0.00ns)   --->   "%call_ln0 = call void @v_mix_upsample<false>_Pipeline_VITIS_LOOP_62_2, i10 %HwReg_layerWidth_1_read, i24 %srcLayer1Rgb, i24 %srcLayer1x"   --->   Operation 31 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "%br_ln60 = br void %VITIS_LOOP_62_2.i" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:60->/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:664]   --->   Operation 32 'br' 'br_ln60' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ srcLayer1Rgb]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ HwReg_layerHeight_1]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ HwReg_layerWidth_1]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ p_read1]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ srcLayer1x]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ HwReg_layerWidth_1_c]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ HwReg_layerHeight_1_c]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+specinterface_ln0        (specinterface    ) [ 0000]
+HwReg_layerHeight_1_read (read             ) [ 0011]
+specinterface_ln0        (specinterface    ) [ 0000]
+write_ln0                (write            ) [ 0000]
+specinterface_ln0        (specinterface    ) [ 0000]
+HwReg_layerWidth_1_read  (read             ) [ 0011]
+specinterface_ln0        (specinterface    ) [ 0000]
+write_ln0                (write            ) [ 0000]
+specinterface_ln0        (specinterface    ) [ 0000]
+p_read                   (read             ) [ 0111]
+specinterface_ln0        (specinterface    ) [ 0000]
+specinterface_ln0        (specinterface    ) [ 0000]
+br_ln58                  (br               ) [ 0000]
+y                        (alloca           ) [ 0111]
+store_ln60               (store            ) [ 0000]
+br_ln60                  (br               ) [ 0000]
+y_7                      (load             ) [ 0000]
+icmp_ln60                (icmp             ) [ 0011]
+speclooptripcount_ln0    (speclooptripcount) [ 0000]
+y_8                      (add              ) [ 0000]
+br_ln60                  (br               ) [ 0000]
+empty                    (wait             ) [ 0000]
+store_ln60               (store            ) [ 0000]
+br_ln0                   (br               ) [ 0000]
+ret_ln664                (ret              ) [ 0000]
+specloopname_ln52        (specloopname     ) [ 0000]
+call_ln0                 (call             ) [ 0000]
+br_ln60                  (br               ) [ 0000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="srcLayer1Rgb">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="srcLayer1Rgb"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="HwReg_layerHeight_1">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="HwReg_layerHeight_1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="HwReg_layerWidth_1">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="HwReg_layerWidth_1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="p_read1">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_read1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="srcLayer1x">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="srcLayer1x"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1000" name="HwReg_layerWidth_1_c">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="HwReg_layerWidth_1_c"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1000" name="HwReg_layerHeight_1_c">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="HwReg_layerHeight_1_c"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1001" name="const_14">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1001" name="const_16">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="ap_fifo_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="ScalarProp_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_fifo.i10P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1001" name="const_32">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Write.ap_fifo.i10P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1001" name="const_34">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_fifo.i1P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1001" name="const_36">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_42"/></StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1001" name="const_38">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_38"/></StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1001" name="const_40">
+<pin_list>
+<pin id="41" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="42" class="1001" name="const_42">
+<pin_list>
+<pin id="43" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="44" class="1001" name="const_44">
+<pin_list>
+<pin id="45" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecLoopTripCount"/></StgValue>
+</bind>
+</comp>
+
+<comp id="46" class="1001" name="const_46">
+<pin_list>
+<pin id="47" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="48" class="1001" name="const_48">
+<pin_list>
+<pin id="49" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="50" class="1001" name="const_50">
+<pin_list>
+<pin id="51" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="52" class="1001" name="const_52">
+<pin_list>
+<pin id="53" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Wait"/></StgValue>
+</bind>
+</comp>
+
+<comp id="54" class="1001" name="const_54">
+<pin_list>
+<pin id="55" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="v_mix_upsample<false>_Pipeline_VITIS_LOOP_62_2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="56" class="1001" name="const_56">
+<pin_list>
+<pin id="57" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecLoopName"/></StgValue>
+</bind>
+</comp>
+
+<comp id="58" class="1001" name="const_58">
+<pin_list>
+<pin id="59" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_41"/></StgValue>
+</bind>
+</comp>
+
+<comp id="60" class="1004" name="y_fu_60">
+<pin_list>
+<pin id="61" dir="0" index="0" bw="1" slack="0"/>
+<pin id="62" dir="1" index="1" bw="10" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="y/1 "/>
+</bind>
+</comp>
+
+<comp id="64" class="1004" name="HwReg_layerHeight_1_read_read_fu_64">
+<pin_list>
+<pin id="65" dir="0" index="0" bw="10" slack="0"/>
+<pin id="66" dir="0" index="1" bw="10" slack="0"/>
+<pin id="67" dir="1" index="2" bw="10" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="HwReg_layerHeight_1_read/1 "/>
+</bind>
+</comp>
+
+<comp id="70" class="1004" name="write_ln0_write_fu_70">
+<pin_list>
+<pin id="71" dir="0" index="0" bw="0" slack="0"/>
+<pin id="72" dir="0" index="1" bw="10" slack="0"/>
+<pin id="73" dir="0" index="2" bw="10" slack="0"/>
+<pin id="74" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln0/1 "/>
+</bind>
+</comp>
+
+<comp id="78" class="1004" name="HwReg_layerWidth_1_read_read_fu_78">
+<pin_list>
+<pin id="79" dir="0" index="0" bw="10" slack="0"/>
+<pin id="80" dir="0" index="1" bw="10" slack="0"/>
+<pin id="81" dir="1" index="2" bw="10" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="HwReg_layerWidth_1_read/1 "/>
+</bind>
+</comp>
+
+<comp id="84" class="1004" name="write_ln0_write_fu_84">
+<pin_list>
+<pin id="85" dir="0" index="0" bw="0" slack="0"/>
+<pin id="86" dir="0" index="1" bw="10" slack="0"/>
+<pin id="87" dir="0" index="2" bw="10" slack="0"/>
+<pin id="88" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln0/1 "/>
+</bind>
+</comp>
+
+<comp id="92" class="1004" name="p_read_read_fu_92">
+<pin_list>
+<pin id="93" dir="0" index="0" bw="1" slack="0"/>
+<pin id="94" dir="0" index="1" bw="1" slack="0"/>
+<pin id="95" dir="1" index="2" bw="1" slack="1"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="p_read/1 "/>
+</bind>
+</comp>
+
+<comp id="98" class="1004" name="grp_v_mix_upsample_false_Pipeline_VITIS_LOOP_62_2_fu_98">
+<pin_list>
+<pin id="99" dir="0" index="0" bw="0" slack="0"/>
+<pin id="100" dir="0" index="1" bw="10" slack="1"/>
+<pin id="101" dir="0" index="2" bw="24" slack="0"/>
+<pin id="102" dir="0" index="3" bw="24" slack="0"/>
+<pin id="103" dir="1" index="4" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/2 "/>
+</bind>
+</comp>
+
+<comp id="107" class="1004" name="store_ln60_store_fu_107">
+<pin_list>
+<pin id="108" dir="0" index="0" bw="1" slack="0"/>
+<pin id="109" dir="0" index="1" bw="10" slack="0"/>
+<pin id="110" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="store_ln60/1 "/>
+</bind>
+</comp>
+
+<comp id="112" class="1004" name="y_7_load_fu_112">
+<pin_list>
+<pin id="113" dir="0" index="0" bw="10" slack="1"/>
+<pin id="114" dir="1" index="1" bw="10" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="y_7/2 "/>
+</bind>
+</comp>
+
+<comp id="115" class="1004" name="icmp_ln60_fu_115">
+<pin_list>
+<pin id="116" dir="0" index="0" bw="10" slack="0"/>
+<pin id="117" dir="0" index="1" bw="10" slack="1"/>
+<pin id="118" dir="1" index="2" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="icmp(45) " fcode="icmp"/>
+<opset="icmp_ln60/2 "/>
+</bind>
+</comp>
+
+<comp id="120" class="1004" name="y_8_fu_120">
+<pin_list>
+<pin id="121" dir="0" index="0" bw="10" slack="0"/>
+<pin id="122" dir="0" index="1" bw="1" slack="0"/>
+<pin id="123" dir="1" index="2" bw="10" slack="0"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="y_8/2 "/>
+</bind>
+</comp>
+
+<comp id="126" class="1004" name="store_ln60_store_fu_126">
+<pin_list>
+<pin id="127" dir="0" index="0" bw="10" slack="0"/>
+<pin id="128" dir="0" index="1" bw="10" slack="1"/>
+<pin id="129" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="store_ln60/2 "/>
+</bind>
+</comp>
+
+<comp id="131" class="1005" name="HwReg_layerHeight_1_read_reg_131">
+<pin_list>
+<pin id="132" dir="0" index="0" bw="10" slack="1"/>
+<pin id="133" dir="1" index="1" bw="10" slack="1"/>
+</pin_list>
+<bind>
+<opset="HwReg_layerHeight_1_read "/>
+</bind>
+</comp>
+
+<comp id="136" class="1005" name="HwReg_layerWidth_1_read_reg_136">
+<pin_list>
+<pin id="137" dir="0" index="0" bw="10" slack="1"/>
+<pin id="138" dir="1" index="1" bw="10" slack="1"/>
+</pin_list>
+<bind>
+<opset="HwReg_layerWidth_1_read "/>
+</bind>
+</comp>
+
+<comp id="141" class="1005" name="p_read_reg_141">
+<pin_list>
+<pin id="142" dir="0" index="0" bw="1" slack="1"/>
+<pin id="143" dir="1" index="1" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="p_read "/>
+</bind>
+</comp>
+
+<comp id="145" class="1005" name="y_reg_145">
+<pin_list>
+<pin id="146" dir="0" index="0" bw="10" slack="0"/>
+<pin id="147" dir="1" index="1" bw="10" slack="0"/>
+</pin_list>
+<bind>
+<opset="y "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="63"><net_src comp="40" pin="0"/><net_sink comp="60" pin=0"/></net>
+
+<net id="68"><net_src comp="30" pin="0"/><net_sink comp="64" pin=0"/></net>
+
+<net id="69"><net_src comp="2" pin="0"/><net_sink comp="64" pin=1"/></net>
+
+<net id="75"><net_src comp="32" pin="0"/><net_sink comp="70" pin=0"/></net>
+
+<net id="76"><net_src comp="12" pin="0"/><net_sink comp="70" pin=1"/></net>
+
+<net id="77"><net_src comp="64" pin="2"/><net_sink comp="70" pin=2"/></net>
+
+<net id="82"><net_src comp="30" pin="0"/><net_sink comp="78" pin=0"/></net>
+
+<net id="83"><net_src comp="4" pin="0"/><net_sink comp="78" pin=1"/></net>
+
+<net id="89"><net_src comp="32" pin="0"/><net_sink comp="84" pin=0"/></net>
+
+<net id="90"><net_src comp="10" pin="0"/><net_sink comp="84" pin=1"/></net>
+
+<net id="91"><net_src comp="78" pin="2"/><net_sink comp="84" pin=2"/></net>
+
+<net id="96"><net_src comp="34" pin="0"/><net_sink comp="92" pin=0"/></net>
+
+<net id="97"><net_src comp="6" pin="0"/><net_sink comp="92" pin=1"/></net>
+
+<net id="104"><net_src comp="54" pin="0"/><net_sink comp="98" pin=0"/></net>
+
+<net id="105"><net_src comp="0" pin="0"/><net_sink comp="98" pin=2"/></net>
+
+<net id="106"><net_src comp="8" pin="0"/><net_sink comp="98" pin=3"/></net>
+
+<net id="111"><net_src comp="42" pin="0"/><net_sink comp="107" pin=0"/></net>
+
+<net id="119"><net_src comp="112" pin="1"/><net_sink comp="115" pin=0"/></net>
+
+<net id="124"><net_src comp="112" pin="1"/><net_sink comp="120" pin=0"/></net>
+
+<net id="125"><net_src comp="50" pin="0"/><net_sink comp="120" pin=1"/></net>
+
+<net id="130"><net_src comp="120" pin="2"/><net_sink comp="126" pin=0"/></net>
+
+<net id="134"><net_src comp="64" pin="2"/><net_sink comp="131" pin=0"/></net>
+
+<net id="135"><net_src comp="131" pin="1"/><net_sink comp="115" pin=1"/></net>
+
+<net id="139"><net_src comp="78" pin="2"/><net_sink comp="136" pin=0"/></net>
+
+<net id="140"><net_src comp="136" pin="1"/><net_sink comp="98" pin=1"/></net>
+
+<net id="144"><net_src comp="92" pin="2"/><net_sink comp="141" pin=0"/></net>
+
+<net id="148"><net_src comp="60" pin="1"/><net_sink comp="145" pin=0"/></net>
+
+<net id="149"><net_src comp="145" pin="1"/><net_sink comp="107" pin=1"/></net>
+
+<net id="150"><net_src comp="145" pin="1"/><net_sink comp="112" pin=0"/></net>
+
+<net id="151"><net_src comp="145" pin="1"/><net_sink comp="126" pin=1"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: srcLayer1x | {2 3 }
+	Port: HwReg_layerWidth_1_c | {1 }
+	Port: HwReg_layerHeight_1_c | {1 }
+ - Input state : 
+	Port: v_mix_upsample<false> : srcLayer1Rgb | {2 3 }
+	Port: v_mix_upsample<false> : HwReg_layerHeight_1 | {1 }
+	Port: v_mix_upsample<false> : HwReg_layerWidth_1 | {1 }
+	Port: v_mix_upsample<false> : p_read1 | {1 }
+  - Chain level:
+	State 1
+		store_ln60 : 1
+	State 2
+		icmp_ln60 : 1
+		y_8 : 1
+		br_ln60 : 2
+		store_ln60 : 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|---------------------------------------------------------|---------|---------|
+| Operation|                     Functional Unit                     |    FF   |   LUT   |
+|----------|---------------------------------------------------------|---------|---------|
+|   call   | grp_v_mix_upsample_false_Pipeline_VITIS_LOOP_62_2_fu_98 |    10   |    28   |
+|----------|---------------------------------------------------------|---------|---------|
+|    add   |                        y_8_fu_120                       |    0    |    17   |
+|----------|---------------------------------------------------------|---------|---------|
+|   icmp   |                     icmp_ln60_fu_115                    |    0    |    11   |
+|----------|---------------------------------------------------------|---------|---------|
+|          |           HwReg_layerHeight_1_read_read_fu_64           |    0    |    0    |
+|   read   |            HwReg_layerWidth_1_read_read_fu_78           |    0    |    0    |
+|          |                    p_read_read_fu_92                    |    0    |    0    |
+|----------|---------------------------------------------------------|---------|---------|
+|   write  |                  write_ln0_write_fu_70                  |    0    |    0    |
+|          |                  write_ln0_write_fu_84                  |    0    |    0    |
+|----------|---------------------------------------------------------|---------|---------|
+|   Total  |                                                         |    10   |    56   |
+|----------|---------------------------------------------------------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++--------------------------------+--------+
+|                                |   FF   |
++--------------------------------+--------+
+|HwReg_layerHeight_1_read_reg_131|   10   |
+| HwReg_layerWidth_1_read_reg_136|   10   |
+|         p_read_reg_141         |    1   |
+|            y_reg_145           |   10   |
++--------------------------------+--------+
+|              Total             |   31   |
++--------------------------------+--------+
+
+* Multiplexer (MUX) list: 
+|--------|------|------|------|--------|
+|  Comp  |  Pin | Size |  BW  | S x BW |
+|--------|------|------|------|--------|
+|  Total |      |      |      |    0   |
+|--------|------|------|------|--------|
+
+
+
+* Summary:
++-----------+--------+--------+
+|           |   FF   |   LUT  |
++-----------+--------+--------+
+|  Function |   10   |   56   |
+|   Memory  |    -   |    -   |
+|Multiplexer|    -   |    -   |
+|  Register |   31   |    -   |
++-----------+--------+--------+
+|   Total   |   41   |   56   |
++-----------+--------+--------+

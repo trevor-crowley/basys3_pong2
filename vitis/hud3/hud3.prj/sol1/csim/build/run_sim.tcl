@@ -8,7 +8,7 @@ set ::env(LD_LIBRARY_PATH) $::env(LD_LIBRARY_PATH):/opt/Xilinx/Vitis_HLS/2022.1/
 set ::env(LD_LIBRARY_PATH) $::env(LD_LIBRARY_PATH):/opt/Xilinx/Vitis_HLS/2022.1/lnx64/tools/fir_v7_0
 set ::env(LD_LIBRARY_PATH) $::env(LD_LIBRARY_PATH):/opt/Xilinx/Vitis_HLS/2022.1/lnx64/tools/dds_v6_0
 set ::env(LD_LIBRARY_PATH) $::env(LD_LIBRARY_PATH):/usr/lib/x86_64-linux-gnu
-set ap_argv "/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/data/128x128_1.png /home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/data/128x128_2.png"
+set ap_argv " /home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/data/128x128_1.png /home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/data/128x128_2.png "
 set ::env(LD_LIBRARY_PATH) $::env(LD_LIBRARY_PATH):/opt/Xilinx/Vitis_HLS/2022.1/lnx64/csim
 ### C sim ###
 if {![file exists csim.exe]} {

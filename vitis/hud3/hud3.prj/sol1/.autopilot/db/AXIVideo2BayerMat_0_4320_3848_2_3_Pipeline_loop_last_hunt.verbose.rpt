@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'AXIVideo2BayerMat_0_4320_3848_2_3_Pipeline_loop_last_hunt'
 ================================================================
-* Date:           Sun Sep  4 22:40:29 2022
+* Date:           Mon Sep  5 21:55:16 2022
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
 * Project:        hud3.prj
@@ -202,15 +202,15 @@ ST_1 : Operation 14 [1/1] (1.29ns)   --->   "%store_ln0 = store i16 %axi_data_2_
 ST_1 : Operation 15 [1/1] (1.29ns)   --->   "%br_ln0 = br void %while.cond10"   --->   Operation 15 'br' 'br_ln0' <Predicate = true> <Delay = 1.29>
 ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%axi_last_V = phi i1 %axi_last_2_lcssa_read, void %newFuncRoot, i1 %tmp_last_V, void %while.body12"   --->   Operation 16 'phi' 'axi_last_V' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%last = phi i1 %last_0_lcssa_read, void %newFuncRoot, i1 %tmp_last_V, void %while.body12"   --->   Operation 17 'phi' 'last' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%br_ln86 = br i1 %last, void %while.body12, void %for.inc16.exitStub" [xf_hud_accel.cpp:86]   --->   Operation 18 'br' 'br_ln86' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%specpipeline_ln88 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_18" [xf_hud_accel.cpp:88]   --->   Operation 19 'specpipeline' 'specpipeline_ln88' <Predicate = (!last)> <Delay = 0.00>
-ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%speclooptripcount_ln89 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 0, i64 0, i64 0" [xf_hud_accel.cpp:89]   --->   Operation 20 'speclooptripcount' 'speclooptripcount_ln89' <Predicate = (!last)> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%br_ln86 = br i1 %last, void %while.body12, void %for.inc16.exitStub" [/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:86]   --->   Operation 18 'br' 'br_ln86' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%specpipeline_ln88 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_18" [/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:88]   --->   Operation 19 'specpipeline' 'specpipeline_ln88' <Predicate = (!last)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%speclooptripcount_ln89 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 0, i64 0, i64 0" [/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:89]   --->   Operation 20 'speclooptripcount' 'speclooptripcount_ln89' <Predicate = (!last)> <Delay = 0.00>
 ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%specloopname_ln283 = specloopname void @_ssdm_op_SpecLoopName, void @empty_8"   --->   Operation 21 'specloopname' 'specloopname_ln283' <Predicate = (!last)> <Delay = 0.00>
 ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%empty = read i24 @_ssdm_op_Read.axis.volatile.i16P0A.i2P0A.i2P0A.i1P0A.i1P0A.i1P0A.i1P0A, i16 %in_ptr_V_data_V, i2 %in_ptr_V_keep_V, i2 %in_ptr_V_strb_V, i1 %in_ptr_V_user_V, i1 %in_ptr_V_last_V, i1 %in_ptr_V_id_V, i1 %in_ptr_V_dest_V"   --->   Operation 22 'read' 'empty' <Predicate = (!last)> <Delay = 0.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
 ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%tmp_data_V = extractvalue i24 %empty"   --->   Operation 23 'extractvalue' 'tmp_data_V' <Predicate = (!last)> <Delay = 0.00>
 ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%tmp_last_V = extractvalue i24 %empty"   --->   Operation 24 'extractvalue' 'tmp_last_V' <Predicate = (!last)> <Delay = 0.00>
-ST_1 : Operation 25 [1/1] (1.29ns)   --->   "%store_ln86 = store i16 %tmp_data_V, i16 %axi_data_V_4_out" [xf_hud_accel.cpp:86]   --->   Operation 25 'store' 'store_ln86' <Predicate = (!last)> <Delay = 1.29>
-ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%br_ln86 = br void %while.cond10" [xf_hud_accel.cpp:86]   --->   Operation 26 'br' 'br_ln86' <Predicate = (!last)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (1.29ns)   --->   "%store_ln86 = store i16 %tmp_data_V, i16 %axi_data_V_4_out" [/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:86]   --->   Operation 25 'store' 'store_ln86' <Predicate = (!last)> <Delay = 1.29>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%br_ln86 = br void %while.cond10" [/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:86]   --->   Operation 26 'br' 'br_ln86' <Predicate = (!last)> <Delay = 0.00>
 ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%write_ln283 = write void @_ssdm_op_Write.ap_auto.i1P0A, i1 %axi_last_V_4_out, i1 %axi_last_V"   --->   Operation 27 'write' 'write_ln283' <Predicate = (last)> <Delay = 0.00>
 ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 28 'ret' 'ret_ln0' <Predicate = (last)> <Delay = 0.00>
 

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="v_tpg" xd:componentRef="v_tpg" xd:initiationInterval="x" xd:clockPeriod="20" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="height" xd:originalName="height" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0x10" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="width" xd:originalName="width" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0x18" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="field_id" xd:originalName="field_id" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0xD0" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="fid_in" xd:originalName="fid_in" xd:direction="in" xd:interfaceRef="fid_in" xd:busTypeRef="register" xd:dataWidth="1"/>
+  <xd:arg xd:name="bckgndId" xd:originalName="bckgndId" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0x20" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="ovrlayId" xd:originalName="ovrlayId" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0x28" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="maskId" xd:originalName="maskId" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0x30" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="motionSpeed" xd:originalName="motionSpeed" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0x38" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="colorFormat" xd:originalName="colorFormat" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0x40" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="crossHairX" xd:originalName="crossHairX" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0x48" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="crossHairY" xd:originalName="crossHairY" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0x50" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="ZplateHorContStart" xd:originalName="ZplateHorContStart" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0x58" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="ZplateHorContDelta" xd:originalName="ZplateHorContDelta" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0x60" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="ZplateVerContStart" xd:originalName="ZplateVerContStart" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0x68" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="ZplateVerContDelta" xd:originalName="ZplateVerContDelta" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0x70" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="boxSize" xd:originalName="boxSize" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0x78" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="boxColorR" xd:originalName="boxColorR" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0x80" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="boxColorG" xd:originalName="boxColorG" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0x88" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="boxColorB" xd:originalName="boxColorB" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0x90" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="dpDynamicRange" xd:originalName="dpDynamicRange" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0xC0" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="dpYUVCoef" xd:originalName="dpYUVCoef" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0xC8" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="bck_motion_en" xd:originalName="bck_motion_en" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0xD8" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="m_axis_video" xd:originalName="m_axis_video" xd:direction="out" xd:interfaceRef="m_axis_video" xd:busTypeRef="axis" xd:dataWidth="24"/>
+  <xd:arg xd:name="fid" xd:originalName="fid" xd:direction="out" xd:interfaceRef="fid" xd:busTypeRef="register" xd:dataWidth="1"/>
+  <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
+  <xd:resourceEstimates xd:LUT="5334" xd:FF="2792" xd:BRAM="0" xd:DSP="9"/>
+</xd:acceleratorMap>

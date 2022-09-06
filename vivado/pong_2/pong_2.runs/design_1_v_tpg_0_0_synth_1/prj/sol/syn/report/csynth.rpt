@@ -1,0 +1,892 @@
+
+
+================================================================
+== Synthesis Summary Report of 'v_tpg'
+================================================================
++ General Information: 
+    * Date:           Mon Sep  5 13:06:33 2022
+    * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+    * Project:        prj
+    * Solution:       sol (Vivado IP Flow Target)
+    * Product family: artix7
+    * Target device:  xc7a35t-cpg236-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +---------------------------------------------------------+------+-------+---------+-----------+----------+---------+------+----------+--------+---------+-----------+------------+-----+
+    |                         Modules                         | Issue|       | Latency |  Latency  | Iteration|         | Trip |          |        |         |           |            |     |
+    |                         & Loops                         | Type | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM  |   DSP   |     FF    |     LUT    | URAM|
+    +---------------------------------------------------------+------+-------+---------+-----------+----------+---------+------+----------+--------+---------+-----------+------------+-----+
+    |+ v_tpg                                                  |     -|   3.77|        -|          -|         -|        -|     -|        no|  5 (5%)|  9 (10%)|  2792 (6%)|  5334 (25%)|    -|
+    | + v_tpgHlsDataFlow*                                     |     -|   3.77|        -|          -|         -|        -|     -|  dataflow|  5 (5%)|  9 (10%)|  2229 (5%)|  4536 (21%)|    -|
+    |  + tpgBackground                                        |     -|   3.77|        -|          -|         -|        -|     -|        no|  5 (5%)|  9 (10%)|  2047 (4%)|  4044 (19%)|    -|
+    |   o VITIS_LOOP_518_1                                    |     -|  14.60|        -|          -|         -|        -|     -|        no|       -|        -|          -|           -|    -|
+    |    + tpgBackground_Pipeline_VITIS_LOOP_520_2            |     -|   3.77|        -|          -|         -|        -|     -|        no|  5 (5%)|  9 (10%)|  1667 (4%)|  3651 (17%)|    -|
+    |     o VITIS_LOOP_520_2                                  |     -|  14.60|        -|          -|        13|        1|     -|       yes|       -|        -|          -|           -|    -|
+    |      + tpgPatternDPColorSquare                          |     -|   8.43|        2|     40.000|         -|        1|     -|       yes|       -|        -|  102 (~0%)|    399 (1%)|    -|
+    |      + tpgPatternCheckerBoard                           |     -|   4.96|        2|     40.000|         -|        1|     -|       yes|       -|        -|   68 (~0%)|    373 (1%)|    -|
+    |      + tpgPatternTartanColorBars                        |     -|   4.96|        2|     40.000|         -|        1|     -|       yes|       -|        -|   64 (~0%)|    369 (1%)|    -|
+    |      + tpgPatternCrossHatch                             |     -|   4.96|        1|     20.000|         -|        1|     -|       yes|       -|        -|   53 (~0%)|    435 (2%)|    -|
+    |       + reg_ap_uint_10_s                                |     -|  14.60|        1|     20.000|         -|        1|     -|       yes|       -|        -|   11 (~0%)|    13 (~0%)|    -|
+    |      + reg_int_s                                        |     -|  14.60|        1|     20.000|         -|        1|     -|       yes|       -|        -|   33 (~0%)|    13 (~0%)|    -|
+    |  + MultiPixStream2AXIvideo                              |     -|   9.84|   644801|  1.290e+07|         -|   644801|     -|        no|       -|        -|   83 (~0%)|    421 (2%)|    -|
+    |   o VITIS_LOOP_934_1                                    |     -|  14.60|   644800|  1.290e+07|       806|        -|   800|        no|       -|        -|          -|           -|    -|
+    |    + MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_936_2  |     -|   9.84|      803|  1.606e+04|         -|      803|     -|        no|       -|        -|   20 (~0%)|   196 (~0%)|    -|
+    |     o VITIS_LOOP_936_2                                  |     -|  14.60|      800|  1.600e+04|         2|        1|   800|       yes|       -|        -|          -|           -|    -|
+    | + reg_unsigned_short_s                                  |     -|  14.60|        1|     20.000|         -|        1|     -|       yes|       -|        -|   16 (~0%)|           -|    -|
+    +---------------------------------------------------------+------+-------+---------+-----------+----------+---------+------+----------+--------+---------+-----------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++------------+------------+---------------+--------+----------+
+| Interface  | Data Width | Address Width | Offset | Register |
++------------+------------+---------------+--------+----------+
+| s_axi_CTRL | 32         | 8             | 16     | 0        |
++------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++------------+--------------------+--------+-------+--------+-----------------------------------+----------------------------------------------------------------------+
+| Interface  | Register           | Offset | Width | Access | Description                       | Bit Fields                                                           |
++------------+--------------------+--------+-------+--------+-----------------------------------+----------------------------------------------------------------------+
+| s_axi_CTRL | CTRL               | 0x00   | 32    | RW     | Control signals                   | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_CTRL | GIER               | 0x04   | 32    | RW     | Global Interrupt Enable Register  | 0=Enable                                                             |
+| s_axi_CTRL | IP_IER             | 0x08   | 32    | RW     | IP Interrupt Enable Register      | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_CTRL | IP_ISR             | 0x0c   | 32    | RW     | IP Interrupt Status Register      | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_CTRL | height             | 0x10   | 32    | W      | Data signal of height             |                                                                      |
+| s_axi_CTRL | width              | 0x18   | 32    | W      | Data signal of width              |                                                                      |
+| s_axi_CTRL | bckgndId           | 0x20   | 32    | W      | Data signal of bckgndId           |                                                                      |
+| s_axi_CTRL | ovrlayId           | 0x28   | 32    | W      | Data signal of ovrlayId           |                                                                      |
+| s_axi_CTRL | maskId             | 0x30   | 32    | W      | Data signal of maskId             |                                                                      |
+| s_axi_CTRL | motionSpeed        | 0x38   | 32    | W      | Data signal of motionSpeed        |                                                                      |
+| s_axi_CTRL | colorFormat        | 0x40   | 32    | W      | Data signal of colorFormat        |                                                                      |
+| s_axi_CTRL | crossHairX         | 0x48   | 32    | W      | Data signal of crossHairX         |                                                                      |
+| s_axi_CTRL | crossHairY         | 0x50   | 32    | W      | Data signal of crossHairY         |                                                                      |
+| s_axi_CTRL | ZplateHorContStart | 0x58   | 32    | W      | Data signal of ZplateHorContStart |                                                                      |
+| s_axi_CTRL | ZplateHorContDelta | 0x60   | 32    | W      | Data signal of ZplateHorContDelta |                                                                      |
+| s_axi_CTRL | ZplateVerContStart | 0x68   | 32    | W      | Data signal of ZplateVerContStart |                                                                      |
+| s_axi_CTRL | ZplateVerContDelta | 0x70   | 32    | W      | Data signal of ZplateVerContDelta |                                                                      |
+| s_axi_CTRL | boxSize            | 0x78   | 32    | W      | Data signal of boxSize            |                                                                      |
+| s_axi_CTRL | boxColorR          | 0x80   | 32    | W      | Data signal of boxColorR          |                                                                      |
+| s_axi_CTRL | boxColorG          | 0x88   | 32    | W      | Data signal of boxColorG          |                                                                      |
+| s_axi_CTRL | boxColorB          | 0x90   | 32    | W      | Data signal of boxColorB          |                                                                      |
+| s_axi_CTRL | dpDynamicRange     | 0xc0   | 32    | W      | Data signal of dpDynamicRange     |                                                                      |
+| s_axi_CTRL | dpYUVCoef          | 0xc8   | 32    | W      | Data signal of dpYUVCoef          |                                                                      |
+| s_axi_CTRL | field_id           | 0xd0   | 32    | W      | Data signal of field_id           |                                                                      |
+| s_axi_CTRL | bck_motion_en      | 0xd8   | 32    | W      | Data signal of bck_motion_en      |                                                                      |
++------------+--------------------+--------+-------+--------+-----------------------------------+----------------------------------------------------------------------+
+
+* AXIS
++--------------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| Interface    | Register Mode | TDATA | TDEST | TID | TKEEP | TLAST | TREADY | TSTRB | TUSER | TVALID |
++--------------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| m_axis_video | both          | 24    | 1     | 1   | 3     | 1     | 1      | 3     | 1     | 1      |
++--------------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+
+* REGISTER
++-----------+---------+----------+
+| Interface | Mode    | Bitwidth |
++-----------+---------+----------+
+| fid       | ap_none | 1        |
+| fid_in    | ap_none | 1        |
++-----------+---------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++--------------------+-----------+---------------------------------------------+
+| Argument           | Direction | Datatype                                    |
++--------------------+-----------+---------------------------------------------+
+| height             | in        | unsigned short&                             |
+| width              | in        | unsigned short&                             |
+| field_id           | in        | unsigned short&                             |
+| fid_in             | in        | bool&                                       |
+| bckgndId           | in        | unsigned char&                              |
+| ovrlayId           | unused    | unsigned char&                              |
+| maskId             | unused    | unsigned char&                              |
+| motionSpeed        | in        | unsigned char&                              |
+| colorFormat        | in        | unsigned char&                              |
+| crossHairX         | unused    | unsigned short&                             |
+| crossHairY         | unused    | unsigned short&                             |
+| ZplateHorContStart | in        | unsigned short&                             |
+| ZplateHorContDelta | in        | unsigned short&                             |
+| ZplateVerContStart | in        | unsigned short&                             |
+| ZplateVerContDelta | in        | unsigned short&                             |
+| boxSize            | unused    | unsigned short&                             |
+| boxColorR          | unused    | unsigned short&                             |
+| boxColorG          | unused    | unsigned short&                             |
+| boxColorB          | unused    | unsigned short&                             |
+| dpDynamicRange     | in        | unsigned char&                              |
+| dpYUVCoef          | in        | unsigned char&                              |
+| bck_motion_en      | in        | unsigned short&                             |
+| m_axis_video       | out       | stream<hls::axis<ap_uint<24>, 1, 1, 1>, 0>& |
+| fid                | out       | bool&                                       |
++--------------------+-----------+---------------------------------------------+
+
+* SW-to-HW Mapping
++--------------------+--------------+-----------+----------------------------------------------+
+| Argument           | HW Interface | HW Type   | HW Info                                      |
++--------------------+--------------+-----------+----------------------------------------------+
+| height             | s_axi_CTRL   | register  | name=height offset=0x10 range=32             |
+| width              | s_axi_CTRL   | register  | name=width offset=0x18 range=32              |
+| field_id           | s_axi_CTRL   | register  | name=field_id offset=0xd0 range=32           |
+| fid_in             | fid_in       | port      |                                              |
+| bckgndId           | s_axi_CTRL   | register  | name=bckgndId offset=0x20 range=32           |
+| ovrlayId           | s_axi_CTRL   | register  | name=ovrlayId offset=0x28 range=32           |
+| maskId             | s_axi_CTRL   | register  | name=maskId offset=0x30 range=32             |
+| motionSpeed        | s_axi_CTRL   | register  | name=motionSpeed offset=0x38 range=32        |
+| colorFormat        | s_axi_CTRL   | register  | name=colorFormat offset=0x40 range=32        |
+| crossHairX         | s_axi_CTRL   | register  | name=crossHairX offset=0x48 range=32         |
+| crossHairY         | s_axi_CTRL   | register  | name=crossHairY offset=0x50 range=32         |
+| ZplateHorContStart | s_axi_CTRL   | register  | name=ZplateHorContStart offset=0x58 range=32 |
+| ZplateHorContDelta | s_axi_CTRL   | register  | name=ZplateHorContDelta offset=0x60 range=32 |
+| ZplateVerContStart | s_axi_CTRL   | register  | name=ZplateVerContStart offset=0x68 range=32 |
+| ZplateVerContDelta | s_axi_CTRL   | register  | name=ZplateVerContDelta offset=0x70 range=32 |
+| boxSize            | s_axi_CTRL   | register  | name=boxSize offset=0x78 range=32            |
+| boxColorR          | s_axi_CTRL   | register  | name=boxColorR offset=0x80 range=32          |
+| boxColorG          | s_axi_CTRL   | register  | name=boxColorG offset=0x88 range=32          |
+| boxColorB          | s_axi_CTRL   | register  | name=boxColorB offset=0x90 range=32          |
+| dpDynamicRange     | s_axi_CTRL   | register  | name=dpDynamicRange offset=0xc0 range=32     |
+| dpYUVCoef          | s_axi_CTRL   | register  | name=dpYUVCoef offset=0xc8 range=32          |
+| bck_motion_en      | s_axi_CTRL   | register  | name=bck_motion_en offset=0xd8 range=32      |
+| m_axis_video       | m_axis_video | interface |                                              |
+| fid                | fid          | port      |                                              |
++--------------------+--------------+-----------+----------------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
++----------------------------------------------------------------------+-----+--------+----------------------+-----+--------+---------+
+| Name                                                                 | DSP | Pragma | Variable             | Op  | Impl   | Latency |
++----------------------------------------------------------------------+-----+--------+----------------------+-----+--------+---------+
+| + v_tpg                                                              | 9   |        |                      |     |        |         |
+|   add_ln457_fu_521_p2                                                | -   |        | add_ln457            | add | fabric | 0       |
+|   add_ln462_fu_553_p2                                                | -   |        | add_ln462            | add | fabric | 0       |
+|  + v_tpgHlsDataFlow                                                  | 9   |        |                      |     |        |         |
+|   + tpgBackground                                                    | 9   |        |                      |     |        |         |
+|     add_i_fu_704_p2                                                  | -   |        | add_i                | add | fabric | 0       |
+|     y_2_fu_864_p2                                                    | -   |        | y_2                  | add | fabric | 0       |
+|     add_ln1488_fu_887_p2                                             | -   |        | add_ln1488           | add | fabric | 0       |
+|     add_ln705_fu_937_p2                                              | -   |        | add_ln705            | add | fabric | 0       |
+|    + tpgBackground_Pipeline_VITIS_LOOP_520_2                         | 9   |        |                      |     |        |         |
+|      x_3_fu_1135_p2                                                  | -   |        | x_3                  | add | fabric | 0       |
+|      add_ln528_fu_1645_p2                                            | -   |        | add_ln528            | add | fabric | 0       |
+|      rampVal_2_new_1_out                                             | -   |        | add_ln1619           | add | fabric | 0       |
+|      add_ln1500_fu_2281_p2                                           | -   |        | add_ln1500           | add | fabric | 0       |
+|      add_ln1236_fu_1291_p2                                           | -   |        | add_ln1236           | add | fabric | 0       |
+|      add_ln1240_fu_1152_p2                                           | -   |        | add_ln1240           | add | fabric | 0       |
+|      add_ln1240_1_fu_1323_p2                                         | -   |        | add_ln1240_1         | add | fabric | 0       |
+|      add_ln1244_fu_1163_p2                                           | -   |        | add_ln1244           | add | fabric | 0       |
+|      add_ln1244_1_fu_1355_p2                                         | -   |        | add_ln1244_1         | add | fabric | 0       |
+|      mac_muladd_8ns_7ns_13ns_15_4_1_U47                              | 1   |        | mul_ln1257           | mul | dsp48  | 3       |
+|      mac_muladd_8ns_8ns_15ns_16_4_1_U50                              | 1   |        | mul_ln1257_1         | mul | dsp48  | 3       |
+|      mul_8ns_6ns_13_1_1_U44                                          | -   |        | mul_ln1257_2         | mul | auto   | 0       |
+|      mac_muladd_8ns_7ns_13ns_15_4_1_U47                              | 1   |        | add_ln1257           | add | dsp48  | 3       |
+|      mac_muladd_8ns_8ns_15ns_16_4_1_U50                              | 1   |        | add_ln1257_1         | add | dsp48  | 3       |
+|      add_ln1257_2_fu_1499_p2                                         | -   |        | add_ln1257_2         | add | fabric | 0       |
+|      add_ln1257_3_fu_1505_p2                                         | -   |        | add_ln1257_3         | add | fabric | 0       |
+|      mac_muladd_8ns_7s_16s_16_4_1_U51                                | 1   |        | mul_ln1258           | mul | dsp48  | 3       |
+|      mac_muladd_8ns_8s_16s_16_4_1_U48                                | 1   |        | mul_ln1258_1         | mul | dsp48  | 3       |
+|      mac_muladd_8ns_8s_16s_16_4_1_U48                                | 1   |        | add_ln1258           | add | dsp48  | 3       |
+|      mac_muladd_8ns_7s_16s_16_4_1_U51                                | 1   |        | add_ln1258_1         | add | dsp48  | 3       |
+|      add_ln1258_2_fu_1524_p2                                         | -   |        | add_ln1258_2         | add | fabric | 0       |
+|      mac_muladd_8ns_8s_15ns_16_4_1_U49                               | 1   |        | mul_ln1259           | mul | dsp48  | 3       |
+|      mac_muladd_8ns_6s_16s_16_4_1_U53                                | 1   |        | mul_ln1259_1         | mul | dsp48  | 3       |
+|      mac_muladd_8ns_8s_15ns_16_4_1_U49                               | 1   |        | add_ln1259           | add | dsp48  | 3       |
+|      mac_muladd_8ns_6s_16s_16_4_1_U53                                | 1   |        | add_ln1259_1         | add | dsp48  | 3       |
+|      add_ln1259_3_fu_2332_p2                                         | -   |        | add_ln1259_3         | add | fabric | 0       |
+|      add_ln1259_2_fu_2336_p2                                         | -   |        | add_ln1259_2         | add | fabric | 0       |
+|      add_ln1296_fu_1602_p2                                           | -   |        | add_ln1296           | add | fabric | 0       |
+|      add_ln1298_fu_1614_p2                                           | -   |        | add_ln1298           | add | fabric | 0       |
+|      am_addmul_16ns_1s_16ns_17_4_1_U46                               | 1   |        | add_ln1302           | add | dsp48  | 3       |
+|      am_addmul_16ns_1s_16ns_17_4_1_U46                               | 1   |        | mul_ln1302           | mul | dsp48  | 3       |
+|      mac_muladd_16s_16s_16ns_16_4_1_U52                              | 1   |        | mul_ln1302_1         | mul | dsp48  | 3       |
+|      grp_fu_2910_p2                                                  | -   |        | add_ln1306_1         | add | fabric | 0       |
+|      mac_muladd_16s_16s_16ns_16_4_1_U52                              | 1   |        | add_ln1306           | add | dsp48  | 3       |
+|      mul_mul_20s_8ns_28_4_1_U54                                      | 1   |        | mul_ln1311           | mul | dsp48  | 3       |
+|      sub_ln1311_fu_2493_p2                                           | -   |        | sub_ln1311           | sub | fabric | 0       |
+|      sub_ln1311_1_fu_2509_p2                                         | -   |        | sub_ln1311_1         | sub | fabric | 0       |
+|      add_ln1314_fu_2532_p2                                           | -   |        | add_ln1314           | add | fabric | 0       |
+|      ret_V_fu_1399_p2                                                | -   |        | ret_V                | add | fabric | 0       |
+|      add_ln232_fu_1410_p2                                            | -   |        | add_ln232            | add | fabric | 0       |
+|      sub_ln232_fu_1416_p2                                            | -   |        | sub_ln232            | sub | fabric | 0       |
+|      add_ln1212_fu_1684_p2                                           | -   |        | add_ln1212           | add | fabric | 0       |
+|      add_ln1056_fu_1820_p2                                           | -   |        | add_ln1056           | add | fabric | 0       |
+|      add_ln1039_fu_2758_p2                                           | -   |        | add_ln1039           | add | fabric | 0       |
+|     + tpgPatternDPColorSquare                                        | 0   |        |                      |     |        |         |
+|       add_ln886_fu_368_p2                                            | -   |        | add_ln886            | add | fabric | 0       |
+|       add_ln887_fu_423_p2                                            | -   |        | add_ln887            | add | fabric | 0       |
+|       add_ln1730_fu_435_p2                                           | -   |        | add_ln1730           | add | fabric | 0       |
+|       add_ln886_2_fu_448_p2                                          | -   |        | add_ln886_2          | add | fabric | 0       |
+|     + tpgPatternCheckerBoard                                         | 0   |        |                      |     |        |         |
+|       add_ln1510_fu_225_p2                                           | -   |        | add_ln1510           | add | fabric | 0       |
+|       barWidthMinSamples_fu_241_p2                                   | -   |        | barWidthMinSamples   | add | fabric | 0       |
+|       add_ln1511_fu_247_p2                                           | -   |        | add_ln1511           | add | fabric | 0       |
+|       ret_V_fu_299_p2                                                | -   |        | ret_V                | add | fabric | 0       |
+|       add_ln1530_fu_327_p2                                           | -   |        | add_ln1530           | add | fabric | 0       |
+|       add_ln886_fu_346_p2                                            | -   |        | add_ln886            | add | fabric | 0       |
+|       sub_ln887_fu_397_p2                                            | -   |        | sub_ln887            | sub | fabric | 0       |
+|       add_ln1548_fu_409_p2                                           | -   |        | add_ln1548           | add | fabric | 0       |
+|       add_ln886_4_fu_422_p2                                          | -   |        | add_ln886_4          | add | fabric | 0       |
+|     + tpgPatternTartanColorBars                                      | 0   |        |                      |     |        |         |
+|       add_ln1328_fu_223_p2                                           | -   |        | add_ln1328           | add | fabric | 0       |
+|       barWidthMinSamples_fu_239_p2                                   | -   |        | barWidthMinSamples   | add | fabric | 0       |
+|       add_ln1329_fu_245_p2                                           | -   |        | add_ln1329           | add | fabric | 0       |
+|       ret_V_fu_293_p2                                                | -   |        | ret_V                | add | fabric | 0       |
+|       add_ln1348_fu_321_p2                                           | -   |        | add_ln1348           | add | fabric | 0       |
+|       add_ln886_fu_334_p2                                            | -   |        | add_ln886            | add | fabric | 0       |
+|       sub_ln887_fu_385_p2                                            | -   |        | sub_ln887            | sub | fabric | 0       |
+|       add_ln1367_fu_397_p2                                           | -   |        | add_ln1367           | add | fabric | 0       |
+|       add_ln886_1_fu_410_p2                                          | -   |        | add_ln886_1          | add | fabric | 0       |
+|     + tpgPatternCrossHatch                                           | 0   |        |                      |     |        |         |
+|       add_ln1396_fu_151_p2                                           | -   |        | add_ln1396           | add | fabric | 0       |
+|       grp_reg_ap_uint_10_s_fu_173_d                                  | -   |        | barWidthMinSamples_V | add | fabric | 0       |
+|       add_ln1398_fu_187_p2                                           | -   |        | add_ln1398           | add | fabric | 0       |
+|       add_ln1404_fu_217_p2                                           | -   |        | add_ln1404           | add | fabric | 0       |
+|       ret_V_fu_249_p2                                                | -   |        | ret_V                | add | fabric | 0       |
+|       add_ln886_fu_275_p2                                            | -   |        | add_ln886            | add | fabric | 0       |
+|       sub40_fu_317_p2                                                | -   |        | sub40                | add | fabric | 0       |
+|       sub_ln887_fu_415_p2                                            | -   |        | sub_ln887            | sub | fabric | 0       |
+|       add_ln886_3_fu_433_p2                                          | -   |        | add_ln886_3          | add | fabric | 0       |
+|   + MultiPixStream2AXIvideo                                          | 0   |        |                      |     |        |         |
+|     grp_MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_936_2_fu_151_sub | -   |        | sub                  | add | fabric | 0       |
+|     i_2_fu_275_p2                                                    | -   |        | i_2                  | add | fabric | 0       |
+|    + MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_936_2               | 0   |        |                      |     |        |         |
+|      j_2_fu_216_p2                                                   | -   |        | j_2                  | add | fabric | 0       |
+|      counter                                                         | -   |        | add_ln960            | add | fabric | 0       |
++----------------------------------------------------------------------+-----+--------+----------------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++----------------------------------------------+------+------+--------+-----------------------+---------+------+---------+
+| Name                                         | BRAM | URAM | Pragma | Variable              | Storage | Impl | Latency |
++----------------------------------------------+------+------+--------+-----------------------+---------+------+---------+
+| + v_tpg                                      | 5    | 0    |        |                       |         |      |         |
+|  + v_tpgHlsDataFlow                          | 5    | 0    |        |                       |         |      |         |
+|    ovrlayYUV_U                               | -    | -    |        | ovrlayYUV             | fifo    | srl  | 0       |
+|   + tpgBackground                            | 5    | 0    |        |                       |         |      |         |
+|    + tpgBackground_Pipeline_VITIS_LOOP_520_2 | 5    | 0    |        |                       |         |      |         |
+|      redYuv_U                                | -    | -    |        | redYuv                | rom_1p  | auto | 1       |
+|      grnYuv_U                                | -    | -    |        | grnYuv                | rom_1p  | auto | 1       |
+|      bluYuv_U                                | -    | -    |        | bluYuv                | rom_1p  | auto | 1       |
+|      blkYuv_U                                | -    | -    |        | blkYuv                | rom_1p  | auto | 1       |
+|      whiYuv_U                                | -    | -    |        | whiYuv                | rom_1p  | auto | 1       |
+|      tpgBarSelYuv_y_U                        | -    | -    |        | tpgBarSelYuv_y        | rom_1p  | auto | 1       |
+|      tpgBarSelYuv_v_U                        | -    | -    |        | tpgBarSelYuv_v        | rom_1p  | auto | 1       |
+|      tpgBarSelYuv_u_U                        | -    | -    |        | tpgBarSelYuv_u        | rom_1p  | auto | 1       |
+|      tpgBarSelRgb_r_U                        | -    | -    |        | tpgBarSelRgb_r        | rom_1p  | auto | 1       |
+|      tpgBarSelRgb_g_U                        | -    | -    |        | tpgBarSelRgb_g        | rom_1p  | auto | 1       |
+|      tpgBarSelRgb_b_U                        | -    | -    |        | tpgBarSelRgb_b        | rom_1p  | auto | 1       |
+|      tpgSinTableArray_U                      | 3    | -    |        | tpgSinTableArray      | rom_1p  | auto | 1       |
+|      tpgSinTableArray_9bit_U                 | 2    | -    |        | tpgSinTableArray_9bit | rom_np  | auto | 1       |
+|     + tpgPatternDPColorSquare                | 0    | 0    |        |                       |         |      |         |
+|       DPtpgBarArray_U                        | -    | -    |        | DPtpgBarArray         | rom_1p  | auto | 1       |
+|       DPtpgBarSelRgb_VESA_r_U                | -    | -    |        | DPtpgBarSelRgb_VESA_r | rom_1p  | auto | 1       |
+|       DPtpgBarSelRgb_VESA_g_U                | -    | -    |        | DPtpgBarSelRgb_VESA_g | rom_1p  | auto | 1       |
+|       DPtpgBarSelRgb_VESA_b_U                | -    | -    |        | DPtpgBarSelRgb_VESA_b | rom_1p  | auto | 1       |
+|       DPtpgBarSelRgb_CEA_r_U                 | -    | -    |        | DPtpgBarSelRgb_CEA_r  | rom_1p  | auto | 1       |
+|       DPtpgBarSelRgb_CEA_g_U                 | -    | -    |        | DPtpgBarSelRgb_CEA_g  | rom_1p  | auto | 1       |
+|       DPtpgBarSelRgb_CEA_b_U                 | -    | -    |        | DPtpgBarSelRgb_CEA_b  | rom_1p  | auto | 1       |
+|       DPtpgBarSelYuv_601_y_U                 | -    | -    |        | DPtpgBarSelYuv_601_y  | rom_1p  | auto | 1       |
+|       DPtpgBarSelYuv_601_v_U                 | -    | -    |        | DPtpgBarSelYuv_601_v  | rom_1p  | auto | 1       |
+|       DPtpgBarSelYuv_709_y_U                 | -    | -    |        | DPtpgBarSelYuv_709_y  | rom_1p  | auto | 1       |
+|       DPtpgBarSelYuv_709_v_U                 | -    | -    |        | DPtpgBarSelYuv_709_v  | rom_1p  | auto | 1       |
+|       DPtpgBarSelYuv_601_u_U                 | -    | -    |        | DPtpgBarSelYuv_601_u  | rom_1p  | auto | 1       |
+|       DPtpgBarSelYuv_709_u_U                 | -    | -    |        | DPtpgBarSelYuv_709_u  | rom_1p  | auto | 1       |
+|     + tpgPatternCheckerBoard                 | 0    | 0    |        |                       |         |      |         |
+|       tpgCheckerBoardArray_U                 | -    | -    |        | tpgCheckerBoardArray  | rom_1p  | auto | 1       |
+|       tpgBarSelRgb_r15_U                     | -    | -    |        | tpgBarSelRgb_r15      | rom_1p  | auto | 1       |
+|       tpgBarSelRgb_g13_U                     | -    | -    |        | tpgBarSelRgb_g13      | rom_1p  | auto | 1       |
+|       tpgBarSelRgb_b11_U                     | -    | -    |        | tpgBarSelRgb_b11      | rom_1p  | auto | 1       |
+|       tpgBarSelYuv_y21_U                     | -    | -    |        | tpgBarSelYuv_y21      | rom_1p  | auto | 1       |
+|       tpgBarSelYuv_v19_U                     | -    | -    |        | tpgBarSelYuv_v19      | rom_1p  | auto | 1       |
+|       tpgBarSelYuv_u17_U                     | -    | -    |        | tpgBarSelYuv_u17      | rom_1p  | auto | 1       |
+|     + tpgPatternTartanColorBars              | 0    | 0    |        |                       |         |      |         |
+|       tpgTartanBarArray_U                    | -    | -    |        | tpgTartanBarArray     | rom_1p  | auto | 1       |
+|       tpgBarSelRgb_r16_U                     | -    | -    |        | tpgBarSelRgb_r16      | rom_1p  | auto | 1       |
+|       tpgBarSelRgb_g14_U                     | -    | -    |        | tpgBarSelRgb_g14      | rom_1p  | auto | 1       |
+|       tpgBarSelRgb_b12_U                     | -    | -    |        | tpgBarSelRgb_b12      | rom_1p  | auto | 1       |
+|       tpgBarSelYuv_y22_U                     | -    | -    |        | tpgBarSelYuv_y22      | rom_1p  | auto | 1       |
+|       tpgBarSelYuv_v20_U                     | -    | -    |        | tpgBarSelYuv_v20      | rom_1p  | auto | 1       |
+|       tpgBarSelYuv_u18_U                     | -    | -    |        | tpgBarSelYuv_u18      | rom_1p  | auto | 1       |
+|     + tpgPatternCrossHatch                   | 0    | 0    |        |                       |         |      |         |
+|       whiYuv_1_U                             | -    | -    |        | whiYuv_1              | rom_1p  | auto | 1       |
+|       blkYuv_1_U                             | -    | -    |        | blkYuv_1              | rom_1p  | auto | 1       |
++----------------------------------------------+------+------+--------+-----------------------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++----------------------+-----------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Type                 | Options                                                   | Location                                                                                                                                                        |
++----------------------+-----------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_axi_io.h:47 in axigetbitfields                                                         |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_axi_io.h:54 in axigetbitfields                                                         |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_axi_io.h:62 in axigetbitfields                                                         |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_axi_io.h:70 in axigetbitfields                                                         |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_axi_io.h:76 in axisetbitfields                                                         |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_axi_io.h:83 in axisetbitfields                                                         |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_axi_io.h:91 in axisetbitfields                                                         |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_axi_io.h:99 in axisetbitfields                                                         |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:117 in apply                                                            |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:131 in apply                                                            |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:145 in apply                                                            |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:157 in kernel_and_apply                                                 |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:163 in kernel_and_apply                                                 |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:175 in apply                                                            |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:184 in apply                                                            |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:193 in apply                                                            |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:202 in apply                                                            |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:216 in apply                                                            |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:227 in apply                                                            |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:238 in apply                                                            |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:249 in apply                                                            |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:262 in apply                                                            |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:274 in apply                                                            |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:290 in apply                                                            |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:320 in apply                                                            |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:329 in apply                                                            |
+| loop_flatten         | off                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:356 in arithm_pro                                                       |
+| pipeline             | II=1                                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:357 in arithm_pro                                                       |
+| loop_flatten         | off                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:388 in arithm_pro                                                       |
+| pipeline             | II=1                                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:389 in arithm_pro                                                       |
+| loop_flatten         | off                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:428 in arithm_pro                                                       |
+| pipeline             | II=1                                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:429 in arithm_pro                                                       |
+| loop_flatten         | off                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:460 in arithm_pro                                                       |
+| pipeline             | II=1                                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:461 in arithm_pro                                                       |
+| loop_flatten         | off                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:492 in arithm_pro                                                       |
+| pipeline             | II=1                                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:493 in arithm_pro                                                       |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:524 in arithm_pro                                                       |
+| loop_flatten         | off                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:531 in arithm_pro                                                       |
+| pipeline             | II=1                                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:532 in arithm_pro                                                       |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:556 in arithm_pro                                                       |
+| loop_flatten         | off                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:565 in arithm_pro                                                       |
+| pipeline             | II=1                                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:566 in arithm_pro                                                       |
+| array_partition      | variable=dst_buffer complete dim=1                        | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:588 in reduce_opr, dst_buffer                                           |
+| array_partition      | variable=dst_buffer complete dim=2                        | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:589 in reduce_opr, dst_buffer                                           |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:596 in reduce_opr                                                       |
+| loop_flatten         | off                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:601 in reduce_opr                                                       |
+| pipeline             | II=1                                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:602 in reduce_opr                                                       |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:705 in mins                                                             |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:725 in maxs                                                             |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:929 in zero                                                             |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:941 in zero                                                             |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:1012 in cmps                                                            |
+| loop_flatten         | off                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:1088 in range                                                           |
+| pipeline             | II=1                                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:1089 in range                                                           |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:1108 in sum                                                             |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:1124 in avg                                                             |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:1142 in avg                                                             |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:1219 in get_max_min                                                     |
+| loop_flatten         | off                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:1234 in get_max_min                                                     |
+| pipeline             | II=1                                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:1235 in get_max_min                                                     |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:1262 in get_max_min                                                     |
+| loop_flatten         | off                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:1278 in get_max_min                                                     |
+| pipeline             | II=1                                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:1279 in get_max_min                                                     |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:1314 in get_max_min                                                     |
+| loop_flatten         | off                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:1329 in get_max_min                                                     |
+| pipeline             | II=1                                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:1330 in get_max_min                                                     |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:1379 in get_max_min                                                     |
+| loop_flatten         | off                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:1395 in get_max_min                                                     |
+| pipeline             | II=1                                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:1396 in get_max_min                                                     |
+| loop_flatten         | off                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:1491 in threshold                                                       |
+| pipeline             | II=1                                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:1492 in threshold                                                       |
+| loop_flatten         | off                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:1532 in consume                                                         |
+| pipeline             | II=1                                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:1533 in consume                                                         |
+| loop_flatten         | off                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:1559 in duplicate                                                       |
+| pipeline             | II=1                                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:1560 in duplicate                                                       |
+| loop_flatten         | off                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:1590 in split                                                           |
+| pipeline             | II=1                                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:1591 in split                                                           |
+| loop_flatten         | off                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:1623 in split                                                           |
+| pipeline             | II=1                                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:1624 in split                                                           |
+| loop_flatten         | off                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:1659 in split                                                           |
+| pipeline             | II=1                                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:1660 in split                                                           |
+| loop_flatten         | off                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:1692 in merge                                                           |
+| pipeline             | II=1                                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:1693 in merge                                                           |
+| loop_flatten         | off                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:1725 in merge                                                           |
+| pipeline             | II=1                                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:1726 in merge                                                           |
+| loop_flatten         | off                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:1761 in merge                                                           |
+| pipeline             | II=1                                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_arithm.h:1762 in merge                                                           |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:183 in scalar<n, t>                                                       |
+| array_partition      | variable=val dim=1 complete                               | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:184 in scalar<n, t>, val                                                  |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:188 in scalar<n, t>                                                       |
+| array_partition      | variable=val dim=1 complete                               | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:189 in scalar<n, t>, val                                                  |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:194 in scalar<n, t>                                                       |
+| array_partition      | variable=val dim=1 complete                               | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:195 in scalar<n, t>, val                                                  |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:200 in scalar<n, t>                                                       |
+| array_partition      | variable=val dim=1 complete                               | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:201 in scalar<n, t>, val                                                  |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:206 in scalar<n, t>                                                       |
+| array_partition      | variable=val dim=1 complete                               | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:207 in scalar<n, t>, val                                                  |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:217 in operator=                                                          |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:219 in operator=                                                          |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:238 in operator=                                                          |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:240 in operator=                                                          |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:247 in operator+                                                          |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:250 in operator+                                                          |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:258 in operator+                                                          |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:261 in operator+                                                          |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:269 in operator-                                                          |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:272 in operator-                                                          |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:280 in operator-                                                          |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:283 in operator-                                                          |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:292 in operator*                                                          |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:295 in operator*                                                          |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:303 in operator*                                                          |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:306 in operator*                                                          |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:315 in operator/                                                          |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:318 in operator/                                                          |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:326 in operator/                                                          |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:329 in operator/                                                          |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:341 in scalar_to_yuv422_8                                                 |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:349 in yuv422_8_to_scalar                                                 |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:359 in scalar_to_yuv444_8                                                 |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:368 in yuv444_8_to_scalar                                                 |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:379 in scalar_to_rgb_8                                                    |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:388 in rgb_8_to_scalar                                                    |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:399 in scalar_to_yuva422_8                                                |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:408 in yuva422_8_to_scalar                                                |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:419 in scalar_to_yuva444_8                                                |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:429 in yuva444_8_to_scalar                                                |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:441 in scalar_to_rgba_8                                                   |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:451 in rgba_8_to_scalar                                                   |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:463 in scalar_to_yuva420_8                                                |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:471 in yuva420_8_to_scalar                                                |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:481 in scalar_to_yuvd422_8                                                |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:490 in yuvd422_8_to_scalar                                                |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:501 in scalar_to_yuvd444_8                                                |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:511 in yuvd444_8_to_scalar                                                |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:523 in scalar_to_rgbd_8                                                   |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:533 in rgbd_8_to_scalar                                                   |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:545 in scalar_to_bayer_8                                                  |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:552 in bayer_8_to_scalar                                                  |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:561 in scalar_to_luma_8                                                   |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:568 in luma_8_to_scalar                                                   |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:590 in read                                                               |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:597 in write                                                              |
+| aggregate            | variable=data_stream                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:598 in write, data_stream                                                 |
+| protocol             | floating                                                  | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:604 in write                                                              |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:606 in write                                                              |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:615 in operator>>                                                         |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:622 in operator<<                                                         |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:640 in mat<rows, cols, t>                                                 |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:646 in mat<rows, cols, t>                                                 |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:652 in mat<rows, cols, t>                                                 |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:658 in init                                                               |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:667 in assignto                                                           |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:674 in read                                                               |
+| protocol             | floating                                                  | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:681 in read                                                               |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:683 in read                                                               |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:692 in read                                                               |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:698 in write                                                              |
+| aggregate            | variable=data_stream                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:699 in write, data_stream                                                 |
+| protocol             | floating                                                  | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:705 in write                                                              |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:707 in write                                                              |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:715 in operator>>                                                         |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:721 in operator<<                                                         |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:727 in empty                                                              |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:730 in empty                                                              |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:742 in type                                                               |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:748 in depth                                                              |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_core.h:753 in channels                                                           |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_fast.h:49 in fast_pixel_diff                                                     |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_fast.h:91 in corescore                                                           |
+| array_partition      | variable=flag_d_min2 dim=0                                | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_fast.h:99 in corescore, flag_d_min2                                              |
+| array_partition      | variable=flag_d_max2 dim=0                                | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_fast.h:100 in corescore, flag_d_max2                                             |
+| array_partition      | variable=flag_d_min4 dim=0                                | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_fast.h:101 in corescore, flag_d_min4                                             |
+| array_partition      | variable=flag_d_max4 dim=0                                | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_fast.h:102 in corescore, flag_d_max4                                             |
+| array_partition      | variable=flag_val dim=0                                   | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_fast.h:160 in fast_judge, flag_val                                               |
+| array_partition      | variable=flag_d dim=0                                     | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_fast.h:161 in fast_judge, flag_d                                                 |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_fast.h:163 in fast_judge                                                         |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_fast.h:193 in fast_nonmax                                                        |
+| array_partition      | variable=flag_val dim=0                                   | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_fast.h:235 in fast_t_opr, flag_val                                               |
+| array_partition      | variable=flag_d dim=0                                     | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_fast.h:236 in fast_t_opr, flag_d                                                 |
+| loop_flatten         | off                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_fast.h:246 in fast_t_opr                                                         |
+| pipeline             | II=1                                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_fast.h:247 in fast_t_opr                                                         |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_fast.h:324 in fastx                                                              |
+| array_partition      | variable=flag_val dim=0                                   | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_fast.h:352 in fast_t_opr, flag_val                                               |
+| array_partition      | variable=flag_d dim=0                                     | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_fast.h:353 in fast_t_opr, flag_d                                                 |
+| loop_flatten         | off                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_fast.h:363 in fast_t_opr                                                         |
+| pipeline             | II=1                                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_fast.h:364 in fast_t_opr                                                         |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_fast.h:446 in fastx                                                              |
+| loop_flatten         | off                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_fast.h:474 in paintmask                                                          |
+| pipeline             | II=1                                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_fast.h:475 in paintmask                                                          |
+| array_partition      | variable=rect complete dim=1                              | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_haar.h:59 in haarfeature, rect                                                   |
+| array_partition      | variable=haar_feature complete dim=1                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_haar.h:70 in haarclassifier<feature_max>, haar_feature                           |
+| array_partition      | variable=classifier complete dim=1                        | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_haar.h:85 in haarstageclassifier<stage, classifier_all, feature_max>, classifier |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_haar.h:174 in intergral_win                                                      |
+| inline               | off                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_haar.h:191 in icvevalhidhaarclassifier                                           |
+| function_instantiate | variable=classifier                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_haar.h:192 in icvevalhidhaarclassifier, classifier                               |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_haar.h:227 in runhaarclassifiercascade                                           |
+| loop_flatten         | off                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_haar.h:284 in haarclassifierobject_opr                                           |
+| pipeline             |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_haar.h:285 in haarclassifierobject_opr                                           |
+| dependence           | array inter false                                         | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_haar.h:286 in haarclassifierobject_opr                                           |
+| expression_balance   | off                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_haar.h:289 in haarclassifierobject_opr                                           |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_haar.h:398 in haarclassifierobject                                               |
+| pipeline             |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_haar.h:462 in combin_mask                                                        |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_haar.h:503 in haarclassifierobject_group                                         |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_harris.h:88 in ismax                                                             |
+| loop_tripcount       | MAX=ROWS                                                  | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_harris.h:115 in findmax                                                          |
+| dependence           | ARRAY INTER FALSE                                         | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_harris.h:118 in findmax                                                          |
+| loop_tripcount       | MAX=COLS                                                  | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_harris.h:119 in findmax                                                          |
+| loop_flatten         | off                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_harris.h:120 in findmax                                                          |
+| pipeline             | II=1                                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_harris.h:121 in findmax                                                          |
+| loop_tripcount       | MAX=ROWS                                                  | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_harris.h:184 in calcim                                                           |
+| dependence           | ARRAY INTER FALSE                                         | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_harris.h:187 in calcim                                                           |
+| loop_tripcount       | MAX=COLS                                                  | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_harris.h:188 in calcim                                                           |
+| loop_flatten         | off                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_harris.h:189 in calcim                                                           |
+| pipeline             | II=1                                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_harris.h:190 in calcim                                                           |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_harris.h:214 in harris_opr                                                       |
+| dataflow             |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_harris.h:215 in harris_opr                                                       |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_harris.h:270 in cornerharris                                                     |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_harris.h:311 in harris                                                           |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_histogram.h:64 in equalize                                                       |
+| pipeline             |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_histogram.h:80 in equalize                                                       |
+| loop_flatten         | OFF                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_histogram.h:81 in equalize                                                       |
+| dependence           | array inter false                                         | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_histogram.h:82 in equalize                                                       |
+| latency              | min=0 max=1                                               | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_histogram.h:98 in equalize                                                       |
+| pipeline             |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_histogram.h:143 in equalize                                                      |
+| pipeline             |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_histogram.h:154 in equalize                                                      |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_histogram.h:178 in equalizehist                                                  |
+| array_partition      | variable=addr complete dim=0                              | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_hough.h:104 in houghpolar, addr                                                  |
+| array_partition      | variable=accbuf complete dim=0                            | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_hough.h:105 in houghpolar, accbuf                                                |
+| array_partition      | variable=sinval complete dim=0                            | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_hough.h:111 in houghpolar, sinval                                                |
+| array_partition      | variable=cosval complete dim=0                            | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_hough.h:112 in houghpolar, cosval                                                |
+| pipeline             |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_hough.h:117 in houghpolar                                                        |
+| pipeline             |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_hough.h:135 in houghpolar                                                        |
+| dependence           | array inter false                                         | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_hough.h:136 in houghpolar                                                        |
+| array_partition      | variable=&accum_buf complete dim=1                        | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_hough.h:178 in sort_insert, &accum_buf                                           |
+| array_partition      | variable=lines_val complete dim=1                         | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_hough.h:179 in sort_insert, lines_val                                            |
+| array_partition      | variable=lines complete dim=0                             | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_hough.h:180 in sort_insert, lines                                                |
+| array_partition      | variable=&accum_win complete dim=0                        | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_hough.h:181 in sort_insert, &accum_win                                           |
+| array_partition      | variable=lines_flag complete dim=0                        | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_hough.h:182 in sort_insert, lines_flag                                           |
+| dependence           | array intra false                                         | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_hough.h:198 in sort_insert                                                       |
+| dependence           | array inter false                                         | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_hough.h:199 in sort_insert                                                       |
+| pipeline             |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_hough.h:200 in sort_insert                                                       |
+| array_partition      | variable=_accum complete dim=1                            | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_hough.h:320 in houghlines2, _accum                                               |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgbase.h:115 in borderinterpolate                                               |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgbase.h:161 in normalizeanchor                                                 |
+| loop_tripcount       | min=20 max=2000                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgbase.h:188 in duplicateimagen                                                 |
+| loop_tripcount       | min=20 max=2000                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgbase.h:190 in duplicateimagen                                                 |
+| pipeline             |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgbase.h:192 in duplicateimagen                                                 |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:152 in apply                                                           |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:178 in apply                                                           |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:280 in apply                                                           |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:302 in apply                                                           |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:316 in getstructuringelement                                           |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:373 in fill_pixelkernel                                                |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:396 in filter                                                          |
+| array_partition      | variable=col_buf complete dim=0                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:413 in filter, col_buf                                                 |
+| array_partition      | variable=&kernel complete dim=0                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:414 in filter, &kernel                                                 |
+| array_partition      | variable=src_kernel_win complete dim=0                    | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:415 in filter, src_kernel_win                                          |
+| array_partition      | variable=k_buf complete dim=1                             | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:416 in filter, k_buf                                                   |
+| array_partition      | variable=right_border_buf complete dim=0                  | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:417 in filter, right_border_buf                                        |
+| dependence           | array inter false                                         | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:447 in filter                                                          |
+| loop_flatten         | OFF                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:448 in filter                                                          |
+| pipeline             |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:449 in filter                                                          |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:527 in get_parameters                                                  |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:589 in filter                                                          |
+| array_partition      | variable=&kernel complete dim=0                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:598 in filter, &kernel                                                 |
+| array_partition      | variable=src_kernel_win complete dim=0                    | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:599 in filter, src_kernel_win                                          |
+| array_partition      | variable=k_buf complete dim=1                             | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:600 in filter, k_buf                                                   |
+| array_partition      | variable=col_buf complete dim=0                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:601 in filter, col_buf                                                 |
+| loop_flatten         | OFF                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:628 in filter                                                          |
+| pipeline             |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:629 in filter                                                          |
+| array_partition      | variable=col_buf complete dim=0                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:716 in column_filter, col_buf                                          |
+| array_partition      | variable=&kernelY complete dim=0                          | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:717 in column_filter, &kernelY                                         |
+| array_partition      | variable=src_kernel_winY complete dim=0                   | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:718 in column_filter, src_kernel_winY                                  |
+| array_partition      | variable=k_buf complete dim=1                             | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:719 in column_filter, k_buf                                            |
+| dependence           | array inter false                                         | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:762 in column_filter                                                   |
+| loop_flatten         | OFF                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:763 in column_filter                                                   |
+| pipeline             |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:764 in column_filter                                                   |
+| array_partition      | variable=&kernelX complete dim=0                          | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:850 in row_filter, &kernelX                                            |
+| array_partition      | variable=src_kernel_winX complete dim=0                   | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:851 in row_filter, src_kernel_winX                                     |
+| array_partition      | variable=src_kernel_winX_temp complete dim=0              | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:852 in row_filter, src_kernel_winX_temp                                |
+| array_partition      | variable=row_buf complete dim=0                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:853 in row_filter, row_buf                                             |
+| array_partition      | variable=l_border_buf complete dim=1                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:854 in row_filter, l_border_buf                                        |
+| array_partition      | variable=r_border_buf complete dim=1                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:855 in row_filter, r_border_buf                                        |
+| dependence           | array inter false                                         | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:911 in row_filter                                                      |
+| loop_flatten         | OFF                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:912 in row_filter                                                      |
+| pipeline             |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:913 in row_filter                                                      |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:979 in filter                                                          |
+| dataflow             |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:980 in filter                                                          |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:1002 in filter                                                         |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:1023 in filter                                                         |
+| array_partition      | variable=&kernelX complete dim=0                          | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:1034 in filter, &kernelX                                               |
+| array_partition      | variable=&kernelY complete dim=0                          | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:1035 in filter, &kernelY                                               |
+| array_partition      | variable=src_kernel_winX complete dim=0                   | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:1036 in filter, src_kernel_winX                                        |
+| array_partition      | variable=src_kernel_winX_temp complete dim=0              | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:1037 in filter, src_kernel_winX_temp                                   |
+| array_partition      | variable=src_kernel_winY complete dim=0                   | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:1038 in filter, src_kernel_winY                                        |
+| array_partition      | variable=k_buf complete dim=1                             | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:1039 in filter, k_buf                                                  |
+| loop_flatten         | OFF                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:1060 in filter                                                         |
+| pipeline             |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:1061 in filter                                                         |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:1130 in filter                                                         |
+| dataflow             |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:1157 in filter_opr_iter                                                |
+| array_partition      | dim=1 type=complete variable=internal                     | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:1159 in filter_opr_iter, internal                                      |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:1163 in filter_opr_iter                                                |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:1174 in morp_opr                                                       |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:1196 in morp_opr                                                       |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:1241 in erode                                                          |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:1268 in dilate                                                         |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:1493 in convert                                                        |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:1509 in max                                                            |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:1518 in min                                                            |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:1555 in apply                                                          |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:1566 in apply                                                          |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:1707 in apply                                                          |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:1772 in apply                                                          |
+| array_partition      | variable=tab dim=0 complete                               | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:1783 in apply, tab                                                     |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:1822 in apply                                                          |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:1905 in apply                                                          |
+| array_partition      | variable=tab dim=0 complete                               | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:1916 in apply, tab                                                     |
+| loop_flatten         | OFF                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:1971 in cvtcolor                                                       |
+| pipeline             |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:1972 in cvtcolor                                                       |
+| loop_flatten         | OFF                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:1998 in integral                                                       |
+| pipeline             |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:1999 in integral                                                       |
+| loop_flatten         | OFF                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:2038 in integral                                                       |
+| pipeline             |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:2039 in integral                                                       |
+| inline               | off                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:2075 in init_scale_coefficients                                        |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:2106 in scale_operator                                                 |
+| array_partition      | variable= temp_in dim=0 complete                          | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:2146 in resize_opr_bicubic                                             |
+| array_partition      | variable= temp_out dim=0 complete                         | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:2147 in resize_opr_bicubic                                             |
+| array_partition      | variable= h_fir dim=0 complete                            | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:2148 in resize_opr_bicubic                                             |
+| array_partition      | variable= v_fir dim=0 complete                            | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:2149 in resize_opr_bicubic                                             |
+| array_partition      | variable=hcoeffs dim=2 complete                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:2150 in resize_opr_bicubic, hcoeffs                                    |
+| array_partition      | variable=vcoeffs dim=2 complete                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:2151 in resize_opr_bicubic, vcoeffs                                    |
+| pipeline             |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:2173 in resize_opr_bicubic                                             |
+| loop_flatten         | off                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:2174 in resize_opr_bicubic                                             |
+| dependence           | array inter false                                         | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:2175 in resize_opr_bicubic                                             |
+| loop_flatten         | OFF                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:2317 in resize_opr_linear                                              |
+| dependence           | array inter false                                         | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:2318 in resize_opr_linear                                              |
+| pipeline             |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:2319 in resize_opr_linear                                              |
+| loop_flatten         | OFF                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:2501 in convertscale                                                   |
+| pipeline             |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:2502 in convertscale                                                   |
+| loop_flatten         | OFF                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:2530 in convertscaleabs                                                |
+| pipeline             |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:2531 in convertscaleabs                                                |
+| inline               | off                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:2639 in getgaussiankernel                                              |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:2776 in pyrup_opr                                                      |
+| array_partition      | variable=col_buf complete dim=0                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:2787 in pyrup_opr, col_buf                                             |
+| array_partition      | variable=&kernel complete dim=0                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:2788 in pyrup_opr, &kernel                                             |
+| array_partition      | variable=src_kernel_win complete dim=0                    | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:2789 in pyrup_opr, src_kernel_win                                      |
+| array_partition      | variable=k_buf complete dim=1                             | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:2790 in pyrup_opr, k_buf                                               |
+| array_partition      | variable=right_border_buf complete dim=0                  | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:2791 in pyrup_opr, right_border_buf                                    |
+| loop_flatten         | OFF                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:2803 in pyrup_opr                                                      |
+| dependence           | array inter false                                         | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:2804 in pyrup_opr                                                      |
+| pipeline             |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:2805 in pyrup_opr                                                      |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:2972 in pyrdown_opr                                                    |
+| array_partition      | variable=col_buf complete dim=0                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:2983 in pyrdown_opr, col_buf                                           |
+| array_partition      | variable=&kernel complete dim=0                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:2984 in pyrdown_opr, &kernel                                           |
+| array_partition      | variable=src_kernel_win complete dim=0                    | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:2985 in pyrdown_opr, src_kernel_win                                    |
+| array_partition      | variable=k_buf complete dim=1                             | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:2986 in pyrdown_opr, k_buf                                             |
+| array_partition      | variable=right_border_buf complete dim=0                  | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:2987 in pyrdown_opr, right_border_buf                                  |
+| loop_flatten         | OFF                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:3004 in pyrdown_opr                                                    |
+| dependence           | array inter false                                         | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:3005 in pyrdown_opr                                                    |
+| pipeline             |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_imgproc.h:3006 in pyrdown_opr                                                    |
+| pipeline             | II=1                                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_io.h:66 in axivideo2mat                                                          |
+| loop_tripcount       | avg=0 max=0                                               | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_io.h:67 in axivideo2mat                                                          |
+| loop_flatten         | off                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_io.h:74 in axivideo2mat                                                          |
+| pipeline             | II=1                                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_io.h:75 in axivideo2mat                                                          |
+| pipeline             | II=1                                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_io.h:97 in axivideo2mat                                                          |
+| loop_tripcount       | avg=0 max=0                                               | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_io.h:98 in axivideo2mat                                                          |
+| loop_flatten         | off                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_io.h:127 in mat2axivideo                                                         |
+| pipeline             | II=1                                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_io.h:128 in mat2axivideo                                                         |
+| loop_flatten         | off                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_io.h:176 in array2mat                                                            |
+| pipeline             | II=1                                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_io.h:177 in array2mat                                                            |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_io.h:183 in array2mat                                                            |
+| loop_flatten         | off                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_io.h:242 in mat2array                                                            |
+| pipeline             | II=1                                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_io.h:243 in mat2array                                                            |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_io.h:248 in mat2array                                                            |
+| array_partition      | variable=val dim=1 complete                               | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:52 in window<rows, cols, t>, val                                           |
+| array_partition      | variable=val dim=2 complete                               | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:53 in window<rows, cols, t>, val                                           |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:114 in shift_pixels_left                                                   |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:124 in shift_pixels_left                                                   |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:126 in shift_pixels_left                                                   |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:152 in shift_pixels_right                                                  |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:162 in shift_pixels_right                                                  |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:164 in shift_pixels_right                                                  |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:190 in shift_pixels_up                                                     |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:200 in shift_pixels_up                                                     |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:202 in shift_pixels_up                                                     |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:228 in shift_pixels_down                                                   |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:238 in shift_pixels_down                                                   |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:240 in shift_pixels_down                                                   |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:265 in insert_pixel                                                        |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:297 in insert_row                                                          |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:307 in insert_row                                                          |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:332 in insert_top_row                                                      |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:363 in insert_bottom_row                                                   |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:394 in insert_col                                                          |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:404 in insert_col                                                          |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:429 in insert_left_col                                                     |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:460 in insert_right_col                                                    |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:491 in getval                                                              |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:500 in operator()                                                          |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:532 in shift_left                                                          |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:542 in shift_right                                                         |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:552 in shift_up                                                            |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:562 in shift_down                                                          |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:572 in insert                                                              |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:582 in insert_top                                                          |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:592 in insert_bottom                                                       |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:602 in insert_left                                                         |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:612 in insert_right                                                        |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:624 in linebuffer<rows, cols, type-parameter-0-2, 0>                       |
+| array_partition      | variable=val dim=1 complete                               | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:625 in linebuffer<rows, cols, type-parameter-0-2, 0>, val                  |
+| dependence           | variable=val inter false                                  | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:626 in linebuffer<rows, cols, type-parameter-0-2, 0>, val                  |
+| dependence           | variable=val intra false                                  | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:627 in linebuffer<rows, cols, type-parameter-0-2, 0>, val                  |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:678 in shift_pixels_down                                                   |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:689 in shift_pixels_down                                                   |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:718 in shift_pixels_up                                                     |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:729 in shift_pixels_up                                                     |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:757 in insert_bottom_row                                                   |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:789 in insert_top_row                                                      |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:821 in get_col                                                             |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:825 in get_col                                                             |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:834 in getval                                                              |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:843 in operator()                                                          |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:853 in shift_down                                                          |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:863 in shift_up                                                            |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:873 in insert_bottom                                                       |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:883 in insert_top                                                          |
+| array_reshape        | variable=val dim=1                                        | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:912 in linebuffer<rows, cols, type-parameter-0-2, 1>, val                  |
+| dependence           | variable=val inter false                                  | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:913 in linebuffer<rows, cols, type-parameter-0-2, 1>, val                  |
+| dependence           | variable=val intra false                                  | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:914 in linebuffer<rows, cols, type-parameter-0-2, 1>, val                  |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:966 in shift_pixels_down                                                   |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:977 in shift_pixels_down                                                   |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:1006 in shift_pixels_up                                                    |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:1017 in shift_pixels_up                                                    |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:1045 in insert_bottom_row                                                  |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:1077 in insert_top_row                                                     |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:1109 in get_col                                                            |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:1113 in get_col                                                            |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:1122 in getval                                                             |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:1131 in operator()                                                         |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:1141 in shift_down                                                         |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:1151 in shift_up                                                           |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:1161 in insert_bottom                                                      |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_mem.h:1171 in insert_top                                                         |
+| array_partition      | variable=tmp complete dim=0                               | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_stereobm.h:164 in prefilternorm, tmp                                             |
+| array_partition      | variable=tmp complete dim=0                               | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_stereobm.h:166 in prefilternorm, tmp                                             |
+| loop_flatten         | off                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_stereobm.h:178 in prefilternorm                                                  |
+| pipeline             | II=1                                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_stereobm.h:179 in prefilternorm                                                  |
+| pipeline             | II=1                                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_stereobm.h:229 in clip                                                           |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_stereobm.h:242 in absdiff                                                        |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_stereobm.h:265 in updatetexture                                                  |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_stereobm.h:282 in sad_compute_inc                                                |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_stereobm.h:307 in find                                                           |
+| array_partition      | variable=a complete dim=0                                 | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_stereobm.h:308 in find, a                                                        |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_stereobm.h:336 in find                                                           |
+| array_partition      | variable=a complete dim=0                                 | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_stereobm.h:337 in find, a                                                        |
+| inline               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_stereobm.h:348 in find                                                           |
+| array_partition      | variable=a complete dim=0                                 | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_stereobm.h:349 in find, a                                                        |
+| array_partition      | variable=l_tmp complete dim=0                             | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_stereobm.h:387 in sadblockmatching, l_tmp                                        |
+| array_partition      | variable=r_tmp complete dim=0                             | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_stereobm.h:389 in sadblockmatching, r_tmp                                        |
+| array_partition      | variable=sad complete dim=0                               | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_stereobm.h:392 in sadblockmatching, sad                                          |
+| array_partition      | variable=sad_cols complete dim=0                          | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_stereobm.h:394 in sadblockmatching, sad_cols                                     |
+| loop_flatten         | off                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_stereobm.h:411 in sadblockmatching                                               |
+| pipeline             | II=1                                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_stereobm.h:412 in sadblockmatching                                               |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_stereobm.h:416 in sadblockmatching                                               |
+| unroll               |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_stereobm.h:419 in sadblockmatching                                               |
+| dataflow             |                                                           | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_stereobm.h:575 in findstereocorrespondencebm                                     |
+| loop_flatten         | OFF                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_undistort.h:229 in remap_nearest                                                 |
+| pipeline             | II=1                                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_undistort.h:232 in remap_nearest                                                 |
+| dependence           | array inter false                                         | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_undistort.h:233 in remap_nearest                                                 |
+| array_partition      | complete variable=buf dim=2                               | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_undistort.h:274 in remap_linear, buf                                             |
+| array_partition      | complete variable=buf dim=4                               | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_undistort.h:275 in remap_linear, buf                                             |
+| loop_flatten         | OFF                                                       | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_undistort.h:289 in remap_linear                                                  |
+| pipeline             | II=1                                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_undistort.h:292 in remap_linear                                                  |
+| dependence           | array inter false                                         | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_undistort.h:293 in remap_linear                                                  |
+| array_partition      | variable=distCoeffs complete                              | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_undistort.h:673 in initundistortrectifymapinverse, distCoeffs                    |
+| pipeline             | II=1                                                      | ../../pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls/hls_video_undistort.h:687 in initundistortrectifymapinverse                                |
+| dataflow             |                                                           | prj/sol/.autopilot/db/v_tpg.cpp:287 in v_tpghlsdataflow                                                                                                         |
+| stream               | variable=bckgndYUV depth=16                               | prj/sol/.autopilot/db/v_tpg.cpp:289 in v_tpghlsdataflow, bckgndYUV                                                                                              |
+| stream               | variable=ovrlayYUV depth=16                               | prj/sol/.autopilot/db/v_tpg.cpp:290 in v_tpghlsdataflow, ovrlayYUV                                                                                              |
+| interface            | axis port=m_axis_video register                           | prj/sol/.autopilot/db/v_tpg.cpp:386 in v_tpg, m_axis_video                                                                                                      |
+| interface            | s_axilite port=height bundle=CTRL offset=0x10             | prj/sol/.autopilot/db/v_tpg.cpp:388 in v_tpg, height                                                                                                            |
+| interface            | s_axilite port=width bundle=CTRL offset=0x18              | prj/sol/.autopilot/db/v_tpg.cpp:389 in v_tpg, width                                                                                                             |
+| interface            | s_axilite port=bckgndId bundle=CTRL offset=0x20           | prj/sol/.autopilot/db/v_tpg.cpp:399 in v_tpg, bckgndId                                                                                                          |
+| interface            | s_axilite port=ovrlayId bundle=CTRL offset=0x28           | prj/sol/.autopilot/db/v_tpg.cpp:400 in v_tpg, ovrlayId                                                                                                          |
+| interface            | s_axilite port=maskId bundle=CTRL offset=0x30             | prj/sol/.autopilot/db/v_tpg.cpp:401 in v_tpg, maskId                                                                                                            |
+| interface            | s_axilite port=motionSpeed bundle=CTRL offset=0x38        | prj/sol/.autopilot/db/v_tpg.cpp:402 in v_tpg, motionSpeed                                                                                                       |
+| interface            | s_axilite port=colorFormat bundle=CTRL offset=0x40        | prj/sol/.autopilot/db/v_tpg.cpp:403 in v_tpg, colorFormat                                                                                                       |
+| interface            | s_axilite port=crossHairX bundle=CTRL offset=0x48         | prj/sol/.autopilot/db/v_tpg.cpp:404 in v_tpg, crossHairX                                                                                                        |
+| interface            | s_axilite port=crossHairY bundle=CTRL offset=0x50         | prj/sol/.autopilot/db/v_tpg.cpp:405 in v_tpg, crossHairY                                                                                                        |
+| interface            | s_axilite port=ZplateHorContStart bundle=CTRL offset=0x58 | prj/sol/.autopilot/db/v_tpg.cpp:406 in v_tpg, ZplateHorContStart                                                                                                |
+| interface            | s_axilite port=ZplateHorContDelta bundle=CTRL offset=0x60 | prj/sol/.autopilot/db/v_tpg.cpp:407 in v_tpg, ZplateHorContDelta                                                                                                |
+| interface            | s_axilite port=ZplateVerContStart bundle=CTRL offset=0x68 | prj/sol/.autopilot/db/v_tpg.cpp:408 in v_tpg, ZplateVerContStart                                                                                                |
+| interface            | s_axilite port=ZplateVerContDelta bundle=CTRL offset=0x70 | prj/sol/.autopilot/db/v_tpg.cpp:409 in v_tpg, ZplateVerContDelta                                                                                                |
+| interface            | s_axilite port=boxSize bundle=CTRL offset=0x78            | prj/sol/.autopilot/db/v_tpg.cpp:410 in v_tpg, boxSize                                                                                                           |
+| interface            | s_axilite port=boxColorR bundle=CTRL offset=0x80          | prj/sol/.autopilot/db/v_tpg.cpp:411 in v_tpg, boxColorR                                                                                                         |
+| interface            | s_axilite port=boxColorG bundle=CTRL offset=0x88          | prj/sol/.autopilot/db/v_tpg.cpp:412 in v_tpg, boxColorG                                                                                                         |
+| interface            | s_axilite port=boxColorB bundle=CTRL offset=0x90          | prj/sol/.autopilot/db/v_tpg.cpp:413 in v_tpg, boxColorB                                                                                                         |
+| interface            | s_axilite port=dpDynamicRange bundle=CTRL offset=0xc0     | prj/sol/.autopilot/db/v_tpg.cpp:414 in v_tpg, dpDynamicRange                                                                                                    |
+| interface            | s_axilite port=dpYUVCoef bundle=CTRL offset=0xc8          | prj/sol/.autopilot/db/v_tpg.cpp:415 in v_tpg, dpYUVCoef                                                                                                         |
+| interface            | s_axilite port=field_id bundle=CTRL offset=0xd0           | prj/sol/.autopilot/db/v_tpg.cpp:416 in v_tpg, field_id                                                                                                          |
+| interface            | s_axilite port=bck_motion_en bundle=CTRL offset=0xd8      | prj/sol/.autopilot/db/v_tpg.cpp:417 in v_tpg, bck_motion_en                                                                                                     |
+| interface            | s_axilite port=return bundle=CTRL                         | prj/sol/.autopilot/db/v_tpg.cpp:418 in v_tpg, return                                                                                                            |
+| stable               | variable=width                                            | prj/sol/.autopilot/db/v_tpg.cpp:420 in v_tpg, width                                                                                                             |
+| stable               | variable=height                                           | prj/sol/.autopilot/db/v_tpg.cpp:421 in v_tpg, height                                                                                                            |
+| stable               | variable=field_id                                         | prj/sol/.autopilot/db/v_tpg.cpp:422 in v_tpg, field_id                                                                                                          |
+| stable               | variable=bck_motion_en                                    | prj/sol/.autopilot/db/v_tpg.cpp:423 in v_tpg, bck_motion_en                                                                                                     |
+| interface            | ap_none port=fid                                          | prj/sol/.autopilot/db/v_tpg.cpp:424 in v_tpg, fid                                                                                                               |
+| stable               | variable=fid_in                                           | prj/sol/.autopilot/db/v_tpg.cpp:425 in v_tpg, fid_in                                                                                                            |
+| stable               | variable=bckgndId                                         | prj/sol/.autopilot/db/v_tpg.cpp:435 in v_tpg, bckgndId                                                                                                          |
+| stable               | variable=ovrlayId                                         | prj/sol/.autopilot/db/v_tpg.cpp:436 in v_tpg, ovrlayId                                                                                                          |
+| stable               | variable=maskId                                           | prj/sol/.autopilot/db/v_tpg.cpp:437 in v_tpg, maskId                                                                                                            |
+| stable               | variable=motionSpeed                                      | prj/sol/.autopilot/db/v_tpg.cpp:438 in v_tpg, motionSpeed                                                                                                       |
+| stable               | variable=colorFormat                                      | prj/sol/.autopilot/db/v_tpg.cpp:439 in v_tpg, colorFormat                                                                                                       |
+| stable               | variable=crossHairX                                       | prj/sol/.autopilot/db/v_tpg.cpp:440 in v_tpg, crossHairX                                                                                                        |
+| stable               | variable=crossHairY                                       | prj/sol/.autopilot/db/v_tpg.cpp:441 in v_tpg, crossHairY                                                                                                        |
+| stable               | variable=ZplateHorContStart                               | prj/sol/.autopilot/db/v_tpg.cpp:442 in v_tpg, ZplateHorContStart                                                                                                |
+| stable               | variable=ZplateHorContDelta                               | prj/sol/.autopilot/db/v_tpg.cpp:443 in v_tpg, ZplateHorContDelta                                                                                                |
+| stable               | variable=ZplateVerContStart                               | prj/sol/.autopilot/db/v_tpg.cpp:444 in v_tpg, ZplateVerContStart                                                                                                |
+| stable               | variable=ZplateVerContDelta                               | prj/sol/.autopilot/db/v_tpg.cpp:445 in v_tpg, ZplateVerContDelta                                                                                                |
+| stable               | variable=boxSize                                          | prj/sol/.autopilot/db/v_tpg.cpp:446 in v_tpg, boxSize                                                                                                           |
+| stable               | variable=boxColorR                                        | prj/sol/.autopilot/db/v_tpg.cpp:447 in v_tpg, boxColorR                                                                                                         |
+| stable               | variable=boxColorG                                        | prj/sol/.autopilot/db/v_tpg.cpp:448 in v_tpg, boxColorG                                                                                                         |
+| stable               | variable=boxColorB                                        | prj/sol/.autopilot/db/v_tpg.cpp:449 in v_tpg, boxColorB                                                                                                         |
+| stable               | variable=dpDynamicRange                                   | prj/sol/.autopilot/db/v_tpg.cpp:450 in v_tpg, dpDynamicRange                                                                                                    |
+| stable               | variable=dpYUVCoef                                        | prj/sol/.autopilot/db/v_tpg.cpp:451 in v_tpg, dpYUVCoef                                                                                                         |
+| loop_flatten         | OFF                                                       | prj/sol/.autopilot/db/v_tpg.cpp:522 in tpgbackground                                                                                                            |
+| pipeline             | II=1                                                      | prj/sol/.autopilot/db/v_tpg.cpp:523 in tpgbackground                                                                                                            |
+| loop_flatten         | OFF                                                       | prj/sol/.autopilot/db/v_tpg.cpp:731 in tpgforeground                                                                                                            |
+| pipeline             | II=1                                                      | prj/sol/.autopilot/db/v_tpg.cpp:732 in tpgforeground                                                                                                            |
+| pipeline             | II=1                                                      | prj/sol/.autopilot/db/v_tpg.cpp:794 in axivideo2multipixstream                                                                                                  |
+| loop_tripcount       | avg=0 max=0                                               | prj/sol/.autopilot/db/v_tpg.cpp:795 in axivideo2multipixstream                                                                                                  |
+| loop_flatten         | off                                                       | prj/sol/.autopilot/db/v_tpg.cpp:807 in axivideo2multipixstream                                                                                                  |
+| pipeline             | II=1                                                      | prj/sol/.autopilot/db/v_tpg.cpp:808 in axivideo2multipixstream                                                                                                  |
+| array_partition      | variable=map complete dim=0                               | prj/sol/.autopilot/db/v_tpg.cpp:831 in axivideo2multipixstream, map                                                                                             |
+| pipeline             | II=1                                                      | prj/sol/.autopilot/db/v_tpg.cpp:854 in axivideo2multipixstream                                                                                                  |
+| loop_tripcount       | avg=0 max=0                                               | prj/sol/.autopilot/db/v_tpg.cpp:855 in axivideo2multipixstream                                                                                                  |
+| loop_flatten         | off                                                       | prj/sol/.autopilot/db/v_tpg.cpp:938 in multipixstream2axivideo                                                                                                  |
+| pipeline             | II=1                                                      | prj/sol/.autopilot/db/v_tpg.cpp:939 in multipixstream2axivideo                                                                                                  |
++----------------------+-----------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+

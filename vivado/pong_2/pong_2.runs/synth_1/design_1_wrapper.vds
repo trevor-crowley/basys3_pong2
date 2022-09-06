@@ -1,0 +1,586 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Mon Sep  5 13:11:02 2022
+# Process ID: 79273
+# Current directory: /home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1
+# Command line: vivado -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+# Log file: /home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/design_1_wrapper.vds
+# Journal file: /home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/vivado.jou
+# Running On: ubuntu-dev2, OS: Linux, CPU Frequency: 3193.980 MHz, CPU Physical cores: 4, Host memory: 16778 MB
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/trevor/repo/CrowdSupplyWorkShop1'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2022.1/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'adiuvo_engineering:hls:hud_gen:1.0'. The one found in IP location '/home/trevor/repo/CrowdSupplyWorkShop1/adiuvo_engineering_hls_hud_gen_1_0_1' will take precedence over the same IP in locations: 
+   /home/trevor/repo/CrowdSupplyWorkShop1/adiuvo_engineering_hls_hud_gen_1_0_4
+   /home/trevor/repo/CrowdSupplyWorkShop1/adiuvo_engineering_hls_hud_gen_1_0
+   /home/trevor/repo/CrowdSupplyWorkShop1/adiuvo_engineering_hls_hud_gen_1_0_5
+   /home/trevor/repo/CrowdSupplyWorkShop1/adiuvo_engineering_hls_hud_gen_1_0_2
+   /home/trevor/repo/CrowdSupplyWorkShop1/adiuvo_engineering_hls_hud_gen_1_0_3
+add_files: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2602.066 ; gain = 8.020 ; free physical = 7630 ; free virtual = 13648
+Command: synth_design -top design_1_wrapper -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 79317
+WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [/opt/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2602.066 ; gain = 0.000 ; free physical = 5845 ; free virtual = 11863
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_1' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_axi_gpio_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_0' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_axi_gpio_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_uartlite_0_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_axi_uartlite_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_uartlite_0_0' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_axi_uartlite_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'design_1_axi_uartlite_0_0' is unconnected for instance 'axi_uartlite_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:279]
+WARNING: [Synth 8-7023] instance 'axi_uartlite_0' of module 'design_1_axi_uartlite_0_0' has 22 connections declared, but only 21 given [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:279]
+INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_0_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_0_0' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_hud_gen_0_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_hud_gen_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_hud_gen_0_0' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_hud_gen_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'design_1_hud_gen_0_0' is unconnected for instance 'hud_gen_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:308]
+WARNING: [Synth 8-7023] instance 'hud_gen_0' of module 'design_1_hud_gen_0_0' has 29 connections declared, but only 28 given [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:308]
+INFO: [Synth 8-6157] synthesizing module 'design_1_mdm_1_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_mdm_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_mdm_1_0' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_mdm_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_microblaze_0_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_microblaze_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_microblaze_0_0' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_microblaze_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'Interrupt_Ack' of module 'design_1_microblaze_0_0' is unconnected for instance 'microblaze_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:350]
+WARNING: [Synth 8-7023] instance 'microblaze_0' of module 'design_1_microblaze_0_0' has 52 connections declared, but only 51 given [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:350]
+INFO: [Synth 8-6157] synthesizing module 'design_1_microblaze_0_axi_periph_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:733]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_8RVYHO' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:1739]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_8RVYHO' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:1739]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1UTB3Y5' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:1871]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1UTB3Y5' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:1871]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_7ANRHB' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:2003]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_cc_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_auto_cc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_cc_0' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_auto_cc_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_auto_cc_0' is unconnected for instance 'auto_cc' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:2166]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_auto_cc_0' is unconnected for instance 'auto_cc' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:2166]
+WARNING: [Synth 8-7023] instance 'auto_cc' of module 'design_1_auto_cc_0' has 42 connections declared, but only 40 given [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:2166]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_7ANRHB' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:2003]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_1W07O72' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:2209]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_cc_1' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_auto_cc_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_cc_1' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_auto_cc_1_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_auto_cc_1' is unconnected for instance 'auto_cc' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:2372]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_auto_cc_1' is unconnected for instance 'auto_cc' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:2372]
+WARNING: [Synth 8-7023] instance 'auto_cc' of module 'design_1_auto_cc_1' has 42 connections declared, but only 40 given [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:2372]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1W07O72' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:2209]
+INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_5LX7BU' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:2415]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_cc_2' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_auto_cc_2_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_cc_2' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_auto_cc_2_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_auto_cc_2' is unconnected for instance 'auto_cc' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:2578]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_auto_cc_2' is unconnected for instance 'auto_cc' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:2578]
+WARNING: [Synth 8-7023] instance 'auto_cc' of module 'design_1_auto_cc_2' has 42 connections declared, but only 40 given [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:2578]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_5LX7BU' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:2415]
+INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_1XR4ZAZ' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:2621]
+INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_1XR4ZAZ' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:2621]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1RZP34U' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:2987]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1RZP34U' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:2987]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_xbar_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_xbar_0_stub.v:5]
+WARNING: [Synth 8-689] width (15) of port connection 'm_axi_arprot' does not match port width (18) of module 'design_1_xbar_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:1700]
+WARNING: [Synth 8-689] width (15) of port connection 'm_axi_awprot' does not match port width (18) of module 'design_1_xbar_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:1704]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_microblaze_0_axi_periph_0' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:733]
+INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_1K0VQXK' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:2753]
+INFO: [Synth 8-6157] synthesizing module 'design_1_dlmb_bram_if_cntlr_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_dlmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_dlmb_bram_if_cntlr_0' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_dlmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_dlmb_v10_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_dlmb_v10_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_dlmb_v10_0' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_dlmb_v10_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'design_1_dlmb_v10_0' is unconnected for instance 'dlmb_v10' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:2899]
+WARNING: [Synth 8-7023] instance 'dlmb_v10' of module 'design_1_dlmb_v10_0' has 25 connections declared, but only 24 given [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:2899]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ilmb_bram_if_cntlr_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_ilmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ilmb_bram_if_cntlr_0' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_ilmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ilmb_v10_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_ilmb_v10_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ilmb_v10_0' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_ilmb_v10_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'design_1_ilmb_v10_0' is unconnected for instance 'ilmb_v10' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:2945]
+WARNING: [Synth 8-7023] instance 'ilmb_v10' of module 'design_1_ilmb_v10_0' has 25 connections declared, but only 24 given [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:2945]
+INFO: [Synth 8-6157] synthesizing module 'design_1_lmb_bram_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_lmb_bram_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_lmb_bram_0' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_lmb_bram_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'design_1_lmb_bram_0' is unconnected for instance 'lmb_bram' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:2970]
+WARNING: [Synth 8-7071] port 'rstb_busy' of module 'design_1_lmb_bram_0' is unconnected for instance 'lmb_bram' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:2970]
+WARNING: [Synth 8-7023] instance 'lmb_bram' of module 'design_1_lmb_bram_0' has 16 connections declared, but only 14 given [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:2970]
+INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_1K0VQXK' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:2753]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_clk_wiz_0_20M_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_rst_clk_wiz_0_20M_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_clk_wiz_0_20M_0' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_rst_clk_wiz_0_20M_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_rst_clk_wiz_0_20M_0' is unconnected for instance 'rst_clk_wiz_0_20M' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:562]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_rst_clk_wiz_0_20M_0' is unconnected for instance 'rst_clk_wiz_0_20M' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:562]
+WARNING: [Synth 8-7023] instance 'rst_clk_wiz_0_20M' of module 'design_1_rst_clk_wiz_0_20M_0' has 10 connections declared, but only 8 given [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:562]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_clk_wiz_0_25M_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_rst_clk_wiz_0_25M_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_clk_wiz_0_25M_0' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_rst_clk_wiz_0_25M_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_rst_clk_wiz_0_25M_0' is unconnected for instance 'rst_clk_wiz_0_25M' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:571]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_rst_clk_wiz_0_25M_0' is unconnected for instance 'rst_clk_wiz_0_25M' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:571]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_rst_clk_wiz_0_25M_0' is unconnected for instance 'rst_clk_wiz_0_25M' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:571]
+WARNING: [Synth 8-7023] instance 'rst_clk_wiz_0_25M' of module 'design_1_rst_clk_wiz_0_25M_0' has 10 connections declared, but only 7 given [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:571]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_clk_wiz_0_50M_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_rst_clk_wiz_0_50M_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_clk_wiz_0_50M_0' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_rst_clk_wiz_0_50M_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_rst_clk_wiz_0_50M_0' is unconnected for instance 'rst_clk_wiz_0_50M' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:579]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_rst_clk_wiz_0_50M_0' is unconnected for instance 'rst_clk_wiz_0_50M' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:579]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_rst_clk_wiz_0_50M_0' is unconnected for instance 'rst_clk_wiz_0_50M' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:579]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_rst_clk_wiz_0_50M_0' is unconnected for instance 'rst_clk_wiz_0_50M' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:579]
+WARNING: [Synth 8-7023] instance 'rst_clk_wiz_0_50M' of module 'design_1_rst_clk_wiz_0_50M_0' has 10 connections declared, but only 6 given [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:579]
+INFO: [Synth 8-6157] synthesizing module 'design_1_seven_segment_0_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_seven_segment_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_seven_segment_0_0' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_seven_segment_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_axi4s_vid_out_0_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_v_axi4s_vid_out_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_axi4s_vid_out_0_0' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_v_axi4s_vid_out_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'vid_active_video' of module 'design_1_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:591]
+WARNING: [Synth 8-7071] port 'vid_vblank' of module 'design_1_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:591]
+WARNING: [Synth 8-7071] port 'vid_hblank' of module 'design_1_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:591]
+WARNING: [Synth 8-7071] port 'vid_field_id' of module 'design_1_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:591]
+WARNING: [Synth 8-7071] port 'locked' of module 'design_1_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:591]
+WARNING: [Synth 8-7071] port 'overflow' of module 'design_1_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:591]
+WARNING: [Synth 8-7071] port 'underflow' of module 'design_1_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:591]
+WARNING: [Synth 8-7071] port 'fifo_read_level' of module 'design_1_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:591]
+WARNING: [Synth 8-7071] port 'status' of module 'design_1_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:591]
+WARNING: [Synth 8-7023] instance 'v_axi4s_vid_out_0' of module 'design_1_v_axi4s_vid_out_0_0' has 32 connections declared, but only 23 given [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:591]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_mix_0_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_v_mix_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_mix_0_0' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_v_mix_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'design_1_v_mix_0_0' is unconnected for instance 'v_mix_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:615]
+WARNING: [Synth 8-7071] port 'm_axis_video_TKEEP' of module 'design_1_v_mix_0_0' is unconnected for instance 'v_mix_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:615]
+WARNING: [Synth 8-7071] port 'm_axis_video_TSTRB' of module 'design_1_v_mix_0_0' is unconnected for instance 'v_mix_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:615]
+WARNING: [Synth 8-7071] port 'm_axis_video_TID' of module 'design_1_v_mix_0_0' is unconnected for instance 'v_mix_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:615]
+WARNING: [Synth 8-7071] port 'm_axis_video_TDEST' of module 'design_1_v_mix_0_0' is unconnected for instance 'v_mix_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:615]
+WARNING: [Synth 8-7023] instance 'v_mix_0' of module 'design_1_v_mix_0_0' has 47 connections declared, but only 42 given [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:615]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_tc_0_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_v_tc_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_tc_0_0' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_v_tc_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'irq' of module 'design_1_v_tc_0_0' is unconnected for instance 'v_tc_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:658]
+WARNING: [Synth 8-7071] port 'fsync_out' of module 'design_1_v_tc_0_0' is unconnected for instance 'v_tc_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:658]
+WARNING: [Synth 8-7023] instance 'v_tc_0' of module 'design_1_v_tc_0_0' has 33 connections declared, but only 31 given [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:658]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_tpg_0_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_v_tpg_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_tpg_0_0' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/.Xil/Vivado-79273-ubuntu-dev2/realtime/design_1_v_tpg_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'fid' of module 'design_1_v_tpg_0_0' is unconnected for instance 'v_tpg_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:690]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'design_1_v_tpg_0_0' is unconnected for instance 'v_tpg_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:690]
+WARNING: [Synth 8-7023] instance 'v_tpg_0' of module 'design_1_v_tpg_0_0' has 31 connections declared, but only 29 given [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:690]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlconstant_0_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconstant_0_0' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlslice_0_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_xlslice_0_0/synth/design_1_xlslice_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_0_0' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_xlslice_0_0/synth/design_1_xlslice_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlslice_1_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_xlslice_1_0/synth/design_1_xlslice_1_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_1_0' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_xlslice_1_0/synth/design_1_xlslice_1_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlslice_2_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_xlslice_2_0/synth/design_1_xlslice_2_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_2_0' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_xlslice_2_0/synth/design_1_xlslice_2_0.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/synth/design_1.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+WARNING: [Synth 8-7129] Port Din[23] in module xlslice_v1_0_2_xlslice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[22] in module xlslice_v1_0_2_xlslice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[21] in module xlslice_v1_0_2_xlslice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[20] in module xlslice_v1_0_2_xlslice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[19] in module xlslice_v1_0_2_xlslice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[18] in module xlslice_v1_0_2_xlslice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[17] in module xlslice_v1_0_2_xlslice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[16] in module xlslice_v1_0_2_xlslice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[15] in module xlslice_v1_0_2_xlslice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[14] in module xlslice_v1_0_2_xlslice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[13] in module xlslice_v1_0_2_xlslice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[12] in module xlslice_v1_0_2_xlslice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[11] in module xlslice_v1_0_2_xlslice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[10] in module xlslice_v1_0_2_xlslice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[9] in module xlslice_v1_0_2_xlslice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[8] in module xlslice_v1_0_2_xlslice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[7] in module xlslice_v1_0_2_xlslice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[6] in module xlslice_v1_0_2_xlslice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[5] in module xlslice_v1_0_2_xlslice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[4] in module xlslice_v1_0_2_xlslice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[0] in module xlslice_v1_0_2_xlslice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[23] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[22] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[21] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[20] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[19] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[18] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[17] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[16] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[15] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[14] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[13] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[12] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[8] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[7] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[6] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[5] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[4] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[3] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[2] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[1] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[0] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[23] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[22] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[21] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[20] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[16] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[15] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[14] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[13] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[12] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[11] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[10] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[9] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[8] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[7] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[6] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[5] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[4] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[3] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[2] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[1] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[0] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module s00_couplers_imp_1RZP34U is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_1RZP34U is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module s00_couplers_imp_1RZP34U is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module s00_couplers_imp_1RZP34U is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m05_couplers_imp_1XR4ZAZ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m05_couplers_imp_1XR4ZAZ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module m05_couplers_imp_1XR4ZAZ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module m05_couplers_imp_1XR4ZAZ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_araddr[31] in module m04_couplers_imp_5LX7BU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_araddr[30] in module m04_couplers_imp_5LX7BU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_araddr[29] in module m04_couplers_imp_5LX7BU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_araddr[28] in module m04_couplers_imp_5LX7BU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_araddr[27] in module m04_couplers_imp_5LX7BU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_araddr[26] in module m04_couplers_imp_5LX7BU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_araddr[25] in module m04_couplers_imp_5LX7BU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_araddr[24] in module m04_couplers_imp_5LX7BU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_araddr[23] in module m04_couplers_imp_5LX7BU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_araddr[22] in module m04_couplers_imp_5LX7BU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_araddr[21] in module m04_couplers_imp_5LX7BU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_araddr[20] in module m04_couplers_imp_5LX7BU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_araddr[19] in module m04_couplers_imp_5LX7BU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_araddr[18] in module m04_couplers_imp_5LX7BU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_araddr[17] in module m04_couplers_imp_5LX7BU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_araddr[16] in module m04_couplers_imp_5LX7BU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_araddr[15] in module m04_couplers_imp_5LX7BU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_araddr[14] in module m04_couplers_imp_5LX7BU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_araddr[13] in module m04_couplers_imp_5LX7BU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_araddr[12] in module m04_couplers_imp_5LX7BU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_araddr[11] in module m04_couplers_imp_5LX7BU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_araddr[10] in module m04_couplers_imp_5LX7BU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_araddr[9] in module m04_couplers_imp_5LX7BU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_araddr[8] in module m04_couplers_imp_5LX7BU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_awaddr[31] in module m04_couplers_imp_5LX7BU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_awaddr[30] in module m04_couplers_imp_5LX7BU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_awaddr[29] in module m04_couplers_imp_5LX7BU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_awaddr[28] in module m04_couplers_imp_5LX7BU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_awaddr[27] in module m04_couplers_imp_5LX7BU is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2602.066 ; gain = 0.000 ; free physical = 6924 ; free virtual = 12943
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2602.066 ; gain = 0.000 ; free physical = 6924 ; free virtual = 12943
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2602.066 ; gain = 0.000 ; free physical = 6924 ; free virtual = 12943
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2602.066 ; gain = 0.000 ; free physical = 6924 ; free virtual = 12943
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_in_context.xdc] for cell 'design_1_i/clk_wiz_0'
+Finished Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_in_context.xdc] for cell 'design_1_i/clk_wiz_0'
+Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_0/design_1_microblaze_0_0/design_1_microblaze_0_0_in_context.xdc] for cell 'design_1_i/microblaze_0'
+Finished Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_0/design_1_microblaze_0_0/design_1_microblaze_0_0_in_context.xdc] for cell 'design_1_i/microblaze_0'
+Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_dlmb_v10_0/design_1_dlmb_v10_0/design_1_ilmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_v10'
+Finished Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_dlmb_v10_0/design_1_dlmb_v10_0/design_1_ilmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_v10'
+Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/design_1_ilmb_v10_0/design_1_ilmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_v10'
+Finished Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/design_1_ilmb_v10_0/design_1_ilmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_v10'
+Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Finished Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Finished Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_lmb_bram_0/design_1_lmb_bram_0/design_1_lmb_bram_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/lmb_bram'
+Finished Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_lmb_bram_0/design_1_lmb_bram_0/design_1_lmb_bram_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/lmb_bram'
+Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0/design_1_mdm_1_0_in_context.xdc] for cell 'design_1_i/mdm_1'
+Finished Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0/design_1_mdm_1_0_in_context.xdc] for cell 'design_1_i/mdm_1'
+Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_0_20M_0/design_1_rst_clk_wiz_0_20M_0/design_1_rst_clk_wiz_0_20M_0_in_context.xdc] for cell 'design_1_i/rst_clk_wiz_0_20M'
+Finished Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_0_20M_0/design_1_rst_clk_wiz_0_20M_0/design_1_rst_clk_wiz_0_20M_0_in_context.xdc] for cell 'design_1_i/rst_clk_wiz_0_20M'
+Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0_in_context.xdc] for cell 'design_1_i/axi_uartlite_0'
+Finished Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0_in_context.xdc] for cell 'design_1_i/axi_uartlite_0'
+Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio_0'
+Finished Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio_0'
+Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/xbar'
+Finished Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/xbar'
+Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0/design_1_auto_cc_0_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/m02_couplers/auto_cc'
+Finished Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0/design_1_auto_cc_0_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/m02_couplers/auto_cc'
+Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_auto_cc_1/design_1_auto_cc_1/design_1_auto_cc_1_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/m03_couplers/auto_cc'
+Finished Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_auto_cc_1/design_1_auto_cc_1/design_1_auto_cc_1_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/m03_couplers/auto_cc'
+Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_auto_cc_2/design_1_auto_cc_2/design_1_auto_cc_2_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/m04_couplers/auto_cc'
+Finished Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_auto_cc_2/design_1_auto_cc_2/design_1_auto_cc_2_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/m04_couplers/auto_cc'
+Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_seven_segment_0_0/design_1_seven_segment_0_0/design_1_seven_segment_0_0_in_context.xdc] for cell 'design_1_i/seven_segment_0'
+Finished Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_seven_segment_0_0/design_1_seven_segment_0_0/design_1_seven_segment_0_0_in_context.xdc] for cell 'design_1_i/seven_segment_0'
+Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/design_1_v_tpg_0_0/design_1_v_tpg_0_0_in_context.xdc] for cell 'design_1_i/v_tpg_0'
+Finished Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/design_1_v_tpg_0_0/design_1_v_tpg_0_0_in_context.xdc] for cell 'design_1_i/v_tpg_0'
+Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_v_mix_0_0/design_1_v_mix_0_0/design_1_v_mix_0_0_in_context.xdc] for cell 'design_1_i/v_mix_0'
+Finished Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_v_mix_0_0/design_1_v_mix_0_0/design_1_v_mix_0_0_in_context.xdc] for cell 'design_1_i/v_mix_0'
+Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_hud_gen_0_0/design_1_hud_gen_0_0/design_1_hud_gen_0_0_in_context.xdc] for cell 'design_1_i/hud_gen_0'
+Finished Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_hud_gen_0_0/design_1_hud_gen_0_0/design_1_hud_gen_0_0_in_context.xdc] for cell 'design_1_i/hud_gen_0'
+Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_0_50M_0/design_1_rst_clk_wiz_0_50M_0/design_1_rst_clk_wiz_0_50M_0_in_context.xdc] for cell 'design_1_i/rst_clk_wiz_0_50M'
+Finished Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_0_50M_0/design_1_rst_clk_wiz_0_50M_0/design_1_rst_clk_wiz_0_50M_0_in_context.xdc] for cell 'design_1_i/rst_clk_wiz_0_50M'
+Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tc_0_0/design_1_v_tc_0_0/design_1_v_tc_0_0_in_context.xdc] for cell 'design_1_i/v_tc_0'
+Finished Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_v_tc_0_0/design_1_v_tc_0_0/design_1_v_tc_0_0_in_context.xdc] for cell 'design_1_i/v_tc_0'
+Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_v_axi4s_vid_out_0_0/design_1_v_axi4s_vid_out_0_0/design_1_v_axi4s_vid_out_0_0_in_context.xdc] for cell 'design_1_i/v_axi4s_vid_out_0'
+Finished Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_v_axi4s_vid_out_0_0/design_1_v_axi4s_vid_out_0_0/design_1_v_axi4s_vid_out_0_0_in_context.xdc] for cell 'design_1_i/v_axi4s_vid_out_0'
+Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_0_25M_0/design_1_rst_clk_wiz_0_25M_0/design_1_rst_clk_wiz_0_25M_0_in_context.xdc] for cell 'design_1_i/rst_clk_wiz_0_25M'
+Finished Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_0_25M_0/design_1_rst_clk_wiz_0_25M_0/design_1_rst_clk_wiz_0_25M_0_in_context.xdc] for cell 'design_1_i/rst_clk_wiz_0_25M'
+Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.srcs/constrs_1/imports/CrowdSupplyWorkShop1/io.xdc]
+WARNING: [Vivado 12-584] No ports matched 'vgaRed[3]'. [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.srcs/constrs_1/imports/CrowdSupplyWorkShop1/io.xdc:41]
+WARNING: [Vivado 12-584] No ports matched 'vgaRed[3]'. [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.srcs/constrs_1/imports/CrowdSupplyWorkShop1/io.xdc:42]
+WARNING: [Vivado 12-584] No ports matched 'vgaBlue[3]'. [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.srcs/constrs_1/imports/CrowdSupplyWorkShop1/io.xdc:49]
+WARNING: [Vivado 12-584] No ports matched 'vgaBlue[3]'. [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.srcs/constrs_1/imports/CrowdSupplyWorkShop1/io.xdc:50]
+WARNING: [Vivado 12-584] No ports matched 'vgaGreen[3]'. [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.srcs/constrs_1/imports/CrowdSupplyWorkShop1/io.xdc:57]
+WARNING: [Vivado 12-584] No ports matched 'vgaGreen[3]'. [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.srcs/constrs_1/imports/CrowdSupplyWorkShop1/io.xdc:58]
+WARNING: [Vivado 12-584] No ports matched 'vgaBlue[3]'. [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.srcs/constrs_1/imports/CrowdSupplyWorkShop1/io.xdc:64]
+WARNING: [Vivado 12-584] No ports matched 'vgaGreen[3]'. [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.srcs/constrs_1/imports/CrowdSupplyWorkShop1/io.xdc:68]
+WARNING: [Vivado 12-584] No ports matched 'vgaRed[3]'. [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.srcs/constrs_1/imports/CrowdSupplyWorkShop1/io.xdc:72]
+Finished Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.srcs/constrs_1/imports/CrowdSupplyWorkShop1/io.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.srcs/constrs_1/imports/CrowdSupplyWorkShop1/io.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/design_1_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.srcs/constrs_1/imports/CrowdSupplyWorkShop1/io.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2626.062 ; gain = 0.000 ; free physical = 6836 ; free virtual = 12855
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2626.062 ; gain = 0.000 ; free physical = 6836 ; free virtual = 12855
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2626.062 ; gain = 23.996 ; free physical = 6902 ; free virtual = 12922
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2626.062 ; gain = 23.996 ; free physical = 6902 ; free virtual = 12921
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for sys_clock. (constraint file  /home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clock. (constraint file  /home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_in_context.xdc, line 6).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/clk_wiz_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/microblaze_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/microblaze_0_local_memory/dlmb_v10. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/microblaze_0_local_memory/ilmb_v10. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/microblaze_0_local_memory/dlmb_bram_if_cntlr. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/microblaze_0_local_memory/lmb_bram. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/mdm_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/rst_clk_wiz_0_20M. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_uartlite_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_gpio_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/microblaze_0_axi_periph/xbar. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/microblaze_0_axi_periph/m02_couplers/auto_cc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/microblaze_0_axi_periph/m03_couplers/auto_cc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/microblaze_0_axi_periph/m04_couplers/auto_cc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/microblaze_0_axi_periph. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/seven_segment_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/v_tpg_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/v_mix_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/hud_gen_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/rst_clk_wiz_0_50M. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/v_tc_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xlconstant_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/v_axi4s_vid_out_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/rst_clk_wiz_0_25M. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xlslice_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xlslice_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xlslice_2. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2626.062 ; gain = 23.996 ; free physical = 6902 ; free virtual = 12921
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2626.062 ; gain = 23.996 ; free physical = 6902 ; free virtual = 12922
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2626.062 ; gain = 23.996 ; free physical = 6898 ; free virtual = 12923
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2626.062 ; gain = 23.996 ; free physical = 6781 ; free virtual = 12805
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2626.062 ; gain = 23.996 ; free physical = 6781 ; free virtual = 12805
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2626.062 ; gain = 23.996 ; free physical = 6765 ; free virtual = 12790
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2626.062 ; gain = 23.996 ; free physical = 6765 ; free virtual = 12789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2626.062 ; gain = 23.996 ; free physical = 6765 ; free virtual = 12789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2626.062 ; gain = 23.996 ; free physical = 6765 ; free virtual = 12789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2626.062 ; gain = 23.996 ; free physical = 6765 ; free virtual = 12789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2626.062 ; gain = 23.996 ; free physical = 6765 ; free virtual = 12789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2626.062 ; gain = 23.996 ; free physical = 6765 ; free virtual = 12789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+------------------------------+----------+
+|      |BlackBox name                 |Instances |
++------+------------------------------+----------+
+|1     |design_1_xbar_0               |         1|
+|2     |design_1_auto_cc_0            |         1|
+|3     |design_1_auto_cc_1            |         1|
+|4     |design_1_auto_cc_2            |         1|
+|5     |design_1_axi_gpio_0_0         |         1|
+|6     |design_1_axi_uartlite_0_0     |         1|
+|7     |design_1_clk_wiz_0_0          |         1|
+|8     |design_1_hud_gen_0_0          |         1|
+|9     |design_1_mdm_1_0              |         1|
+|10    |design_1_microblaze_0_0       |         1|
+|11    |design_1_rst_clk_wiz_0_20M_0  |         1|
+|12    |design_1_rst_clk_wiz_0_25M_0  |         1|
+|13    |design_1_rst_clk_wiz_0_50M_0  |         1|
+|14    |design_1_seven_segment_0_0    |         1|
+|15    |design_1_v_axi4s_vid_out_0_0  |         1|
+|16    |design_1_v_mix_0_0            |         1|
+|17    |design_1_v_tc_0_0             |         1|
+|18    |design_1_v_tpg_0_0            |         1|
+|19    |design_1_dlmb_bram_if_cntlr_0 |         1|
+|20    |design_1_dlmb_v10_0           |         1|
+|21    |design_1_ilmb_bram_if_cntlr_0 |         1|
+|22    |design_1_ilmb_v10_0           |         1|
+|23    |design_1_lmb_bram_0           |         1|
++------+------------------------------+----------+
+
+Report Cell Usage: 
++------+----------------------------+------+
+|      |Cell                        |Count |
++------+----------------------------+------+
+|1     |design_1_auto_cc            |     3|
+|4     |design_1_axi_gpio_0         |     1|
+|5     |design_1_axi_uartlite_0     |     1|
+|6     |design_1_clk_wiz_0          |     1|
+|7     |design_1_dlmb_bram_if_cntlr |     1|
+|8     |design_1_dlmb_v10           |     1|
+|9     |design_1_hud_gen_0          |     1|
+|10    |design_1_ilmb_bram_if_cntlr |     1|
+|11    |design_1_ilmb_v10           |     1|
+|12    |design_1_lmb_bram           |     1|
+|13    |design_1_mdm_1              |     1|
+|14    |design_1_microblaze_0       |     1|
+|15    |design_1_rst_clk_wiz_0_20M  |     1|
+|16    |design_1_rst_clk_wiz_0_25M  |     1|
+|17    |design_1_rst_clk_wiz_0_50M  |     1|
+|18    |design_1_seven_segment_0    |     1|
+|19    |design_1_v_axi4s_vid_out_0  |     1|
+|20    |design_1_v_mix_0            |     1|
+|21    |design_1_v_tc_0             |     1|
+|22    |design_1_v_tpg_0            |     1|
+|23    |design_1_xbar               |     1|
+|24    |IBUF                        |     6|
+|25    |OBUF                        |    23|
++------+----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2626.062 ; gain = 23.996 ; free physical = 6765 ; free virtual = 12789
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 72 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2626.062 ; gain = 0.000 ; free physical = 6829 ; free virtual = 12854
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2626.070 ; gain = 23.996 ; free physical = 6829 ; free virtual = 12854
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2626.070 ; gain = 0.000 ; free physical = 6900 ; free virtual = 12925
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2626.070 ; gain = 0.000 ; free physical = 6848 ; free virtual = 12872
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 955ee2b
+INFO: [Common 17-83] Releasing license: Synthesis
+101 Infos, 171 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:31 . Memory (MB): peak = 2626.070 ; gain = 24.004 ; free physical = 7037 ; free virtual = 13061
+INFO: [Common 17-1381] The checkpoint '/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/synth_1/design_1_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Sep  5 13:11:49 2022...

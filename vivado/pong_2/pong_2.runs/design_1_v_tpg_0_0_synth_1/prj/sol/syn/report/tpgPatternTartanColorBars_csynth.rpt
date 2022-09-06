@@ -1,0 +1,182 @@
+
+
+================================================================
+== Vitis HLS Report for 'tpgPatternTartanColorBars'
+================================================================
+* Date:           Mon Sep  5 13:06:26 2022
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        prj
+* Solution:       sol (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  20.00 ns|  9.641 ns|     5.40 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        2|        2|  40.000 ns|  40.000 ns|    1|    1|      yes|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+----+-------+-------+-----+
+|       Name      | BRAM_18K| DSP|   FF  |  LUT  | URAM|
++-----------------+---------+----+-------+-------+-----+
+|DSP              |        -|   -|      -|      -|    -|
+|Expression       |        -|   -|      0|    282|    -|
+|FIFO             |        -|   -|      -|      -|    -|
+|Instance         |        -|   -|      -|      -|    -|
+|Memory           |        0|   -|     33|      9|    -|
+|Multiplexer      |        -|   -|      -|     78|    -|
+|Register         |        -|   -|     31|      -|    -|
++-----------------+---------+----+-------+-------+-----+
+|Total            |        0|   0|     64|    369|    0|
++-----------------+---------+----+-------+-------+-----+
+|Available        |      100|  90|  41600|  20800|    0|
++-----------------+---------+----+-------+-------+-----+
+|Utilization (%)  |        0|   0|     ~0|      1|    0|
++-----------------+---------+----+-------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +---------------------+-----------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |        Memory       |                           Module                          | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +---------------------+-----------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |tpgBarSelYuv_u18_U   |tpgPatternCheckerBoard_tpgBarSelYuv_u17_ROM_AUTO_1R        |        0|  8|   1|    0|     8|    8|     1|           64|
+    |tpgBarSelYuv_v20_U   |tpgPatternCheckerBoard_tpgBarSelYuv_v19_ROM_AUTO_1R        |        0|  8|   1|    0|     8|    8|     1|           64|
+    |tpgBarSelYuv_y22_U   |tpgPatternCheckerBoard_tpgBarSelYuv_y21_ROM_AUTO_1R        |        0|  8|   1|    0|     8|    8|     1|           64|
+    |tpgBarSelRgb_b12_U   |tpgPatternDPColorSquare_DPtpgBarSelRgb_VESA_b_ROM_AUTO_1R  |        0|  2|   1|    0|     8|    2|     1|           16|
+    |tpgBarSelRgb_g14_U   |tpgPatternDPColorSquare_DPtpgBarSelRgb_VESA_g_ROM_AUTO_1R  |        0|  2|   1|    0|     8|    2|     1|           16|
+    |tpgBarSelRgb_r16_U   |tpgPatternDPColorSquare_DPtpgBarSelRgb_VESA_r_ROM_AUTO_1R  |        0|  2|   1|    0|     8|    2|     1|           16|
+    |tpgTartanBarArray_U  |tpgPatternTartanColorBars_tpgTartanBarArray_ROM_AUTO_1R    |        0|  3|   3|    0|    64|    3|     1|          192|
+    +---------------------+-----------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total                |                                                           |        0| 33|   9|    0|   112|   33|     7|          432|
+    +---------------------+-----------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------------------+----------+----+---+----+------------+------------+
+    |         Variable Name        | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------------+----------+----+---+----+------------+------------+
+    |add_ln1328_fu_223_p2          |         +|   0|  0|  21|          14|           4|
+    |add_ln1329_fu_245_p2          |         +|   0|  0|  21|          14|           4|
+    |add_ln1348_fu_321_p2          |         +|   0|  0|  11|           3|           1|
+    |add_ln1367_fu_397_p2          |         +|   0|  0|  11|           3|           1|
+    |add_ln886_1_fu_410_p2         |         +|   0|  0|  17|          10|           1|
+    |add_ln886_fu_334_p2           |         +|   0|  0|  17|          10|           1|
+    |barWidthMinSamples_fu_239_p2  |         +|   0|  0|  17|          10|           2|
+    |ret_V_fu_293_p2               |         +|   0|  0|  18|          11|           2|
+    |sub_ln887_fu_385_p2           |         -|   0|  0|  17|          10|          10|
+    |and_ln1341_fu_309_p2          |       and|   0|  0|   2|           1|           1|
+    |and_ln1379_1_fu_459_p2        |       and|   0|  0|   2|           1|           1|
+    |and_ln1379_fu_453_p2          |       and|   0|  0|   2|           1|           1|
+    |ap_condition_155              |       and|   0|  0|   2|           1|           1|
+    |ap_condition_170              |       and|   0|  0|   2|           1|           1|
+    |cmp65_fu_358_p2               |      icmp|   0|  0|  11|           8|           1|
+    |cmp88_fu_364_p2               |      icmp|   0|  0|  11|           8|           1|
+    |icmp_ln1073_1_fu_379_p2       |      icmp|   0|  0|  11|          10|          10|
+    |icmp_ln1073_fu_303_p2         |      icmp|   0|  0|  11|          11|          11|
+    |icmp_ln1336_1_fu_263_p2       |      icmp|   0|  0|  13|          16|           1|
+    |icmp_ln1336_fu_251_p2         |      icmp|   0|  0|  13|          16|           1|
+    |or_ln1336_fu_257_p2           |        or|   0|  0|  16|          16|          16|
+    |pix_val_V_1_fu_494_p3         |    select|   0|  0|   8|           1|           8|
+    |pix_val_V_2_fu_508_p3         |    select|   0|  0|   8|           1|           8|
+    |pix_val_V_fu_501_p3           |    select|   0|  0|   8|           1|           8|
+    |sel_tmp_fu_487_p3             |    select|   0|  0|   8|           1|           8|
+    |ap_enable_pp0                 |       xor|   0|  0|   2|           1|           2|
+    |sel_tmp1_fu_447_p2            |       xor|   0|  0|   2|           1|           2|
+    +------------------------------+----------+----+---+----+------------+------------+
+    |Total                         |          |   0|  0| 282|         181|         108|
+    +------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------+----+-----------+-----+-----------+
+    |                  Name                  | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------+----+-----------+-----+-----------+
+    |ap_phi_mux_hBarSel_loc_1_phi_fu_210_p6  |  17|          4|    3|         12|
+    |ap_phi_mux_vBarSel_loc_2_phi_fu_196_p8  |  17|          4|    3|         12|
+    |hBarSel                                 |   9|          2|    3|          6|
+    |vBarSel                                 |   9|          2|    3|          6|
+    |xCount_V                                |  13|          3|   10|         30|
+    |yCount_V                                |  13|          3|   10|         30|
+    +----------------------------------------+----+-----------+-----+-----------+
+    |Total                                   |  78|         18|   32|         96|
+    +----------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------+----+----+-----+-----------+
+    |                Name                | FF | LUT| Bits| Const Bits|
+    +------------------------------------+----+----+-----+-----------+
+    |and_ln1379_1_reg_557                |   1|   0|    1|          0|
+    |and_ln1379_1_reg_557_pp0_iter1_reg  |   1|   0|    1|          0|
+    |ap_CS_fsm                           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1             |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2             |   1|   0|    1|          0|
+    |hBarSel                             |   3|   0|    3|          0|
+    |vBarSel                             |   3|   0|    3|          0|
+    |xCount_V                            |  10|   0|   10|          0|
+    |yCount_V                            |  10|   0|   10|          0|
+    +------------------------------------+----+----+-----+-----------+
+    |Total                               |  31|   0|   31|          0|
+    +------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------+-----+-----+------------+---------------------------+--------------+
+|  RTL Ports  | Dir | Bits|  Protocol  |       Source Object       |    C Type    |
++-------------+-----+-----+------------+---------------------------+--------------+
+|ap_clk       |   in|    1|  ap_ctrl_hs|  tpgPatternTartanColorBars|  return value|
+|ap_rst       |   in|    1|  ap_ctrl_hs|  tpgPatternTartanColorBars|  return value|
+|ap_start     |   in|    1|  ap_ctrl_hs|  tpgPatternTartanColorBars|  return value|
+|ap_done      |  out|    1|  ap_ctrl_hs|  tpgPatternTartanColorBars|  return value|
+|ap_idle      |  out|    1|  ap_ctrl_hs|  tpgPatternTartanColorBars|  return value|
+|ap_ready     |  out|    1|  ap_ctrl_hs|  tpgPatternTartanColorBars|  return value|
+|ap_ce        |   in|    1|  ap_ctrl_hs|  tpgPatternTartanColorBars|  return value|
+|ap_return_0  |  out|    8|  ap_ctrl_hs|  tpgPatternTartanColorBars|  return value|
+|ap_return_1  |  out|    8|  ap_ctrl_hs|  tpgPatternTartanColorBars|  return value|
+|ap_return_2  |  out|    8|  ap_ctrl_hs|  tpgPatternTartanColorBars|  return value|
+|y            |   in|   16|     ap_none|                          y|        scalar|
+|x            |   in|   16|     ap_none|                          x|        scalar|
+|width        |   in|   14|   ap_stable|                      width|        scalar|
+|height       |   in|   14|   ap_stable|                     height|        scalar|
+|color        |   in|    8|   ap_stable|                      color|        scalar|
++-------------+-----+-----+------------+---------------------------+--------------+
+

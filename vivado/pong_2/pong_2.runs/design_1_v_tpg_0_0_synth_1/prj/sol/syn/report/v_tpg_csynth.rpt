@@ -1,0 +1,177 @@
+
+
+================================================================
+== Vitis HLS Report for 'v_tpg'
+================================================================
+* Date:           Mon Sep  5 13:06:31 2022
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        prj
+* Solution:       sol (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+-----------+------------+
+    |  Clock |  Target  | Estimated | Uncertainty|
+    +--------+----------+-----------+------------+
+    |ap_clk  |  20.00 ns|  10.830 ns|     5.40 ns|
+    +--------+----------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------------+----------------------+---------+---------+-----------+-----------+-----+-----+----------+
+        |                                 |                      |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline |
+        |             Instance            |        Module        |   min   |   max   |    min    |    max    | min | max |   Type   |
+        +---------------------------------+----------------------+---------+---------+-----------+-----------+-----+-----+----------+
+        |grp_v_tpgHlsDataFlow_fu_315      |v_tpgHlsDataFlow      |        ?|        ?|          ?|          ?|    ?|    ?|  dataflow|
+        |grp_reg_unsigned_short_s_fu_505  |reg_unsigned_short_s  |        1|        1|  20.000 ns|  20.000 ns|    1|    1|       yes|
+        +---------------------------------+----------------------+---------+---------+-----------+-----------+-----+-----+----------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+----+-------+-------+-----+
+|       Name      | BRAM_18K| DSP|   FF  |  LUT  | URAM|
++-----------------+---------+----+-------+-------+-----+
+|DSP              |        -|   -|      -|      -|    -|
+|Expression       |        -|   -|      0|    164|    -|
+|FIFO             |        -|   -|      -|      -|    -|
+|Instance         |        5|   9|   2687|   5136|    -|
+|Memory           |        -|   -|      -|      -|    -|
+|Multiplexer      |        -|   -|      -|     34|    -|
+|Register         |        -|   -|    105|      -|    -|
++-----------------+---------+----+-------+-------+-----+
+|Total            |        5|   9|   2792|   5334|    0|
++-----------------+---------+----+-------+-------+-----+
+|Available        |      100|  90|  41600|  20800|    0|
++-----------------+---------+----+-------+-------+-----+
+|Utilization (%)  |        5|  10|      6|     25|    0|
++-----------------+---------+----+-------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------------+----------------------+---------+----+------+------+-----+
+    |             Instance            |        Module        | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +---------------------------------+----------------------+---------+----+------+------+-----+
+    |CTRL_s_axi_U                     |CTRL_s_axi            |        0|   0|   442|   600|    0|
+    |grp_reg_unsigned_short_s_fu_505  |reg_unsigned_short_s  |        0|   0|    16|     0|    0|
+    |grp_v_tpgHlsDataFlow_fu_315      |v_tpgHlsDataFlow      |        5|   9|  2229|  4536|    0|
+    +---------------------------------+----------------------+---------+----+------+------+-----+
+    |Total                            |                      |        5|   9|  2687|  5136|    0|
+    +---------------------------------+----------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------------------------------+----------+----+---+----+------------+------------+
+    |                  Variable Name                  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------------------------+----------+----+---+----+------------+------------+
+    |add_ln457_fu_521_p2                              |         +|   0|  0|  39|          32|           1|
+    |add_ln462_fu_553_p2                              |         +|   0|  0|  39|          32|           1|
+    |grp_v_tpgHlsDataFlow_fu_315_m_axis_video_TREADY  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln455_fu_511_p2                             |      icmp|   0|  0|  13|          16|           1|
+    |icmp_ln458_fu_527_p2                             |      icmp|   0|  0|  18|          32|           4|
+    |icmp_ln460_fu_547_p2                             |      icmp|   0|  0|  17|          29|           1|
+    |ap_sync_grp_v_tpgHlsDataFlow_fu_315_ap_done      |        or|   0|  0|   2|           1|           1|
+    |ap_sync_grp_v_tpgHlsDataFlow_fu_315_ap_ready     |        or|   0|  0|   2|           1|           1|
+    |select_ln460_fu_559_p3                           |    select|   0|  0|  32|           1|          32|
+    +-------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                            |          |   0|  0| 164|         145|          43|
+    +-------------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------+----+-----------+-----+-----------+
+    |         Name        | LUT| Input Size| Bits| Total Bits|
+    +---------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm            |  25|          6|    1|          6|
+    |count_new_0_reg_304  |   9|          2|   32|         64|
+    +---------------------+----+-----------+-----+-----------+
+    |Total                |  34|          8|   33|         70|
+    +---------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------------+----+----+-----+-----------+
+    |                       Name                       | FF | LUT| Bits| Const Bits|
+    +--------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                         |   5|   0|    5|          0|
+    |ap_sync_reg_grp_v_tpgHlsDataFlow_fu_315_ap_done   |   1|   0|    1|          0|
+    |ap_sync_reg_grp_v_tpgHlsDataFlow_fu_315_ap_ready  |   1|   0|    1|          0|
+    |count                                             |  32|   0|   32|          0|
+    |count_new_0_reg_304                               |  32|   0|   32|          0|
+    |grp_v_tpgHlsDataFlow_fu_315_ap_start_reg          |   1|   0|    1|          0|
+    |icmp_ln455_reg_579                                |   1|   0|    1|          0|
+    |s                                                 |  32|   0|   32|          0|
+    +--------------------------------------------------+----+----+-----+-----------+
+    |Total                                             | 105|   0|  105|          0|
+    +--------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------+-----+-----+------------+-----------------------+--------------+
+|      RTL Ports      | Dir | Bits|  Protocol  |     Source Object     |    C Type    |
++---------------------+-----+-----+------------+-----------------------+--------------+
+|s_axi_CTRL_AWVALID   |   in|    1|       s_axi|                   CTRL|       pointer|
+|s_axi_CTRL_AWREADY   |  out|    1|       s_axi|                   CTRL|       pointer|
+|s_axi_CTRL_AWADDR    |   in|    8|       s_axi|                   CTRL|       pointer|
+|s_axi_CTRL_WVALID    |   in|    1|       s_axi|                   CTRL|       pointer|
+|s_axi_CTRL_WREADY    |  out|    1|       s_axi|                   CTRL|       pointer|
+|s_axi_CTRL_WDATA     |   in|   32|       s_axi|                   CTRL|       pointer|
+|s_axi_CTRL_WSTRB     |   in|    4|       s_axi|                   CTRL|       pointer|
+|s_axi_CTRL_ARVALID   |   in|    1|       s_axi|                   CTRL|       pointer|
+|s_axi_CTRL_ARREADY   |  out|    1|       s_axi|                   CTRL|       pointer|
+|s_axi_CTRL_ARADDR    |   in|    8|       s_axi|                   CTRL|       pointer|
+|s_axi_CTRL_RVALID    |  out|    1|       s_axi|                   CTRL|       pointer|
+|s_axi_CTRL_RREADY    |   in|    1|       s_axi|                   CTRL|       pointer|
+|s_axi_CTRL_RDATA     |  out|   32|       s_axi|                   CTRL|       pointer|
+|s_axi_CTRL_RRESP     |  out|    2|       s_axi|                   CTRL|       pointer|
+|s_axi_CTRL_BVALID    |  out|    1|       s_axi|                   CTRL|       pointer|
+|s_axi_CTRL_BREADY    |   in|    1|       s_axi|                   CTRL|       pointer|
+|s_axi_CTRL_BRESP     |  out|    2|       s_axi|                   CTRL|       pointer|
+|ap_clk               |   in|    1|  ap_ctrl_hs|                  v_tpg|  return value|
+|ap_rst_n             |   in|    1|  ap_ctrl_hs|                  v_tpg|  return value|
+|interrupt            |  out|    1|  ap_ctrl_hs|                  v_tpg|  return value|
+|fid_in               |   in|    1|     ap_none|                 fid_in|       pointer|
+|m_axis_video_TDATA   |  out|   24|        axis|  m_axis_video_V_data_V|       pointer|
+|m_axis_video_TVALID  |  out|    1|        axis|  m_axis_video_V_dest_V|       pointer|
+|m_axis_video_TREADY  |   in|    1|        axis|  m_axis_video_V_dest_V|       pointer|
+|m_axis_video_TDEST   |  out|    1|        axis|  m_axis_video_V_dest_V|       pointer|
+|m_axis_video_TKEEP   |  out|    3|        axis|  m_axis_video_V_keep_V|       pointer|
+|m_axis_video_TSTRB   |  out|    3|        axis|  m_axis_video_V_strb_V|       pointer|
+|m_axis_video_TUSER   |  out|    1|        axis|  m_axis_video_V_user_V|       pointer|
+|m_axis_video_TLAST   |  out|    1|        axis|  m_axis_video_V_last_V|       pointer|
+|m_axis_video_TID     |  out|    1|        axis|    m_axis_video_V_id_V|       pointer|
+|fid                  |  out|    1|     ap_none|                    fid|       pointer|
++---------------------+-----+-----+------------+-----------------------+--------------+
+

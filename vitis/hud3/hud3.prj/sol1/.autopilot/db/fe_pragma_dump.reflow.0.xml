@@ -1,11 +1,11 @@
 <pragmas>
-<pragma file="xf_hud_accel.cpp" line="199" pragmaType="dataflow" parentfunction="hud_accel" disable_start_propagation="0"/>
-<pragma file="xf_hud_accel.cpp" line="178" pragmaType="interface" parentfunction="hud_accel" mode="axis" port="in_ptr" register="1" register_mode="both" name="" depth="-1"/>
-<pragma file="xf_hud_accel.cpp" line="179" pragmaType="interface" parentfunction="hud_accel" mode="axis" port="lef_ptr" register="1" register_mode="both" name="" depth="-1"/>
-<pragma file="xf_hud_accel.cpp" line="180" pragmaType="interface" parentfunction="hud_accel" mode="axis" port="sef_ptr" register="1" register_mode="both" name="" depth="-1"/>
-<pragma file="xf_hud_accel.cpp" line="182" pragmaType="interface" parentfunction="hud_accel" mode="s_axilite" port="height" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
-<pragma file="xf_hud_accel.cpp" line="183" pragmaType="interface" parentfunction="hud_accel" mode="s_axilite" port="width" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
-<pragma file="xf_hud_accel.cpp" line="184" pragmaType="interface" parentfunction="hud_accel" mode="s_axilite" port="" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp" line="199" pragmaType="dataflow" parentfunction="hud_accel" disable_start_propagation="0"/>
+<pragma file="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp" line="178" pragmaType="interface" parentfunction="hud_accel" mode="axis" port="in_ptr" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp" line="179" pragmaType="interface" parentfunction="hud_accel" mode="axis" port="lef_ptr" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp" line="180" pragmaType="interface" parentfunction="hud_accel" mode="axis" port="sef_ptr" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp" line="182" pragmaType="interface" parentfunction="hud_accel" mode="s_axilite" port="height" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp" line="183" pragmaType="interface" parentfunction="hud_accel" mode="s_axilite" port="width" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp" line="184" pragmaType="interface" parentfunction="hud_accel" mode="s_axilite" port="" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
 <pragma file="/home/trevor/repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" line="672" pragmaType="inline" parentfunction="xf::cv::Mat<0, 2160, 3840, 2, 3>::Mat(int, int)" off="0" region="0" recursive="0"/>
 <pragma file="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" line="1679" pragmaType="inline" parentfunction="ap_int_base<16, false>::RType<($_0)32, true>::mult operator*<16, false>(ap_int_base<16, false> const&, int)" off="0" region="0" recursive="0"/>
 <pragma file="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" line="587" pragmaType="inline" parentfunction="ap_int_base<48, true>::operator long long() const" off="0" region="0" recursive="0"/>
@@ -13,21 +13,21 @@
 <pragma file="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" line="587" pragmaType="inline" parentfunction="ap_int_base<33, true>::operator long long() const" off="0" region="0" recursive="0"/>
 <pragma file="/home/trevor/repo/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" line="672" pragmaType="inline" parentfunction="xf::cv::Mat<0, 4320, 3848, 2, 3>::Mat(int, int)" off="0" region="0" recursive="0"/>
 <pragma file="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" line="587" pragmaType="inline" parentfunction="ap_int_base<16, false>::operator unsigned long long() const" off="0" region="0" recursive="0"/>
-<pragma file="xf_hud_accel.cpp" line="36" pragmaType="inline" parentfunction="AXIVideo2BayerMat" off="1" region="0" recursive="0"/>
-<pragma file="xf_hud_accel.cpp" line="64" pragmaType="loop_tripcount" parentfunction="AXIVideo2BayerMat" min="0" max="4320" avg="4320"/>
-<pragma file="xf_hud_accel.cpp" line="70" pragmaType="pipeline" parentfunction="AXIVideo2BayerMat" off="0" ii="1" rewind="0" style=""/>
-<pragma file="xf_hud_accel.cpp" line="69" pragmaType="loop_flatten" parentfunction="AXIVideo2BayerMat" off="1"/>
-<pragma file="xf_hud_accel.cpp" line="71" pragmaType="loop_tripcount" parentfunction="AXIVideo2BayerMat" min="0" max="1924" avg="1924"/>
-<pragma file="xf_hud_accel.cpp" line="88" pragmaType="pipeline" parentfunction="AXIVideo2BayerMat" off="0" ii="1" rewind="0" style=""/>
-<pragma file="xf_hud_accel.cpp" line="89" pragmaType="loop_tripcount" parentfunction="AXIVideo2BayerMat" min="0" max="0" avg="0"/>
-<pragma file="xf_hud_accel.cpp" line="52" pragmaType="pipeline" parentfunction="AXIVideo2BayerMat" off="0" ii="1" rewind="0" style=""/>
-<pragma file="xf_hud_accel.cpp" line="53" pragmaType="loop_tripcount" parentfunction="AXIVideo2BayerMat" min="0" max="0" avg="0"/>
+<pragma file="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp" line="36" pragmaType="inline" parentfunction="AXIVideo2BayerMat" off="1" region="0" recursive="0"/>
+<pragma file="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp" line="64" pragmaType="loop_tripcount" parentfunction="AXIVideo2BayerMat" min="0" max="4320" avg="4320"/>
+<pragma file="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp" line="70" pragmaType="pipeline" parentfunction="AXIVideo2BayerMat" off="0" ii="1" rewind="0" style=""/>
+<pragma file="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp" line="69" pragmaType="loop_flatten" parentfunction="AXIVideo2BayerMat" off="1"/>
+<pragma file="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp" line="71" pragmaType="loop_tripcount" parentfunction="AXIVideo2BayerMat" min="0" max="1924" avg="1924"/>
+<pragma file="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp" line="88" pragmaType="pipeline" parentfunction="AXIVideo2BayerMat" off="0" ii="1" rewind="0" style=""/>
+<pragma file="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp" line="89" pragmaType="loop_tripcount" parentfunction="AXIVideo2BayerMat" min="0" max="0" avg="0"/>
+<pragma file="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp" line="52" pragmaType="pipeline" parentfunction="AXIVideo2BayerMat" off="0" ii="1" rewind="0" style=""/>
+<pragma file="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp" line="53" pragmaType="loop_tripcount" parentfunction="AXIVideo2BayerMat" min="0" max="0" avg="0"/>
 <pragma file="/home/trevor/repo/Vitis_Libraries/vision/L1/include/imgproc/xf_extract_eframes.hpp" line="219" pragmaType="inline" parentfunction="extractExposureFrames" off="1" region="0" recursive="0"/>
-<pragma file="xf_hud_accel.cpp" line="103" pragmaType="inline" parentfunction="GRAYMat2AXIvideo" off="1" region="0" recursive="0"/>
-<pragma file="xf_hud_accel.cpp" line="123" pragmaType="loop_tripcount" parentfunction="GRAYMat2AXIvideo" min="0" max="2160" avg="2160"/>
-<pragma file="xf_hud_accel.cpp" line="129" pragmaType="pipeline" parentfunction="GRAYMat2AXIvideo" off="0" ii="1" rewind="0" style=""/>
-<pragma file="xf_hud_accel.cpp" line="128" pragmaType="loop_flatten" parentfunction="GRAYMat2AXIvideo" off="1"/>
-<pragma file="xf_hud_accel.cpp" line="130" pragmaType="loop_tripcount" parentfunction="GRAYMat2AXIvideo" min="0" max="1920" avg="1920"/>
+<pragma file="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp" line="103" pragmaType="inline" parentfunction="GRAYMat2AXIvideo" off="1" region="0" recursive="0"/>
+<pragma file="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp" line="123" pragmaType="loop_tripcount" parentfunction="GRAYMat2AXIvideo" min="0" max="2160" avg="2160"/>
+<pragma file="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp" line="129" pragmaType="pipeline" parentfunction="GRAYMat2AXIvideo" off="0" ii="1" rewind="0" style=""/>
+<pragma file="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp" line="128" pragmaType="loop_flatten" parentfunction="GRAYMat2AXIvideo" off="1"/>
+<pragma file="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp" line="130" pragmaType="loop_tripcount" parentfunction="GRAYMat2AXIvideo" min="0" max="1920" avg="1920"/>
 <pragma file="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h" line="230" pragmaType="inline" parentfunction="ap_uint<16>::ap_uint()" off="0" region="0" recursive="0"/>
 <pragma file="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h" line="333" pragmaType="inline" parentfunction="ap_uint<1>::ap_uint(int)" off="0" region="0" recursive="0"/>
 <pragma file="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h" line="333" pragmaType="inline" parentfunction="ap_uint<16>::ap_uint(int)" off="0" region="0" recursive="0"/>

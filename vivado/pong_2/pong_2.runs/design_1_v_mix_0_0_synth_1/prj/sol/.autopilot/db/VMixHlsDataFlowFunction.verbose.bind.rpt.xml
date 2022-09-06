@@ -1,0 +1,61 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'VMixHlsDataFlowFunction'" level="0">
+<item name = "Date">Mon Sep  5 13:09:01 2022
+</item>
+<item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)</item>
+<item name = "Project">prj</item>
+<item name = "Solution">sol (Vivado IP Flow Target)</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a35t-cpg236-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">20.00 ns, 8.469 ns, 5.40 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="call_ln0_entry_proc_fu_564">entry_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="grp_AXIvideo2MultiPixStream_fu_598">AXIvideo2MultiPixStream, 2, 648006, 40.000 ns, 12.960 ms, 2, 648006, no</column>
+<column name="grp_AXIvideoAlpha2MultiPixStream_fu_624">AXIvideoAlpha2MultiPixStream, 2, 648006, 40.000 ns, 12.960 ms, 2, 648006, no</column>
+<column name="grp_v_mix_420_to_422_false_s_fu_656">v_mix_420_to_422_false_s, 1, 643201, 20.000 ns, 12.864 ms, 1, 643201, no</column>
+<column name="grp_v_mix_420_to_422_false_1_fu_666">v_mix_420_to_422_false_1, 1, 643201, 20.000 ns, 12.864 ms, 1, 643201, no</column>
+<column name="grp_v_mix_upsample_alpha_false_s_fu_678">v_mix_upsample_alpha_false_s, 1, 643201, 20.000 ns, 12.864 ms, 1, 643201, no</column>
+<column name="grp_v_mix_422_to_444_false_s_fu_687">v_mix_422_to_444_false_s, 1, 643201, 20.000 ns, 12.864 ms, 1, 643201, no</column>
+<column name="grp_v_mix_422_to_444_false_2_fu_697">v_mix_422_to_444_false_2, 1, 643201, 20.000 ns, 12.864 ms, 1, 643201, no</column>
+<column name="grp_v_mix_yuv2rgb_false_s_fu_709">v_mix_yuv2rgb_false_s, 1, 643201, 20.000 ns, 12.864 ms, 1, 643201, no</column>
+<column name="grp_v_mix_yuv2rgb_false_3_fu_718">v_mix_yuv2rgb_false_3, 1, 643201, 20.000 ns, 12.864 ms, 1, 643201, no</column>
+<column name="grp_v_mix_upsample_false_s_fu_730">v_mix_upsample_false_s, 1, 643201, 20.000 ns, 12.864 ms, 1, 643201, no</column>
+<column name="grp_v_mix_core_alpha_true_true_s_fu_741">v_mix_core_alpha_true_true_s, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_v_mix_rgb2yuv_false_s_fu_763">v_mix_rgb2yuv_false_s, 1, 643201, 20.000 ns, 12.864 ms, 1, 643201, no</column>
+<column name="grp_v_mix_444_to_422_false_s_fu_773">v_mix_444_to_422_false_s, 1, 643201, 20.000 ns, 12.864 ms, 1, 643201, no</column>
+<column name="grp_v_mix_422_to_420_false_s_fu_783">v_mix_422_to_420_false_s, 1, 643201, 20.000 ns, 12.864 ms, 1, 643201, no</column>
+<column name="grp_MultiPixStream2AXIvideo_fu_793">MultiPixStream2AXIvideo, 2, 644002, 40.000 ns, 12.880 ms, 2, 644002, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

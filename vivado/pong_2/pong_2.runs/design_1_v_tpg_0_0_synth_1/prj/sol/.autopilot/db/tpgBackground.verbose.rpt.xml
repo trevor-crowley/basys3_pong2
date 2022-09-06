@@ -1,0 +1,213 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'tpgBackground'" level="0">
+<item name = "Date">Mon Sep  5 13:06:29 2022
+</item>
+<item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)</item>
+<item name = "Project">prj</item>
+<item name = "Solution">sol (Vivado IP Flow Target)</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a35t-cpg236-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">20.00 ns, 10.830 ns, 5.40 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_tpgBackground_Pipeline_VITIS_LOOP_520_2_fu_424">tpgBackground_Pipeline_VITIS_LOOP_520_2, ?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_518_1">?, ?, ?, -, -, ?, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 237, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">5, 9, 1667, 3651, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 156, -</column>
+<column name="Register">-, -, 380, -, -</column>
+<specialColumn name="Available">100, 90, 41600, 20800, 0</specialColumn>
+<specialColumn name="Utilization (%)">5, 10, 4, 19, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="grp_tpgBackground_Pipeline_VITIS_LOOP_520_2_fu_424">tpgBackground_Pipeline_VITIS_LOOP_520_2, 5, 9, 1667, 3651, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_i_fu_704_p2">+, 0, 0, 21, 14, 3</column>
+<column name="add_ln1488_fu_887_p2">+, 0, 0, 15, 8, 8</column>
+<column name="add_ln705_fu_937_p2">+, 0, 0, 15, 8, 8</column>
+<column name="y_2_fu_864_p2">+, 0, 0, 23, 16, 1</column>
+<column name="cmp12_i_fu_870_p2">icmp, 0, 0, 13, 16, 1</column>
+<column name="cmp2_i322_fu_630_p2">icmp, 0, 0, 11, 8, 1</column>
+<column name="cmp6_i_fu_650_p2">icmp, 0, 0, 11, 8, 1</column>
+<column name="grp_tpgBackground_Pipeline_VITIS_LOOP_520_2_fu_424_cmp57_i">icmp, 0, 0, 11, 8, 1</column>
+<column name="grp_tpgBackground_Pipeline_VITIS_LOOP_520_2_fu_424_cmp85_i">icmp, 0, 0, 10, 7, 1</column>
+<column name="icmp_ln1592_1_fu_899_p2">icmp, 0, 0, 8, 2, 3</column>
+<column name="icmp_ln1592_2_fu_912_p2">icmp, 0, 0, 8, 2, 1</column>
+<column name="icmp_ln1592_fu_893_p2">icmp, 0, 0, 8, 2, 1</column>
+<column name="icmp_ln518_fu_859_p2">icmp, 0, 0, 13, 16, 16</column>
+<column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln1592_1_fu_918_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln1592_2_fu_925_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln1592_fu_905_p2">or, 0, 0, 2, 1, 1</column>
+<column name="grp_tpgBackground_Pipeline_VITIS_LOOP_520_2_fu_424_conv2_i_i10_i329">select, 0, 0, 7, 1, 2</column>
+<column name="grp_tpgBackground_Pipeline_VITIS_LOOP_520_2_fu_424_conv2_i_i10_i335">select, 0, 0, 8, 1, 1</column>
+<column name="grp_tpgBackground_Pipeline_VITIS_LOOP_520_2_fu_424_conv2_i_i10_i354_cast_cast_cast_cast">select, 0, 0, 3, 1, 1</column>
+<column name="grp_tpgBackground_Pipeline_VITIS_LOOP_520_2_fu_424_conv2_i_i_i337_cast_cast">select, 0, 0, 5, 1, 1</column>
+<column name="grp_tpgBackground_Pipeline_VITIS_LOOP_520_2_fu_424_conv2_i_i_i356">select, 0, 0, 7, 1, 2</column>
+<column name="grp_tpgBackground_Pipeline_VITIS_LOOP_520_2_fu_424_conv2_i_i_i373">select, 0, 0, 9, 1, 1</column>
+<column name="grp_tpgBackground_Pipeline_VITIS_LOOP_520_2_fu_424_conv2_i_i_i390">select, 0, 0, 9, 1, 2</column>
+<column name="grp_tpgBackground_Pipeline_VITIS_LOOP_520_2_fu_424_select_ln1099_1">select, 0, 0, 3, 1, 1</column>
+<column name="select_ln260_fu_782_p3">select, 0, 0, 9, 1, 8</column>
+<column name="grp_tpgBackground_Pipeline_VITIS_LOOP_520_2_fu_424_conv2_i_i_i_cast">xor, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">21, 5, 1, 5</column>
+<column name="ap_done">9, 2, 1, 2</column>
+<column name="hBarSel_4_loc_0_fu_294">9, 2, 8, 16</column>
+<column name="hdata_flag_0_reg_400">9, 2, 1, 2</column>
+<column name="hdata_loc_0_fu_274">9, 2, 16, 32</column>
+<column name="ovrlayYUV_write">9, 2, 1, 2</column>
+<column name="rampVal_2_flag_0_reg_412">9, 2, 1, 2</column>
+<column name="rampVal_2_loc_0_fu_266">9, 2, 16, 32</column>
+<column name="rampVal_3_flag_0_reg_388">9, 2, 1, 2</column>
+<column name="rampVal_3_loc_0_fu_302">9, 2, 16, 32</column>
+<column name="rampVal_loc_0_fu_298">9, 2, 16, 32</column>
+<column name="real_start">9, 2, 1, 2</column>
+<column name="xBar_V_loc_0_fu_290">9, 2, 11, 22</column>
+<column name="y_fu_250">9, 2, 16, 32</column>
+<column name="zonePlateVAddr_loc_0_fu_286">9, 2, 16, 32</column>
+<column name="zonePlateVDelta_loc_0_fu_282">9, 2, 16, 32</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="add_ln1488_reg_1251">8, 0, 8, 0</column>
+<column name="ap_CS_fsm">4, 0, 4, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="cmp12_i_reg_1246">1, 0, 1, 0</column>
+<column name="grp_tpgBackground_Pipeline_VITIS_LOOP_520_2_fu_424_ap_start_reg">1, 0, 1, 0</column>
+<column name="hBarSel_2">8, 0, 8, 0</column>
+<column name="hBarSel_4_loc_0_fu_294">8, 0, 8, 0</column>
+<column name="hdata">16, 0, 16, 0</column>
+<column name="hdata_flag_0_reg_400">1, 0, 1, 0</column>
+<column name="hdata_loc_0_fu_274">16, 0, 16, 0</column>
+<column name="hdata_new_0_fu_278">16, 0, 16, 0</column>
+<column name="or_ln1592_1_reg_1261">1, 0, 1, 0</column>
+<column name="or_ln1592_2_reg_1266">1, 0, 1, 0</column>
+<column name="or_ln1592_reg_1256">1, 0, 1, 0</column>
+<column name="p_0_0_0_0_0489_lcssa496_fu_254">8, 0, 8, 0</column>
+<column name="p_0_1_0_0_0491_lcssa499_fu_258">8, 0, 8, 0</column>
+<column name="p_0_2_0_0_0493_lcssa502_fu_262">8, 0, 8, 0</column>
+<column name="rampStart">8, 0, 8, 0</column>
+<column name="rampStart_load_reg_1217">8, 0, 8, 0</column>
+<column name="rampVal">8, 0, 8, 0</column>
+<column name="rampVal_1">16, 0, 16, 0</column>
+<column name="rampVal_2">16, 0, 16, 0</column>
+<column name="rampVal_2_flag_0_reg_412">1, 0, 1, 0</column>
+<column name="rampVal_2_loc_0_fu_266">16, 0, 16, 0</column>
+<column name="rampVal_2_new_0_fu_270">16, 0, 16, 0</column>
+<column name="rampVal_3_flag_0_reg_388">1, 0, 1, 0</column>
+<column name="rampVal_3_loc_0_fu_302">16, 0, 16, 0</column>
+<column name="rampVal_3_new_0_fu_306">16, 0, 16, 0</column>
+<column name="rampVal_loc_0_fu_298">16, 0, 16, 0</column>
+<column name="select_ln260_reg_1223">8, 0, 8, 0</column>
+<column name="shl_ln_reg_1228">8, 0, 16, 8</column>
+<column name="start_once_reg">1, 0, 1, 0</column>
+<column name="xBar_V">11, 0, 11, 0</column>
+<column name="xBar_V_loc_0_fu_290">11, 0, 11, 0</column>
+<column name="y_1_reg_1238">16, 0, 16, 0</column>
+<column name="y_fu_250">16, 0, 16, 0</column>
+<column name="zonePlateVAddr">16, 0, 16, 0</column>
+<column name="zonePlateVAddr_loc_0_fu_286">16, 0, 16, 0</column>
+<column name="zonePlateVDelta">16, 0, 16, 0</column>
+<column name="zonePlateVDelta_loc_0_fu_282">16, 0, 16, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, tpgBackground, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, tpgBackground, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, tpgBackground, return value</column>
+<column name="start_full_n">in, 1, ap_ctrl_hs, tpgBackground, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, tpgBackground, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, tpgBackground, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, tpgBackground, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, tpgBackground, return value</column>
+<column name="start_out">out, 1, ap_ctrl_hs, tpgBackground, return value</column>
+<column name="start_write">out, 1, ap_ctrl_hs, tpgBackground, return value</column>
+<column name="height">in, 16, ap_stable, height, pointer</column>
+<column name="width">in, 16, ap_stable, width, pointer</column>
+<column name="bckgndId">in, 8, ap_stable, bckgndId, pointer</column>
+<column name="ZplateHorContStart">in, 16, ap_stable, ZplateHorContStart, pointer</column>
+<column name="ZplateHorContDelta">in, 16, ap_stable, ZplateHorContDelta, pointer</column>
+<column name="ZplateVerContStart">in, 16, ap_stable, ZplateVerContStart, pointer</column>
+<column name="ZplateVerContDelta">in, 16, ap_stable, ZplateVerContDelta, pointer</column>
+<column name="dpDynamicRange">in, 8, ap_stable, dpDynamicRange, pointer</column>
+<column name="dpYUVCoef">in, 8, ap_stable, dpYUVCoef, pointer</column>
+<column name="motionSpeed">in, 8, ap_stable, motionSpeed, pointer</column>
+<column name="colorFormat">in, 8, ap_stable, colorFormat, pointer</column>
+<column name="ovrlayYUV_din">out, 24, ap_fifo, ovrlayYUV, pointer</column>
+<column name="ovrlayYUV_num_data_valid">in, 5, ap_fifo, ovrlayYUV, pointer</column>
+<column name="ovrlayYUV_fifo_cap">in, 5, ap_fifo, ovrlayYUV, pointer</column>
+<column name="ovrlayYUV_full_n">in, 1, ap_fifo, ovrlayYUV, pointer</column>
+<column name="ovrlayYUV_write">out, 1, ap_fifo, ovrlayYUV, pointer</column>
+<column name="s">in, 32, ap_none, s, pointer</column>
+</table>
+</item>
+</section>
+</profile>

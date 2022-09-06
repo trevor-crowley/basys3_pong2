@@ -1,0 +1,264 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'v_mix_core_alpha_true_true_s'" level="0">
+<item name = "Date">Mon Sep  5 13:09:05 2022
+</item>
+<item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)</item>
+<item name = "Project">prj</item>
+<item name = "Solution">sol (Vivado IP Flow Target)</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a35t-cpg236-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">20.00 ns, 8.469 ns, 5.40 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_v_mix_core_alpha_true_true_Pipeline_VITIS_LOOP_271_3_fu_190">v_mix_core_alpha_true_true_Pipeline_VITIS_LOOP_271_3, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_reg_unsigned_short_s_fu_215">reg_unsigned_short_s, 1, 1, 20.000 ns, 20.000 ns, 1, 1, yes</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_269_2">?, ?, ?, -, -, ?, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 310, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, 3, 154, 369, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 210, -</column>
+<column name="Register">-, -, 192, -, -</column>
+<specialColumn name="Available">100, 90, 41600, 20800, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 3, ~0, 4, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="grp_reg_unsigned_short_s_fu_215">reg_unsigned_short_s, 0, 0, 10, 0, 0</column>
+<column name="grp_v_mix_core_alpha_true_true_Pipeline_VITIS_LOOP_271_3_fu_190">v_mix_core_alpha_true_true_Pipeline_VITIS_LOOP_271_3, 0, 3, 144, 369, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add64_fu_278_p2">+, 0, 0, 24, 17, 17</column>
+<column name="add75_fu_291_p2">+, 0, 0, 24, 17, 17</column>
+<column name="y_12_fu_318_p2">+, 0, 0, 17, 10, 1</column>
+<column name="and_ln285_fu_340_p2">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln269_fu_313_p2">icmp, 0, 0, 11, 10, 10</column>
+<column name="notrhs_fu_335_p2">icmp, 0, 0, 13, 17, 17</column>
+<column name="ult_fu_324_p2">icmp, 0, 0, 13, 16, 16</column>
+<column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
+<column name="shl_ln251_fu_244_p2">shl, 0, 0, 100, 32, 32</column>
+<column name="shl_ln252_fu_253_p2">shl, 0, 0, 100, 32, 32</column>
+<column name="rev12_fu_329_p2">xor, 0, 0, 2, 1, 2</column>
+<column name="rev_fu_297_p2">xor, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="HwReg_height_c45_blk_n">9, 2, 1, 2</column>
+<column name="HwReg_width_c41_blk_n">9, 2, 1, 2</column>
+<column name="ap_NS_fsm">21, 5, 1, 5</column>
+<column name="ap_done">9, 2, 1, 2</column>
+<column name="hwReg_background_U_G_blk_n">9, 2, 1, 2</column>
+<column name="hwReg_background_V_B_blk_n">9, 2, 1, 2</column>
+<column name="hwReg_background_Y_R_blk_n">9, 2, 1, 2</column>
+<column name="hwReg_height_blk_n">9, 2, 1, 2</column>
+<column name="hwReg_layerAlpha_1_blk_n">9, 2, 1, 2</column>
+<column name="hwReg_layerEnable_blk_n">9, 2, 1, 2</column>
+<column name="hwReg_layerHeight_1_blk_n">9, 2, 1, 2</column>
+<column name="hwReg_layerScaleFactor_1_blk_n">9, 2, 1, 2</column>
+<column name="hwReg_layerStartX_1_blk_n">9, 2, 1, 2</column>
+<column name="hwReg_layerStartY_1_blk_n">9, 2, 1, 2</column>
+<column name="hwReg_layerWidth_1_blk_n">9, 2, 1, 2</column>
+<column name="hwReg_width_blk_n">9, 2, 1, 2</column>
+<column name="outLayer0_read">9, 2, 1, 2</column>
+<column name="outLayer1_write">9, 2, 1, 2</column>
+<column name="real_start">9, 2, 1, 2</column>
+<column name="srcLayer1Alphax_read">9, 2, 1, 2</column>
+<column name="srcLayer1x_read">9, 2, 1, 2</column>
+<column name="y_fu_86">9, 2, 10, 20</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="add64_reg_441">17, 0, 17, 0</column>
+<column name="add75_reg_446">17, 0, 17, 0</column>
+<column name="and_ln285_reg_459">1, 0, 1, 0</column>
+<column name="ap_CS_fsm">4, 0, 4, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="bkgpix_val_V_1_reg_406">8, 0, 8, 0</column>
+<column name="bkgpix_val_V_2_reg_401">8, 0, 8, 0</column>
+<column name="bkgpix_val_V_reg_411">8, 0, 8, 0</column>
+<column name="empty_reg_426">1, 0, 1, 0</column>
+<column name="grp_v_mix_core_alpha_true_true_Pipeline_VITIS_LOOP_271_3_fu_190_ap_start_reg">1, 0, 1, 0</column>
+<column name="height_reg_416">10, 0, 10, 0</column>
+<column name="hwReg_layerHeight_1_read_reg_379">10, 0, 10, 0</column>
+<column name="hwReg_layerScaleFactor_1_read_reg_374">8, 0, 8, 0</column>
+<column name="hwReg_layerWidth_1_read_reg_384">10, 0, 10, 0</column>
+<column name="layerStartX_reg_395">16, 0, 16, 0</column>
+<column name="layerStartY_reg_389">16, 0, 16, 0</column>
+<column name="p_0_0_0_0_023_lcssa38_fu_90">8, 0, 8, 0</column>
+<column name="p_0_1_0_0_025_lcssa41_fu_94">8, 0, 8, 0</column>
+<column name="p_0_2_0_0_027_lcssa44_fu_98">8, 0, 8, 0</column>
+<column name="rev_reg_451">1, 0, 1, 0</column>
+<column name="start_once_reg">1, 0, 1, 0</column>
+<column name="tmp_reg_431">1, 0, 1, 0</column>
+<column name="trunc_ln246_reg_436">9, 0, 9, 0</column>
+<column name="width_reg_421">10, 0, 10, 0</column>
+<column name="y_fu_86">10, 0, 10, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, v_mix_core_alpha&lt;true, true&gt;, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, v_mix_core_alpha&lt;true, true&gt;, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, v_mix_core_alpha&lt;true, true&gt;, return value</column>
+<column name="start_full_n">in, 1, ap_ctrl_hs, v_mix_core_alpha&lt;true, true&gt;, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, v_mix_core_alpha&lt;true, true&gt;, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, v_mix_core_alpha&lt;true, true&gt;, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, v_mix_core_alpha&lt;true, true&gt;, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, v_mix_core_alpha&lt;true, true&gt;, return value</column>
+<column name="start_out">out, 1, ap_ctrl_hs, v_mix_core_alpha&lt;true, true&gt;, return value</column>
+<column name="start_write">out, 1, ap_ctrl_hs, v_mix_core_alpha&lt;true, true&gt;, return value</column>
+<column name="outLayer0_dout">in, 24, ap_fifo, outLayer0, pointer</column>
+<column name="outLayer0_num_data_valid">in, 2, ap_fifo, outLayer0, pointer</column>
+<column name="outLayer0_fifo_cap">in, 2, ap_fifo, outLayer0, pointer</column>
+<column name="outLayer0_empty_n">in, 1, ap_fifo, outLayer0, pointer</column>
+<column name="outLayer0_read">out, 1, ap_fifo, outLayer0, pointer</column>
+<column name="srcLayer1x_dout">in, 24, ap_fifo, srcLayer1x, pointer</column>
+<column name="srcLayer1x_num_data_valid">in, 2, ap_fifo, srcLayer1x, pointer</column>
+<column name="srcLayer1x_fifo_cap">in, 2, ap_fifo, srcLayer1x, pointer</column>
+<column name="srcLayer1x_empty_n">in, 1, ap_fifo, srcLayer1x, pointer</column>
+<column name="srcLayer1x_read">out, 1, ap_fifo, srcLayer1x, pointer</column>
+<column name="srcLayer1Alphax_dout">in, 8, ap_fifo, srcLayer1Alphax, pointer</column>
+<column name="srcLayer1Alphax_num_data_valid">in, 5, ap_fifo, srcLayer1Alphax, pointer</column>
+<column name="srcLayer1Alphax_fifo_cap">in, 5, ap_fifo, srcLayer1Alphax, pointer</column>
+<column name="srcLayer1Alphax_empty_n">in, 1, ap_fifo, srcLayer1Alphax, pointer</column>
+<column name="srcLayer1Alphax_read">out, 1, ap_fifo, srcLayer1Alphax, pointer</column>
+<column name="hwReg_width_dout">in, 10, ap_fifo, hwReg_width, pointer</column>
+<column name="hwReg_width_num_data_valid">in, 4, ap_fifo, hwReg_width, pointer</column>
+<column name="hwReg_width_fifo_cap">in, 4, ap_fifo, hwReg_width, pointer</column>
+<column name="hwReg_width_empty_n">in, 1, ap_fifo, hwReg_width, pointer</column>
+<column name="hwReg_width_read">out, 1, ap_fifo, hwReg_width, pointer</column>
+<column name="hwReg_height_dout">in, 10, ap_fifo, hwReg_height, pointer</column>
+<column name="hwReg_height_num_data_valid">in, 4, ap_fifo, hwReg_height, pointer</column>
+<column name="hwReg_height_fifo_cap">in, 4, ap_fifo, hwReg_height, pointer</column>
+<column name="hwReg_height_empty_n">in, 1, ap_fifo, hwReg_height, pointer</column>
+<column name="hwReg_height_read">out, 1, ap_fifo, hwReg_height, pointer</column>
+<column name="hwReg_background_Y_R_dout">in, 8, ap_fifo, hwReg_background_Y_R, pointer</column>
+<column name="hwReg_background_Y_R_num_data_valid">in, 4, ap_fifo, hwReg_background_Y_R, pointer</column>
+<column name="hwReg_background_Y_R_fifo_cap">in, 4, ap_fifo, hwReg_background_Y_R, pointer</column>
+<column name="hwReg_background_Y_R_empty_n">in, 1, ap_fifo, hwReg_background_Y_R, pointer</column>
+<column name="hwReg_background_Y_R_read">out, 1, ap_fifo, hwReg_background_Y_R, pointer</column>
+<column name="hwReg_background_U_G_dout">in, 8, ap_fifo, hwReg_background_U_G, pointer</column>
+<column name="hwReg_background_U_G_num_data_valid">in, 4, ap_fifo, hwReg_background_U_G, pointer</column>
+<column name="hwReg_background_U_G_fifo_cap">in, 4, ap_fifo, hwReg_background_U_G, pointer</column>
+<column name="hwReg_background_U_G_empty_n">in, 1, ap_fifo, hwReg_background_U_G, pointer</column>
+<column name="hwReg_background_U_G_read">out, 1, ap_fifo, hwReg_background_U_G, pointer</column>
+<column name="hwReg_background_V_B_dout">in, 8, ap_fifo, hwReg_background_V_B, pointer</column>
+<column name="hwReg_background_V_B_num_data_valid">in, 4, ap_fifo, hwReg_background_V_B, pointer</column>
+<column name="hwReg_background_V_B_fifo_cap">in, 4, ap_fifo, hwReg_background_V_B, pointer</column>
+<column name="hwReg_background_V_B_empty_n">in, 1, ap_fifo, hwReg_background_V_B, pointer</column>
+<column name="hwReg_background_V_B_read">out, 1, ap_fifo, hwReg_background_V_B, pointer</column>
+<column name="hwReg_layerEnable_dout">in, 2, ap_fifo, hwReg_layerEnable, pointer</column>
+<column name="hwReg_layerEnable_num_data_valid">in, 4, ap_fifo, hwReg_layerEnable, pointer</column>
+<column name="hwReg_layerEnable_fifo_cap">in, 4, ap_fifo, hwReg_layerEnable, pointer</column>
+<column name="hwReg_layerEnable_empty_n">in, 1, ap_fifo, hwReg_layerEnable, pointer</column>
+<column name="hwReg_layerEnable_read">out, 1, ap_fifo, hwReg_layerEnable, pointer</column>
+<column name="hwReg_layerAlpha_1_dout">in, 10, ap_fifo, hwReg_layerAlpha_1, pointer</column>
+<column name="hwReg_layerAlpha_1_num_data_valid">in, 4, ap_fifo, hwReg_layerAlpha_1, pointer</column>
+<column name="hwReg_layerAlpha_1_fifo_cap">in, 4, ap_fifo, hwReg_layerAlpha_1, pointer</column>
+<column name="hwReg_layerAlpha_1_empty_n">in, 1, ap_fifo, hwReg_layerAlpha_1, pointer</column>
+<column name="hwReg_layerAlpha_1_read">out, 1, ap_fifo, hwReg_layerAlpha_1, pointer</column>
+<column name="hwReg_layerStartX_1_dout">in, 16, ap_fifo, hwReg_layerStartX_1, pointer</column>
+<column name="hwReg_layerStartX_1_num_data_valid">in, 4, ap_fifo, hwReg_layerStartX_1, pointer</column>
+<column name="hwReg_layerStartX_1_fifo_cap">in, 4, ap_fifo, hwReg_layerStartX_1, pointer</column>
+<column name="hwReg_layerStartX_1_empty_n">in, 1, ap_fifo, hwReg_layerStartX_1, pointer</column>
+<column name="hwReg_layerStartX_1_read">out, 1, ap_fifo, hwReg_layerStartX_1, pointer</column>
+<column name="hwReg_layerStartY_1_dout">in, 16, ap_fifo, hwReg_layerStartY_1, pointer</column>
+<column name="hwReg_layerStartY_1_num_data_valid">in, 4, ap_fifo, hwReg_layerStartY_1, pointer</column>
+<column name="hwReg_layerStartY_1_fifo_cap">in, 4, ap_fifo, hwReg_layerStartY_1, pointer</column>
+<column name="hwReg_layerStartY_1_empty_n">in, 1, ap_fifo, hwReg_layerStartY_1, pointer</column>
+<column name="hwReg_layerStartY_1_read">out, 1, ap_fifo, hwReg_layerStartY_1, pointer</column>
+<column name="hwReg_layerWidth_1_dout">in, 10, ap_fifo, hwReg_layerWidth_1, pointer</column>
+<column name="hwReg_layerWidth_1_num_data_valid">in, 2, ap_fifo, hwReg_layerWidth_1, pointer</column>
+<column name="hwReg_layerWidth_1_fifo_cap">in, 2, ap_fifo, hwReg_layerWidth_1, pointer</column>
+<column name="hwReg_layerWidth_1_empty_n">in, 1, ap_fifo, hwReg_layerWidth_1, pointer</column>
+<column name="hwReg_layerWidth_1_read">out, 1, ap_fifo, hwReg_layerWidth_1, pointer</column>
+<column name="hwReg_layerHeight_1_dout">in, 10, ap_fifo, hwReg_layerHeight_1, pointer</column>
+<column name="hwReg_layerHeight_1_num_data_valid">in, 2, ap_fifo, hwReg_layerHeight_1, pointer</column>
+<column name="hwReg_layerHeight_1_fifo_cap">in, 2, ap_fifo, hwReg_layerHeight_1, pointer</column>
+<column name="hwReg_layerHeight_1_empty_n">in, 1, ap_fifo, hwReg_layerHeight_1, pointer</column>
+<column name="hwReg_layerHeight_1_read">out, 1, ap_fifo, hwReg_layerHeight_1, pointer</column>
+<column name="hwReg_layerScaleFactor_1_dout">in, 8, ap_fifo, hwReg_layerScaleFactor_1, pointer</column>
+<column name="hwReg_layerScaleFactor_1_num_data_valid">in, 4, ap_fifo, hwReg_layerScaleFactor_1, pointer</column>
+<column name="hwReg_layerScaleFactor_1_fifo_cap">in, 4, ap_fifo, hwReg_layerScaleFactor_1, pointer</column>
+<column name="hwReg_layerScaleFactor_1_empty_n">in, 1, ap_fifo, hwReg_layerScaleFactor_1, pointer</column>
+<column name="hwReg_layerScaleFactor_1_read">out, 1, ap_fifo, hwReg_layerScaleFactor_1, pointer</column>
+<column name="outLayer1_din">out, 24, ap_fifo, outLayer1, pointer</column>
+<column name="outLayer1_num_data_valid">in, 2, ap_fifo, outLayer1, pointer</column>
+<column name="outLayer1_fifo_cap">in, 2, ap_fifo, outLayer1, pointer</column>
+<column name="outLayer1_full_n">in, 1, ap_fifo, outLayer1, pointer</column>
+<column name="outLayer1_write">out, 1, ap_fifo, outLayer1, pointer</column>
+<column name="HwReg_width_c41_din">out, 10, ap_fifo, HwReg_width_c41, pointer</column>
+<column name="HwReg_width_c41_num_data_valid">in, 2, ap_fifo, HwReg_width_c41, pointer</column>
+<column name="HwReg_width_c41_fifo_cap">in, 2, ap_fifo, HwReg_width_c41, pointer</column>
+<column name="HwReg_width_c41_full_n">in, 1, ap_fifo, HwReg_width_c41, pointer</column>
+<column name="HwReg_width_c41_write">out, 1, ap_fifo, HwReg_width_c41, pointer</column>
+<column name="HwReg_height_c45_din">out, 10, ap_fifo, HwReg_height_c45, pointer</column>
+<column name="HwReg_height_c45_num_data_valid">in, 2, ap_fifo, HwReg_height_c45, pointer</column>
+<column name="HwReg_height_c45_fifo_cap">in, 2, ap_fifo, HwReg_height_c45, pointer</column>
+<column name="HwReg_height_c45_full_n">in, 1, ap_fifo, HwReg_height_c45, pointer</column>
+<column name="HwReg_height_c45_write">out, 1, ap_fifo, HwReg_height_c45, pointer</column>
+</table>
+</item>
+</section>
+</profile>

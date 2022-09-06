@@ -1,0 +1,152 @@
+
+
+================================================================
+== Vitis HLS Report for 'v_tpgHlsDataFlow'
+================================================================
+* Date:           Mon Sep  5 13:06:21 2022
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        prj
+* Solution:       sol (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+-----------+------------+
+    |  Clock |  Target  | Estimated | Uncertainty|
+    +--------+----------+-----------+------------+
+    |ap_clk  |  20.00 ns|  10.830 ns|     5.40 ns|
+    +--------+----------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|  dataflow|
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 4, States = { 1 2 3 4 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.69>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%ovrlayYUV = alloca i64 1"   --->   Operation 5 'alloca' 'ovrlayYUV' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.67> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 24> <Depth = 16> <FIFO>
+ST_1 : Operation 6 [2/2] (2.69ns)   --->   "%call_ln300 = call void @tpgBackground, i16 %height, i16 %width, i8 %bckgndId, i16 %ZplateHorContStart, i16 %ZplateHorContDelta, i16 %ZplateVerContStart, i16 %ZplateVerContDelta, i8 %dpDynamicRange, i8 %dpYUVCoef, i8 %motionSpeed, i8 %colorFormat, i24 %ovrlayYUV, i8 %rampStart, i16 %rampVal_1, i8 %rampVal, i8 %hBarSel_2, i11 %xBar_V, i16 %zonePlateVAddr, i16 %zonePlateVDelta, i16 %hdata, i16 %rampVal_2, i8 %redYuv, i8 %grnYuv, i8 %bluYuv, i8 %blkYuv, i8 %whiYuv, i8 %tpgBarSelYuv_y, i8 %tpgBarSelYuv_v, i32 %s, i8 %tpgBarSelYuv_u, i2 %tpgBarSelRgb_r, i2 %tpgBarSelRgb_g, i2 %tpgBarSelRgb_b, i20 %tpgSinTableArray, i3 %vBarSel, i10 %yCount_V, i3 %hBarSel, i10 %xCount_V, i3 %tpgTartanBarArray, i2 %tpgBarSelRgb_r16, i2 %tpgBarSelRgb_g14, i2 %tpgBarSelRgb_b12, i8 %tpgBarSelYuv_y22, i8 %tpgBarSelYuv_v20, i8 %tpgBarSelYuv_u18, i10 %yCount_V_2, i1 %vHatch, i10 %xCount_V_2, i8 %whiYuv_1, i8 %blkYuv_1, i9 %tpgSinTableArray_9bit, i8 %vBarSel_2, i10 %yCount_V_3, i3 %hBarSel_3, i10 %xCount_V_3, i2 %tpgCheckerBoardArray, i2 %tpgBarSelRgb_r15, i2 %tpgBarSelRgb_g13, i2 %tpgBarSelRgb_b11, i8 %tpgBarSelYuv_y21, i8 %tpgBarSelYuv_v19, i8 %tpgBarSelYuv_u17, i28 %rSerie_V, i28 %gSerie_V, i28 %bSerie_V, i1 %vBarSel_1, i6 %yCount_V_1, i3 %hBarSel_1, i10 %xCount_V_1, i3 %DPtpgBarArray, i2 %DPtpgBarSelRgb_VESA_r, i2 %DPtpgBarSelRgb_VESA_g, i2 %DPtpgBarSelRgb_VESA_b, i6 %DPtpgBarSelRgb_CEA_r, i6 %DPtpgBarSelRgb_CEA_g, i6 %DPtpgBarSelRgb_CEA_b, i8 %DPtpgBarSelYuv_601_y, i8 %DPtpgBarSelYuv_601_v, i8 %DPtpgBarSelYuv_709_y, i8 %DPtpgBarSelYuv_709_v, i8 %DPtpgBarSelYuv_601_u, i8 %DPtpgBarSelYuv_709_u" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:300]   --->   Operation 6 'call' 'call_ln300' <Predicate = true> <Delay = 2.69> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 7 [1/2] (0.00ns)   --->   "%call_ln300 = call void @tpgBackground, i16 %height, i16 %width, i8 %bckgndId, i16 %ZplateHorContStart, i16 %ZplateHorContDelta, i16 %ZplateVerContStart, i16 %ZplateVerContDelta, i8 %dpDynamicRange, i8 %dpYUVCoef, i8 %motionSpeed, i8 %colorFormat, i24 %ovrlayYUV, i8 %rampStart, i16 %rampVal_1, i8 %rampVal, i8 %hBarSel_2, i11 %xBar_V, i16 %zonePlateVAddr, i16 %zonePlateVDelta, i16 %hdata, i16 %rampVal_2, i8 %redYuv, i8 %grnYuv, i8 %bluYuv, i8 %blkYuv, i8 %whiYuv, i8 %tpgBarSelYuv_y, i8 %tpgBarSelYuv_v, i32 %s, i8 %tpgBarSelYuv_u, i2 %tpgBarSelRgb_r, i2 %tpgBarSelRgb_g, i2 %tpgBarSelRgb_b, i20 %tpgSinTableArray, i3 %vBarSel, i10 %yCount_V, i3 %hBarSel, i10 %xCount_V, i3 %tpgTartanBarArray, i2 %tpgBarSelRgb_r16, i2 %tpgBarSelRgb_g14, i2 %tpgBarSelRgb_b12, i8 %tpgBarSelYuv_y22, i8 %tpgBarSelYuv_v20, i8 %tpgBarSelYuv_u18, i10 %yCount_V_2, i1 %vHatch, i10 %xCount_V_2, i8 %whiYuv_1, i8 %blkYuv_1, i9 %tpgSinTableArray_9bit, i8 %vBarSel_2, i10 %yCount_V_3, i3 %hBarSel_3, i10 %xCount_V_3, i2 %tpgCheckerBoardArray, i2 %tpgBarSelRgb_r15, i2 %tpgBarSelRgb_g13, i2 %tpgBarSelRgb_b11, i8 %tpgBarSelYuv_y21, i8 %tpgBarSelYuv_v19, i8 %tpgBarSelYuv_u17, i28 %rSerie_V, i28 %gSerie_V, i28 %bSerie_V, i1 %vBarSel_1, i6 %yCount_V_1, i3 %hBarSel_1, i10 %xCount_V_1, i3 %DPtpgBarArray, i2 %DPtpgBarSelRgb_VESA_r, i2 %DPtpgBarSelRgb_VESA_g, i2 %DPtpgBarSelRgb_VESA_b, i6 %DPtpgBarSelRgb_CEA_r, i6 %DPtpgBarSelRgb_CEA_g, i6 %DPtpgBarSelRgb_CEA_b, i8 %DPtpgBarSelYuv_601_y, i8 %DPtpgBarSelYuv_601_v, i8 %DPtpgBarSelYuv_709_y, i8 %DPtpgBarSelYuv_709_v, i8 %DPtpgBarSelYuv_601_u, i8 %DPtpgBarSelYuv_709_u" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:300]   --->   Operation 7 'call' 'call_ln300' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 2.38>
+ST_3 : Operation 8 [2/2] (2.38ns)   --->   "%call_ln354 = call void @MultiPixStream2AXIvideo, i24 %ovrlayYUV, i24 %m_axis_video_V_data_V, i3 %m_axis_video_V_keep_V, i3 %m_axis_video_V_strb_V, i1 %m_axis_video_V_user_V, i1 %m_axis_video_V_last_V, i1 %m_axis_video_V_id_V, i1 %m_axis_video_V_dest_V, i16 %height, i16 %width, i8 %colorFormat, i1 %fid_in, i1 %fid, i16 %field_id, i1 %fidStored, i16 %counter" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:354]   --->   Operation 8 'call' 'call_ln354' <Predicate = true> <Delay = 2.38> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 1.70>
+ST_4 : Operation 9 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln0 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_16"   --->   Operation 9 'specdataflowpipeline' 'specdataflowpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 10 [1/1] (0.00ns)   --->   "%specstablecontent_ln0 = specstablecontent void @_ssdm_op_SpecStableContent, i8 %dpYUVCoef, void "   --->   Operation 10 'specstablecontent' 'specstablecontent_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 11 [1/1] (0.00ns)   --->   "%specstablecontent_ln0 = specstablecontent void @_ssdm_op_SpecStableContent, i8 %dpDynamicRange, void "   --->   Operation 11 'specstablecontent' 'specstablecontent_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 12 [1/1] (0.00ns)   --->   "%specstablecontent_ln0 = specstablecontent void @_ssdm_op_SpecStableContent, i16 %ZplateVerContDelta, void "   --->   Operation 12 'specstablecontent' 'specstablecontent_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 13 [1/1] (0.00ns)   --->   "%specstablecontent_ln0 = specstablecontent void @_ssdm_op_SpecStableContent, i16 %ZplateVerContStart, void "   --->   Operation 13 'specstablecontent' 'specstablecontent_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 14 [1/1] (0.00ns)   --->   "%specstablecontent_ln0 = specstablecontent void @_ssdm_op_SpecStableContent, i16 %ZplateHorContDelta, void "   --->   Operation 14 'specstablecontent' 'specstablecontent_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 15 [1/1] (0.00ns)   --->   "%specstablecontent_ln0 = specstablecontent void @_ssdm_op_SpecStableContent, i16 %ZplateHorContStart, void "   --->   Operation 15 'specstablecontent' 'specstablecontent_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 16 [1/1] (0.00ns)   --->   "%specstablecontent_ln0 = specstablecontent void @_ssdm_op_SpecStableContent, i8 %colorFormat, void "   --->   Operation 16 'specstablecontent' 'specstablecontent_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 17 [1/1] (0.00ns)   --->   "%specstablecontent_ln0 = specstablecontent void @_ssdm_op_SpecStableContent, i8 %motionSpeed, void "   --->   Operation 17 'specstablecontent' 'specstablecontent_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 18 [1/1] (0.00ns)   --->   "%specstablecontent_ln0 = specstablecontent void @_ssdm_op_SpecStableContent, i8 %bckgndId, void "   --->   Operation 18 'specstablecontent' 'specstablecontent_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 19 [1/1] (0.00ns)   --->   "%specstablecontent_ln0 = specstablecontent void @_ssdm_op_SpecStableContent, i1 %fid_in, void "   --->   Operation 19 'specstablecontent' 'specstablecontent_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 20 [1/1] (0.00ns)   --->   "%specstablecontent_ln0 = specstablecontent void @_ssdm_op_SpecStableContent, i16 %field_id, void "   --->   Operation 20 'specstablecontent' 'specstablecontent_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 21 [1/1] (0.00ns)   --->   "%specstablecontent_ln0 = specstablecontent void @_ssdm_op_SpecStableContent, i16 %height, void "   --->   Operation 21 'specstablecontent' 'specstablecontent_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 22 [1/1] (0.00ns)   --->   "%specstablecontent_ln0 = specstablecontent void @_ssdm_op_SpecStableContent, i16 %width, void "   --->   Operation 22 'specstablecontent' 'specstablecontent_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %m_axis_video_V_dest_V, i1 %m_axis_video_V_id_V, i1 %m_axis_video_V_last_V, i1 %m_axis_video_V_user_V, i3 %m_axis_video_V_strb_V, i3 %m_axis_video_V_keep_V, i24 %m_axis_video_V_data_V, void @empty_18, i32 0, i32 0, void @empty_27, i32 0, i32 0, void @empty_16, void @empty_16, void @empty_16, i32 0, i32 0, i32 0, i32 0, void @empty_16, void @empty_16, i32 4294967295, i32 0"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 24 [1/1] (0.00ns)   --->   "%empty = specchannel i32 @_ssdm_op_SpecChannel, void @ovrlayYUV_str, i32 1, void @p_str, void @p_str, i32 16, i32 16, i24 %ovrlayYUV, i24 %ovrlayYUV"   --->   Operation 24 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 25 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %ovrlayYUV, void @empty_10, i32 0, i32 0, void @empty_16, i32 0, i32 0, void @empty_16, void @empty_16, void @empty_16, i32 0, i32 0, i32 0, i32 0, void @empty_16, void @empty_16, i32 4294967295, i32 0"   --->   Operation 25 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 26 [1/2] (1.70ns)   --->   "%call_ln354 = call void @MultiPixStream2AXIvideo, i24 %ovrlayYUV, i24 %m_axis_video_V_data_V, i3 %m_axis_video_V_keep_V, i3 %m_axis_video_V_strb_V, i1 %m_axis_video_V_user_V, i1 %m_axis_video_V_last_V, i1 %m_axis_video_V_id_V, i1 %m_axis_video_V_dest_V, i16 %height, i16 %width, i8 %colorFormat, i1 %fid_in, i1 %fid, i16 %field_id, i1 %fidStored, i16 %counter" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:354]   --->   Operation 26 'call' 'call_ln354' <Predicate = true> <Delay = 1.70> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 27 [1/1] (0.00ns)   --->   "%ret_ln356 = ret" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:356]   --->   Operation 27 'ret' 'ret_ln356' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 20ns, clock uncertainty: 5.4ns.
+
+ <State 1>: 2.69ns
+The critical path consists of the following:
+	'alloca' operation ('ovrlayYUV') [109]  (0 ns)
+	'call' operation ('call_ln300', /home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:300) to 'tpgBackground' [112]  (2.69 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 2.38ns
+The critical path consists of the following:
+	'call' operation ('call_ln354', /home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:354) to 'MultiPixStream2AXIvideo' [113]  (2.38 ns)
+
+ <State 4>: 1.7ns
+The critical path consists of the following:
+	'call' operation ('call_ln354', /home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:354) to 'MultiPixStream2AXIvideo' [113]  (1.7 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

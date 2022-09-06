@@ -1,0 +1,208 @@
+
+
+================================================================
+== Vitis HLS Report for 'tpgPatternDPColorSquare'
+================================================================
+* Date:           Mon Sep  5 13:06:25 2022
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        prj
+* Solution:       sol (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  20.00 ns|  6.174 ns|     5.40 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        2|        2|  40.000 ns|  40.000 ns|    1|    1|      yes|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+----+-------+-------+-----+
+|       Name      | BRAM_18K| DSP|   FF  |  LUT  | URAM|
++-----------------+---------+----+-------+-------+-----+
+|DSP              |        -|   -|      -|      -|    -|
+|Expression       |        -|   -|      0|    308|    -|
+|FIFO             |        -|   -|      -|      -|    -|
+|Instance         |        -|   -|      -|      -|    -|
+|Memory           |        0|   -|     75|     13|    -|
+|Multiplexer      |        -|   -|      -|     78|    -|
+|Register         |        -|   -|     27|      -|    -|
++-----------------+---------+----+-------+-------+-----+
+|Total            |        0|   0|    102|    399|    0|
++-----------------+---------+----+-------+-------+-----+
+|Available        |      100|  90|  41600|  20800|    0|
++-----------------+---------+----+-------+-------+-----+
+|Utilization (%)  |        0|   0|     ~0|      1|    0|
++-----------------+---------+----+-------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +-------------------------+-----------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |          Memory         |                           Module                          | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +-------------------------+-----------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |DPtpgBarArray_U          |tpgPatternDPColorSquare_DPtpgBarArray_ROM_AUTO_1R          |        0|  3|   1|    0|    16|    3|     1|           48|
+    |DPtpgBarSelRgb_CEA_b_U   |tpgPatternDPColorSquare_DPtpgBarSelRgb_CEA_b_ROM_AUTO_1R   |        0|  6|   1|    0|     8|    6|     1|           48|
+    |DPtpgBarSelRgb_CEA_g_U   |tpgPatternDPColorSquare_DPtpgBarSelRgb_CEA_g_ROM_AUTO_1R   |        0|  6|   1|    0|     8|    6|     1|           48|
+    |DPtpgBarSelRgb_CEA_r_U   |tpgPatternDPColorSquare_DPtpgBarSelRgb_CEA_r_ROM_AUTO_1R   |        0|  6|   1|    0|     8|    6|     1|           48|
+    |DPtpgBarSelRgb_VESA_b_U  |tpgPatternDPColorSquare_DPtpgBarSelRgb_VESA_b_ROM_AUTO_1R  |        0|  2|   1|    0|     8|    2|     1|           16|
+    |DPtpgBarSelRgb_VESA_g_U  |tpgPatternDPColorSquare_DPtpgBarSelRgb_VESA_g_ROM_AUTO_1R  |        0|  2|   1|    0|     8|    2|     1|           16|
+    |DPtpgBarSelRgb_VESA_r_U  |tpgPatternDPColorSquare_DPtpgBarSelRgb_VESA_r_ROM_AUTO_1R  |        0|  2|   1|    0|     8|    2|     1|           16|
+    |DPtpgBarSelYuv_601_u_U   |tpgPatternDPColorSquare_DPtpgBarSelYuv_601_u_ROM_AUTO_1R   |        0|  8|   1|    0|     8|    8|     1|           64|
+    |DPtpgBarSelYuv_601_v_U   |tpgPatternDPColorSquare_DPtpgBarSelYuv_601_v_ROM_AUTO_1R   |        0|  8|   1|    0|     8|    8|     1|           64|
+    |DPtpgBarSelYuv_601_y_U   |tpgPatternDPColorSquare_DPtpgBarSelYuv_601_y_ROM_AUTO_1R   |        0|  8|   1|    0|     8|    8|     1|           64|
+    |DPtpgBarSelYuv_709_u_U   |tpgPatternDPColorSquare_DPtpgBarSelYuv_709_u_ROM_AUTO_1R   |        0|  8|   1|    0|     8|    8|     1|           64|
+    |DPtpgBarSelYuv_709_v_U   |tpgPatternDPColorSquare_DPtpgBarSelYuv_709_v_ROM_AUTO_1R   |        0|  8|   1|    0|     8|    8|     1|           64|
+    |DPtpgBarSelYuv_709_y_U   |tpgPatternDPColorSquare_DPtpgBarSelYuv_709_y_ROM_AUTO_1R   |        0|  8|   1|    0|     8|    8|     1|           64|
+    +-------------------------+-----------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total                    |                                                           |        0| 75|  13|    0|   112|   75|    13|          624|
+    +-------------------------+-----------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------------------+----------+----+---+----+------------+------------+
+    |         Variable Name        | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------------+----------+----+---+----+------------+------------+
+    |add_ln1730_fu_435_p2          |         +|   0|  0|  11|           3|           1|
+    |add_ln886_2_fu_448_p2         |         +|   0|  0|  14|           6|           1|
+    |add_ln886_fu_368_p2           |         +|   0|  0|  14|           6|           1|
+    |add_ln887_fu_423_p2           |         +|   0|  0|  17|          10|           7|
+    |and_ln1706_fu_343_p2          |       and|   0|  0|   2|           1|           1|
+    |and_ln1756_1_fu_595_p2        |       and|   0|  0|   2|           1|           1|
+    |and_ln1756_2_fu_604_p2        |       and|   0|  0|   2|           1|           1|
+    |and_ln1756_3_fu_549_p2        |       and|   0|  0|   2|           1|           1|
+    |and_ln1756_fu_495_p2          |       and|   0|  0|   2|           1|           1|
+    |ap_condition_223              |       and|   0|  0|   2|           1|           1|
+    |ap_condition_238              |       and|   0|  0|   2|           1|           1|
+    |sel_tmp3_fu_519_p2            |       and|   0|  0|   2|           1|           1|
+    |sel_tmp6_fu_531_p2            |       and|   0|  0|   2|           1|           1|
+    |cmp126_fu_398_p2              |      icmp|   0|  0|  11|           8|           1|
+    |cmp56_fu_392_p2               |      icmp|   0|  0|  11|           8|           1|
+    |empty_56_fu_507_p2            |      icmp|   0|  0|  11|           8|           1|
+    |icmp_ln1073_2_fu_417_p2       |      icmp|   0|  0|  11|          10|           6|
+    |icmp_ln1073_fu_337_p2         |      icmp|   0|  0|  10|           6|           2|
+    |icmp_ln1701_1_fu_321_p2       |      icmp|   0|  0|  13|          16|           1|
+    |icmp_ln1701_fu_309_p2         |      icmp|   0|  0|  13|          16|           1|
+    |icmp_ln1756_fu_489_p2         |      icmp|   0|  0|  11|           8|           1|
+    |sel_tmp2_fu_513_p2            |      icmp|   0|  0|  11|           8|           1|
+    |empty_fu_501_p2               |        or|   0|  0|   8|           8|           8|
+    |or_cond44_fu_670_p2           |        or|   0|  0|   2|           1|           1|
+    |or_ln1701_fu_315_p2           |        or|   0|  0|  16|          16|          16|
+    |or_ln1756_1_fu_629_p2         |        or|   0|  0|   2|           1|           1|
+    |or_ln1756_2_fu_649_p2         |        or|   0|  0|   2|           1|           1|
+    |or_ln1756_fu_616_p2           |        or|   0|  0|   2|           1|           1|
+    |sel_tmp16_demorgan_fu_537_p2  |        or|   0|  0|   2|           1|           1|
+    |newSel43_fu_663_p3            |    select|   0|  0|   8|           1|           8|
+    |newSel45_fu_674_p3            |    select|   0|  0|   8|           1|           8|
+    |newSel47_fu_681_p3            |    select|   0|  0|   8|           1|           8|
+    |newSel49_fu_689_p3            |    select|   0|  0|   8|           1|           8|
+    |newSel51_fu_696_p3            |    select|   0|  0|   8|           1|           8|
+    |pix_val_V_6_fu_655_p3         |    select|   0|  0|   8|           1|           8|
+    |pix_val_V_7_fu_703_p3         |    select|   0|  0|   8|           1|           8|
+    |select_ln1756_1_fu_621_p3     |    select|   0|  0|   8|           1|           8|
+    |select_ln1756_2_fu_634_p3     |    select|   0|  0|   8|           1|           8|
+    |select_ln1756_3_fu_641_p3     |    select|   0|  0|   8|           1|           8|
+    |select_ln1756_fu_609_p3       |    select|   0|  0|   8|           1|           8|
+    |ap_enable_pp0                 |       xor|   0|  0|   2|           1|           2|
+    |sel_tmp16_fu_543_p2           |       xor|   0|  0|   2|           1|           2|
+    |sel_tmp5_fu_525_p2            |       xor|   0|  0|   2|           1|           2|
+    |xor_ln1713_fu_355_p2          |       xor|   0|  0|   2|           1|           2|
+    |xor_ln1756_fu_599_p2          |       xor|   0|  0|   2|           2|           1|
+    +------------------------------+----------+----+---+----+------------+------------+
+    |Total                         |          |   0|  0| 308|         168|         160|
+    +------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------------------------+----+-----------+-----+-----------+
+    |                   Name                   | LUT| Input Size| Bits| Total Bits|
+    +------------------------------------------+----+-----------+-----+-----------+
+    |ap_phi_mux_hBarSel_5_loc_1_phi_fu_296_p6  |  17|          4|    3|         12|
+    |ap_phi_mux_vBarSel_3_loc_2_phi_fu_282_p8  |  17|          4|    1|          4|
+    |hBarSel_1                                 |   9|          2|    3|          6|
+    |vBarSel_1                                 |   9|          2|    1|          2|
+    |xCount_V_1                                |  13|          3|   10|         30|
+    |yCount_V_1                                |  13|          3|    6|         18|
+    +------------------------------------------+----+-----------+-----+-----------+
+    |Total                                     |  78|         18|   24|         72|
+    +------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------+----+----+-----+-----------+
+    |                Name                | FF | LUT| Bits| Const Bits|
+    +------------------------------------+----+----+-----+-----------+
+    |and_ln1756_3_reg_774                |   1|   0|    1|          0|
+    |and_ln1756_3_reg_774_pp0_iter1_reg  |   1|   0|    1|          0|
+    |and_ln1756_reg_746                  |   1|   0|    1|          0|
+    |and_ln1756_reg_746_pp0_iter1_reg    |   1|   0|    1|          0|
+    |ap_CS_fsm                           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1             |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2             |   1|   0|    1|          0|
+    |hBarSel_1                           |   3|   0|    3|          0|
+    |vBarSel_1                           |   1|   0|    1|          0|
+    |xCount_V_1                          |  10|   0|   10|          0|
+    |yCount_V_1                          |   6|   0|    6|          0|
+    +------------------------------------+----+----+-----+-----------+
+    |Total                               |  27|   0|   27|          0|
+    +------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------+-----+-----+------------+-------------------------+--------------+
+|    RTL Ports   | Dir | Bits|  Protocol  |      Source Object      |    C Type    |
++----------------+-----+-----+------------+-------------------------+--------------+
+|ap_clk          |   in|    1|  ap_ctrl_hs|  tpgPatternDPColorSquare|  return value|
+|ap_rst          |   in|    1|  ap_ctrl_hs|  tpgPatternDPColorSquare|  return value|
+|ap_start        |   in|    1|  ap_ctrl_hs|  tpgPatternDPColorSquare|  return value|
+|ap_done         |  out|    1|  ap_ctrl_hs|  tpgPatternDPColorSquare|  return value|
+|ap_idle         |  out|    1|  ap_ctrl_hs|  tpgPatternDPColorSquare|  return value|
+|ap_ready        |  out|    1|  ap_ctrl_hs|  tpgPatternDPColorSquare|  return value|
+|ap_ce           |   in|    1|  ap_ctrl_hs|  tpgPatternDPColorSquare|  return value|
+|ap_return_0     |  out|    8|  ap_ctrl_hs|  tpgPatternDPColorSquare|  return value|
+|ap_return_1     |  out|    8|  ap_ctrl_hs|  tpgPatternDPColorSquare|  return value|
+|ap_return_2     |  out|    8|  ap_ctrl_hs|  tpgPatternDPColorSquare|  return value|
+|y               |   in|   16|     ap_none|                        y|        scalar|
+|x               |   in|   16|     ap_none|                        x|        scalar|
+|color           |   in|    8|   ap_stable|                    color|        scalar|
+|dpDynamicRange  |   in|    8|   ap_stable|           dpDynamicRange|        scalar|
+|dpYUVCoef       |   in|    8|   ap_stable|                dpYUVCoef|        scalar|
++----------------+-----+-----+------------+-------------------------+--------------+
+

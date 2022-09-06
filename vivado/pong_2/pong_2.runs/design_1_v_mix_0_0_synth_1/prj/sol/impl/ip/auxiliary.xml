@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="v_mix" xd:componentRef="v_mix" xd:initiationInterval="x" xd:clockPeriod="20" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="s_axis_video" xd:originalName="s_axis_video" xd:direction="in" xd:interfaceRef="s_axis_video" xd:busTypeRef="axis" xd:dataWidth="24"/>
+  <xd:arg xd:name="s_axis_video1" xd:originalName="s_axis_video1" xd:direction="in" xd:interfaceRef="s_axis_video1" xd:busTypeRef="axis" xd:dataWidth="32"/>
+  <xd:arg xd:name="width" xd:originalName="width" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0x10" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="height" xd:originalName="height" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0x18" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="video_format" xd:originalName="video_format" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0x20" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="background_Y_R" xd:originalName="background_Y_R" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0x28" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="background_U_G" xd:originalName="background_U_G" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0x30" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="background_V_B" xd:originalName="background_V_B" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0x38" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="layerEnable" xd:originalName="layerEnable" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0x40" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(s_axi_CTRL)" xd:originalName="layerAlpha" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(layerAlpha_0)" xd:originalName="layerAlpha" xd:direction="in" xd:interfaceRef="layerAlpha_0" xd:busTypeRef="register" xd:dataWidth="16"/>
+  <xd:arg xd:name="*(s_axi_CTRL)" xd:originalName="layerStartX" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(layerStartX_0)" xd:originalName="layerStartX" xd:direction="in" xd:interfaceRef="layerStartX_0" xd:busTypeRef="register" xd:dataWidth="16"/>
+  <xd:arg xd:name="*(s_axi_CTRL)" xd:originalName="layerStartY" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(layerStartY_0)" xd:originalName="layerStartY" xd:direction="in" xd:interfaceRef="layerStartY_0" xd:busTypeRef="register" xd:dataWidth="16"/>
+  <xd:arg xd:name="*(s_axi_CTRL)" xd:originalName="layerWidth" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(layerWidth_0)" xd:originalName="layerWidth" xd:direction="in" xd:interfaceRef="layerWidth_0" xd:busTypeRef="register" xd:dataWidth="16"/>
+  <xd:arg xd:name="*(s_axi_CTRL)" xd:originalName="layerHeight" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(layerHeight_0)" xd:originalName="layerHeight" xd:direction="in" xd:interfaceRef="layerHeight_0" xd:busTypeRef="register" xd:dataWidth="16"/>
+  <xd:arg xd:name="*(s_axi_CTRL)" xd:originalName="layerScaleFactor" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(layerScaleFactor_0)" xd:originalName="layerScaleFactor" xd:direction="in" xd:interfaceRef="layerScaleFactor_0" xd:busTypeRef="register" xd:dataWidth="8"/>
+  <xd:arg xd:name="*(layerVideoFormat_d0)" xd:originalName="layerVideoFormat" xd:direction="out" xd:interfaceRef="layerVideoFormat_d0" xd:busTypeRef="ap_memory" xd:dataWidth="8"/>
+  <xd:arg xd:name="*(layerVideoFormat_q0)" xd:originalName="layerVideoFormat" xd:direction="in" xd:interfaceRef="layerVideoFormat_q0" xd:busTypeRef="ap_memory" xd:dataWidth="8"/>
+  <xd:arg xd:name="*(layerVideoFormat_d1)" xd:originalName="layerVideoFormat" xd:direction="out" xd:interfaceRef="layerVideoFormat_d1" xd:busTypeRef="ap_memory" xd:dataWidth="8"/>
+  <xd:arg xd:name="*(layerVideoFormat_q1)" xd:originalName="layerVideoFormat" xd:direction="in" xd:interfaceRef="layerVideoFormat_q1" xd:busTypeRef="ap_memory" xd:dataWidth="8"/>
+  <xd:arg xd:name="*(s_axi_CTRL)" xd:originalName="layerStride" xd:direction="unused" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(layerStride_0)" xd:originalName="layerStride" xd:direction="in" xd:interfaceRef="layerStride_0" xd:busTypeRef="register" xd:dataWidth="16"/>
+  <xd:arg xd:name="reserve" xd:originalName="reserve" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0xFF0" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="K11" xd:originalName="K11" xd:direction="in" xd:interfaceRef="K11" xd:busTypeRef="register" xd:dataWidth="32"/>
+  <xd:arg xd:name="K12" xd:originalName="K12" xd:direction="in" xd:interfaceRef="K12" xd:busTypeRef="register" xd:dataWidth="32"/>
+  <xd:arg xd:name="K13" xd:originalName="K13" xd:direction="in" xd:interfaceRef="K13" xd:busTypeRef="register" xd:dataWidth="32"/>
+  <xd:arg xd:name="K21" xd:originalName="K21" xd:direction="in" xd:interfaceRef="K21" xd:busTypeRef="register" xd:dataWidth="32"/>
+  <xd:arg xd:name="K22" xd:originalName="K22" xd:direction="in" xd:interfaceRef="K22" xd:busTypeRef="register" xd:dataWidth="32"/>
+  <xd:arg xd:name="K23" xd:originalName="K23" xd:direction="in" xd:interfaceRef="K23" xd:busTypeRef="register" xd:dataWidth="32"/>
+  <xd:arg xd:name="K31" xd:originalName="K31" xd:direction="in" xd:interfaceRef="K31" xd:busTypeRef="register" xd:dataWidth="32"/>
+  <xd:arg xd:name="K32" xd:originalName="K32" xd:direction="in" xd:interfaceRef="K32" xd:busTypeRef="register" xd:dataWidth="32"/>
+  <xd:arg xd:name="K33" xd:originalName="K33" xd:direction="in" xd:interfaceRef="K33" xd:busTypeRef="register" xd:dataWidth="32"/>
+  <xd:arg xd:name="ROffset" xd:originalName="ROffset" xd:direction="in" xd:interfaceRef="ROffset" xd:busTypeRef="register" xd:dataWidth="32"/>
+  <xd:arg xd:name="GOffset" xd:originalName="GOffset" xd:direction="in" xd:interfaceRef="GOffset" xd:busTypeRef="register" xd:dataWidth="32"/>
+  <xd:arg xd:name="BOffset" xd:originalName="BOffset" xd:direction="in" xd:interfaceRef="BOffset" xd:busTypeRef="register" xd:dataWidth="32"/>
+  <xd:arg xd:name="K11_2" xd:originalName="K11_2" xd:direction="in" xd:interfaceRef="K11_2" xd:busTypeRef="register" xd:dataWidth="32"/>
+  <xd:arg xd:name="K12_2" xd:originalName="K12_2" xd:direction="in" xd:interfaceRef="K12_2" xd:busTypeRef="register" xd:dataWidth="32"/>
+  <xd:arg xd:name="K13_2" xd:originalName="K13_2" xd:direction="in" xd:interfaceRef="K13_2" xd:busTypeRef="register" xd:dataWidth="32"/>
+  <xd:arg xd:name="K21_2" xd:originalName="K21_2" xd:direction="in" xd:interfaceRef="K21_2" xd:busTypeRef="register" xd:dataWidth="32"/>
+  <xd:arg xd:name="K22_2" xd:originalName="K22_2" xd:direction="in" xd:interfaceRef="K22_2" xd:busTypeRef="register" xd:dataWidth="32"/>
+  <xd:arg xd:name="K23_2" xd:originalName="K23_2" xd:direction="in" xd:interfaceRef="K23_2" xd:busTypeRef="register" xd:dataWidth="32"/>
+  <xd:arg xd:name="K31_2" xd:originalName="K31_2" xd:direction="in" xd:interfaceRef="K31_2" xd:busTypeRef="register" xd:dataWidth="32"/>
+  <xd:arg xd:name="K32_2" xd:originalName="K32_2" xd:direction="in" xd:interfaceRef="K32_2" xd:busTypeRef="register" xd:dataWidth="32"/>
+  <xd:arg xd:name="K33_2" xd:originalName="K33_2" xd:direction="in" xd:interfaceRef="K33_2" xd:busTypeRef="register" xd:dataWidth="32"/>
+  <xd:arg xd:name="YOffset" xd:originalName="YOffset" xd:direction="in" xd:interfaceRef="YOffset" xd:busTypeRef="register" xd:dataWidth="32"/>
+  <xd:arg xd:name="UOffset" xd:originalName="UOffset" xd:direction="in" xd:interfaceRef="UOffset" xd:busTypeRef="register" xd:dataWidth="32"/>
+  <xd:arg xd:name="VOffset" xd:originalName="VOffset" xd:direction="in" xd:interfaceRef="VOffset" xd:busTypeRef="register" xd:dataWidth="32"/>
+  <xd:arg xd:name="m_axis_video" xd:originalName="m_axis_video" xd:direction="out" xd:interfaceRef="m_axis_video" xd:busTypeRef="axis" xd:dataWidth="24"/>
+  <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
+  <xd:resourceEstimates xd:LUT="8912" xd:FF="7225" xd:BRAM="0" xd:DSP="3"/>
+</xd:acceleratorMap>

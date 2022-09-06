@@ -1,0 +1,143 @@
+
+
+================================================================
+== Vitis HLS Report for 'v_mix_upsample_false_Pipeline_VITIS_LOOP_62_2'
+================================================================
+* Date:           Mon Sep  5 13:08:59 2022
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        prj
+* Solution:       sol (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  20.00 ns|  7.816 ns|     5.40 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        2|      802|  40.000 ns|  16.040 us|    2|  802|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip  |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  |  Count  | Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |- VITIS_LOOP_62_2  |        0|      800|         2|          1|          1|  0 ~ 800|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+---------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.73>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%x = alloca i32 1"   --->   Operation 5 'alloca' 'x' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %srcLayer1x, void @empty_42, i32 0, i32 0, void @empty_38, i32 0, i32 0, void @empty_38, void @empty_38, void @empty_38, i32 0, i32 0, i32 0, i32 0, void @empty_38, void @empty_38, i32 4294967295, i32 0"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %srcLayer1Rgb, void @empty_42, i32 0, i32 0, void @empty_38, i32 0, i32 0, void @empty_38, void @empty_38, void @empty_38, i32 0, i32 0, i32 0, i32 0, void @empty_38, void @empty_38, i32 4294967295, i32 0"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%HwReg_layerWidth_1_load_read = read i10 @_ssdm_op_Read.ap_auto.i10, i10 %HwReg_layerWidth_1_load" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:49->/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:664]   --->   Operation 8 'read' 'HwReg_layerWidth_1_load_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (1.61ns)   --->   "%store_ln0 = store i10 0, i10 %x"   --->   Operation 9 'store' 'store_ln0' <Predicate = true> <Delay = 1.61>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc.i"   --->   Operation 10 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%x_7 = load i10 %x" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:62->/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:664]   --->   Operation 11 'load' 'x_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (1.70ns)   --->   "%icmp_ln62 = icmp_eq  i10 %x_7, i10 %HwReg_layerWidth_1_load_read" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:62->/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:664]   --->   Operation 12 'icmp' 'icmp_ln62' <Predicate = true> <Delay = 1.70> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.70> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 0, i64 800, i64 0"   --->   Operation 13 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (2.12ns)   --->   "%x_8 = add i10 %x_7, i10 1" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:62->/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:664]   --->   Operation 14 'add' 'x_8' <Predicate = true> <Delay = 2.12> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%br_ln62 = br i1 %icmp_ln62, void %for.inc.split.i, void %for.inc11.loopexit.i.exitStub" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:62->/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:664]   --->   Operation 15 'br' 'br_ln62' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (1.61ns)   --->   "%store_ln62 = store i10 %x_8, i10 %x" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:62->/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:664]   --->   Operation 16 'store' 'store_ln62' <Predicate = (!icmp_ln62)> <Delay = 1.61>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 22 'ret' 'ret_ln0' <Predicate = (icmp_ln62)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 7.81>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%specpipeline_ln65 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_38" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:65->/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:664]   --->   Operation 17 'specpipeline' 'specpipeline_ln65' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%specloopname_ln52 = specloopname void @_ssdm_op_SpecLoopName, void @empty_31" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:52->/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:664]   --->   Operation 18 'specloopname' 'specloopname_ln52' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (3.90ns)   --->   "%srcLayer1Rgb_read = read i24 @_ssdm_op_Read.ap_fifo.volatile.i24P0A, i24 %srcLayer1Rgb" [/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 19 'read' 'srcLayer1Rgb_read' <Predicate = true> <Delay = 3.90> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 24> <Depth = 2> <FIFO>
+ST_2 : Operation 20 [1/1] (3.90ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i24P0A, i24 %srcLayer1x, i24 %srcLayer1Rgb_read" [/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 20 'write' 'write_ln174' <Predicate = true> <Delay = 3.90> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 24> <Depth = 2> <FIFO>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%br_ln62 = br void %for.inc.i" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:62->/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:664]   --->   Operation 21 'br' 'br_ln62' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 20ns, clock uncertainty: 5.4ns.
+
+ <State 1>: 3.73ns
+The critical path consists of the following:
+	'alloca' operation ('x') [4]  (0 ns)
+	'load' operation ('x', /home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:62->/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:664) on local variable 'x' [11]  (0 ns)
+	'add' operation ('x', /home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:62->/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:664) [14]  (2.12 ns)
+	'store' operation ('store_ln62', /home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:62->/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:664) of variable 'x', /home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:62->/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp:664 on local variable 'x' [21]  (1.61 ns)
+
+ <State 2>: 7.82ns
+The critical path consists of the following:
+	fifo read operation ('srcLayer1Rgb_read', /opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) on port 'srcLayer1Rgb' (/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) [19]  (3.91 ns)
+	fifo write operation ('write_ln174', /opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) on port 'srcLayer1x' (/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) [20]  (3.91 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

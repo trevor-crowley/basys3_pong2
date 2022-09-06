@@ -1,0 +1,410 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Mon Sep  5 13:06:43 2022
+# Process ID: 78074
+# Current directory: /home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_hud_gen_0_0_synth_1
+# Command line: vivado -log design_1_hud_gen_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_hud_gen_0_0.tcl
+# Log file: /home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_hud_gen_0_0_synth_1/design_1_hud_gen_0_0.vds
+# Journal file: /home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_hud_gen_0_0_synth_1/vivado.jou
+# Running On: ubuntu-dev2, OS: Linux, CPU Frequency: 3193.980 MHz, CPU Physical cores: 4, Host memory: 16778 MB
+#-----------------------------------------------------------
+source design_1_hud_gen_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 2594.047 ; gain = 3.992 ; free physical = 5368 ; free virtual = 11242
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/trevor/repo/CrowdSupplyWorkShop1'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2022.1/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'adiuvo_engineering:hls:hud_gen:1.0'. The one found in IP location '/home/trevor/repo/CrowdSupplyWorkShop1/adiuvo_engineering_hls_hud_gen_1_0_1' will take precedence over the same IP in locations: 
+   /home/trevor/repo/CrowdSupplyWorkShop1/adiuvo_engineering_hls_hud_gen_1_0_4
+   /home/trevor/repo/CrowdSupplyWorkShop1/adiuvo_engineering_hls_hud_gen_1_0
+   /home/trevor/repo/CrowdSupplyWorkShop1/adiuvo_engineering_hls_hud_gen_1_0_5
+   /home/trevor/repo/CrowdSupplyWorkShop1/adiuvo_engineering_hls_hud_gen_1_0_2
+   /home/trevor/repo/CrowdSupplyWorkShop1/adiuvo_engineering_hls_hud_gen_1_0_3
+Command: synth_design -top design_1_hud_gen_0_0 -part xc7a35tcpg236-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 78197
+WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [/opt/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 2594.047 ; gain = 0.000 ; free physical = 4076 ; free virtual = 9952
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_hud_gen_0_0' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_hud_gen_0_0/synth/design_1_hud_gen_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'hud_gen' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ipshared/1647/hdl/verilog/hud_gen.v:10]
+INFO: [Synth 8-6157] synthesizing module 'hud_gen_AXILiteS_s_axi' [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ipshared/1647/hdl/verilog/hud_gen_AXILiteS_s_axi.v:6]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ipshared/1647/hdl/verilog/hud_gen_AXILiteS_s_axi.v:240]
+INFO: [Synth 8-6155] done synthesizing module 'hud_gen_AXILiteS_s_axi' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ipshared/1647/hdl/verilog/hud_gen_AXILiteS_s_axi.v:6]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ipshared/1647/hdl/verilog/hud_gen.v:1179]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ipshared/1647/hdl/verilog/hud_gen.v:1181]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ipshared/1647/hdl/verilog/hud_gen.v:1183]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ipshared/1647/hdl/verilog/hud_gen.v:1185]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ipshared/1647/hdl/verilog/hud_gen.v:1187]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ipshared/1647/hdl/verilog/hud_gen.v:1189]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ipshared/1647/hdl/verilog/hud_gen.v:1191]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ipshared/1647/hdl/verilog/hud_gen.v:1193]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ipshared/1647/hdl/verilog/hud_gen.v:1195]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ipshared/1647/hdl/verilog/hud_gen.v:1201]
+INFO: [Synth 8-6155] done synthesizing module 'hud_gen' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ipshared/1647/hdl/verilog/hud_gen.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_hud_gen_0_0' (0#1) [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_hud_gen_0_0/synth/design_1_hud_gen_0_0.v:53]
+WARNING: [Synth 8-6014] Unused sequential element op_V_dest_V_1_sel_rd_reg was removed.  [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ipshared/1647/hdl/verilog/hud_gen.v:467]
+WARNING: [Synth 8-6014] Unused sequential element op_V_id_V_1_sel_rd_reg was removed.  [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ipshared/1647/hdl/verilog/hud_gen.v:493]
+WARNING: [Synth 8-6014] Unused sequential element op_V_keep_V_1_sel_rd_reg was removed.  [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ipshared/1647/hdl/verilog/hud_gen.v:519]
+WARNING: [Synth 8-6014] Unused sequential element op_V_strb_V_1_sel_rd_reg was removed.  [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ipshared/1647/hdl/verilog/hud_gen.v:581]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 2594.047 ; gain = 0.000 ; free physical = 5259 ; free virtual = 11136
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 2594.047 ; gain = 0.000 ; free physical = 5193 ; free virtual = 11070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 2594.047 ; gain = 0.000 ; free physical = 5193 ; free virtual = 11070
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2594.047 ; gain = 0.000 ; free physical = 5172 ; free virtual = 11049
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_hud_gen_0_0/constraints/hud_gen_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_hud_gen_0_0/constraints/hud_gen_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_hud_gen_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_hud_gen_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2626.062 ; gain = 0.000 ; free physical = 4843 ; free virtual = 10721
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2626.062 ; gain = 0.000 ; free physical = 4837 ; free virtual = 10714
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 2626.062 ; gain = 32.016 ; free physical = 4828 ; free virtual = 10708
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 2626.062 ; gain = 32.016 ; free physical = 4828 ; free virtual = 10708
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_hud_gen_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 2626.062 ; gain = 32.016 ; free physical = 4821 ; free virtual = 10702
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'hud_gen_AXILiteS_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'hud_gen_AXILiteS_s_axi'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'hud_gen_AXILiteS_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'hud_gen_AXILiteS_s_axi'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 2626.062 ; gain = 32.016 ; free physical = 4736 ; free virtual = 10616
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 7     
+	   3 Input   32 Bit       Adders := 2     
+	   2 Input   31 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 20    
++---Registers : 
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 28    
+	               31 Bit    Registers := 3     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 8     
+	                1 Bit    Registers := 30    
++---Multipliers : 
+	              32x32  Multipliers := 1     
++---Muxes : 
+	  13 Input   32 Bit        Muxes := 1     
+	   5 Input   32 Bit        Muxes := 3     
+	   2 Input   32 Bit        Muxes := 1     
+	   2 Input   31 Bit        Muxes := 7     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 4     
+	  13 Input    4 Bit        Muxes := 1     
+	   3 Input    4 Bit        Muxes := 1     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 15    
+	   3 Input    2 Bit        Muxes := 7     
+	   2 Input    1 Bit        Muxes := 18    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP bound_fu_254_p2, operation Mode is: A2*B.
+DSP Report: register bound_fu_254_p2 is absorbed into DSP bound_fu_254_p2.
+DSP Report: operator bound_fu_254_p2 is absorbed into DSP bound_fu_254_p2.
+DSP Report: operator bound_fu_254_p2 is absorbed into DSP bound_fu_254_p2.
+DSP Report: Generating DSP bound_reg_871_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register bound_reg_871_reg is absorbed into DSP bound_reg_871_reg.
+DSP Report: operator bound_fu_254_p2 is absorbed into DSP bound_reg_871_reg.
+DSP Report: operator bound_fu_254_p2 is absorbed into DSP bound_reg_871_reg.
+DSP Report: Generating DSP bound_fu_254_p2, operation Mode is: A2*B2.
+DSP Report: register bound_fu_254_p2 is absorbed into DSP bound_fu_254_p2.
+DSP Report: register bound_fu_254_p2 is absorbed into DSP bound_fu_254_p2.
+DSP Report: operator bound_fu_254_p2 is absorbed into DSP bound_fu_254_p2.
+DSP Report: operator bound_fu_254_p2 is absorbed into DSP bound_fu_254_p2.
+DSP Report: Generating DSP bound_reg_871_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register bound_reg_871_reg is absorbed into DSP bound_reg_871_reg.
+DSP Report: register bound_reg_871_reg is absorbed into DSP bound_reg_871_reg.
+DSP Report: operator bound_fu_254_p2 is absorbed into DSP bound_reg_871_reg.
+DSP Report: operator bound_fu_254_p2 is absorbed into DSP bound_reg_871_reg.
+WARNING: [Synth 8-3332] Sequential element (hud_gen_AXILiteS_s_axi_U/FSM_onehot_wstate_reg[0]) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (hud_gen_AXILiteS_s_axi_U/FSM_onehot_rstate_reg[0]) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[47]) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[46]) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[45]) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[44]) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[43]) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[42]) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[41]) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[40]) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[39]) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[38]) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[37]) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[36]) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[35]) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[34]) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[33]) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[32]) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[31]) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[30]) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[29]) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[28]) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[27]) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[26]) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[25]) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[24]) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[23]) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[22]) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[21]) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[20]) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[19]) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[18]) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[17]) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[47]__0) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[46]__0) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[45]__0) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[44]__0) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[43]__0) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[42]__0) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[41]__0) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[40]__0) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[39]__0) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[38]__0) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[37]__0) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[36]__0) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[35]__0) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[34]__0) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[33]__0) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[32]__0) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[31]__0) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[30]__0) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[29]__0) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[28]__0) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[27]__0) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[26]__0) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[25]__0) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[24]__0) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[23]__0) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[22]__0) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[21]__0) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[20]__0) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[19]__0) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[18]__0) is unused and will be removed from module hud_gen.
+WARNING: [Synth 8-3332] Sequential element (bound_reg_871_reg[17]__0) is unused and will be removed from module hud_gen.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 2626.062 ; gain = 32.016 ; free physical = 4292 ; free virtual = 10190
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|hud_gen     | A2*B            | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|hud_gen     | (PCIN>>17)+A*B  | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|hud_gen     | A2*B2           | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|hud_gen     | (PCIN>>17)+A2*B | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:36 . Memory (MB): peak = 2626.062 ; gain = 32.016 ; free physical = 4181 ; free virtual = 10084
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:41 . Memory (MB): peak = 2626.062 ; gain = 32.016 ; free physical = 4204 ; free virtual = 10107
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 2626.062 ; gain = 32.016 ; free physical = 4111 ; free virtual = 10013
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:00:47 . Memory (MB): peak = 2626.062 ; gain = 32.016 ; free physical = 4133 ; free virtual = 10037
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:00:47 . Memory (MB): peak = 2626.062 ; gain = 32.016 ; free physical = 4132 ; free virtual = 10035
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:00:47 . Memory (MB): peak = 2626.062 ; gain = 32.016 ; free physical = 4132 ; free virtual = 10035
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:00:47 . Memory (MB): peak = 2626.062 ; gain = 32.016 ; free physical = 4132 ; free virtual = 10035
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:00:47 . Memory (MB): peak = 2626.062 ; gain = 32.016 ; free physical = 4131 ; free virtual = 10034
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:00:47 . Memory (MB): peak = 2626.062 ; gain = 32.016 ; free physical = 4131 ; free virtual = 10034
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping       | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|hud_gen     | A'*B'             | 17     | 15     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|hud_gen     | (PCIN>>17+A'*B')' | 15     | 15     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|hud_gen     | A'*B'             | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|hud_gen     | (PCIN>>17+A'*B')' | 17     | 15     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
++------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |   181|
+|2     |DSP48E1 |     4|
+|4     |LUT1    |   126|
+|5     |LUT2    |   280|
+|6     |LUT3    |   313|
+|7     |LUT4    |   215|
+|8     |LUT5    |   289|
+|9     |LUT6    |   283|
+|10    |FDRE    |  1096|
+|11    |FDSE    |     1|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:00:47 . Memory (MB): peak = 2626.062 ; gain = 32.016 ; free physical = 4129 ; free virtual = 10033
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 65 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:38 ; elapsed = 00:00:45 . Memory (MB): peak = 2626.062 ; gain = 0.000 ; free physical = 4189 ; free virtual = 10088
+Synthesis Optimization Complete : Time (s): cpu = 00:00:41 ; elapsed = 00:00:47 . Memory (MB): peak = 2626.070 ; gain = 32.016 ; free physical = 4188 ; free virtual = 10087
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2626.070 ; gain = 0.000 ; free physical = 4292 ; free virtual = 10191
+INFO: [Netlist 29-17] Analyzing 185 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2626.070 ; gain = 0.000 ; free physical = 4236 ; free virtual = 10134
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 22bf05ff
+INFO: [Common 17-83] Releasing license: Synthesis
+31 Infos, 81 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 2626.070 ; gain = 32.023 ; free physical = 4409 ; free virtual = 10307
+INFO: [Common 17-1381] The checkpoint '/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_hud_gen_0_0_synth_1/design_1_hud_gen_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_hud_gen_0_0, cache-ID = bf95a50636e1dbf8
+INFO: [Coretcl 2-1174] Renamed 2 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_hud_gen_0_0_synth_1/design_1_hud_gen_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_hud_gen_0_0_utilization_synth.rpt -pb design_1_hud_gen_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Sep  5 13:07:49 2022...

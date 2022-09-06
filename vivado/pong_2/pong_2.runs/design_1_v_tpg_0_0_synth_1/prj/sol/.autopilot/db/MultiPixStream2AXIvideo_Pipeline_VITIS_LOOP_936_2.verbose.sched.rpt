@@ -1,0 +1,192 @@
+
+
+================================================================
+== Vitis HLS Report for 'MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_936_2'
+================================================================
+* Date:           Mon Sep  5 13:06:21 2022
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        prj
+* Solution:       sol (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  20.00 ns|  4.759 ns|     5.40 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        4|      803|  80.000 ns|  16.060 us|    4|  803|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip  |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  |  Count  | Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |- VITIS_LOOP_936_2  |        1|      800|         2|          1|          1|  1 ~ 800|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+---------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 4 3 
+3 --> 2 
+4 --> 5 
+5 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.61>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%j = alloca i32 1"   --->   Operation 6 'alloca' 'j' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %m_axis_video_V_dest_V, i1 %m_axis_video_V_id_V, i1 %m_axis_video_V_last_V, i1 %m_axis_video_V_user_V, i3 %m_axis_video_V_strb_V, i3 %m_axis_video_V_keep_V, i24 %m_axis_video_V_data_V, void @empty_18, i32 0, i32 0, void @empty_27, i32 0, i32 0, void @empty_16, void @empty_16, void @empty_16, i32 0, i32 0, i32 0, i32 0, void @empty_16, void @empty_16, i32 4294967295, i32 0"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %ovrlayYUV, void @empty_10, i32 0, i32 0, void @empty_16, i32 0, i32 0, void @empty_16, void @empty_16, void @empty_16, i32 0, i32 0, i32 0, i32 0, void @empty_16, void @empty_16, i32 4294967295, i32 0"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%sub_read = read i11 @_ssdm_op_Read.ap_auto.i11, i11 %sub"   --->   Operation 9 'read' 'sub_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%icmp_ln975_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %icmp_ln975"   --->   Operation 10 'read' 'icmp_ln975_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%width_load_cast1_read = read i10 @_ssdm_op_Read.ap_auto.i10, i10 %width_load_cast1"   --->   Operation 11 'read' 'width_load_cast1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%sof_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %sof"   --->   Operation 12 'read' 'sof_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (1.61ns)   --->   "%store_ln0 = store i10 0, i10 %j"   --->   Operation 13 'store' 'store_ln0' <Predicate = true> <Delay = 1.61>
+ST_1 : Operation 14 [1/1] (1.61ns)   --->   "%br_ln0 = br void %for.body21"   --->   Operation 14 'br' 'br_ln0' <Predicate = true> <Delay = 1.61>
+
+State 2 <SV = 1> <Delay = 3.73>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%tmp_user_V = phi i1 0, void %for.body44_ifconv, i1 %sof_read, void %newFuncRoot"   --->   Operation 15 'phi' 'tmp_user_V' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%phi_ln991 = phi i1 %trunc_ln145, void %for.body44_ifconv, i1 0, void %newFuncRoot" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:991]   --->   Operation 16 'phi' 'phi_ln991' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%j_1 = load i10 %j" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:936]   --->   Operation 17 'load' 'j_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%zext_ln936 = zext i10 %j_1" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:936]   --->   Operation 18 'zext' 'zext_ln936' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (1.70ns)   --->   "%icmp_ln936 = icmp_eq  i10 %j_1, i10 %width_load_cast1_read" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:936]   --->   Operation 19 'icmp' 'icmp_ln936' <Predicate = true> <Delay = 1.70> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.70> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 1, i64 800, i64 0"   --->   Operation 20 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (2.12ns)   --->   "%j_2 = add i10 %j_1, i10 1" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:936]   --->   Operation 21 'add' 'j_2' <Predicate = true> <Delay = 2.12> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%br_ln936 = br i1 %icmp_ln936, void %for.body21.split, void %for.inc113.loopexit.exitStub" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:936]   --->   Operation 22 'br' 'br_ln936' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%specpipeline_ln939 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_16" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:939]   --->   Operation 23 'specpipeline' 'specpipeline_ln939' <Predicate = (!icmp_ln936)> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%specloopname_ln928 = specloopname void @_ssdm_op_SpecLoopName, void @empty_13" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:928]   --->   Operation 24 'specloopname' 'specloopname_ln928' <Predicate = (!icmp_ln936)> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (1.81ns)   --->   "%tmp_last_V = icmp_eq  i11 %zext_ln936, i11 %sub_read" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:949]   --->   Operation 25 'icmp' 'tmp_last_V' <Predicate = (!icmp_ln936)> <Delay = 1.81> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%br_ln958 = br i1 %tmp_user_V, void %for.body44_ifconv, void %if.then34" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:958]   --->   Operation 26 'br' 'br_ln958' <Predicate = (!icmp_ln936)> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%counter_loc_1_out_load = load i16 %counter_loc_1_out" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:960]   --->   Operation 27 'load' 'counter_loc_1_out_load' <Predicate = (!icmp_ln936 & tmp_user_V)> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (2.14ns)   --->   "%add_ln960 = add i16 %counter_loc_1_out_load, i16 1" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:960]   --->   Operation 28 'add' 'add_ln960' <Predicate = (!icmp_ln936 & tmp_user_V)> <Delay = 2.14> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%store_ln960 = store i16 %add_ln960, i16 %counter" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:960]   --->   Operation 29 'store' 'store_ln960' <Predicate = (!icmp_ln936 & tmp_user_V)> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%store_ln961 = store i16 %add_ln960, i16 %counter_loc_1_out" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:961]   --->   Operation 30 'store' 'store_ln961' <Predicate = (!icmp_ln936 & tmp_user_V)> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%br_ln961 = br void %for.body44_ifconv" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:961]   --->   Operation 31 'br' 'br_ln961' <Predicate = (!icmp_ln936 & tmp_user_V)> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (1.61ns)   --->   "%store_ln936 = store i10 %j_2, i10 %j" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:936]   --->   Operation 32 'store' 'store_ln936' <Predicate = (!icmp_ln936)> <Delay = 1.61>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%br_ln936 = br void %for.body21" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:936]   --->   Operation 33 'br' 'br_ln936' <Predicate = (!icmp_ln936)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 4.75>
+ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%counter_loc_1_out_load_1 = load i16 %counter_loc_1_out" [/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 34 'load' 'counter_loc_1_out_load_1' <Predicate = (!icmp_ln936)> <Delay = 0.00>
+ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%trunc_ln145 = trunc i16 %counter_loc_1_out_load_1" [/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 35 'trunc' 'trunc_ln145' <Predicate = (!icmp_ln936)> <Delay = 0.00>
+ST_3 : Operation 36 [1/1] (3.67ns)   --->   "%ovrlayYUV_read = read i24 @_ssdm_op_Read.ap_fifo.volatile.i24P0A, i24 %ovrlayYUV" [/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 36 'read' 'ovrlayYUV_read' <Predicate = (!icmp_ln936)> <Delay = 3.67> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.67> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 24> <Depth = 16> <FIFO>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%pix_444_V = trunc i24 %ovrlayYUV_read" [/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 37 'trunc' 'pix_444_V' <Predicate = (!icmp_ln936)> <Delay = 0.00>
+ST_3 : Operation 38 [1/1] (0.00ns)   --->   "%pix_rgb_V_2 = partselect i8 @_ssdm_op_PartSelect.i8.i24.i32.i32, i24 %ovrlayYUV_read, i32 8, i32 15" [/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 38 'partselect' 'pix_rgb_V_2' <Predicate = (!icmp_ln936)> <Delay = 0.00>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%pix_rgb_V = partselect i8 @_ssdm_op_PartSelect.i8.i24.i32.i32, i24 %ovrlayYUV_read, i32 16, i32 23" [/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 39 'partselect' 'pix_rgb_V' <Predicate = (!icmp_ln936)> <Delay = 0.00>
+ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%p_Result_s = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i1.i8, i1 1, i8 %pix_444_V"   --->   Operation 40 'bitconcatenate' 'p_Result_s' <Predicate = (!icmp_ln936 & !icmp_ln975_read)> <Delay = 0.00>
+ST_3 : Operation 41 [1/1] (0.00ns)   --->   "%p_Result_1 = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i1.i8, i1 1, i8 %pix_rgb_V_2"   --->   Operation 41 'bitconcatenate' 'p_Result_1' <Predicate = (!icmp_ln936 & icmp_ln975_read)> <Delay = 0.00>
+ST_3 : Operation 42 [1/1] (1.08ns)   --->   "%axi_data_V = select i1 %icmp_ln975_read, i9 %p_Result_1, i9 %p_Result_s" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:975]   --->   Operation 42 'select' 'axi_data_V' <Predicate = (!icmp_ln936)> <Delay = 1.08> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.08> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%sext_ln880 = sext i9 %axi_data_V" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:880]   --->   Operation 43 'sext' 'sext_ln880' <Predicate = (!icmp_ln936)> <Delay = 0.00>
+ST_3 : Operation 44 [1/1] (1.04ns)   --->   "%select_ln975 = select i1 %icmp_ln975_read, i8 %pix_rgb_V, i8 %pix_rgb_V_2" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:975]   --->   Operation 44 'select' 'select_ln975' <Predicate = (!icmp_ln936)> <Delay = 1.04> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.04> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 45 [1/1] (1.04ns)   --->   "%select_ln975_1 = select i1 %icmp_ln975_read, i8 %pix_444_V, i8 %pix_rgb_V" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:975]   --->   Operation 45 'select' 'select_ln975_1' <Predicate = (!icmp_ln936)> <Delay = 1.04> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.04> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%tmp = bitconcatenate i16 @_ssdm_op_BitConcatenate.i16.i8.i8, i8 %select_ln975_1, i8 %select_ln975" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:975]   --->   Operation 46 'bitconcatenate' 'tmp' <Predicate = (!icmp_ln936)> <Delay = 0.00>
+ST_3 : Operation 47 [1/1] (0.00ns)   --->   "%axi_data_V_3 = partset i24 @_ssdm_op_PartSet.i24.i24.i16.i32.i32, i24 %sext_ln880, i16 %tmp, i32 8, i32 23" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:975]   --->   Operation 47 'partset' 'axi_data_V_3' <Predicate = (!icmp_ln936)> <Delay = 0.00>
+ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%write_ln304 = write void @_ssdm_op_Write.axis.volatile.i24P0A.i3P0A.i3P0A.i1P0A.i1P0A.i1P0A.i1P0A, i24 %m_axis_video_V_data_V, i3 %m_axis_video_V_keep_V, i3 %m_axis_video_V_strb_V, i1 %m_axis_video_V_user_V, i1 %m_axis_video_V_last_V, i1 %m_axis_video_V_id_V, i1 %m_axis_video_V_dest_V, i24 %axi_data_V_3, i3 7, i3 0, i1 %tmp_user_V, i1 %tmp_last_V, i1 0, i1 0"   --->   Operation 48 'write' 'write_ln304' <Predicate = (!icmp_ln936)> <Delay = 0.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 4 <SV = 2> <Delay = 0.00>
+ST_4 : Operation 49 [1/1] (0.00ns)   --->   "%write_ln991 = write void @_ssdm_op_Write.ap_auto.i1P0A, i1 %phi_ln991_out, i1 %phi_ln991" [/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:991]   --->   Operation 49 'write' 'write_ln991' <Predicate = true> <Delay = 0.00>
+
+State 5 <SV = 3> <Delay = 0.00>
+ST_5 : Operation 50 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 50 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 20ns, clock uncertainty: 5.4ns.
+
+ <State 1>: 1.61ns
+The critical path consists of the following:
+	'alloca' operation ('j') [16]  (0 ns)
+	'store' operation ('store_ln0') of constant 0 on local variable 'j' [23]  (1.61 ns)
+
+ <State 2>: 3.73ns
+The critical path consists of the following:
+	'load' operation ('j', /home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:936) on local variable 'j' [28]  (0 ns)
+	'add' operation ('j', /home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:936) [32]  (2.12 ns)
+	'store' operation ('store_ln936', /home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:936) of variable 'j', /home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:936 on local variable 'j' [61]  (1.61 ns)
+
+ <State 3>: 4.76ns
+The critical path consists of the following:
+	fifo read operation ('ovrlayYUV_read', /opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) on port 'ovrlayYUV' (/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) [48]  (3.67 ns)
+	'select' operation ('axi.data.V', /home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.cpp:975) [54]  (1.08 ns)
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

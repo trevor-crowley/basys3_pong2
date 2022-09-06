@@ -753,7 +753,7 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="InImg_cols_fu_42_p2" SOURCE="xf_hud_accel.cpp:191" URAM="0" VARIABLE="InImg_cols"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="InImg_cols_fu_42_p2" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:191" URAM="0" VARIABLE="InImg_cols"/>
             </BindNodes>
         </Module>
         <Module>
@@ -869,7 +869,7 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_col_zxi2mat" OPTYPE="add" PRAGMA="" RTLNAME="j_6_fu_198_p2" SOURCE="xf_hud_accel.cpp:67" URAM="0" VARIABLE="j_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_col_zxi2mat" OPTYPE="add" PRAGMA="" RTLNAME="j_6_fu_198_p2" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:67" URAM="0" VARIABLE="j_6"/>
             </BindNodes>
         </Module>
         <Module>
@@ -993,7 +993,7 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_row_axi2mat" OPTYPE="add" PRAGMA="" RTLNAME="i_6_fu_288_p2" SOURCE="xf_hud_accel.cpp:61" URAM="0" VARIABLE="i_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_row_axi2mat" OPTYPE="add" PRAGMA="" RTLNAME="i_6_fu_288_p2" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:61" URAM="0" VARIABLE="i_6"/>
             </BindNodes>
         </Module>
         <Module>
@@ -1431,7 +1431,7 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_col_mat2axi" OPTYPE="add" PRAGMA="" RTLNAME="j_2_fu_160_p2" SOURCE="xf_hud_accel.cpp:126" URAM="0" VARIABLE="j_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_col_mat2axi" OPTYPE="add" PRAGMA="" RTLNAME="j_2_fu_160_p2" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:126" URAM="0" VARIABLE="j_2"/>
             </BindNodes>
         </Module>
         <Module>
@@ -1500,8 +1500,8 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="sub_fu_146_p2" SOURCE="xf_hud_accel.cpp:109" URAM="0" VARIABLE="sub"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_row_mat2axi" OPTYPE="add" PRAGMA="" RTLNAME="i_4_fu_165_p2" SOURCE="xf_hud_accel.cpp:121" URAM="0" VARIABLE="i_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="sub_fu_146_p2" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:109" URAM="0" VARIABLE="sub"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_row_mat2axi" OPTYPE="add" PRAGMA="" RTLNAME="i_4_fu_165_p2" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:121" URAM="0" VARIABLE="i_4"/>
             </BindNodes>
         </Module>
         <Module>
@@ -1563,7 +1563,7 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_col_mat2axi" OPTYPE="add" PRAGMA="" RTLNAME="j_4_fu_160_p2" SOURCE="xf_hud_accel.cpp:126" URAM="0" VARIABLE="j_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_col_mat2axi" OPTYPE="add" PRAGMA="" RTLNAME="j_4_fu_160_p2" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:126" URAM="0" VARIABLE="j_4"/>
             </BindNodes>
         </Module>
         <Module>
@@ -1632,8 +1632,8 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="sub_fu_134_p2" SOURCE="xf_hud_accel.cpp:109" URAM="0" VARIABLE="sub"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_row_mat2axi" OPTYPE="add" PRAGMA="" RTLNAME="i_2_fu_153_p2" SOURCE="xf_hud_accel.cpp:121" URAM="0" VARIABLE="i_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="sub_fu_134_p2" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:109" URAM="0" VARIABLE="sub"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_row_mat2axi" OPTYPE="add" PRAGMA="" RTLNAME="i_2_fu_153_p2" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:121" URAM="0" VARIABLE="i_2"/>
             </BindNodes>
         </Module>
         <Module>
@@ -1676,17 +1676,17 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="LEF_Img_rows_c_U" SOURCE="xf_hud_accel.cpp:199" URAM="0" VARIABLE="LEF_Img_rows_c"/>
-                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="InImg_cols_c_U" SOURCE="xf_hud_accel.cpp:199" URAM="0" VARIABLE="InImg_cols_c"/>
-                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="InImg_data_U" SOURCE="xf_hud_accel.cpp:190" URAM="0" VARIABLE="InImg_data"/>
-                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="LEF_Img_data_U" SOURCE="xf_hud_accel.cpp:192" URAM="0" VARIABLE="LEF_Img_data"/>
-                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="SEF_Img_data_U" SOURCE="xf_hud_accel.cpp:193" URAM="0" VARIABLE="SEF_Img_data"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="InImg_rows_channel_U" SOURCE="xf_hud_accel.cpp:199" URAM="0" VARIABLE="InImg_rows_channel"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="LEF_Img_cols_channel_U" SOURCE="xf_hud_accel.cpp:199" URAM="0" VARIABLE="LEF_Img_cols_channel"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="SEF_Img_rows_channel_U" SOURCE="xf_hud_accel.cpp:199" URAM="0" VARIABLE="SEF_Img_rows_channel"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="SEF_Img_cols_channel_U" SOURCE="xf_hud_accel.cpp:199" URAM="0" VARIABLE="SEF_Img_cols_channel"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="InImg_cols_c15_channel_U" SOURCE="xf_hud_accel.cpp:199" URAM="0" VARIABLE="InImg_cols_c15_channel"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="LEF_Img_rows_c16_channel_U" SOURCE="xf_hud_accel.cpp:199" URAM="0" VARIABLE="LEF_Img_rows_c16_channel"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="LEF_Img_rows_c_U" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:199" URAM="0" VARIABLE="LEF_Img_rows_c"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="InImg_cols_c_U" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:199" URAM="0" VARIABLE="InImg_cols_c"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="InImg_data_U" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:190" URAM="0" VARIABLE="InImg_data"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="LEF_Img_data_U" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:192" URAM="0" VARIABLE="LEF_Img_data"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="SEF_Img_data_U" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:193" URAM="0" VARIABLE="SEF_Img_data"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="InImg_rows_channel_U" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:199" URAM="0" VARIABLE="InImg_rows_channel"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="LEF_Img_cols_channel_U" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:199" URAM="0" VARIABLE="LEF_Img_cols_channel"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="SEF_Img_rows_channel_U" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:199" URAM="0" VARIABLE="SEF_Img_rows_channel"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="SEF_Img_cols_channel_U" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:199" URAM="0" VARIABLE="SEF_Img_cols_channel"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="InImg_cols_c15_channel_U" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:199" URAM="0" VARIABLE="InImg_cols_c15_channel"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="LEF_Img_rows_c16_channel_U" SOURCE="/home/trevor/Documents/xilinx/basys3_pong2/vitis/hud3/xf_hud_accel.cpp:199" URAM="0" VARIABLE="LEF_Img_rows_c16_channel"/>
             </BindNodes>
         </Module>
     </ModuleInformation>
