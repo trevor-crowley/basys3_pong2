@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="devices_info_luigilinux" value="{&quot;cables&quot;:[{&quot;name&quot;:&quot;Digilent Basys3 210183756705A&quot;,&quot;indexContextMap&quot;:{&quot;2&quot;:&quot;jsn-Basys3-210183756705A-0362d093-0&quot;}}]}"/>
+	<item key="Pong2_system-bitFile" value="${project_loc:Pong2}/_ide/bitstream/design_1_wrapper.bit"/>
+	<item key="Pong2_system-bmmFile" value="${project_loc:Pong2}/_ide/bitstream/design_1_wrapper.mmi"/>
+	<item key="Pong2_system-target" value="luigilinux"/>
+	<item key="Pong2_system-device" value="Auto Detect"/>
+	<item key="Pong2_system-partial_bit" value="false"/>
+	<item key="Pong2_system-skip_rev_check" value="false"/>
+	<item key="programfpga.sdxproject" value="Pong2_system"/>
+	<item key="Pong2_system-microblaze_0-initElf" value="bootloop"/>
+</section>

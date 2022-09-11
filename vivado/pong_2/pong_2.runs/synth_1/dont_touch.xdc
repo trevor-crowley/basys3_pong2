@@ -48,6 +48,15 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_mi
 # IP: bd/design_1/ip/design_1_seven_segment_0_0/design_1_seven_segment_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_seven_segment_0_0 || ORIG_REF_NAME==design_1_seven_segment_0_0} -quiet] -quiet
 
+# IP: bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_cc_0 || ORIG_REF_NAME==design_1_auto_cc_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_auto_cc_1/design_1_auto_cc_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_cc_1 || ORIG_REF_NAME==design_1_auto_cc_1} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_auto_cc_2/design_1_auto_cc_2.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_cc_2 || ORIG_REF_NAME==design_1_auto_cc_2} -quiet] -quiet
+
 # IP: bd/design_1/ip/design_1_v_tpg_0_0/design_1_v_tpg_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_v_tpg_0_0 || ORIG_REF_NAME==design_1_v_tpg_0_0} -quiet] -quiet
 
@@ -80,14 +89,5 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_xl
 
 # IP: bd/design_1/ip/design_1_xlslice_2_0/design_1_xlslice_2_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_xlslice_2_0 || ORIG_REF_NAME==design_1_xlslice_2_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_cc_0 || ORIG_REF_NAME==design_1_auto_cc_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_auto_cc_1/design_1_auto_cc_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_cc_1 || ORIG_REF_NAME==design_1_auto_cc_1} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_auto_cc_2/design_1_auto_cc_2.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_cc_2 || ORIG_REF_NAME==design_1_auto_cc_2} -quiet] -quiet
 
 # XDC: /home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/design_1_ooc.xdc

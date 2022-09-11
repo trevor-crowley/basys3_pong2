@@ -194,6 +194,7 @@
 <pragma file="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" line="403" pragmaType="inline" parentfunction="ap_int_base<8, false>::ap_int_base<24, false>(ap_range_ref<24, false> const&)" off="0" region="0" recursive="0"/>
 <pragma file="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" line="672" pragmaType="inline" parentfunction="get" off="0" region="0" recursive="0"/>
 <pragma file="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h" line="281" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
 <pragma file="/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp" line="0" pragmaType="inline" parentfunction="v_mix_upsample_alpha" off="1" region="0" recursive="0"/>
 <pragma file="/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp" line="161" pragmaType="pipeline" parentfunction="v_mix_upsample_alpha" off="0" ii="-1" rewind="0" style=""/>
 <pragma file="/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp" line="160" pragmaType="loop_flatten" parentfunction="v_mix_upsample_alpha" off="1"/>
@@ -210,7 +211,6 @@
 <pragma file="/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp" line="3190" pragmaType="loop_flatten" parentfunction="MultiPixStream2AXIvideo" off="1"/>
 <pragma file="/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.runs/design_1_v_mix_0_0_synth_1/prj/sol/.autopilot/db/v_mix.cpp" line="3179" pragmaType="array_partition" parentfunction="MultiPixStream2AXIvideo" dim="0" factor="0" mode="complete" dynamic="0" variable=""/>
 <pragma file="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" line="0" pragmaType="inline" parentfunction="ap_range_ref<24, false>& ap_range_ref<24, false>::operator=<8, false>(ap_int_base<8, false> const&)" off="0" region="0" recursive="0"/>
-<pragma file="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
 <pragma file="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
 <pragma file="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_common.h" line="0" pragmaType="inline" parentfunction="ssdm_int<5, false>::ssdm_int()" off="0" region="0" recursive="0"/>
 <pragma file="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>

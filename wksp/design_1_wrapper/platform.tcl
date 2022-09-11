@@ -21,3 +21,9 @@ platform active {design_1_wrapper}
 platform config -updatehw {/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/design_1_wrapper.xsa}
 platform config -updatehw {/home/trevor/repo/CrowdSupplyWorkShop1/Solution/design_1_wrapper.xsa}
 platform clean
+platform generate
+platform active {design_1_wrapper}
+platform config -updatehw {/home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/design_1_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {/home/trevor/repo/CrowdSupplyWorkShop1/Solution/design_1_wrapper.xsa}
+platform generate -domains 

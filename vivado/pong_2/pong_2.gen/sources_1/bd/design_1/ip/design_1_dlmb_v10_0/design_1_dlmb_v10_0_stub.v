@@ -1,11 +1,11 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
-// Date        : Mon Sep  5 13:07:45 2022
-// Host        : ubuntu-dev2 running 64-bit Ubuntu 20.04.5 LTS
-// Command     : write_verilog -force -mode synth_stub -rename_top design_1_dlmb_v10_0 -prefix
-//               design_1_dlmb_v10_0_ design_1_ilmb_v10_0_stub.v
-// Design      : design_1_ilmb_v10_0
+// Date        : Tue Sep  6 19:46:17 2022
+// Host        : ubuntu-dev3 running 64-bit Ubuntu 22.04.1 LTS
+// Command     : write_verilog -force -mode synth_stub
+//               /home/trevor/Documents/xilinx/basys3_pong2/vivado/pong_2/pong_2.gen/sources_1/bd/design_1/ip/design_1_dlmb_v10_0/design_1_dlmb_v10_0_stub.v
+// Design      : design_1_dlmb_v10_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a35tcpg236-1
 // --------------------------------------------------------------------------------

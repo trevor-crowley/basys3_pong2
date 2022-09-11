@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# updatemem v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# 
+# Start of session at: Sat Sep 10 13:40:40 2022
+# Process ID: 74729
+# Current directory: /home/trevor/Documents/xilinx/basys3_pong2/vivado
+# Command line: updatemem -mode batch -source /opt/Xilinx/Vitis/2022.1/scripts/updatemem/main.tcl -notrace -tclargs -meminfo /home/trevor/Documents/xilinx/basys3_pong2/wksp/Pong2/_ide/bitstream/design_1_wrapper.mmi -data /opt/Xilinx/Vitis/2022.1/data/embeddedsw/lib/microblaze/mb_bootloop_le.elf -proc design_1_i/microblaze_0 -bit /home/trevor/Documents/xilinx/basys3_pong2/wksp/Pong2/_ide/bitstream/design_1_wrapper.bit -out /home/trevor/Documents/xilinx/basys3_pong2/wksp/Pong2/_ide/bitstream/download.bit -force
+# Log file: /home/trevor/Documents/xilinx/basys3_pong2/vivado/updatemem.log
+# Journal file: /home/trevor/Documents/xilinx/basys3_pong2/vivado/updatemem.jou
+# Running On: ubuntu-dev3, OS: Linux, CPU Frequency: 3193.980 MHz, CPU Physical cores: 4, Host memory: 16778 MB
+#-----------------------------------------------------------
+source /opt/Xilinx/Vitis/2022.1/scripts/updatemem/main.tcl -notrace

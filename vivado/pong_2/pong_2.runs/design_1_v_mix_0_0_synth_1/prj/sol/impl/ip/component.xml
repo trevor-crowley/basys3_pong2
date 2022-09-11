@@ -1967,7 +1967,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>7744d15c</spirit:value>
+            <spirit:value>0e7a059a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1983,7 +1983,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>63e4ba5a</spirit:value>
+            <spirit:value>1ada6e9c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -4973,8 +4973,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>V_mix</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2112668769</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2022-09-05T17:09:50Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2112670607</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2022-09-06T23:48:02Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -4984,7 +4984,7 @@
       <xilinx:xilinxVersion>2022.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="9bdca115"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="e332b8c3"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="0a0115c0"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="60a1567d"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="1f5e504c"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="014f018f"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="dec32225"/>
